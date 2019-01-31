@@ -1,3 +1,14 @@
+/*
+    Turned the setRace and setSubRace methods into one function.
+    Turned the setClass method into a function.
+    Turned setBackground and setPersonalityTraits (eventually setIdeals, setBonds, and setFlaws) into one function.
+
+*/
+/*
+    Bug List
+
+*/
+
 function setRace() {
 	var races = ["Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling"];
 	var race = races[Math.floor(Math.random() * 9)];
@@ -22,16 +33,117 @@ function setRace() {
 	return "Race: " + subrace + race + " ";
 }
 
-
 function setClass() {
 	var classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
 	return "Class: " + classes[Math.floor(Math.random() * 11)] + " ";
 }
 
-//For some reason some punctuation marks seem to be broken
+//Come back and complete. 
+/*
+function setAlignment(var race, var ideal) {
+
+
+
+} 
+
+public static String setAlignment(String race, String ideal) {
+        
+    String[] alignmentOrder = {"Lawful", "Neutral", "Chaotic"};
+    String[] alignmentMoral = {"Good", "Neutral", "Evil"};
+    
+    String order = "";
+    String moral = "";
+    
+    if (ideal.contains("Lawful"))
+        order = "Lawful";
+    else if (ideal.contains("Chaotic"))
+        order = "Chaotic";
+    else if (ideal.contains("Good"))
+        moral = "Good";
+    else if (ideal.contains("Evil"))
+        moral = "Evil";
+    else if (ideal.contains("Neutral")) {
+        int choice = rng.nextInt(2);
+        if (choice == 0)
+            order = "Neutral";
+        else
+            moral = "Neutral";
+    }
+    else {
+        int choice1 = rng.nextInt(2);
+        if (choice1 == 0)
+            order = alignmentOrder[rng.nextInt(3)];
+        else
+            moral = alignmentMoral[rng.nextInt(3)];  
+    }
+    
+    switch (race) {
+        case "Dwarf":
+            if (order.equals(""))
+                order = "Lawful";
+            else
+                moral = "Good";
+            break;
+        case "Elf":
+            if (order.equals(""))
+                order = "Chaotic";
+            else
+                moral = "Good";
+            break;
+        case "Halfling":
+            if (order.equals(""))
+                order = "Lawful";
+            else
+                moral = "Good";
+            break;
+        case "Human":
+            if (order.equals(""))
+                order = alignmentOrder[rng.nextInt(3)];
+            else
+                moral = alignmentMoral[rng.nextInt(3)];
+            break;
+        case "Dragonborn":
+            if (order.equals(""))
+                order = alignmentOrder[rng.nextInt(3)];
+            else
+                moral = "Good";
+            break;
+        case "Gnome":
+            if (order.equals(""))
+                order = alignmentOrder[rng.nextInt(2) * 2];
+            else
+                moral = "Good";
+            break;
+        case "Half-Elf":
+            if (order.equals(""))
+                order = "Chaotic";
+            else
+                moral = alignmentMoral[rng.nextInt(3)];
+            break;
+        case "Half-Orc":
+            if (order.equals(""))
+                order = "Chaotic";
+            else
+                moral = alignmentMoral[rng.nextInt(2) + 1];
+            break;
+        case "Tiefling":
+            if (order.equals(""))
+                order = "Chaotic";
+            else
+                moral = alignmentMoral[rng.nextInt(2) + 1];
+            break;
+       
+    }
+    return order + " " + moral;
+    
+}
+*/
+
 function setBackground() {
 	var backgrounds = ["Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Gladiator", "Guild Artisan", "Guild Merchant", "Hermit", "Knight", "Noble", "Outlander", "Pirate", "Sage", "Sailor", "Soldier", "Spy", "Urchin"];
 	background = backgrounds[Math.floor(Math.random() * 18)];
+
+        //Personality Traits
 
 	 	var personalityTraitsAcolyte = [
             "I idolize a particular hero of my faith, and constantly refer to that person’s deeds and example.", 
@@ -212,192 +324,357 @@ function setBackground() {
             "I think anyone who’s nice to me is hiding evil intent.",
             "I don’t like to bathe.",
             "I bluntly say what other people are hinting at or hiding."];
+
+        //Ideals
+
+        var idealsAcolyte = [
+            "Tradition. The ancient traditions of worship and sacrifice must be preserved and upheld. (Lawful)",
+            "Charity. I always try to help those in need, no matter what the personal cost. (Good)",
+            "Change. We must help bring about the changes the gods are constantly working in the world. (Chaotic)",
+            "Power. I hope to one day rise to the top of my faith’s religious hierarchy. (Lawful)",
+            "Faith. I trust that my deity will guide my actions, I have faith that if I work hard, things will go well. (Lawful)",
+            "Aspiration. I seek to prove myself worthy of my god’s favor by matching my actions against his or her teachings. (Any)"];
+            
+        var idealsCharlatan = [
+            "Independence. I am a free spirit— no one tells me what to do. (Chaotic)",
+            "Fairness. I never target people who can’t afford to lose a few coins. (Lawful)",
+            "Charity. I distribute the money I acquire to the people who really need it. (Good)",
+            "Creativity. I never run the same con twice. (Chaotic)",
+            "Friendship. Material goods come and go. Bonds of friendship last forever. (Good)",
+            "Aspiration. I’m determined to make something of myself. (Any)"];
+            
+        var idealsCriminal = [
+            "Honor. I don’t steal from others in the trade. (Lawful)",
+            "Freedom. Chains are meant to be broken, as are those who would forge them. (Chaotic)",
+            "Charity. I steal from the wealthy so that I can help people in need. (Good)",
+            "Greed. I will do whatever it takes to become wealthy. (Evil)",
+            "People. I’m loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care. (Neutral)",
+            "Redemption. There’s a spark of good in everyone. (Good)"];
+            
+        var idealsEntertainer = [
+            "Beauty. When I perform, I make the world better than it was. (Good)",
+            "Tradition. The stories, legends, and songs of the past must never be forgotten, for they teach us who we are. (Lawful)",
+            "Creativity. The world is in need of new ideas and bold action. (Chaotic)",
+            "Greed. I’m only in it for the money and fame. (Evil)",
+            "People. I like seeing the smiles on people’s faces when I perform. That’s all that matters. (Neutral)",
+            "Honesty. Art should reflect the soul; it should come from within and reveal who we really are. (Any)"];
+            
+        var idealsFolkHero = [
+            "Respect. People deserve to be treated with dignity and respect. (Good)",
+            "Fairness. No one should get preferential treatment before the law, and no one is above the law. (Lawful)",
+            "Freedom. Tyrants must not be allowed to oppress the people. (Chaotic)",
+            "Might. If I become strong, I can take what I want—what I deserve. (Evil)",
+            "Sincerity. There’s no good in pretending to be something I’m not. (Neutral)",
+            "Destiny. Nothing and no one can steer me away from my higher calling. (Any)"];
+            
+        var idealsGladiator = [
+            "Beauty. When I perform, I make the world better than it was. (Good)",
+            "Tradition. The stories, legends, and songs of the past must never be forgotten, for they teach us who we are. (Lawful)",
+            "Creativity. The world is in need of new ideas and bold action. (Chaotic)",
+            "Greed. I’m only in it for the money and fame. (Evil)",
+            "People. I like seeing the smiles on people’s faces when I perform. That’s all that matters. (Neutral)",
+            "Honesty. Art should reflect the soul; it should come from within and reveal who we really are. (Any)"];
+            
+        var idealsGuildArtisan = [
+            "Community. It is the duty of all civilized people to strengthen the bonds of community and the security of civilization. (Lawful)",
+            "Generosity. My talents were given to me so that I could use them to benefit the world. (Good)",
+            "Freedom. Everyone should be free to pursue his or her own livelihood. (Chaotic)",
+            "Greed. I’m only in it for the money. (Evil)",
+            "People. I’m committed to the people I care about, not to ideals. (Neutral)",
+            "Aspiration. I work hard to be the best there is at my craft. (Any)"];
+            
+        var idealsGuildMerchant = [
+            "Community. It is the duty of all civilized people to strengthen the bonds of community and the security of civilization. (Lawful)",
+            "Generosity. My talents were given to me so that I could use them to benefit the world. (Good)",
+            "Freedom. Everyone should be free to pursue his or her own livelihood. (Chaotic)",
+            "Greed. I’m only in it for the money. (Evil)",
+            "People. I’m committed to the people I care about, not to ideals. (Neutral)",
+            "Aspiration. I work hard to be the best there is at my craft. (Any)"];
+            
+        var idealsHermit = [
+            "Greater Good. My gifts are meant to be shared with all, not used for my own benefit. (Good)",
+            "Logic. Emotions must not cloud our sense of what is right and true, or our logical thinking. (Lawful)",
+            "Free Thinking. Inquiry and curiosity are the pillars of progress. (Chaotic)",
+            "Power. Solitude and contemplation are paths toward mystical or magical power. (Evil)",
+            "Live and Let Live. Meddling in the affairs of others only causes trouble. (Neutral)",
+            "Self-Knowledge. If you know yourself, there’s nothing left to know. (Any)"];
+            
+        var idealsKnight = [
+            "Respect. Respect is due to me because of my position, but all people regardless of station deserve to be treated with dignity. (Good)",
+            "Responsibility. It is my duty to respect the authority of those above me, just as those below me must respect mine. (Lawful)",
+            "Independence. I must prove that I can handle myself without the coddling of my family. (Chaotic)",
+            "Power. If I can attain more power, no one will tell me what to do. (Evil)",
+            "Family. Blood runs thicker than water. (Any)",
+            "Noble Obligation. It is my duty to protect and care for the people beneath me. (Good)"];
+            
+        var idealsNoble = [
+            "Respect. Respect is due to me because of my position, but all people regardless of station deserve to be treated with dignity. (Good)",
+            "Responsibility. It is my duty to respect the authority of those above me, just as those below me must respect mine. (Lawful)",
+            "Independence. I must prove that I can handle myself without the coddling of my family. (Chaotic)",
+            "Power. If I can attain more power, no one will tell me what to do. (Evil)",
+            "Family. Blood runs thicker than water. (Any)",
+            "Noble Obligation. It is my duty to protect and care for the people beneath me. (Good)"];
+            
+        var idealsOutlander = [
+            "Change. Life is like the seasons, in constant change, and we must change with it. (Chaotic)",
+            "Greater Good. It is each person’s responsibility to make the most happiness for the whole tribe. (Good)",
+            "Honor. If I dishonor myself, I dishonor my whole clan. (Lawful)",
+            "Might. The strongest are meant to rule. (Evil)",
+            "Nature. The natural world is more important than all the constructs of civilization. (Neutral)",
+            "Glory. I must earn glory in battle, for myself and my clan. (Any)"];
+            
+        var idealsPirate = [
+            "Respect. The thing that keeps a ship together is mutual respect between captain and crew. (Good)",
+            "Fairness. We all do the work, so we all share in the rewards. (Lawful)",
+            "Freedom. The sea is freedom—the freedom to go anywhere and do anything. (Chaotic)",
+            "Mastery. I’m a predator, and the other ships on the sea are my prey. (Evil)",
+            "People. I’m committed to my crewmates, not to ideals. (Neutral)",
+            "Aspiration. Someday I’ll own my own ship and chart my own destiny. (Any"];
+            
+        var idealsSage = [
+            "Knowledge. The path to power and self-improvement is through knowledge. (Neutral)",
+            "Beauty. What is beautiful points us beyond itself toward what is true. (Good)",
+            "Logic. Emotions must not cloud our logical thinking. (Lawful)",
+            "No Limits. Nothing should fetter the infinite possibility inherent in all existence. (Chaotic)",
+            "Power. Knowledge is the path to power and domination. (Evil)",
+            "Self-Improvement. The goal of a life of study is the betterment of oneself. (Any)"];
+            
+        var idealsSailor = [
+            "Respect. The thing that keeps a ship together is mutual respect between captain and crew. (Good)",
+            "Fairness. We all do the work, so we all share in the rewards. (Lawful)",
+            "Freedom. The sea is freedom—the freedom to go anywhere and do anything. (Chaotic)",
+            "Mastery. I’m a predator, and the other ships on the sea are my prey. (Evil)",
+            "People. I’m committed to my crewmates, not to ideals. (Neutral)",
+            "Aspiration. Someday I’ll own my own ship and chart my own destiny. (Any"];
+            
+        var idealsSoldier = [
+            "Greater Good. Our lot is to lay down our lives in defense of others. (Good)",
+            "Responsibility. I do what I must and obey just authority. (Lawful)",
+            "Independence. When people follow orders blindly, they embrace a kind of tyranny. (Chaotic)",
+            "Might. In life as in war, the stronger force wins. (Evil)",
+            "Live and Let Live. Ideals aren’t worth killing over or going to war for. (Neutral)",
+            "Nation. My city, nation, or people are all that matter. (Any)"];
+            
+        var idealsSpy = [
+            "Honor. I don’t steal from others in the trade. (Lawful)",
+            "Freedom. Chains are meant to be broken, as are those who would forge them. (Chaotic)",
+            "Charity. I steal from the wealthy so that I can help people in need. (Good)",
+            "Greed. I will do whatever it takes to become wealthy. (Evil)",
+            "People. I’m loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care. (Neutral)",
+            "Redemption. There’s a spark of good in everyone. (Good)"];
+            
+        var idealsUrchin = [
+            "Respect. All people, rich or poor, deserve respect. (Good)",
+            "Community. We have to take care of each other, because no one else is going to do it. (Lawful)",
+            "Change. The low are lifted up, and the high and mighty are brought down. Change is the nature of things. (Chaotic)",
+            "Retribution. The rich need to be shown what life and death are like in the gutters. (Evil)",
+            "People. I help the people who help me— that’s what keeps us alive. (Neutral)",
+            "Aspiration. I'm going to prove that I'm worthy of a better life. (Any)"];
+
         
         switch (background) {
             case "Acolyte":
                 var index = Math.floor(Math.random() * 8);
-                var trait1 = personalityTraitsAcolyte[index] + "\n";
+                var trait1 = personalityTraitsAcolyte[index];
                 personalityTraitsAcolyte[index] = "";
                 var trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsAcolyte[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                var ideal = idealsAcolyte[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Charlatan":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsCharlatan[index] + "\n";
+                trait1 = personalityTraitsCharlatan[index];
                 personalityTraitsCharlatan[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsCharlatan[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsCharlatan[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Criminal":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsCriminal[index] + "\n";
+                trait1 = personalityTraitsCriminal[index];
                 personalityTraitsCriminal[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsCriminal[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsCriminal[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Entertainer":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsEntertainer[index] + "\n";
+                trait1 = personalityTraitsEntertainer[index];
                 personalityTraitsEntertainer[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsEntertainer[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsEntertainer[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Folk Hero":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsFolkHero[index] + "\n";
+                trait1 = personalityTraitsFolkHero[index];
                 personalityTraitsFolkHero[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsFolkHero[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsFolkHero[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Gladiator":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsGladiator[index] + "\n";
+                trait1 = personalityTraitsGladiator[index];
                 personalityTraitsGladiator[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsGladiator[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsGladiator[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Guild Artisan":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsGuildArtisan[index] + "\n";
+                trait1 = personalityTraitsGuildArtisan[index];
                 personalityTraitsGuildArtisan[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsGuildArtisan[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsGuildArtisan[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Guild Merchant":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsGuildMerchant[index] + "\n";
+                trait1 = personalityTraitsGuildMerchant[index];
                 personalityTraitsGuildMerchant[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsGuildMerchant[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsGuildMerchant[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Hermit":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsHermit[index] + "\n";
+                trait1 = personalityTraitsHermit[index];
                 personalityTraitsHermit[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsHermit[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsHermit[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Knight":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsKnight[index] + "\n";
+                trait1 = personalityTraitsKnight[index];
                 personalityTraitsKnight[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsKnight[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsKnight[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Noble":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsNoble[index] + "\n";
+                trait1 = personalityTraitsNoble[index];
                 personalityTraitsNoble[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsNoble[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsNoble[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Outlander":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsOutlander[index] + "\n";
+                trait1 = personalityTraitsOutlander[index];
                 personalityTraitsOutlander[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsOutlander[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsOutlander[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Pirate":    
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsPirate[index] + "\n";
+                trait1 = personalityTraitsPirate[index];
                 personalityTraitsPirate[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsPirate[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsPirate[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Sage":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsSage[index] + "\n";
+                trait1 = personalityTraitsSage[index];
                 personalityTraitsSage[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsSage[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsSage[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Sailor":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsSailor[index] + "\n";
+                trait1 = personalityTraitsSailor[index];
                 personalityTraitsSailor[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsSailor[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsSailor[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Soldier":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsSoldier[index] + "\n";
+                trait1 = personalityTraitsSoldier[index];
                 personalityTraitsSoldier[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsSoldier[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsSoldier[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Spy":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsSpy[index] + "\n";
+                trait1 = personalityTraitsSpy[index];
                 personalityTraitsSpy[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsSpy[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;
+                ideal = idealsSpy[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Urchin":
                 index = Math.floor(Math.random() * 8);
-                trait1 = personalityTraitsUrchin[index] + "\n";
+                trait1 = personalityTraitsUrchin[index];
                 personalityTraitsUrchin[index] = "";
                 trait2 = "";
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsUrchin[index];
                 }
-                return "Background: " + background + "<br>" + "Personality Trait One: " + trait1 + "<br>" + "Personality Trait Two: " + trait2;         
+                ideal = idealsUrchin[Math.floor(Math.random() * 6)];
+                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;         
     }
 }
 
 function getCharacter() {
-	document.getElementById("testConsole").innerHTML = setRace() + "<br>" + setClass() + "<br>" + setBackground();
+	document.getElementById("testConsole").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground();
 }
 
