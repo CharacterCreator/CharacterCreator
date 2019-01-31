@@ -1,7 +1,7 @@
 /*
     Turned the setRace and setSubRace methods into one function.
     Turned the setClass method into a function.
-    Turned setBackground and setPersonalityTraits (eventually setIdeals, setBonds, and setFlaws) into one function.
+    Turned setBackground, setPersonalityTraits, and setIdeals (eventually setBonds and setFlaws) into one function.
 
 */
 /*
