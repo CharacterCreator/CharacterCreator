@@ -38,107 +38,6 @@ function setClass() {
 	return "Class: " + classes[Math.floor(Math.random() * 11)] + " ";
 }
 
-//Come back and complete. 
-/*
-function setAlignment(var race, var ideal) {
-
-
-
-} 
-
-public static String setAlignment(String race, String ideal) {
-        
-    String[] alignmentOrder = {"Lawful", "Neutral", "Chaotic"};
-    String[] alignmentMoral = {"Good", "Neutral", "Evil"};
-    
-    String order = "";
-    String moral = "";
-    
-    if (ideal.contains("Lawful"))
-        order = "Lawful";
-    else if (ideal.contains("Chaotic"))
-        order = "Chaotic";
-    else if (ideal.contains("Good"))
-        moral = "Good";
-    else if (ideal.contains("Evil"))
-        moral = "Evil";
-    else if (ideal.contains("Neutral")) {
-        int choice = rng.nextInt(2);
-        if (choice == 0)
-            order = "Neutral";
-        else
-            moral = "Neutral";
-    }
-    else {
-        int choice1 = rng.nextInt(2);
-        if (choice1 == 0)
-            order = alignmentOrder[rng.nextInt(3)];
-        else
-            moral = alignmentMoral[rng.nextInt(3)];  
-    }
-    
-    switch (race) {
-        case "Dwarf":
-            if (order.equals(""))
-                order = "Lawful";
-            else
-                moral = "Good";
-            break;
-        case "Elf":
-            if (order.equals(""))
-                order = "Chaotic";
-            else
-                moral = "Good";
-            break;
-        case "Halfling":
-            if (order.equals(""))
-                order = "Lawful";
-            else
-                moral = "Good";
-            break;
-        case "Human":
-            if (order.equals(""))
-                order = alignmentOrder[rng.nextInt(3)];
-            else
-                moral = alignmentMoral[rng.nextInt(3)];
-            break;
-        case "Dragonborn":
-            if (order.equals(""))
-                order = alignmentOrder[rng.nextInt(3)];
-            else
-                moral = "Good";
-            break;
-        case "Gnome":
-            if (order.equals(""))
-                order = alignmentOrder[rng.nextInt(2) * 2];
-            else
-                moral = "Good";
-            break;
-        case "Half-Elf":
-            if (order.equals(""))
-                order = "Chaotic";
-            else
-                moral = alignmentMoral[rng.nextInt(3)];
-            break;
-        case "Half-Orc":
-            if (order.equals(""))
-                order = "Chaotic";
-            else
-                moral = alignmentMoral[rng.nextInt(2) + 1];
-            break;
-        case "Tiefling":
-            if (order.equals(""))
-                order = "Chaotic";
-            else
-                moral = alignmentMoral[rng.nextInt(2) + 1];
-            break;
-       
-    }
-    return order + " " + moral;
-    
-}
-*/
-
 function setBackground() {
 	var backgrounds = ["Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Gladiator", "Guild Artisan", "Guild Merchant", "Hermit", "Knight", "Noble", "Outlander", "Pirate", "Sage", "Sailor", "Soldier", "Spy", "Urchin"];
 	background = backgrounds[Math.floor(Math.random() * 18)];
@@ -673,6 +572,193 @@ function setBackground() {
                 return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;         
     }
 }
+
+//Come back and complete. 
+
+/*function setAlignment(var race, var ideal) {
+
+    var alignmentOrder = ["Lawful", "Neutral", "Chaotic"];
+    var alignmentMoral = ["Good", "Neutral", "Evil"];
+
+    var order = "";
+    var moral = "";
+
+    if (ideal.includes("Lawful"))
+        order = "Lawful";
+    else if (ideal.includes("Chaotic"))
+        order = "Chaotic";
+    else if (ideal.includes("Good"))
+        moral = "Good";
+    else if (ideal.includes("Evil"))
+        moral = "Evil";
+    else if (ideal.includes("Neutral")) {
+        int choice = Math.floor(Math.random() * 2);
+        if (choice == 0)
+            order = "Neutral";
+        else
+            moral = "Neutral";
+    }
+    else {
+        int choice1 = Math.floor(Math.random() * 2);
+        if (choice1 == 0)
+            order = alignmentOrder[Math.floor(Math.random() * 3)];
+        else
+            moral = alignmentMoral[Math.floor(Math.random() * 3)];  
+    }
+
+    switch (race) {
+        case "Dwarf":
+            if (order == (""))
+                order = "Lawful";
+            else
+                moral = "Good";
+            break;
+        case "Elf":
+            if (order == (""))
+                order = "Chaotic";
+            else
+                moral = "Good";
+            break;
+        case "Halfling":
+            if (order == (""))
+                order = "Lawful";
+            else
+                moral = "Good";
+            break;
+        case "Human":
+            if (order == (""))
+                order = alignmentOrder[rng.nextInt(3)];
+            else
+                moral = alignmentMoral[rng.nextInt(3)];
+            break;
+        case "Dragonborn":
+            if (order == (""))
+                order = alignmentOrder[rng.nextInt(3)];
+            else
+                moral = "Good";
+            break;
+        case "Gnome":
+            if (order == (""))
+                order = alignmentOrder[rng.nextInt(2) * 2];
+            else
+                moral = "Good";
+            break;
+        case "Half-Elf":
+            if (order == (""))
+                order = "Chaotic";
+            else
+                moral = alignmentMoral[rng.nextInt(3)];
+            break;
+        case "Half-Orc":
+            if (order == (""))
+                order = "Chaotic";
+            else
+                moral = alignmentMoral[rng.nextInt(2) + 1];
+            break;
+        case "Tiefling":
+            if (order == (""))
+                order = "Chaotic";
+            else
+                moral = alignmentMoral[rng.nextInt(2) + 1];
+            break;
+       
+    }
+    return order + " " + moral;
+
+} 
+
+public static String setAlignment(String race, String ideal) {
+        
+    String[] alignmentOrder = {"Lawful", "Neutral", "Chaotic"};
+    String[] alignmentMoral = {"Good", "Neutral", "Evil"};
+    
+    String order = "";
+    String moral = "";
+    
+    if (ideal.contains("Lawful"))
+        order = "Lawful";
+    else if (ideal.contains("Chaotic"))
+        order = "Chaotic";
+    else if (ideal.contains("Good"))
+        moral = "Good";
+    else if (ideal.contains("Evil"))
+        moral = "Evil";
+    else if (ideal.contains("Neutral")) {
+        int choice = rng.nextInt(2);
+        if (choice == 0)
+            order = "Neutral";
+        else
+            moral = "Neutral";
+    }
+    else {
+        int choice1 = rng.nextInt(2);
+        if (choice1 == 0)
+            order = alignmentOrder[rng.nextInt(3)];
+        else
+            moral = alignmentMoral[rng.nextInt(3)];  
+    }
+    
+    switch (race) {
+        case "Dwarf":
+            if (order.equals(""))
+                order = "Lawful";
+            else
+                moral = "Good";
+            break;
+        case "Elf":
+            if (order.equals(""))
+                order = "Chaotic";
+            else
+                moral = "Good";
+            break;
+        case "Halfling":
+            if (order.equals(""))
+                order = "Lawful";
+            else
+                moral = "Good";
+            break;
+        case "Human":
+            if (order.equals(""))
+                order = alignmentOrder[rng.nextInt(3)];
+            else
+                moral = alignmentMoral[rng.nextInt(3)];
+            break;
+        case "Dragonborn":
+            if (order.equals(""))
+                order = alignmentOrder[rng.nextInt(3)];
+            else
+                moral = "Good";
+            break;
+        case "Gnome":
+            if (order.equals(""))
+                order = alignmentOrder[rng.nextInt(2) * 2];
+            else
+                moral = "Good";
+            break;
+        case "Half-Elf":
+            if (order.equals(""))
+                order = "Chaotic";
+            else
+                moral = alignmentMoral[rng.nextInt(3)];
+            break;
+        case "Half-Orc":
+            if (order.equals(""))
+                order = "Chaotic";
+            else
+                moral = alignmentMoral[rng.nextInt(2) + 1];
+            break;
+        case "Tiefling":
+            if (order.equals(""))
+                order = "Chaotic";
+            else
+                moral = alignmentMoral[rng.nextInt(2) + 1];
+            break;
+       
+    }
+    return order + " " + moral;
+    
+}*/
+
 
 function getCharacter() {
 	document.getElementById("testConsole").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground();
