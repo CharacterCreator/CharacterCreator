@@ -10,7 +10,7 @@
 var races = "";
 var race = "";
 var subraces = "";
-var subrace = ";"
+var subrace = ""
 
 function setRace() {
 	races = ["Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling"];
@@ -22,25 +22,26 @@ function setRace() {
 			subrace = subraces[Math.floor(Math.random() * 2)];
 			break;
 		case "Elf":
-			subrace = subraces[Math.floor((Math.random() * 3) + 2)];
+			subrace = subraces[Math.floor(Math.random() * 3) + 2];
 			break;
 		case "Halfling":
-			subrace = subraces[Math.floor((Math.random() * 2) + 5)];
+			subrace = subraces[Math.floor(Math.random() * 2) + 5];
 			break;
 		case "Gnome":
-			subrace = subraces[Math.floor((Math.random() * 2) + 7)];
+			subrace = subraces[Math.floor(Math.random() * 2) + 7];
 			break;
 		default:
 			subrace = "";
 	}
-	return "Race: " + subrace + race + " ";
+	return "Race: " + subrace + race;
 }
 
-var classes = "";
+var classChoice = "";
 
 function setClass() {
-	classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
-	return "Class: " + classes[Math.floor(Math.random() * 11)] + " ";
+	var classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
+    classChoice = classes[Math.floor(Math.random() * 11)];
+	return "Class: " + classChoice;
 }
 
 var background = "";
@@ -660,7 +661,7 @@ function setAlignment(race, ideal) {
             if (order == (""))
                 order = "Chaotic";
             else
-                moral = alignmentMoral[Math.floor((Math.random() * 2) + 1)];
+                moral = alignmentMoral[Math.floor(Math.random() * 2) + 1];
             break;
         case "Tiefling":
             if (order == (""))
@@ -676,6 +677,216 @@ function setAlignment(race, ideal) {
     return "Alignment: " + order + " " + moral;
 } 
 
+/*var speed = 25;
+
+function setSpeed(race, subrace) {
+	if (subrace == "Wood ")
+		speed += 10;
+	else if ()
+
+}*/
+
+var primary = 0;
+var secondary = 0;
+var scoresTemp = [0, 0, 0, 0, 0, 0];
+
+var scores = [0, 0, 0, 0, 0, 0];
+
+var strength = 0;
+var dexterity = 0;
+var constitution = 0;
+var intelligence = 0;
+var wisdom = 0;
+var charisma = 0;
+
+function generateScores(primary, secondary, race) {
+    strength = 0;
+    dexterity = 0;
+    constitution = 0;
+    intelligence = 0;
+    wisdom = 0;
+    charisma = 0;
+    scoresTemp = [0, 0, 0, 0, 0, 0];
+    scores = [0, 0, 0, 0, 0, 0];
+    for (var i = 0; i < 6; i++) {
+        var score = 0;
+        var lowest = 6;
+        for (var j = 0; j < 4; j++) {
+            var roll = 0;
+            roll = Math.floor((Math.random() * 6) + 1);
+            score += roll;
+            if (roll < lowest)
+                lowest = roll;
+        }
+        score -= lowest;
+        scoresTemp[i] = score;
+    }
+
+    var biggest = 0;
+    var index = 0;
+    for (var i = 0; i < scoresTemp.length; i++) {
+        if (scoresTemp[i] > biggest) {
+            index = i;
+            biggest = scoresTemp[i];
+        }
+    }
+
+    scores[primary] += biggest;
+    scoresTemp[index] = 0;
+
+    var secondBiggest = 0;
+    for (var i = 0; i < scoresTemp.length; i++) {
+        if (scoresTemp[i] > secondBiggest) {
+            index = i;
+            secondBiggest = scoresTemp[i];
+        }
+    }
+
+    scores[secondary] += secondBiggest;
+    scoresTemp[index] = 0;
+
+    for (var i = 0; i < scores.length; i++) {
+        var original = scores[i];
+        while (i != primary && i != secondary && scores[i] == original) {
+                var j = Math.floor(Math.random() * 6);
+                scores[i] += scoresTemp[j];
+                scoresTemp[j] = 0;
+        }
+    }
+
+    switch (race) {
+        case "Dwarf":
+            scores[2] += 2;
+            break;
+        case "Elf":
+            scores[1] += 2;
+            break;
+        case "Halfling":
+            scores[1] += 2;
+            break;
+        case "Human":
+            for (var i = 0; i < scores.length; i++)
+                scores[i] += 1;
+            break;
+        case "Dragonborn":
+            scores[0] += 2;
+            scores[5] += 1;
+            break;
+        case "Gnome":
+            scores[3] += 2;
+            break;
+        case "Half-Elf":
+            scores[5] += 2;
+            var index = Math.floor(Math.random() * 5);
+            scores[index] += 1;
+            var index2 = 0;
+            do {
+                index2 = Math.floor(Math.random() * 5);                  
+            } while (index2 != index);
+            scores[index2] += 1;
+            break;
+        case "Half-Orc":
+            scores[0] += 2;
+            scores[2] += 1;
+            break;
+        case "Tiefling":
+            scores[5] += 2;
+            scores[3] += 1;
+            break;
+    }
+
+    switch (subrace) {
+        case "Hill ": 
+            scores[4] += 1;
+            break;
+        case "Mountain ":
+            scores[0] += 2;
+            break;
+        case "High ":
+            scores[3] += 1;
+            break;
+        case "Wood ":
+            scores[4] += 1;
+            break;
+        case "Dark ":
+            scores[5] += 1;
+            break;
+        case "Lightfoot ":
+            scores[5] += 1;
+            break;
+        case "Stout ":
+            scores[2] += 1;
+            break;
+        case "Forest ":
+            scores[1] += 1;
+            break;
+        case "Rock ":
+            scores[2] += 1;
+            break;
+    }
+
+    switch (classChoice) {
+        case "Barbarian":
+            primary = 0;
+            secondary = 2;
+            break;
+        case "Bard":
+            primary = 5;
+            secondary = 1;
+            break;
+        case "Cleric":
+            primary = 4;
+            secondary = Math.floor(Math.floor(Math.random() * 2) * 2);
+            break;
+        case "Druid":
+            primary = 4;
+            secondary = 2;
+            break;
+        case "Fighter":
+            primary = Math.floor(Math.random() * 2);
+            secondary = 2;
+            break;
+        case "Monk": 
+            primary = 1;
+            secondary = 4;
+            break;
+        case "Paladin":
+            primary = 0;
+            secondary = 5;
+            break;
+        case "Ranger":
+            primary = 1;
+            secondary = 4;
+            break;
+        case "Rogue":
+            primary = 1;
+            secondary = Math.floor(Math.floor(Math.random() * 2) * 2) + 3;
+            break;
+        case "Sorcerer":
+            primary = 5;
+            secondary = 2;
+            break;
+        case "Warlock":
+            primary = 5;
+            secondary = 2;
+            break;
+        case "Wizard":
+            primary = 3;
+            secondary = Math.floor(Math.random() * 2) + 1;
+            break;
+    }
+
+    strength = scores[0];
+    dexterity = scores[1];
+    constitution = scores[2];
+    intelligence = scores[3];
+    wisdom = scores[4];
+    charisma = scores[5];
+
+    return "Strength: " + strength + "</br> Dexterity: " + dexterity + "</br> Constitution: " + constitution + "</br> Intelligence: " + intelligence + "</br> Wisdom: " + wisdom + "</br> Charisma: " + charisma;
+}
+
 function getCharacter() {
-	document.getElementById("testConsole").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
+	document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
+	document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary);
 }
