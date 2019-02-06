@@ -33,15 +33,15 @@ function setRace() {
 		default:
 			subrace = "";
 	}
-	return "Race: " + subrace + race;
+	return "Race: " + subrace + race + " ";
 }
 
 var classChoice = "";
 
 function setClass() {
 	var classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
-    classChoice = classes[Math.floor(Math.random() * 11)];
-	return "Class: " + classChoice;
+    classChoice = classes[Math.floor(Math.random() * 11)]
+	return "Class: " + classChoice + " ";
 }
 
 var background = "";
@@ -699,7 +699,7 @@ var intelligence = 0;
 var wisdom = 0;
 var charisma = 0;
 
-function generateScores(primary, secondary, race) {
+function generateScores(primary, secondary, race, subrace, classChoice) {
     strength = 0;
     dexterity = 0;
     constitution = 0;
@@ -708,51 +708,6 @@ function generateScores(primary, secondary, race) {
     charisma = 0;
     scoresTemp = [0, 0, 0, 0, 0, 0];
     scores = [0, 0, 0, 0, 0, 0];
-    for (var i = 0; i < 6; i++) {
-        var score = 0;
-        var lowest = 6;
-        for (var j = 0; j < 4; j++) {
-            var roll = 0;
-            roll = Math.floor((Math.random() * 6) + 1);
-            score += roll;
-            if (roll < lowest)
-                lowest = roll;
-        }
-        score -= lowest;
-        scoresTemp[i] = score;
-    }
-
-    var biggest = 0;
-    var index = 0;
-    for (var i = 0; i < scoresTemp.length; i++) {
-        if (scoresTemp[i] > biggest) {
-            index = i;
-            biggest = scoresTemp[i];
-        }
-    }
-
-    scores[primary] += biggest;
-    scoresTemp[index] = 0;
-
-    var secondBiggest = 0;
-    for (var i = 0; i < scoresTemp.length; i++) {
-        if (scoresTemp[i] > secondBiggest) {
-            index = i;
-            secondBiggest = scoresTemp[i];
-        }
-    }
-
-    scores[secondary] += secondBiggest;
-    scoresTemp[index] = 0;
-
-    for (var i = 0; i < scores.length; i++) {
-        var original = scores[i];
-        while (i != primary && i != secondary && scores[i] == original) {
-                var j = Math.floor(Math.random() * 6);
-                scores[i] += scoresTemp[j];
-                scoresTemp[j] = 0;
-        }
-    }
 
     switch (race) {
         case "Dwarf":
@@ -876,6 +831,52 @@ function generateScores(primary, secondary, race) {
             break;
     }
 
+    for (var i = 0; i < 6; i++) {
+        var score = 0;
+        var lowest = 6;
+        for (var j = 0; j < 4; j++) {
+            var roll = 0;
+            roll = Math.floor((Math.random() * 6) + 1);
+            score += roll;
+            if (roll < lowest)
+                lowest = roll;
+        }
+        score -= lowest;
+        scoresTemp[i] = score;
+    }
+
+    var biggest = 0;
+    var index = 0;
+    for (var i = 0; i < scoresTemp.length; i++) {
+        if (scoresTemp[i] > biggest) {
+            index = i;
+            biggest = scoresTemp[i];
+        }
+    }
+
+    scores[primary] += biggest;
+    scoresTemp[index] = 0;
+
+    var secondBiggest = 0;
+    for (var i = 0; i < scoresTemp.length; i++) {
+        if (scoresTemp[i] > secondBiggest) {
+            index = i;
+            secondBiggest = scoresTemp[i];
+        }
+    }
+
+    scores[secondary] += secondBiggest;
+    scoresTemp[index] = 0;
+
+    for (var i = 0; i < scores.length; i++) {
+        var original = scores[i];
+        while (i != primary && i != secondary && scores[i] == original) {
+                var j = Math.floor(Math.random() * 6);
+                scores[i] += scoresTemp[j];
+                scoresTemp[j] = 0;
+        }
+    }
+
     strength = scores[0];
     dexterity = scores[1];
     constitution = scores[2];
@@ -888,5 +889,5 @@ function generateScores(primary, secondary, race) {
 
 function getCharacter() {
 	document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
-	document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary);
+	document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice);
 }
