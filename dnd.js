@@ -2,49 +2,49 @@ var race = "";
 var subrace = ""
 
 function setRace() {
-	races = ["Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling"];
-	race = races[Math.floor(Math.random() * 9)];
-	subraces = ["Hill ", "Mountain ", "High ", "Wood ", "Dark ", "Lightfoot ", "Stout ", "Forest ", "Rock "];
-	subrace = "";
-	switch (race) {
-		case "Dwarf":
-			subrace = subraces[Math.floor(Math.random() * 2)];
-			break;
-		case "Elf":
-			subrace = subraces[Math.floor(Math.random() * 3) + 2];
-			break;
-		case "Halfling":
-			subrace = subraces[Math.floor(Math.random() * 2) + 5];
-			break;
-		case "Gnome":
-			subrace = subraces[Math.floor(Math.random() * 2) + 7];
-			break;
-		default:
-			subrace = "";
-	}
-	return "Race: " + subrace + race + " ";
+    races = ["Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling"];
+    race = races[Math.floor(Math.random() * 9)];
+    subraces = ["Hill ", "Mountain ", "High ", "Wood ", "Dark ", "Lightfoot ", "Stout ", "Forest ", "Rock "];
+    subrace = "";
+    switch (race) {
+        case "Dwarf":
+            subrace = subraces[Math.floor(Math.random() * 2)];
+            break;
+        case "Elf":
+            subrace = subraces[Math.floor(Math.random() * 3) + 2];
+            break;
+        case "Halfling":
+            subrace = subraces[Math.floor(Math.random() * 2) + 5];
+            break;
+        case "Gnome":
+            subrace = subraces[Math.floor(Math.random() * 2) + 7];
+            break;
+        default:
+            subrace = "";
+    }
+    return "Race: " + subrace + race + " ";
 }
 
 var classChoice = "";
 
 function setClass() {
-	var classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
+    var classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
     classChoice = classes[Math.floor(Math.random() * 11)]
-	return "Class: " + classChoice + " ";
+    return "Class: " + classChoice + " ";
 }
 
-var background = "";
+var backgroundSelect = "";
 var trait1 = "";
 var trait2 = "";
 var ideal = "";
 
 function setBackground() {
-	var backgrounds = ["Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Gladiator", "Guild Artisan", "Guild Merchant", "Hermit", "Knight", "Noble", "Outlander", "Pirate", "Sage", "Sailor", "Soldier", "Spy", "Urchin"];
-	background = backgrounds[Math.floor(Math.random() * 18)];
+    var backgrounds = ["Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Gladiator", "Guild Artisan", "Guild Merchant", "Hermit", "Knight", "Noble", "Outlander", "Pirate", "Sage", "Sailor", "Soldier", "Spy", "Urchin"];
+    backgroundSelect = backgrounds[Math.floor(Math.random() * 18)];
 
         //Personality Traits
 
-	 	var personalityTraitsAcolyte = [
+        var personalityTraitsAcolyte = [
             "I idolize a particular hero of my faith, and constantly refer to that person’s deeds and example.", 
             "I can find common ground between the fiercest enemies, empathizing with them and always working toward peace.", 
             "I see omens in every event and action. The gods try to speak to us, we just need to listen.", 
@@ -371,7 +371,7 @@ function setBackground() {
             "Aspiration. I'm going to prove that I'm worthy of a better life. (Any)"];
 
         
-        switch (background) {
+        switch (backgroundSelect) {
             case "Acolyte":
                 var index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsAcolyte[index];
@@ -382,7 +382,7 @@ function setBackground() {
                     trait2 = personalityTraitsAcolyte[index];
                 }
                 ideal = idealsAcolyte[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Charlatan":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsCharlatan[index];
@@ -393,7 +393,7 @@ function setBackground() {
                     trait2 = personalityTraitsCharlatan[index];
                 }
                 ideal = idealsCharlatan[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Criminal":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsCriminal[index];
@@ -404,7 +404,7 @@ function setBackground() {
                     trait2 = personalityTraitsCriminal[index];
                 }
                 ideal = idealsCriminal[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Entertainer":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsEntertainer[index];
@@ -415,7 +415,7 @@ function setBackground() {
                     trait2 = personalityTraitsEntertainer[index];
                 }
                 ideal = idealsEntertainer[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Folk Hero":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsFolkHero[index];
@@ -426,7 +426,7 @@ function setBackground() {
                     trait2 = personalityTraitsFolkHero[index];
                 }
                 ideal = idealsFolkHero[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Gladiator":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsGladiator[index];
@@ -437,7 +437,7 @@ function setBackground() {
                     trait2 = personalityTraitsGladiator[index];
                 }
                 ideal = idealsGladiator[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Guild Artisan":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsGuildArtisan[index];
@@ -448,7 +448,7 @@ function setBackground() {
                     trait2 = personalityTraitsGuildArtisan[index];
                 }
                 ideal = idealsGuildArtisan[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Guild Merchant":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsGuildMerchant[index];
@@ -459,7 +459,7 @@ function setBackground() {
                     trait2 = personalityTraitsGuildMerchant[index];
                 }
                 ideal = idealsGuildMerchant[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Hermit":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsHermit[index];
@@ -470,7 +470,7 @@ function setBackground() {
                     trait2 = personalityTraitsHermit[index];
                 }
                 ideal = idealsHermit[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Knight":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsKnight[index];
@@ -481,7 +481,7 @@ function setBackground() {
                     trait2 = personalityTraitsKnight[index];
                 }
                 ideal = idealsKnight[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Noble":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsNoble[index];
@@ -492,7 +492,7 @@ function setBackground() {
                     trait2 = personalityTraitsNoble[index];
                 }
                 ideal = idealsNoble[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Outlander":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsOutlander[index];
@@ -503,7 +503,7 @@ function setBackground() {
                     trait2 = personalityTraitsOutlander[index];
                 }
                 ideal = idealsOutlander[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Pirate":    
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsPirate[index];
@@ -514,7 +514,7 @@ function setBackground() {
                     trait2 = personalityTraitsPirate[index];
                 }
                 ideal = idealsPirate[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Sage":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsSage[index];
@@ -525,7 +525,7 @@ function setBackground() {
                     trait2 = personalityTraitsSage[index];
                 }
                 ideal = idealsSage[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Sailor":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsSailor[index];
@@ -536,7 +536,7 @@ function setBackground() {
                     trait2 = personalityTraitsSailor[index];
                 }
                 ideal = idealsSailor[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Soldier":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsSoldier[index];
@@ -547,7 +547,7 @@ function setBackground() {
                     trait2 = personalityTraitsSoldier[index];
                 }
                 ideal = idealsSoldier[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Spy":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsSpy[index];
@@ -558,7 +558,7 @@ function setBackground() {
                     trait2 = personalityTraitsSpy[index];
                 }
                 ideal = idealsSpy[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
             case "Urchin":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsUrchin[index];
@@ -569,7 +569,7 @@ function setBackground() {
                     trait2 = personalityTraitsUrchin[index];
                 }
                 ideal = idealsUrchin[Math.floor(Math.random() * 6)];
-                return "Background: " + background + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;         
+                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;         
     }
 }
 
@@ -661,7 +661,7 @@ function setAlignment(race, ideal) {
        
     }
     if (order == moral) 
-    	moral = " ";
+        moral = " ";
 
     return "Alignment: " + order + " " + moral;
 } 
@@ -872,7 +872,7 @@ var subracePrevious = subrace;
 
 var classChoicePrevious = classChoice;
 
-var backgroundPrevious = background;
+var backgroundPrevious = backgroundSelect;
 var trait1Previous = trait1;
 var trait2Previous = trait2;
 var idealPrevious = ideal;
@@ -890,43 +890,128 @@ var charismaPrevious = charisma;
 var charactersCreated = 0;
 
 function getCharacter() {
-	racePrevious = race;
-	subracePrevious = subrace;
+    racePrevious = race;
+    subracePrevious = subrace;
 
-	classChoicePrevious = classChoice;
+    classChoicePrevious = classChoice;
 
-	backgroundPrevious = background;
-	trait1Previous = trait1;
-	trait2Previous = trait2;
-	idealPrevious = ideal;
+    backgroundPrevious = backgroundSelect;
+    trait1Previous = trait1;
+    trait2Previous = trait2;
+    idealPrevious = ideal;
 
-	orderPrevious = order;
-	moralPrevious = moral;
+    orderPrevious = order;
+    moralPrevious = moral;
 
-	strengthPrevious = strength;
-	dexterityPrevious = dexterity;
-	constitutionPrevious = constitution;
-	intelligencePrevious = intelligence;
-	wisdomPrevious = wisdom;
-	charismaPrevious = charisma;
+    strengthPrevious = strength;
+    dexterityPrevious = dexterity;
+    constitutionPrevious = constitution;
+    intelligencePrevious = intelligence;
+    wisdomPrevious = wisdom;
+    charismaPrevious = charisma;
 
-	charactersCreated ++;
-	document.getElementById("charactersCreated").innerHTML = charactersCreated;
-	document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
-	document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice);
+    charactersCreated ++;
+    document.getElementById("charactersCreated").innerHTML = charactersCreated;
+    document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
+    document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice);
 }
 
 
 
 function getPreviousCharacter() {
-	if (charactersCreated >= 2) {
-		document.getElementById("consoleDescriptions").innerHTML = "Race: " + subracePrevious + racePrevious + 
-			"</br> Class: " + classChoicePrevious + 
-			"</br> Background: " + backgroundPrevious + 
-			"</br> Personality Trait One: " + trait1Previous + "</br> Personality Trait Two: " + trait2Previous + "</br>" + "Ideal: " + idealPrevious + 
-			"</br> Alignment: " + orderPrevious + " " + moralPrevious;
-		document.getElementById("consoleStatistics").innerHTML = "Strength: " + strengthPrevious + "</br> Dexterity: " + dexterityPrevious + "</br> Constitution: " + constitutionPrevious + "</br> Intelligence: " + intelligencePrevious + "</br> Wisdom: " + wisdomPrevious + "</br> Charisma: " + charismaPrevious;
-	}
+    if (charactersCreated >= 2) {
+        document.getElementById("consoleDescriptions").innerHTML = "Race: " + subracePrevious + racePrevious + 
+            "</br> Class: " + classChoicePrevious + 
+            "</br> Background: " + backgroundPrevious + 
+            "</br> Personality Trait One: " + trait1Previous + "</br> Personality Trait Two: " + trait2Previous + "</br>" + "Ideal: " + idealPrevious + 
+            "</br> Alignment: " + orderPrevious + " " + moralPrevious;
+        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strengthPrevious + "</br> Dexterity: " + dexterityPrevious + "</br> Constitution: " + constitutionPrevious + "</br> Intelligence: " + intelligencePrevious + "</br> Wisdom: " + wisdomPrevious + "</br> Charisma: " + charismaPrevious;
+    }
 }
 
+var save = " ";
 
+function saveCharacter() {
+    save = {
+        race: race,
+        subrace: subrace,
+        classChoice: classChoice,
+        backgroundSelect: backgroundSelect,
+        trait1: trait1,
+        trait2: trait2,
+        ideal: ideal,
+        order: order,
+        moral: moral,
+        strength: strength,
+        dexterity: dexterity,
+        constitution: constitution,
+        intelligence: intelligence,
+        wisdom: wisdom,
+        charisma: charisma,
+        racePrevious: racePrevious,
+        subracePrevious: subracePrevious,
+        classChoicePrevious: classChoicePrevious,
+        backgroundPrevious: backgroundPrevious,
+        trait1Previous: trait1Previous,
+        trait2Previous: trait2Previous,
+        idealPrevious: idealPrevious,
+        orderPrevious: orderPrevious,
+        moralPrevious: moralPrevious,
+        strengthPrevious: strengthPrevious,
+        dexterityPrevious: dexterityPrevious,
+        constitutionPrevious: constitutionPrevious,
+        intelligencePrevious: intelligencePrevious,
+        wisdomPrevious: wisdomPrevious,
+        charismaPrevious: charismaPrevious,
+        charactersCreated: charactersCreated
+    }
+    localStorage.setItem("save", JSON.stringify(save));
+}
+
+function loadCharacter() {
+    if (save !== " ") {
+        var saveinfo = JSON.parse(localStorage.getItem("save"));
+        if (typeof saveinfo.race !== "undefined") race = saveinfo.race;
+        if (typeof saveinfo.subrace !== "undefined") subrace = saveinfo.subrace;
+        if (typeof saveinfo.classChoice !== "undefined") classChoice = saveinfo.classChoice;
+        if (typeof saveinfo.backgroundSelect !== "undefined") backgroundSelect = saveinfo.backgroundSelect;
+        if (typeof saveinfo.trait1 !== "undefined") trait1 = saveinfo.trait1;
+        if (typeof saveinfo.trait2 !== "undefined") trait2 = saveinfo.trait2;
+        if (typeof saveinfo.ideal !== "undefined") ideal = saveinfo.ideal;
+        if (typeof saveinfo.order !== "undefined") order = saveinfo.order;
+        if (typeof saveinfo.moral !== "undefined") moral = saveinfo.moral;    
+        if (typeof saveinfo.strength !== "undefined") strength = saveinfo.strength;
+        if (typeof saveinfo.dexterity !== "undefined") dexterity = saveinfo.dexterity;
+        if (typeof saveinfo.constitution !== "undefined") constitution = saveinfo.constitution;
+        if (typeof saveinfo.intelligence !== "undefined") intelligence = saveinfo.intelligence;    
+        if (typeof saveinfo.wisdom !== "undefined") wisdom = saveinfo.wisdom;
+        if (typeof saveinfo.charisma !== "undefined") charisma = saveinfo.charisma;    
+        if (typeof saveinfo.racePrevious !== "undefined") racePrevious = saveinfo.racePrevious;
+        if (typeof saveinfo.subracePrevious !== "undefined") subracePrevious = saveinfo.subracePrevious;    
+        if (typeof saveinfo.classChoicePrevious !== "undefined") classChoicePrevious = saveinfo.classChoicePrevious;
+        if (typeof saveinfo.backgroundPrevious !== "undefined") backgroundPrevious = saveinfo.backgroundPrevious;    
+        if (typeof saveinfo.trait1Previous !== "undefined") trait1Previous = saveinfo.trait1Previous;
+        if (typeof saveinfo.trait2Previous !== "undefined") trait2Previous = saveinfo.trait2Previous;    
+        if (typeof saveinfo.idealPrevious !== "undefined") idealPrevious = saveinfo.idealPrevious;
+        if (typeof saveinfo.orderPrevious !== "undefined") orderPrevious = saveinfo.orderPrevious;    
+        if (typeof saveinfo.moralPrevious !== "undefined") moralPrevious = saveinfo.moralPrevious;
+        if (typeof saveinfo.strengthPrevious !== "undefined") strengthPrevious = saveinfo.strengthPrevious;
+        if (typeof saveinfo.dexterityPrevious !== "undefined") dexterityPrevious = saveinfo.dexterityPrevious;
+        if (typeof saveinfo.constitutionPrevious !== "undefined") constitutionPrevious = saveinfo.constitutionPrevious;
+        if (typeof saveinfo.intelligencePrevious !== "undefined") intelligencePrevious = saveinfo.intelligencePrevious;
+        if (typeof saveinfo.wisdomPrevious !== "undefined") wisdomPrevious = saveinfo.wisdomPrevious;
+        if (typeof saveinfo.charismaPrevious !== "undefined") charismaPrevious = saveinfo.charismaPrevious;
+        if (typeof saveinfo.charactersCreated !== "undefined") charactersCreated = saveinfo.charactersCreated;
+        document.getElementById("consoleDescriptions").innerHTML = "Race: " + subrace + race + 
+                "</br> Class: " + classChoice + 
+                "</br> Background: " + backgroundSelect + 
+                "</br> Personality Trait One: " + trait1 + "</br> Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal + 
+                "</br> Alignment: " + order + " " + moral;
+        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strength + "</br> Dexterity: " + dexterity + "</br> Constitution: " + constitution + "</br> Intelligence: " + intelligence + "</br> Wisdom: " + wisdom + "</br> Charisma: " + charisma;
+    } 
+}
+
+function deleteCharacter() {
+    localStorage.removeItem("save");
+    location.reload();
+}
