@@ -8,13 +8,13 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body onload="loadCharacter()">
+<body onload="getCharacter(); loadCharacter(); saveCharacter()">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col">
 				<div class="btn-group fixed-top d-flex" role="group">
 					<button class="btn btn-outline-primary flex-fill" onclick="getPreviousCharacter(); saveCharacter()">Previous Character</button>
-				    <button class="btn btn-outline-primary flex-fill" onclick="getCharacter(); saveCharacter()">Create Character <span id="charactersCreated">1</span></button>
+				    <button class="btn btn-outline-primary flex-fill" onclick="getCharacter(); saveCharacter()">Create Character</button>
 				</div>
 			</div>
 			<div class="col-12">
