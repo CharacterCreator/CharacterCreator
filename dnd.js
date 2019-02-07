@@ -890,7 +890,6 @@ var charismaPrevious = charisma;
 var charactersCreated = 0;
 
 function getCharacter() {
-    if ("save" == "undefined") {
     racePrevious = race;
     subracePrevious = subrace;
 
@@ -915,7 +914,6 @@ function getCharacter() {
     document.getElementById("charactersCreated").innerHTML = charactersCreated;
     document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
     document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice);
-    }
 }
 
 
