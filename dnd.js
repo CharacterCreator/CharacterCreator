@@ -919,7 +919,11 @@ function getCharacter() {
 
 
 function getPreviousCharacter() {
-	document.getElementById("consoleDescriptions").innerHTML = "Race: " + subracePrevious + racePrevious + "</br>" + "Class: " + classChoicePrevious + "</br>" + "Background: " + backgroundPrevious + "</br>" + "Personality Trait One: " + trait1Previous + "</br>" + "Personality Trait Two: " + trait2Previous + "</br>" + "Ideal: " + idealPrevious + "</br>" + "Alignment: " + order + " " + moral;
+	document.getElementById("consoleDescriptions").innerHTML = "Race: " + subracePrevious + racePrevious + 
+		"</br> Class: " + classChoicePrevious + 
+		"</br> Background: " + backgroundPrevious + 
+		"</br> Personality Trait One: " + trait1Previous + "</br> Personality Trait Two: " + trait2Previous + "</br>" + "Ideal: " + idealPrevious + 
+		"</br> Alignment: " + order + " " + moral;
 	document.getElementById("consoleStatistics").innerHTML = "Strength: " + strengthPrevious + "</br> Dexterity: " + dexterityPrevious + "</br> Constitution: " + constitutionPrevious + "</br> Intelligence: " + intelligencePrevious + "</br> Wisdom: " + wisdomPrevious + "</br> Charisma: " + charismaPrevious;
 }
 
