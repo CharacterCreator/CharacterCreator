@@ -919,7 +919,7 @@ function getCharacter() {
 
 
 function getPreviousCharacter() {
-	if (charactersCreated >= 1) {
+	if (charactersCreated >= 2) {
 		document.getElementById("consoleDescriptions").innerHTML = "Race: " + subracePrevious + racePrevious + 
 			"</br> Class: " + classChoicePrevious + 
 			"</br> Background: " + backgroundPrevious + 
