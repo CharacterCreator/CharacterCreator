@@ -929,10 +929,8 @@ function getPreviousCharacter() {
     }
 }
 
-var save = " ";
-
 function saveCharacter() {
-    save = {
+    var save = {
         race: race,
         subrace: subrace,
         classChoice: classChoice,
@@ -969,7 +967,7 @@ function saveCharacter() {
 }
 
 function loadCharacter() {
-    if (save !== " ") {
+    if ("save" !== "undefined") {
         var saveinfo = JSON.parse(localStorage.getItem("save"));
         if (typeof saveinfo.race !== "undefined") race = saveinfo.race;
         if (typeof saveinfo.subrace !== "undefined") subrace = saveinfo.subrace;
