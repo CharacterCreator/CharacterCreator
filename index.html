@@ -11,6 +11,12 @@
 <body onload="getCharacter()">
 	<div class="container-fluid">
 		<div class="row">
+			<div class="col">
+				<div class="btn-group fixed-top d-flex" role="group">
+					<button class="btn btn-outline-primary flex-fill" onclick="getPreviousCharacter()">Previous Character</button>
+				    <button class="btn btn-outline-primary flex-fill" onclick="getCharacter()">Create Character <span id="charactersCreated">1</span></button>
+				</div>
+			</div>
 			<div class="col-12">
 				</br></br>
 				<h4>Descriptions</h4>
@@ -18,12 +24,6 @@
 		                <hr>
 				<h4>Statistics</h4>
 				<span id="consoleStatistics"></span>
-			</div>
-			<div class="col">
-				<div class="btn-group sticky-top" role="group">
-					<button class="btn btn-outline-primary btn-block">Previous Character</button>
-				        <button class="btn btn-outline-primary btn-block" onclick="getCharacter()">Create Character</button>
-				</div>
 			</div>
 		</div>
 	</div>
