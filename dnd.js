@@ -889,31 +889,36 @@ var charismaPrevious = charisma;
 
 var charactersCreated = 0;
 
+var save = localStorage.getItem("save");
+
+if (save == null) {
+	save = undefined;
+}
+
 function getCharacter() {
-    racePrevious = race;
-    subracePrevious = subrace;
+		racePrevious = race;
+	    subracePrevious = subrace;
 
-    classChoicePrevious = classChoice;
+	    classChoicePrevious = classChoice;
 
-    backgroundPrevious = backgroundSelect;
-    trait1Previous = trait1;
-    trait2Previous = trait2;
-    idealPrevious = ideal;
+	    backgroundPrevious = backgroundSelect;
+	    trait1Previous = trait1;
+	    trait2Previous = trait2;
+	    idealPrevious = ideal;
 
-    orderPrevious = order;
-    moralPrevious = moral;
+	    orderPrevious = order;
+	    moralPrevious = moral;
 
-    strengthPrevious = strength;
-    dexterityPrevious = dexterity;
-    constitutionPrevious = constitution;
-    intelligencePrevious = intelligence;
-    wisdomPrevious = wisdom;
-    charismaPrevious = charisma;
+	    strengthPrevious = strength;
+	    dexterityPrevious = dexterity;
+	    constitutionPrevious = constitution;
+	    intelligencePrevious = intelligence;
+	    wisdomPrevious = wisdom;
+	    charismaPrevious = charisma;
 
-    charactersCreated ++;
-    document.getElementById("charactersCreated").innerHTML = charactersCreated;
-    document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
-    document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice);
+	    charactersCreated ++;
+	    document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
+	    document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice);
 }
 
 
@@ -930,7 +935,7 @@ function getPreviousCharacter() {
 }
 
 function saveCharacter() {
-    var save = {
+    save = {
         race: race,
         subrace: subrace,
         classChoice: classChoice,
@@ -967,7 +972,7 @@ function saveCharacter() {
 }
 
 function loadCharacter() {
-    if ("save" !== "undefined") {
+    if (save !== undefined) {
         var saveinfo = JSON.parse(localStorage.getItem("save"));
         if (typeof saveinfo.race !== "undefined") race = saveinfo.race;
         if (typeof saveinfo.subrace !== "undefined") subrace = saveinfo.subrace;
@@ -1010,6 +1015,6 @@ function loadCharacter() {
 }
 
 function deleteCharacter() {
-    localStorage.removeItem("save");
     location.reload();
+    localStorage.removeItem("save");
 }
