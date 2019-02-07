@@ -924,7 +924,7 @@ function getPreviousCharacter() {
 			"</br> Class: " + classChoicePrevious + 
 			"</br> Background: " + backgroundPrevious + 
 			"</br> Personality Trait One: " + trait1Previous + "</br> Personality Trait Two: " + trait2Previous + "</br>" + "Ideal: " + idealPrevious + 
-			"</br> Alignment: " + order + " " + moral;
+			"</br> Alignment: " + orderPrevious + " " + moralPrevious;
 		document.getElementById("consoleStatistics").innerHTML = "Strength: " + strengthPrevious + "</br> Dexterity: " + dexterityPrevious + "</br> Constitution: " + constitutionPrevious + "</br> Intelligence: " + intelligencePrevious + "</br> Wisdom: " + wisdomPrevious + "</br> Charisma: " + charismaPrevious;
 	}
 }
