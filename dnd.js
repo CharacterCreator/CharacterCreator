@@ -1,15 +1,4 @@
-/*
-    Turned the setRace and setSubRace methods into one function.
-    Turned the setClass method into a function.
-    Turned setBackground, setPersonalityTraits, and setIdeals (eventually setBonds and setFlaws) into one function.
-    Turned setAlignment into a function.
-*/
-/*
-    Bug List
-*/
-var races = "";
 var race = "";
-var subraces = "";
 var subrace = ""
 
 function setRace() {
@@ -677,20 +666,8 @@ function setAlignment(race, ideal) {
     return "Alignment: " + order + " " + moral;
 } 
 
-/*var speed = 25;
-
-function setSpeed(race, subrace) {
-	if (subrace == "Wood ")
-		speed += 10;
-	else if ()
-
-}*/
-
 var primary = 0;
 var secondary = 0;
-var scoresTemp = [0, 0, 0, 0, 0, 0];
-
-var scores = [0, 0, 0, 0, 0, 0];
 
 var strength = 0;
 var dexterity = 0;
@@ -700,15 +677,18 @@ var wisdom = 0;
 var charisma = 0;
 
 function generateScores(primary, secondary, race, subrace, classChoice) {
+    var primary = 0;
+    var secondary = 0;
+    var scoresTemp = [0, 0, 0, 0, 0, 0];
+    var scores = [0, 0, 0, 0, 0, 0];
+
     strength = 0;
     dexterity = 0;
     constitution = 0;
     intelligence = 0;
     wisdom = 0;
     charisma = 0;
-    scoresTemp = [0, 0, 0, 0, 0, 0];
-    scores = [0, 0, 0, 0, 0, 0];
-
+    
     switch (race) {
         case "Dwarf":
             scores[2] += 2;
@@ -887,7 +867,60 @@ function generateScores(primary, secondary, race, subrace, classChoice) {
     return "Strength: " + strength + "</br> Dexterity: " + dexterity + "</br> Constitution: " + constitution + "</br> Intelligence: " + intelligence + "</br> Wisdom: " + wisdom + "</br> Charisma: " + charisma;
 }
 
+var racePrevious = race;
+var subracePrevious = subrace;
+
+var classChoicePrevious = classChoice;
+
+var backgroundPrevious = background;
+var trait1Previous = trait1;
+var trait2Previous = trait2;
+var idealPrevious = ideal;
+
+var orderPrevious = order;
+var moralPrevious = moral;
+
+var strengthPrevious = strength;
+var dexterityPrevious = dexterity;
+var constitutionPrevious = constitution;
+var intelligencePrevious = intelligence;
+var wisdomPrevious = wisdom;
+var charismaPrevious = charisma;
+
+var charactersCreated = 0;
+
 function getCharacter() {
+	racePrevious = race;
+	subracePrevious = subrace;
+
+	classChoicePrevious = classChoice;
+
+	backgroundPrevious = background;
+	trait1Previous = trait1;
+	trait2Previous = trait2;
+	idealPrevious = ideal;
+
+	orderPrevious = order;
+	moralPrevious = moral;
+
+	strengthPrevious = strength;
+	dexterityPrevious = dexterity;
+	constitutionPrevious = constitution;
+	intelligencePrevious = intelligence;
+	wisdomPrevious = wisdom;
+	charismaPrevious = charisma;
+
+	charactersCreated ++;
+	document.getElementById("charactersCreated").innerHTML = charactersCreated;
 	document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
 	document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice);
 }
+
+
+
+function getPreviousCharacter() {
+	document.getElementById("consoleDescriptions").innerHTML = "Race: " + subracePrevious + racePrevious + "</br>" + "Class: " + classChoicePrevious + "</br>" + "Background: " + backgroundPrevious + "</br>" + "Personality Trait One: " + trait1Previous + "</br>" + "Personality Trait Two: " + trait2Previous + "</br>" + "Ideal: " + idealPrevious + "</br>" + "Alignment: " + order + " " + moral;
+	document.getElementById("consoleStatistics").innerHTML = "Strength: " + strengthPrevious + "</br> Dexterity: " + dexterityPrevious + "</br> Constitution: " + constitutionPrevious + "</br> Intelligence: " + intelligencePrevious + "</br> Wisdom: " + wisdomPrevious + "</br> Charisma: " + charismaPrevious;
+}
+
+
