@@ -28,10 +28,14 @@ function setRace() {
 }
 
 var classChoice = "";
+var hitDie = 0;
 
 function setClass() {
     var classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
-    classChoice = classes[Math.floor(Math.random() * 11)]
+    var hitDice = [12, 8, 8, 8, 10, 8, 10, 10, 8, 6, 8, 6];
+    var index = Math.floor(Math.random() * 11);
+    classChoice = classes[index];
+    hitDie = hitDice[index];
     return "Class: " + classChoice + " ";
 }
 
@@ -869,6 +873,20 @@ function generateScores(primary, secondary, race, subrace, classChoice) {
     return "Strength: " + strength + "</br> Dexterity: " + dexterity + "</br> Constitution: " + constitution + "</br> Intelligence: " + intelligence + "</br> Wisdom: " + wisdom + "</br> Charisma: " + charisma;
 }
 
+var maxHP = 0;
+
+function setHealth() {
+    if (constitution >= 10)
+        maxHP = hitDie + Math.floor((constitution - 10) / 2);
+    else if (constitution % 2 == 0)
+        maxHP = hitDie + Math.floor((constitution - 10) / 2);
+    else
+        maxHP = hitDie + Math.floor(constitution - 10 - 0.5) / 2;
+    if (maxHP <= 0)
+        maxHP = 1;
+    return "Max HP: " + maxHP;
+}
+
 var racePrevious = race;
 var subracePrevious = subrace;
 
@@ -888,6 +906,8 @@ var constitutionPrevious = constitution;
 var intelligencePrevious = intelligence;
 var wisdomPrevious = wisdom;
 var charismaPrevious = charisma;
+
+var healthPrevious = maxHP;
 
 var charactersCreated = 0;
 
@@ -918,9 +938,11 @@ function getCharacter() {
 	    wisdomPrevious = wisdom;
 	    charismaPrevious = charisma;
 
+        healthPrevious = maxHP;
+
 	    charactersCreated ++;
 	    document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
-	    document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice);
+	    document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice) + "</br>" + setHealth();
 }
 
 
@@ -932,7 +954,7 @@ function getPreviousCharacter() {
             "</br> Background: " + backgroundPrevious + 
             "</br> Personality Trait One: " + trait1Previous + "</br> Personality Trait Two: " + trait2Previous + "</br>" + "Ideal: " + idealPrevious + 
             "</br> Alignment: " + orderPrevious + " " + moralPrevious;
-        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strengthPrevious + "</br> Dexterity: " + dexterityPrevious + "</br> Constitution: " + constitutionPrevious + "</br> Intelligence: " + intelligencePrevious + "</br> Wisdom: " + wisdomPrevious + "</br> Charisma: " + charismaPrevious;
+        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strengthPrevious + "</br> Dexterity: " + dexterityPrevious + "</br> Constitution: " + constitutionPrevious + "</br> Intelligence: " + intelligencePrevious + "</br> Wisdom: " + wisdomPrevious + "</br> Charisma: " + charismaPrevious + "</br> Max HP: " + healthPrevious;
     }
 }
 
@@ -968,6 +990,7 @@ function saveCharacter() {
         intelligencePrevious: intelligencePrevious,
         wisdomPrevious: wisdomPrevious,
         charismaPrevious: charismaPrevious,
+        healthPrevious: healthPrevious,
         charactersCreated: charactersCreated
     }
     localStorage.setItem("save", JSON.stringify(save));
@@ -1006,13 +1029,14 @@ function loadCharacter() {
         if (typeof saveinfo.intelligencePrevious !== "undefined") intelligencePrevious = saveinfo.intelligencePrevious;
         if (typeof saveinfo.wisdomPrevious !== "undefined") wisdomPrevious = saveinfo.wisdomPrevious;
         if (typeof saveinfo.charismaPrevious !== "undefined") charismaPrevious = saveinfo.charismaPrevious;
+        if (typeof saveinfo.healthPrevious !== "undefined") healthPrevious = saveinfo.healthPrevious;
         if (typeof saveinfo.charactersCreated !== "undefined") charactersCreated = saveinfo.charactersCreated;
         document.getElementById("consoleDescriptions").innerHTML = "Race: " + subrace + race + 
                 "</br> Class: " + classChoice + 
                 "</br> Background: " + backgroundSelect + 
                 "</br> Personality Trait One: " + trait1 + "</br> Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal + 
                 "</br> Alignment: " + order + " " + moral;
-        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strength + "</br> Dexterity: " + dexterity + "</br> Constitution: " + constitution + "</br> Intelligence: " + intelligence + "</br> Wisdom: " + wisdom + "</br> Charisma: " + charisma;
+        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strength + "</br> Dexterity: " + dexterity + "</br> Constitution: " + constitution + "</br> Intelligence: " + intelligence + "</br> Wisdom: " + wisdom + "</br> Charisma: " + charisma + "</br> Max HP: " + healthPrevious;
     } 
 }
 
