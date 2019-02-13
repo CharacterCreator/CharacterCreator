@@ -682,11 +682,19 @@ var intelligence = 0;
 var wisdom = 0;
 var charisma = 0;
 
+var strMod = 0;
+var dexMod = 0;
+var conMod = 0;
+var intMod = 0;
+var wisMod = 0;
+var chaMod = 0;
+
 function generateScores(primary, secondary, race, subrace, classChoice) {
     var primary = 0;
     var secondary = 0;
     var scoresTemp = [0, 0, 0, 0, 0, 0];
     var scores = [0, 0, 0, 0, 0, 0];
+    var mods = [0, 0, 0, 0, 0, 0];
 
     strength = 0;
     dexterity = 0;
@@ -870,18 +878,67 @@ function generateScores(primary, secondary, race, subrace, classChoice) {
     wisdom = scores[4];
     charisma = scores[5];
 
-    return "Strength: " + strength + "</br> Dexterity: " + dexterity + "</br> Constitution: " + constitution + "</br> Intelligence: " + intelligence + "</br> Wisdom: " + wisdom + "</br> Charisma: " + charisma;
+    if (strength >= 10)
+        mods[0] = Math.floor((strength - 10) / 2);
+    else if (strength % 2 == 0)
+        mods[0] = Math.floor((strength - 10) / 2);
+    else
+        mods[0] = Math.floor((strength - 10.5) / 2);
+
+    if (dexterity >= 10)
+        mods[1] = Math.floor((dexterity - 10) / 2);
+    else if (dexterity % 2 == 0)
+        mods[1] = Math.floor((dexterity - 10) / 2);
+    else
+        mods[1] = Math.floor((dexterity - 10.5) / 2);
+
+    if (constitution >= 10)
+        mods[2] = Math.floor((constitution - 10) / 2);
+    else if (constitution % 2 == 0)
+        mods[2] = Math.floor((constitution - 10) / 2);
+    else
+        mods[2] = Math.floor((constitution - 10.5) / 2);
+
+    if (intelligence >= 10)
+        mods[3] = Math.floor((intelligence - 10) / 2);
+    else if (intelligence % 2 == 0)
+        mods[3] = Math.floor((intelligence - 10) / 2);
+    else
+        mods[3] = Math.floor((intelligence - 10.5) / 2);
+
+    if (wisdom >= 10)
+        mods[4] = Math.floor((wisdom - 10) / 2);
+    else if (wisdom % 2 == 0)
+        mods[4] = Math.floor((wisdom - 10) / 2);
+    else
+        mods[4] = Math.floor((wisdom - 10.5) / 2);
+
+    if (charisma >= 10)
+        mods[5] = Math.floor((charisma - 10) / 2);
+    else if (charisma % 2 == 0)
+        mods[5] = Math.floor((charisma - 10) / 2);
+    else
+        mods[5] = Math.floor((charisma - 10.5) / 2);
+
+    strMod = mods[0];
+    dexMod = mods[1];
+    conMod = mods[2];
+    intMod = mods[3];
+    wisMod = mods[4];
+    chaMod = mods[5];
+
+    for (var e = 0; e < mods.length; e++) {
+        if (mods[e] >= 0)
+            mods[e] = "+" + mods[e];
+    }
+
+    return "Strength: " + strength + " (" + mods[0] + ")</br> Dexterity: " + dexterity + " (" + mods[1] + ")</br> Constitution: " + constitution + " (" + mods[2] + ")</br> Intelligence: " + intelligence + " (" + mods[3] + ")</br> Wisdom: " + wisdom + " (" + mods[4] + ")</br> Charisma: " + charisma + " (" + mods[5] + ")";
 }
 
 var maxHP = 0;
 
 function setHealth() {
-    if (constitution >= 10)
-        maxHP = hitDie + Math.floor((constitution - 10) / 2);
-    else if (constitution % 2 == 0)
-        maxHP = hitDie + Math.floor((constitution - 10) / 2);
-    else
-        maxHP = hitDie + Math.floor(constitution - 10 - 0.5) / 2;
+    maxHP = hitDie + conMod;
     if (maxHP <= 0)
         maxHP = 1;
     return "Max HP: " + maxHP;
@@ -938,6 +995,13 @@ function getCharacter() {
 	    wisdomPrevious = wisdom;
 	    charismaPrevious = charisma;
 
+        strModPrevious = strMod;
+        dexModPrevious = dexMod;
+        conModPrevious = conMod;
+        intModPrevious = intMod;
+        wisModPrevious = wisMod;
+        chaModPrevious = chaMod;
+
         healthPrevious = maxHP;
 
 	    charactersCreated ++;
@@ -991,6 +1055,12 @@ function saveCharacter() {
         wisdomPrevious: wisdomPrevious,
         charismaPrevious: charismaPrevious,
         healthPrevious: healthPrevious,
+        strModPrevious: strModPrevious,
+        dexModPrevious: dexModPrevious,
+        conModPrevious: conModPrevious,
+        intModPrevious: intModPrevious,
+        wisModPrevious: wisModPrevious,
+        chaModPrevious: chaModPrevious,
         charactersCreated: charactersCreated
     }
     localStorage.setItem("save", JSON.stringify(save));
