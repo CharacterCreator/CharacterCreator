@@ -1,5 +1,3 @@
-//Test
-
 var race = "";
 var subrace = ""
 
@@ -682,6 +680,15 @@ var intelligence = 0;
 var wisdom = 0;
 var charisma = 0;
 
+var mods = [0, 0, 0, 0, 0, 0];
+
+var strMod = 0;
+var dexMod = 0;
+var conMod = 0;
+var intMod = 0;
+var wisMod = 0;
+var chaMod = 0;
+
 function generateScores(primary, secondary, race, subrace, classChoice) {
     var primary = 0;
     var secondary = 0;
@@ -870,24 +877,73 @@ function generateScores(primary, secondary, race, subrace, classChoice) {
     wisdom = scores[4];
     charisma = scores[5];
 
-    return "Strength: " + strength + "</br> Dexterity: " + dexterity + "</br> Constitution: " + constitution + "</br> Intelligence: " + intelligence + "</br> Wisdom: " + wisdom + "</br> Charisma: " + charisma;
+    mods = [0, 0, 0, 0, 0, 0];
+
+    if (strength >= 10)
+        mods[0] = Math.floor((strength - 10) / 2);
+    else if (strength % 2 == 0)
+        mods[0] = Math.floor((strength - 10) / 2);
+    else
+        mods[0] = Math.floor((strength - 10.5) / 2);
+
+    if (dexterity >= 10)
+        mods[1] = Math.floor((dexterity - 10) / 2);
+    else if (dexterity % 2 == 0)
+        mods[1] = Math.floor((dexterity - 10) / 2);
+    else
+        mods[1] = Math.floor((dexterity - 10.5) / 2);
+
+    if (constitution >= 10)
+        mods[2] = Math.floor((constitution - 10) / 2);
+    else if (constitution % 2 == 0)
+        mods[2] = Math.floor((constitution - 10) / 2);
+    else
+        mods[2] = Math.floor((constitution - 10.5) / 2);
+
+    if (intelligence >= 10)
+        mods[3] = Math.floor((intelligence - 10) / 2);
+    else if (intelligence % 2 == 0)
+        mods[3] = Math.floor((intelligence - 10) / 2);
+    else
+        mods[3] = Math.floor((intelligence - 10.5) / 2);
+
+    if (wisdom >= 10)
+        mods[4] = Math.floor((wisdom - 10) / 2);
+    else if (wisdom % 2 == 0)
+        mods[4] = Math.floor((wisdom - 10) / 2);
+    else
+        mods[4] = Math.floor((wisdom - 10.5) / 2);
+
+    if (charisma >= 10)
+        mods[5] = Math.floor((charisma - 10) / 2);
+    else if (charisma % 2 == 0)
+        mods[5] = Math.floor((charisma - 10) / 2);
+    else
+        mods[5] = Math.floor((charisma - 10.5) / 2);
+
+    strMod = mods[0];
+    dexMod = mods[1];
+    conMod = mods[2];
+    intMod = mods[3];
+    wisMod = mods[4];
+    chaMod = mods[5];
+
+    for (var e = 0; e < mods.length; e++) {
+        if (mods[e] >= 0)
+            mods[e] = "+" + mods[e];
+    }
+
+    return "Strength: " + strength + " (" + mods[0] + ")</br> Dexterity: " + dexterity + " (" + mods[1] + ")</br> Constitution: " + constitution + " (" + mods[2] + ")</br> Intelligence: " + intelligence + " (" + mods[3] + ")</br> Wisdom: " + wisdom + " (" + mods[4] + ")</br> Charisma: " + charisma + " (" + mods[5] + ")";
 }
 
 var maxHP = 0;
 
 function setHealth() {
-    if (constitution >= 10)
-        maxHP = hitDie + Math.floor((constitution - 10) / 2);
-    else if (constitution % 2 == 0)
-        maxHP = hitDie + Math.floor((constitution - 10) / 2);
-    else
-        maxHP = hitDie + Math.floor(constitution - 10 - 0.5) / 2;
+    maxHP = hitDie + conMod;
     if (maxHP <= 0)
         maxHP = 1;
     return "Max HP: " + maxHP;
 }
-
-var speed = 0;
 
 //Return when higher levels are implemented
 function setSpeed() {
@@ -899,6 +955,173 @@ function setSpeed() {
 		raceMod += 5;
 	speed = baseSpeed + raceMod;
 	return "Speed: " + speed;
+}
+
+//0:STR, 1:DEX, 2:CON, 3:INT, 4:WIS, 5:CHA
+var saveProficiencies = [0, 0, 0, 0, 0, 0];
+//[0:Athletics], [1:Acrobatics, 2:Sleight of Hand, 3:Stealth], [4:Arcana, 5:History, 6:Investigation, 7:Nature, 8:Religion], [9:Animal Handling, 10:Insight, 11:Medicine, 12:Perception, 13:Survival], [14: Deception, 15:Intimidation, 16: Performance, 17:Persuasion]
+var skillProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+//0:Light, 1:Medium, 2:Heavy, 3:Shields
+var armorProficiencies = [0, 0, 0, 0];
+//0:Simple Melee, 1:Simple Ranged, 2:Martial Melee, 3:Martial Ranged
+var weaponTypeProficiencies = [0, 0, 0, 0];
+//Simple Melee: 0:Club, 1:Dagger, 2:Greatclub, 3:Handaxe, 4:Javelin, 5:Light Hammer, 6:Mace, 7:Quarterstaff, 8:Sickle, 9:Spear
+//Simple Ranged: 10:Light Crossbow, 11:Dart, 12:Shortbow, 13:Sling
+//Martial Melee: 14:Battleaxe, 15:Flail, 16:Glaive, 17:Greataxe, 18:Greatsword, 19:Halberd, 20:Lance, 21:Longsword, 22:Maul, 23:Morningstar, 24:Pike, 25:Rapier, 26:Scimitar, 27:Shortsword, 28:Trident, 29:War Pick, 30:Warhammer, 31:Whip
+//Martial Ranged: 32:Blowgun, 33:Hand Crossbow, 34:Heavy Crossbow, 35:Longbow, 36:Net
+var weaponProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+//0:Alchemist's Supplies, 1:Brewer's Supplies, 2: Calligrapher's Supplies, 3:Carpenter's Tools, 4: Cartographer's Tools, 5:Cobbler's Tools, 6:Cook's Utensils, 7:Glassblower's Tools, 8:Herbalism Kit, 9:Jeweler's Tools, 10:Leatherworker's Tools, 11:Mason's Tools, 12:Navigator's Tools, 13:Painter's Supplies, 14:Potter's Tools, 15:Smith's Tools, 16:Thieves' Tools, 17:Tinker's Tools, 18:Weaver's Tools, 19:Woodcarver's Tools
+var toolProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+//0:Dice Set, 1:Playing Card Set, 2:Dragonchess Set
+var gamingProficiencies = [0, 0, 0];
+//0:Bagpipes, 1:Drum, 2:Dulcimer, 3:Flute, 4:Lute, 5:Lyre, 6:Horn, 7:Pan Flute, 8:Shawm, 9:Viol
+var instrumentProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+function setProficiencies() {
+	switch(classChoice) {
+		case "Barbarian":
+			saveProficiencies[0] = 1;
+			saveProficiencies[2] = 1;
+			armorProficiencies[0] = 1;
+			armorProficiencies[1] = 1;
+			armorProficiencies[3] = 1;
+			weaponTypeProficiencies[0] = 1;
+			weaponTypeProficiencies[1] = 1;
+			weaponTypeProficiencies[2] = 1;
+			weaponTypeProficiencies[3] = 1;
+			//skills
+			break;
+		case "Bard":
+			saveProficiencies[1] = 1;
+			saveProficiencies[5] = 1;
+			armorProficiencies[0] = 1;
+			weaponTypeProficiencies[0] = 1;
+			weaponTypeProficiencies[1] = 1;
+			weaponProficiencies[21] = 1;
+			weaponProficiencies[25] = 1;
+			weaponProficiencies[27] = 1;
+			weaponProficiencies[33] = 1;
+			//instruments
+			//skills
+			break;
+		case "Cleric":
+			saveProficiencies[4] = 1;
+			saveProficiencies[5] = 1;
+			armorProficiencies[0] = 1;
+			armorProficiencies[1] = 1;
+			armorProficiencies[3] = 1;
+			weaponTypeProficiencies[0] = 1;
+			weaponTypeProficiencies[1] = 1;
+			//skills
+			break;
+		case "Druid":
+			saveProficiencies[3] = 1;
+			saveProficiencies[4] = 1;
+			armorProficiencies[0] = 1;
+			armorProficiencies[1] = 1;
+			armorProficiencies[3] = 1;
+			weaponProficiencies[0] = 1;
+			weaponProficiencies[1] = 1;
+			weaponProficiencies[4] = 1;
+			weaponProficiencies[6] = 1;
+			weaponProficiencies[7] = 1;
+			weaponProficiencies[8] = 1;
+			weaponProficiencies[9] = 1;
+			weaponProficiencies[11] = 1;
+			weaponProficiencies[13] = 1;
+			weaponProficiencies[26] = 1;
+			toolProficiencies[8] = 1;
+			//skills
+			break;
+		case "Fighter":
+			saveProficiencies[0] = 1;
+			saveProficiencies[2] = 1;
+			armorProficiencies[0] = 1;
+			armorProficiencies[1] = 1;
+			armorProficiencies[2] = 1;
+			armorProficiencies[3] = 1;
+			weaponTypeProficiencies[0] = 1;
+			weaponTypeProficiencies[1] = 1;
+			weaponTypeProficiencies[2] = 1;
+			weaponTypeProficiencies[3] = 1;
+			//skills
+			break;
+		case "Monk":
+			saveProficiencies[0] = 1;
+			saveProficiencies[1] = 1;
+			weaponTypeProficiencies[0] = 1;
+			weaponTypeProficiencies[1] = 1;
+			weaponProficiencies[27] = 1;
+			//tools
+			//skills
+			break;
+		case "Paladin":
+			saveProficiencies[4] = 1;
+			saveProficiencies[5] = 1;
+			armorProficiencies[0] = 1;
+			armorProficiencies[1] = 1;
+			armorProficiencies[2] = 1;
+			armorProficiencies[3] = 1;
+			weaponTypeProficiencies[0] = 1;
+			weaponTypeProficiencies[1] = 1;
+			weaponTypeProficiencies[2] = 1;
+			weaponTypeProficiencies[3] = 1;
+			//skills
+			break;
+		case "Ranger":
+			saveProficiencies[0] = 1;
+			saveProficiencies[1] = 1;
+			armorProficiencies[0] = 1;
+			armorProficiencies[1] = 1;
+			armorProficiencies[3] = 1;
+			weaponTypeProficiencies[0] = 1;
+			weaponTypeProficiencies[1] = 1;
+			weaponTypeProficiencies[2] = 1;
+			weaponTypeProficiencies[3] = 1;
+			//skills
+			break;
+		case "Rogue":
+			saveProficiencies[1] = 1;
+			saveProficiencies[3] = 1;
+			armorProficiencies[0] = 1;
+			weaponTypeProficiencies[0] = 1;
+			weaponTypeProficiencies[1] = 1;
+			weaponProficiencies[21] = 1;
+			weaponProficiencies[25] = 1;
+			weaponProficiencies[27] = 1;
+			weaponProficiencies[33] = 1;
+			toolProficiencies[16] = 1;
+			//skills
+			break;
+		case "Sorcerer":
+			saveProficiencies[2] = 1;
+			saveProficiencies[5] = 1;
+			weaponProficiencies[1] = 1;
+			weaponProficiencies[7] = 1;
+			weaponProficiencies[10] = 1;
+			weaponProficiencies[11] = 1;
+			weaponProficiencies[13] = 1;
+			//skills
+			break;
+		case "Warlock":
+			saveProficiencies[4] = 1;
+			saveProficiencies[5] = 1;
+			armorProficiencies[0] = 1;
+			weaponTypeProficiencies[0] = 1;
+			weaponTypeProficiencies[1] = 1;
+			//skills
+			break;
+		case "Wizard":
+			saveProficiencies[3] = 1;
+			saveProficiencies[4] = 1;
+			weaponProficiencies[1] = 1;
+			weaponProficiencies[7] = 1;
+			weaponProficiencies[10] = 1;
+			weaponProficiencies[11] = 1;
+			weaponProficiencies[13] = 1;
+			//skills
+			break;
+	}
 }
 
 var racePrevious = race;
@@ -921,45 +1144,50 @@ var intelligencePrevious = intelligence;
 var wisdomPrevious = wisdom;
 var charismaPrevious = charisma;
 
-var healthPrevious = maxHP;
+var maxHPPrevious = maxHP;
 
 var charactersCreated = 0;
 
 var save = localStorage.getItem("save");
 
 if (save == null) {
-	save = undefined;
+    save = undefined;
 }
 
 function getCharacter() {
-		racePrevious = race;
-	    subracePrevious = subrace;
+        racePrevious = race;
+        subracePrevious = subrace;
 
-	    classChoicePrevious = classChoice;
+        classChoicePrevious = classChoice;
 
-	    backgroundPrevious = backgroundSelect;
-	    trait1Previous = trait1;
-	    trait2Previous = trait2;
-	    idealPrevious = ideal;
+        backgroundPrevious = backgroundSelect;
+        trait1Previous = trait1;
+        trait2Previous = trait2;
+        idealPrevious = ideal;
 
-	    orderPrevious = order;
-	    moralPrevious = moral;
+        orderPrevious = order;
+        moralPrevious = moral;
 
-	    strengthPrevious = strength;
-	    dexterityPrevious = dexterity;
-	    constitutionPrevious = constitution;
-	    intelligencePrevious = intelligence;
-	    wisdomPrevious = wisdom;
-	    charismaPrevious = charisma;
+        strengthPrevious = strength;
+        dexterityPrevious = dexterity;
+        constitutionPrevious = constitution;
+        intelligencePrevious = intelligence;
+        wisdomPrevious = wisdom;
+        charismaPrevious = charisma;
 
-        healthPrevious = maxHP;
+        strModPrevious = strMod;
+        dexModPrevious = dexMod;
+        conModPrevious = conMod;
+        intModPrevious = intMod;
+        wisModPrevious = wisMod;
+        chaModPrevious = chaMod;
 
-	    charactersCreated ++;
-	    document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
-	    document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice) + "</br>" + setHealth();
+        maxHPPrevious = maxHP;
+
+        charactersCreated ++;
+        document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
+        document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice) + "</br>" + setHealth();
 }
-
-
 
 function getPreviousCharacter() {
     if (charactersCreated >= 2) {
@@ -968,7 +1196,8 @@ function getPreviousCharacter() {
             "</br> Background: " + backgroundPrevious + 
             "</br> Personality Trait One: " + trait1Previous + "</br> Personality Trait Two: " + trait2Previous + "</br>" + "Ideal: " + idealPrevious + 
             "</br> Alignment: " + orderPrevious + " " + moralPrevious;
-        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strengthPrevious + "</br> Dexterity: " + dexterityPrevious + "</br> Constitution: " + constitutionPrevious + "</br> Intelligence: " + intelligencePrevious + "</br> Wisdom: " + wisdomPrevious + "</br> Charisma: " + charismaPrevious + "</br> Max HP: " + healthPrevious;
+        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strengthPrevious + " (" + strModPrevious + ")</br> Dexterity: " + dexterityPrevious + " (" + dexModPrevious + ")</br> Constitution: " + constitutionPrevious + " (" + conModPrevious + ")</br> Intelligence: " + intelligencePrevious + " (" + intModPrevious + ")</br> Wisdom: " + wisdomPrevious + " (" + wisModPrevious + ")</br> Charisma: " + charismaPrevious + " (" + chaModPrevious + ")" +
+            "</br> Max HP: " + maxHPPrevious;
     }
 }
 
@@ -989,6 +1218,13 @@ function saveCharacter() {
         intelligence: intelligence,
         wisdom: wisdom,
         charisma: charisma,
+        maxHP: maxHP,
+        strMod: strMod,
+        dexMod: dexMod,
+        conMod: conMod,
+        intMod: intMod,
+        wisMod: wisMod,
+        chaMod: chaMod,
         racePrevious: racePrevious,
         subracePrevious: subracePrevious,
         classChoicePrevious: classChoicePrevious,
@@ -1004,7 +1240,13 @@ function saveCharacter() {
         intelligencePrevious: intelligencePrevious,
         wisdomPrevious: wisdomPrevious,
         charismaPrevious: charismaPrevious,
-        healthPrevious: healthPrevious,
+        maxHPPrevious: maxHPPrevious,
+        strModPrevious: strModPrevious,
+        dexModPrevious: dexModPrevious,
+        conModPrevious: conModPrevious,
+        intModPrevious: intModPrevious,
+        wisModPrevious: wisModPrevious,
+        chaModPrevious: chaModPrevious,
         charactersCreated: charactersCreated
     }
     localStorage.setItem("save", JSON.stringify(save));
@@ -1021,13 +1263,20 @@ function loadCharacter() {
         if (typeof saveinfo.trait2 !== "undefined") trait2 = saveinfo.trait2;
         if (typeof saveinfo.ideal !== "undefined") ideal = saveinfo.ideal;
         if (typeof saveinfo.order !== "undefined") order = saveinfo.order;
-        if (typeof saveinfo.moral !== "undefined") moral = saveinfo.moral;    
+        if (typeof saveinfo.moral !== "undefined") moral = saveinfo.moral;
         if (typeof saveinfo.strength !== "undefined") strength = saveinfo.strength;
         if (typeof saveinfo.dexterity !== "undefined") dexterity = saveinfo.dexterity;
         if (typeof saveinfo.constitution !== "undefined") constitution = saveinfo.constitution;
         if (typeof saveinfo.intelligence !== "undefined") intelligence = saveinfo.intelligence;    
         if (typeof saveinfo.wisdom !== "undefined") wisdom = saveinfo.wisdom;
-        if (typeof saveinfo.charisma !== "undefined") charisma = saveinfo.charisma;    
+        if (typeof saveinfo.charisma !== "undefined") charisma = saveinfo.charisma;
+        if (typeof saveinfo.maxHP !== "undefined") maxHP = saveinfo.maxHP;
+        if (typeof saveinfo.strMod !== "undefined") strMod = saveinfo.strMod;
+        if (typeof saveinfo.dexMod !== "undefined") dexMod = saveinfo.dexMod;
+        if (typeof saveinfo.conMod !== "undefined") conMod = saveinfo.conMod;
+        if (typeof saveinfo.intMod !== "undefined") intMod = saveinfo.intMod;
+        if (typeof saveinfo.wisMod !== "undefined") wisMod = saveinfo.wisMod;
+        if (typeof saveinfo.chaMod !== "undefined") chaMod = saveinfo.chaMod;     
         if (typeof saveinfo.racePrevious !== "undefined") racePrevious = saveinfo.racePrevious;
         if (typeof saveinfo.subracePrevious !== "undefined") subracePrevious = saveinfo.subracePrevious;    
         if (typeof saveinfo.classChoicePrevious !== "undefined") classChoicePrevious = saveinfo.classChoicePrevious;
@@ -1043,14 +1292,21 @@ function loadCharacter() {
         if (typeof saveinfo.intelligencePrevious !== "undefined") intelligencePrevious = saveinfo.intelligencePrevious;
         if (typeof saveinfo.wisdomPrevious !== "undefined") wisdomPrevious = saveinfo.wisdomPrevious;
         if (typeof saveinfo.charismaPrevious !== "undefined") charismaPrevious = saveinfo.charismaPrevious;
-        if (typeof saveinfo.healthPrevious !== "undefined") healthPrevious = saveinfo.healthPrevious;
+        if (typeof saveinfo.maxHPPrevious !== "undefined") maxHPPrevious = saveinfo.maxHPPrevious;
+        if (typeof saveinfo.strModPrevious !== "undefined") strModPrevious = saveinfo.strModPrevious;
+        if (typeof saveinfo.dexModPrevious !== "undefined") dexModPrevious = saveinfo.dexModPrevious;
+        if (typeof saveinfo.conModPrevious !== "undefined") conModPrevious = saveinfo.conModPrevious;
+        if (typeof saveinfo.intModPrevious !== "undefined") intModPrevious = saveinfo.intModPrevious;
+        if (typeof saveinfo.wisModPrevious !== "undefined") wisModPrevious = saveinfo.wisModPrevious;
+        if (typeof saveinfo.chaModPrevious !== "undefined") chaModPrevious = saveinfo.chaModPrevious;
         if (typeof saveinfo.charactersCreated !== "undefined") charactersCreated = saveinfo.charactersCreated;
         document.getElementById("consoleDescriptions").innerHTML = "Race: " + subrace + race + 
                 "</br> Class: " + classChoice + 
                 "</br> Background: " + backgroundSelect + 
                 "</br> Personality Trait One: " + trait1 + "</br> Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal + 
                 "</br> Alignment: " + order + " " + moral;
-        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strength + "</br> Dexterity: " + dexterity + "</br> Constitution: " + constitution + "</br> Intelligence: " + intelligence + "</br> Wisdom: " + wisdom + "</br> Charisma: " + charisma + "</br> Max HP: " + healthPrevious;
+        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strength + " (" + strMod + ")</br> Dexterity: " + dexterity + " (" + dexMod + ")</br> Constitution: " + constitution + " (" + conMod + ")</br> Intelligence: " + intelligence + " (" + intMod + ")</br> Wisdom: " + wisdom + " (" + wisMod + ")</br> Charisma: " + charisma + " (" + chaMod + ")" +
+                "</br> Max HP: " + maxHP;
     } 
 }
 
