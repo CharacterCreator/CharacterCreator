@@ -1,28 +1,113 @@
 var race = "";
-var subrace = ""
+var subrace = "";
+var manualRace = false;
 
 function setRace() {
-    races = ["Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling"];
-    race = races[Math.floor(Math.random() * 9)];
-    subraces = ["Hill ", "Mountain ", "High ", "Wood ", "Dark ", "Lightfoot ", "Stout ", "Forest ", "Rock "];
-    subrace = "";
-    switch (race) {
-        case "Dwarf":
-            subrace = subraces[Math.floor(Math.random() * 2)];
-            break;
-        case "Elf":
-            subrace = subraces[Math.floor(Math.random() * 3) + 2];
-            break;
-        case "Halfling":
-            subrace = subraces[Math.floor(Math.random() * 2) + 5];
-            break;
-        case "Gnome":
-            subrace = subraces[Math.floor(Math.random() * 2) + 7];
-            break;
-        default:
-            subrace = "";
-    }
+	if (!manualRace) {
+		races = ["Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling"];
+	    race = races[Math.floor(Math.random() * 9)];
+	    subraces = ["Hill ", "Mountain ", "High ", "Wood ", "Dark ", "Lightfoot ", "Stout ", "Forest ", "Rock "];
+	    subrace = "";
+	    switch (race) {
+	        case "Dwarf":
+	            subrace = subraces[Math.floor(Math.random() * 2)];
+	            break;
+	        case "Elf":
+	            subrace = subraces[Math.floor(Math.random() * 3) + 2];
+	            break;
+	        case "Halfling":
+	            subrace = subraces[Math.floor(Math.random() * 2) + 5];
+	            break;
+	        case "Gnome":
+	            subrace = subraces[Math.floor(Math.random() * 2) + 7];
+	            break;
+	        default:
+	            subrace = "";
+	    }
+	}  
     return "Race: " + subrace + race + " ";
+}
+
+function setRaceManual(raceNumber) {
+	manualRace = true;
+    switch (raceNumber) {
+        case 1:
+            race = "Dwarf";
+            subrace = "Hill ";
+            document.getElementById("dropdownMenuButton").innerHTML = "Hill Dwarf";
+            break;
+        case 2:
+            race = "Dwarf";
+            subrace = "Mountain ";
+            document.getElementById("dropdownMenuButton").innerHTML = "Mountain Dwarf";
+            break;
+        case 3:
+        	race = "Elf";
+            subrace = "High ";
+            document.getElementById("dropdownMenuButton").innerHTML = "High Elf";
+            break;
+        case 4:
+        	race = "Elf";
+            subrace = "Wood ";
+            document.getElementById("dropdownMenuButton").innerHTML = "Wood Elf";
+            break;
+        case 5:
+        	race = "Elf";
+            subrace = "Dark ";
+            document.getElementById("dropdownMenuButton").innerHTML = "Dark Elf";
+            break;
+        case 6:
+        	race = "Halfling";
+            subrace = "Lightfoot ";
+            document.getElementById("dropdownMenuButton").innerHTML = "Lightfoot Halfling";
+            break;
+        case 7:
+        	race = "Halfling";
+            subrace = "Stout ";
+            document.getElementById("dropdownMenuButton").innerHTML = "Stout Halfling";
+            break;
+        case 8:
+        	race = "Human";
+            subrace = "";
+            document.getElementById("dropdownMenuButton").innerHTML = "Human";
+            break;
+        case 9:
+        	race = "Dragonborn";
+            subrace = "";
+            document.getElementById("dropdownMenuButton").innerHTML = "Dragonborn";
+            break;
+        case 10:
+        	race = "Gnome";
+            subrace = "Forest ";
+            document.getElementById("dropdownMenuButton").innerHTML = "Forest Gnome";
+            break;
+        case 11:
+        	race = "Gnome";
+            subrace = "Rock ";
+            document.getElementById("dropdownMenuButton").innerHTML = "Rock Gnome";
+            break;
+        case 12:
+        	race = "Half-Elf";
+            subrace = "";
+            document.getElementById("dropdownMenuButton").innerHTML = "Half-Elf";
+            break;
+        case 13:
+        	race = "Half-Orc";
+            subrace = "";
+            document.getElementById("dropdownMenuButton").innerHTML = "Half-Orc";
+            break;
+        case 14:
+        	race = "Tiefling";
+            subrace = "";
+            document.getElementById("dropdownMenuButton").innerHTML = "Tiefling";
+            break;
+        case 15:
+        	manualRace = false;
+        	race = "";
+        	subrace = "";
+        	document.getElementById("dropdownMenuButton").innerHTML = "Random";
+        	break;
+    }
 }
 
 var classChoice = "";
@@ -945,16 +1030,17 @@ function setHealth() {
     return "Max HP: " + maxHP;
 }
 
-//Return when higher levels are implemented
+var speed = 0;
+
 function setSpeed() {
-	var baseSpeed = 25;
-	var raceMod = 0;
-	if (race !== "Gnome" && race !== "Halfling" && race !== "Dwarf")
-		raceMod += 5;
-	if (subrace + race == "Wood Elf")
-		raceMod += 5;
-	speed = baseSpeed + raceMod;
-	return "Speed: " + speed;
+    var baseSpeed = 25;
+    var raceMod = 0;
+    if (race !== "Gnome" && race !== "Halfling" && race !== "Dwarf")
+        raceMod += 5;
+    if (subrace + race == "Wood Elf")
+        raceMod += 5;
+    speed = baseSpeed + raceMod;
+    return "Speed: " + speed;
 }
 
 var racePrevious = race;
@@ -977,7 +1063,11 @@ var intelligencePrevious = intelligence;
 var wisdomPrevious = wisdom;
 var charismaPrevious = charisma;
 
+var modsPrevious = mods;
+
 var maxHPPrevious = maxHP;
+
+var speedPrevious = speed;
 
 var charactersCreated = 0;
 
@@ -1008,6 +1098,7 @@ function getCharacter() {
         wisdomPrevious = wisdom;
         charismaPrevious = charisma;
 
+        modsPrevious = mods;
         strModPrevious = strMod;
         dexModPrevious = dexMod;
         conModPrevious = conMod;
@@ -1017,9 +1108,11 @@ function getCharacter() {
 
         maxHPPrevious = maxHP;
 
+        speedPrevious = speed;
+
         charactersCreated ++;
         document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
-        document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice) + "</br>" + setHealth();
+        document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice) + "</br>" + setHealth() + "</br>" + setSpeed();
 }
 
 function getPreviousCharacter() {
@@ -1029,8 +1122,9 @@ function getPreviousCharacter() {
             "</br> Background: " + backgroundPrevious + 
             "</br> Personality Trait One: " + trait1Previous + "</br> Personality Trait Two: " + trait2Previous + "</br>" + "Ideal: " + idealPrevious + 
             "</br> Alignment: " + orderPrevious + " " + moralPrevious;
-        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strengthPrevious + " (" + strModPrevious + ")</br> Dexterity: " + dexterityPrevious + " (" + dexModPrevious + ")</br> Constitution: " + constitutionPrevious + " (" + conModPrevious + ")</br> Intelligence: " + intelligencePrevious + " (" + intModPrevious + ")</br> Wisdom: " + wisdomPrevious + " (" + wisModPrevious + ")</br> Charisma: " + charismaPrevious + " (" + chaModPrevious + ")" +
-            "</br> Max HP: " + maxHPPrevious;
+        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strengthPrevious + " (" + modsPrevious[0] + ")</br> Dexterity: " + dexterityPrevious + " (" + modsPrevious[1] + ")</br> Constitution: " + constitutionPrevious + " (" + modsPrevious[2] + ")</br> Intelligence: " + intelligencePrevious + " (" + modsPrevious[3] + ")</br> Wisdom: " + wisdomPrevious + " (" + modsPrevious[4] + ")</br> Charisma: " + charismaPrevious + " (" + modsPrevious[5] + ")" +
+            "</br> Max HP: " + maxHPPrevious + 
+            "</br> Speed: " + speedPrevious;
     }
 }
 
@@ -1052,12 +1146,14 @@ function saveCharacter() {
         wisdom: wisdom,
         charisma: charisma,
         maxHP: maxHP,
+        speed: speed,
         strMod: strMod,
         dexMod: dexMod,
         conMod: conMod,
         intMod: intMod,
         wisMod: wisMod,
         chaMod: chaMod,
+        mods: mods,
         racePrevious: racePrevious,
         subracePrevious: subracePrevious,
         classChoicePrevious: classChoicePrevious,
@@ -1074,6 +1170,8 @@ function saveCharacter() {
         wisdomPrevious: wisdomPrevious,
         charismaPrevious: charismaPrevious,
         maxHPPrevious: maxHPPrevious,
+        modsPrevious: modsPrevious,
+        speedPrevious: speedPrevious,
         strModPrevious: strModPrevious,
         dexModPrevious: dexModPrevious,
         conModPrevious: conModPrevious,
@@ -1104,6 +1202,8 @@ function loadCharacter() {
         if (typeof saveinfo.wisdom !== "undefined") wisdom = saveinfo.wisdom;
         if (typeof saveinfo.charisma !== "undefined") charisma = saveinfo.charisma;
         if (typeof saveinfo.maxHP !== "undefined") maxHP = saveinfo.maxHP;
+        if (typeof saveinfo.speed !== "undefined") speed = saveinfo.speed;
+        if (typeof saveinfo.mods !== "undefined") mods = saveinfo.mods;
         if (typeof saveinfo.strMod !== "undefined") strMod = saveinfo.strMod;
         if (typeof saveinfo.dexMod !== "undefined") dexMod = saveinfo.dexMod;
         if (typeof saveinfo.conMod !== "undefined") conMod = saveinfo.conMod;
@@ -1126,6 +1226,8 @@ function loadCharacter() {
         if (typeof saveinfo.wisdomPrevious !== "undefined") wisdomPrevious = saveinfo.wisdomPrevious;
         if (typeof saveinfo.charismaPrevious !== "undefined") charismaPrevious = saveinfo.charismaPrevious;
         if (typeof saveinfo.maxHPPrevious !== "undefined") maxHPPrevious = saveinfo.maxHPPrevious;
+        if (typeof saveinfo.speedPrevious !== "undefined") speedPrevious = saveinfo.speedPrevious;
+        if (typeof saveinfo.modsPrevious !== "undefined") modsPrevious = saveinfo.modsPrevious;
         if (typeof saveinfo.strModPrevious !== "undefined") strModPrevious = saveinfo.strModPrevious;
         if (typeof saveinfo.dexModPrevious !== "undefined") dexModPrevious = saveinfo.dexModPrevious;
         if (typeof saveinfo.conModPrevious !== "undefined") conModPrevious = saveinfo.conModPrevious;
@@ -1138,8 +1240,9 @@ function loadCharacter() {
                 "</br> Background: " + backgroundSelect + 
                 "</br> Personality Trait One: " + trait1 + "</br> Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal + 
                 "</br> Alignment: " + order + " " + moral;
-        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strength + " (" + strMod + ")</br> Dexterity: " + dexterity + " (" + dexMod + ")</br> Constitution: " + constitution + " (" + conMod + ")</br> Intelligence: " + intelligence + " (" + intMod + ")</br> Wisdom: " + wisdom + " (" + wisMod + ")</br> Charisma: " + charisma + " (" + chaMod + ")" +
-                "</br> Max HP: " + maxHP;
+        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strength + " (" + mods[0] + ")</br> Dexterity: " + dexterity + " (" + mods[1] + ")</br> Constitution: " + constitution + " (" + mods[2] + ")</br> Intelligence: " + intelligence + " (" + mods[3] + ")</br> Wisdom: " + wisdom + " (" + mods[4] + ")</br> Charisma: " + charisma + " (" + mods[5] + ")" +
+                "</br> Max HP: " + maxHP + 
+                "</br> Speed: " + speed;
     } 
 }
 
