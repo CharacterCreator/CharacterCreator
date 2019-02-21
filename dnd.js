@@ -1003,7 +1003,7 @@ function getCharacter() {
         wisModPrevious = wisMod;
         chaModPrevious = chaMod;
 
-        healthPrevious = maxHP;
+        maxHPPrevious = maxHP;
 
         charactersCreated ++;
         document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
@@ -1017,7 +1017,8 @@ function getPreviousCharacter() {
             "</br> Background: " + backgroundPrevious + 
             "</br> Personality Trait One: " + trait1Previous + "</br> Personality Trait Two: " + trait2Previous + "</br>" + "Ideal: " + idealPrevious + 
             "</br> Alignment: " + orderPrevious + " " + moralPrevious;
-        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strengthPrevious + " (" + strModPrevious + ")</br> Dexterity: " + dexterityPrevious + " (" + dexModPrevious + ")</br> Constitution: " + constitutionPrevious + " (" + conModPrevious + ")</br> Intelligence: " + intelligencePrevious + " (" + intModPrevious + ")</br> Wisdom: " + wisdomPrevious + " (" + wisModPrevious + ")</br> Charisma: " + charismaPrevious + " (" + chaModPrevious + ")";
+        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strengthPrevious + " (" + strModPrevious + ")</br> Dexterity: " + dexterityPrevious + " (" + dexModPrevious + ")</br> Constitution: " + constitutionPrevious + " (" + conModPrevious + ")</br> Intelligence: " + intelligencePrevious + " (" + intModPrevious + ")</br> Wisdom: " + wisdomPrevious + " (" + wisModPrevious + ")</br> Charisma: " + charismaPrevious + " (" + chaModPrevious + ")" +
+            "</br> Max HP: " + maxHPPrevious;
     }
 }
 
@@ -1125,7 +1126,8 @@ function loadCharacter() {
                 "</br> Background: " + backgroundSelect + 
                 "</br> Personality Trait One: " + trait1 + "</br> Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal + 
                 "</br> Alignment: " + order + " " + moral;
-        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strength + " (" + strMod + ")</br> Dexterity: " + dexterity + " (" + dexMod + ")</br> Constitution: " + constitution + " (" + conMod + ")</br> Intelligence: " + intelligence + " (" + intMod + ")</br> Wisdom: " + wisdom + " (" + wisMod + ")</br> Charisma: " + charisma + " (" + chaMod + ")";
+        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strength + " (" + strMod + ")</br> Dexterity: " + dexterity + " (" + dexMod + ")</br> Constitution: " + constitution + " (" + conMod + ")</br> Intelligence: " + intelligence + " (" + intMod + ")</br> Wisdom: " + wisdom + " (" + wisMod + ")</br> Charisma: " + charisma + " (" + chaMod + ")" +
+                "</br> Max HP: " + maxHP;
     } 
 }
 
