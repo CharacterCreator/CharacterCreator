@@ -989,7 +989,50 @@ function setProficiencies() {
 			weaponTypeProficiencies[1] = 1;
 			weaponTypeProficiencies[2] = 1;
 			weaponTypeProficiencies[3] = 1;
-			//skills
+            var skill1 = Math.floor(Math.random() * 6);
+            var skill2 = Math.floor(Math.random() * 6);
+            while (skill2 == skill1)
+                skill2 = Math.floor(Math.random() * 6);
+            switch (skill1) {
+                case 0:
+                    skillProficiencies[9] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[0] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[15] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[7] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[12] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[13] = 1;
+                    break;
+            }
+            switch (skill2) {
+                case 0:
+                    skillProficiencies[9] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[0] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[15] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[7] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[12] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[13] = 1;
+                    break;
+            }
 			break;
 		case "Bard":
 			saveProficiencies[1] = 1;
@@ -1001,8 +1044,26 @@ function setProficiencies() {
 			weaponProficiencies[25] = 1;
 			weaponProficiencies[27] = 1;
 			weaponProficiencies[33] = 1;
-			//instruments
-			//skills
+			var instrument1 = Math.floor(Math.random() * 10);
+            var instrument2 = Math.floor(Math.random() * 10);
+            var instrument3 = Math.floor(Math.random() * 10);
+            while (instrument1 == instrument2 || instrument1 == instrument3)
+                instrument1 = Math.floor(Math.random() * 10);
+            while (instrument2 == instrument3)
+                instrument3 = Math.floor(Math.random() * 10);
+            instrumentProficiencies[instrument1] = 1;
+            instrumentProficiencies[instrument2] = 1;
+            instrumentProficiencies[instrument3] = 1;
+			var skill1 = Math.floor(Math.random() * 18);
+            var skill2 = Math.floor(Math.random() * 18);
+            var skill3 = Math.floor(Math.random() * 18);
+            while (skill1 == skill2 || skill1 == skill3)
+                skill1 = Math.floor(Math.random() * 18);
+            while (skill2 == skill3)
+                skill3 = Math.floor(Math.random() * 18);
+            skillProficiencies[skill1] = 1;
+            skillProficiencies[skill2] = 1;
+            skillProficiencies[skill3] = 1;
 			break;
 		case "Cleric":
 			saveProficiencies[4] = 1;
@@ -1012,7 +1073,44 @@ function setProficiencies() {
 			armorProficiencies[3] = 1;
 			weaponTypeProficiencies[0] = 1;
 			weaponTypeProficiencies[1] = 1;
-			//skills
+			var skill1 = Math.floor(Math.random() * 5);
+            var skill2 = Math.floor(Math.random() * 5);
+            while (skill1 == skill2)
+                skill2 = Math.floor(Math.random() * 5);
+            switch (skill1) {
+                case 0:
+                    skillProficiencies[5] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[11] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[17] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[8] = 1;
+                    break;
+            }
+            switch (skill2) {
+                case 0:
+                    skillProficiencies[5] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[11] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[17] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[8] = 1;
+                    break;
+            }
 			break;
 		case "Druid":
 			saveProficiencies[3] = 1;
@@ -1031,7 +1129,62 @@ function setProficiencies() {
 			weaponProficiencies[13] = 1;
 			weaponProficiencies[26] = 1;
 			toolProficiencies[8] = 1;
-			//skills
+			var skill1 = Math.floor(Math.random() * 8);
+            var skill2 = Math.floor(Math.random() * 8);
+            while (skill1 == skill2)
+                skill2 = Math.floor(Math.random() * 8);
+            switch (skill1) {
+                case 0:
+                    skillProficiencies[4] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[9] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[11] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[7] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[12] = 1;
+                    break;
+                case 6:
+                    skillProficiencies[8] = 1;
+                    break;
+                case 7:
+                    skillProficiencies[13] = 1;
+                    break;
+            }
+            switch (skill2) {
+                case 0:
+                    skillProficiencies[4] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[9] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[11] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[7] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[12] = 1;
+                    break;
+                case 6:
+                    skillProficiencies[8] = 1;
+                    break;
+                case 7:
+                    skillProficiencies[13] = 1;
+                    break;
+            }
 			break;
 		case "Fighter":
 			saveProficiencies[0] = 1;
@@ -1044,7 +1197,62 @@ function setProficiencies() {
 			weaponTypeProficiencies[1] = 1;
 			weaponTypeProficiencies[2] = 1;
 			weaponTypeProficiencies[3] = 1;
-			//skills
+			var skill1 = Math.floor(Math.random() * 8);
+            var skill2 = Math.floor(Math.random() * 8);
+            while (skill1 == skill2)
+                skill2 = Math.floor(Math.random() * 8);
+            switch (skill1) {
+                case 0:
+                    skillProficiencies[1] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[9] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[0] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[5] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[15] = 1;
+                    break;
+                case 6:
+                    skillProficiencies[12] = 1;
+                    break;
+                case 7:
+                    skillProficiencies[13] = 1;
+                    break;
+            }
+            switch (skill2) {
+                case 0:
+                    skillProficiencies[1] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[9] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[0] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[5] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[15] = 1;
+                    break;
+                case 6:
+                    skillProficiencies[12] = 1;
+                    break;
+                case 7:
+                    skillProficiencies[13] = 1;
+                    break;
+            }
 			break;
 		case "Monk":
 			saveProficiencies[0] = 1;
@@ -1052,8 +1260,59 @@ function setProficiencies() {
 			weaponTypeProficiencies[0] = 1;
 			weaponTypeProficiencies[1] = 1;
 			weaponProficiencies[27] = 1;
-			//tools
-			//skills
+			var choice = Math.floor(Math.random() * 2);
+            switch (choice) {
+                case 0:
+                    toolProficiencies[Math.floor(Math.random() * 20)] = 1;
+                    break;
+                case 1:
+                    instrumentProficiencies[Math.floor(Math.random() * 10)] = 1;
+                    break;
+            }
+			var skill1 = Math.floor(Math.random() * 6);
+            var skill2 = Math.floor(Math.random() * 6);
+            while (skill2 == skill1)
+                skill2 = Math.floor(Math.random() * 6);
+            switch (skill1) {
+                case 0:
+                    skillProficiencies[1] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[0] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[5] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[8] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[3] = 1;
+                    break;
+            }
+            switch (skill2) {
+                case 0:
+                    skillProficiencies[1] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[0] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[5] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[8] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[3] = 1;
+                    break;
+            }
 			break;
 		case "Paladin":
 			saveProficiencies[4] = 1;
@@ -1066,7 +1325,50 @@ function setProficiencies() {
 			weaponTypeProficiencies[1] = 1;
 			weaponTypeProficiencies[2] = 1;
 			weaponTypeProficiencies[3] = 1;
-			//skills
+			var skill1 = Math.floor(Math.random() * 6);
+            var skill2 = Math.floor(Math.random() * 6);
+            while (skill2 == skill1)
+                skill2 = Math.floor(Math.random() * 6);
+            switch (skill1) {
+                case 0:
+                    skillProficiencies[0] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[15] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[11] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[17] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[8] = 1;
+                    break;
+            }
+            switch (skill2) {
+                case 0:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[0] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[15] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[11] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[17] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[8] = 1;
+                    break;
+            }
 			break;
 		case "Ranger":
 			saveProficiencies[0] = 1;
@@ -1078,7 +1380,91 @@ function setProficiencies() {
 			weaponTypeProficiencies[1] = 1;
 			weaponTypeProficiencies[2] = 1;
 			weaponTypeProficiencies[3] = 1;
-			//skills
+			var skill1 = Math.floor(Math.random() * 8);
+            var skill2 = Math.floor(Math.random() * 8);
+            var skill3 = Math.floor(Math.random() * 8);
+            while (skill1 == skill2 || skill1 == skill3)
+                skill1 = Math.floor(Math.random() * 8);
+            while (skill2 == skill3)
+                skill3 = Math.floor(Math.random() * 8);
+            switch (skill1) {
+                case 0:
+                    skillProficiencies[9] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[0] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[6] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[7] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[12] = 1;
+                    break;
+                case 6:
+                    skillProficiencies[3] = 1;
+                    break;
+                case 7:
+                    skillProficiencies[13] = 1;
+                    break;
+            }
+            switch (skill2) {
+                case 0:
+                    skillProficiencies[9] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[0] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[6] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[7] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[12] = 1;
+                    break;
+                case 6:
+                    skillProficiencies[3] = 1;
+                    break;
+                case 7:
+                    skillProficiencies[13] = 1;
+                    break;
+            }
+            switch (skill3) {
+                case 0:
+                    skillProficiencies[9] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[0] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[6] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[7] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[12] = 1;
+                    break;
+                case 6:
+                    skillProficiencies[3] = 1;
+                    break;
+                case 7:
+                    skillProficiencies[13] = 1;
+                    break;
+            }
 			break;
 		case "Rogue":
 			saveProficiencies[1] = 1;
@@ -1091,7 +1477,156 @@ function setProficiencies() {
 			weaponProficiencies[27] = 1;
 			weaponProficiencies[33] = 1;
 			toolProficiencies[16] = 1;
-			//skills
+			var skill1 = Math.floor(Math.random() * 11);
+            var skill2 = Math.floor(Math.random() * 11);
+            var skill3 = Math.floor(Math.random() * 11);
+            var skill4 = Math.floor(Math.random() * 11);
+            while (skill1 == skill2 || skill1 == skill3 || skill1 == skill4)
+                skill1 = Math.floor(Math.random() * 11);
+            while (skill2 == skill3 || skill2 == skill4)
+                skill2 = Math.floor(Math.random() * 11);
+            while (skill3 == skill4)
+                skill4 = Math.floor(Math.random() * 11);
+            switch (skill1) {
+                case 0:
+                    skillProficiencies[1] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[0] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[14] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[15] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[6] = 1;
+                    break;
+                case 6:
+                    skillProficiencies[12] = 1;
+                    break;
+                case 7:
+                    skillProficiencies[16] = 1;
+                    break;
+                case 8:
+                    skillProficiencies[17] = 1;
+                    break;
+                case 9:
+                    skillProficiencies[2] = 1;
+                    break;
+                case 10:
+                    skillProficiencies[3] = 1;
+                    break;
+            }
+            switch (skill2) {
+                case 0:
+                    skillProficiencies[1] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[0] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[14] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[15] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[6] = 1;
+                    break;
+                case 6:
+                    skillProficiencies[12] = 1;
+                    break;
+                case 7:
+                    skillProficiencies[16] = 1;
+                    break;
+                case 8:
+                    skillProficiencies[17] = 1;
+                    break;
+                case 9:
+                    skillProficiencies[2] = 1;
+                    break;
+                case 10:
+                    skillProficiencies[3] = 1;
+                    break;
+            }
+            switch (skill3) {
+                case 0:
+                    skillProficiencies[1] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[0] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[14] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[15] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[6] = 1;
+                    break;
+                case 6:
+                    skillProficiencies[12] = 1;
+                    break;
+                case 7:
+                    skillProficiencies[16] = 1;
+                    break;
+                case 8:
+                    skillProficiencies[17] = 1;
+                    break;
+                case 9:
+                    skillProficiencies[2] = 1;
+                    break;
+                case 10:
+                    skillProficiencies[3] = 1;
+                    break;
+            }
+            switch (skill4) {
+                case 0:
+                    skillProficiencies[1] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[0] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[14] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[15] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[6] = 1;
+                    break;
+                case 6:
+                    skillProficiencies[12] = 1;
+                    break;
+                case 7:
+                    skillProficiencies[16] = 1;
+                    break;
+                case 8:
+                    skillProficiencies[17] = 1;
+                    break;
+                case 9:
+                    skillProficiencies[2] = 1;
+                    break;
+                case 10:
+                    skillProficiencies[3] = 1;
+                    break;
+            }
 			break;
 		case "Sorcerer":
 			saveProficiencies[2] = 1;
@@ -1101,7 +1636,50 @@ function setProficiencies() {
 			weaponProficiencies[10] = 1;
 			weaponProficiencies[11] = 1;
 			weaponProficiencies[13] = 1;
-			//skills
+			var skill1 = Math.floor(Math.random() * 6);
+            var skill2 = Math.floor(Math.random() * 6);
+            while (skill2 == skill1)
+                skill2 = Math.floor(Math.random() * 6);
+            switch (skill1) {
+                case 0:
+                    skillProficiencies[4] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[14] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[15] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[17] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[8] = 1;
+                    break;
+            }
+            switch (skill2) {
+                case 0:
+                    skillProficiencies[4] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[14] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[15] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[17] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[8] = 1;
+                    break;
+            }
 			break;
 		case "Warlock":
 			saveProficiencies[4] = 1;
@@ -1109,7 +1687,56 @@ function setProficiencies() {
 			armorProficiencies[0] = 1;
 			weaponTypeProficiencies[0] = 1;
 			weaponTypeProficiencies[1] = 1;
-			//skills
+			var skill1 = Math.floor(Math.random() * 7);
+            var skill2 = Math.floor(Math.random() * 7);
+            while (skill2 == skill1)
+                skill2 = Math.floor(Math.random() * 7);
+            switch (skill1) {
+                case 0:
+                    skillProficiencies[4] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[14] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[5] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[15] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[6] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[7] = 1;
+                    break;
+                case 6:
+                    skillProficiencies[8] = 1;
+                    break;
+            }
+            switch (skill2) {
+                case 0:
+                    skillProficiencies[4] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[14] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[5] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[15] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[6] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[7] = 1;
+                    break;
+                case 6:
+                    skillProficiencies[8] = 1;
+                    break;
+            }
 			break;
 		case "Wizard":
 			saveProficiencies[3] = 1;
@@ -1119,7 +1746,50 @@ function setProficiencies() {
 			weaponProficiencies[10] = 1;
 			weaponProficiencies[11] = 1;
 			weaponProficiencies[13] = 1;
-			//skills
+			var skill1 = Math.floor(Math.random() * 6);
+            var skill2 = Math.floor(Math.random() * 6);
+            while (skill2 == skill1)
+                skill2 = Math.floor(Math.random() * 6);
+            switch (skill1) {
+                case 0:
+                    skillProficiencies[4] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[5] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[6] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[11] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[8] = 1;
+                    break;
+            }
+            switch (skill2) {
+                case 0:
+                    skillProficiencies[4] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[5] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[10] = 1;
+                    break;
+                case 3:
+                    skillProficiencies[6] = 1;
+                    break;
+                case 4:
+                    skillProficiencies[11] = 1;
+                    break;
+                case 5:
+                    skillProficiencies[8] = 1;
+                    break;
+            }
 			break;
 	}
 }
