@@ -3,33 +3,33 @@ var subrace = "";
 var manualRace = false;
 
 function setRace() {
-	if (!manualRace) {
-		races = ["Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling"];
-	    race = races[Math.floor(Math.random() * 9)];
-	    subraces = ["Hill ", "Mountain ", "High ", "Wood ", "Dark ", "Lightfoot ", "Stout ", "Forest ", "Rock "];
-	    subrace = "";
-	    switch (race) {
-	        case "Dwarf":
-	            subrace = subraces[Math.floor(Math.random() * 2)];
-	            break;
-	        case "Elf":
-	            subrace = subraces[Math.floor(Math.random() * 3) + 2];
-	            break;
-	        case "Halfling":
-	            subrace = subraces[Math.floor(Math.random() * 2) + 5];
-	            break;
-	        case "Gnome":
-	            subrace = subraces[Math.floor(Math.random() * 2) + 7];
-	            break;
-	        default:
-	            subrace = "";
-	    }
-	}  
+    if (!manualRace) {
+        races = ["Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling"];
+        race = races[Math.floor(Math.random() * 9)];
+        subraces = ["Hill ", "Mountain ", "High ", "Wood ", "Dark ", "Lightfoot ", "Stout ", "Forest ", "Rock "];
+        subrace = "";
+        switch (race) {
+            case "Dwarf":
+                subrace = subraces[Math.floor(Math.random() * 2)];
+                break;
+            case "Elf":
+                subrace = subraces[Math.floor(Math.random() * 3) + 2];
+                break;
+            case "Halfling":
+                subrace = subraces[Math.floor(Math.random() * 2) + 5];
+                break;
+            case "Gnome":
+                subrace = subraces[Math.floor(Math.random() * 2) + 7];
+                break;
+            default:
+                subrace = "";
+        }
+    }  
     return subrace + race + " ";
 }
 
 function setRaceManual(raceNumber) {
-	manualRace = true;
+    manualRace = true;
     switch (raceNumber) {
         case 1:
             race = "Dwarf";
@@ -42,71 +42,71 @@ function setRaceManual(raceNumber) {
             document.getElementById("dropdownMenuButton").innerHTML = "Mountain Dwarf";
             break;
         case 3:
-        	race = "Elf";
+            race = "Elf";
             subrace = "High ";
             document.getElementById("dropdownMenuButton").innerHTML = "High Elf";
             break;
         case 4:
-        	race = "Elf";
+            race = "Elf";
             subrace = "Wood ";
             document.getElementById("dropdownMenuButton").innerHTML = "Wood Elf";
             break;
         case 5:
-        	race = "Elf";
+            race = "Elf";
             subrace = "Dark ";
             document.getElementById("dropdownMenuButton").innerHTML = "Dark Elf";
             break;
         case 6:
-        	race = "Halfling";
+            race = "Halfling";
             subrace = "Lightfoot ";
             document.getElementById("dropdownMenuButton").innerHTML = "Lightfoot Halfling";
             break;
         case 7:
-        	race = "Halfling";
+            race = "Halfling";
             subrace = "Stout ";
             document.getElementById("dropdownMenuButton").innerHTML = "Stout Halfling";
             break;
         case 8:
-        	race = "Human";
+            race = "Human";
             subrace = "";
             document.getElementById("dropdownMenuButton").innerHTML = "Human";
             break;
         case 9:
-        	race = "Dragonborn";
+            race = "Dragonborn";
             subrace = "";
             document.getElementById("dropdownMenuButton").innerHTML = "Dragonborn";
             break;
         case 10:
-        	race = "Gnome";
+            race = "Gnome";
             subrace = "Forest ";
             document.getElementById("dropdownMenuButton").innerHTML = "Forest Gnome";
             break;
         case 11:
-        	race = "Gnome";
+            race = "Gnome";
             subrace = "Rock ";
             document.getElementById("dropdownMenuButton").innerHTML = "Rock Gnome";
             break;
         case 12:
-        	race = "Half-Elf";
+            race = "Half-Elf";
             subrace = "";
             document.getElementById("dropdownMenuButton").innerHTML = "Half-Elf";
             break;
         case 13:
-        	race = "Half-Orc";
+            race = "Half-Orc";
             subrace = "";
             document.getElementById("dropdownMenuButton").innerHTML = "Half-Orc";
             break;
         case 14:
-        	race = "Tiefling";
+            race = "Tiefling";
             subrace = "";
             document.getElementById("dropdownMenuButton").innerHTML = "Tiefling";
             break;
         case 15:
-        	manualRace = false;
-        	race = "";
-        	subrace = "";
-        	document.getElementById("dropdownMenuButton").innerHTML = "Race Selection";
-        	break;
+            manualRace = false;
+            race = "";
+            subrace = "";
+            document.getElementById("dropdownMenuButton").innerHTML = "Race Selection";
+            break;
     }
 }
 
@@ -380,12 +380,12 @@ function setBackground() {
             "Aspiration. I work hard to be the best there is at my craft. (Any)"];
             
         var idealsHermit = [
-            "Greater Good. My gifts are meant to be shared with all, not used for my own benefit. (Good)",
+            "Greater good. My gifts are meant to be shared with all, not used for my own benefit. (Good)",
             "Logic. Emotions must not cloud our sense of what is right and true, or our logical thinking. (Lawful)",
             "Free Thinking. Inquiry and curiosity are the pillars of progress. (Chaotic)",
             "Power. Solitude and contemplation are paths toward mystical or magical power. (Evil)",
-            "Live and Let Live. Meddling in the affairs of others only causes trouble. (Neutral)",
-            "Self-Knowledge. If you know yourself, there’s nothing left to know. (Any)"];
+            "Live and let live. Meddling in the affairs of others only causes trouble. (Neutral)",
+            "Self-knowledge. If you know yourself, there’s nothing left to know. (Any)"];
             
         var idealsKnight = [
             "Respect. Respect is due to me because of my position, but all people regardless of station deserve to be treated with dignity. (Good)",
@@ -405,7 +405,7 @@ function setBackground() {
             
         var idealsOutlander = [
             "Change. Life is like the seasons, in constant change, and we must change with it. (Chaotic)",
-            "Greater Good. It is each person’s responsibility to make the most happiness for the whole tribe. (Good)",
+            "Greater good. It is each person’s responsibility to make the most happiness for the whole tribe. (Good)",
             "Honor. If I dishonor myself, I dishonor my whole clan. (Lawful)",
             "Might. The strongest are meant to rule. (Evil)",
             "Nature. The natural world is more important than all the constructs of civilization. (Neutral)",
@@ -436,7 +436,7 @@ function setBackground() {
             "Aspiration. Someday I’ll own my own ship and chart my own destiny. (Any"];
             
         var idealsSoldier = [
-            "Greater Good. Our lot is to lay down our lives in defense of others. (Good)",
+            "Greater good. Our lot is to lay down our lives in defense of others. (Good)",
             "Responsibility. I do what I must and obey just authority. (Lawful)",
             "Independence. When people follow orders blindly, they embrace a kind of tyranny. (Chaotic)",
             "Might. In life as in war, the stronger force wins. (Evil)",
@@ -469,9 +469,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsAcolyte[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) == " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsAcolyte[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -484,9 +483,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsCharlatan[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsCharlatan[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -499,9 +497,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsCriminal[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsCriminal[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -514,9 +511,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsEntertainer[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsEntertainer[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -529,9 +525,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsFolkHero[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsFolkHero[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -544,9 +539,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsGladiator[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsGladiator[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -559,9 +553,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsGuildArtisan[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsGuildArtisan[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -574,9 +567,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsGuildMerchant[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsGuildMerchant[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -589,9 +581,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsHermit[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsHermit[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -604,9 +595,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsKnight[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsKnight[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -619,9 +609,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsNoble[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsNoble[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -634,9 +623,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsOutlander[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsOutlander[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -649,9 +637,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsPirate[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsPirate[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -664,9 +651,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsSage[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsSage[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -679,9 +665,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsSailor[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsSailor[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -694,9 +679,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsSoldier[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsSoldier[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -709,9 +693,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsSpy[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsSpy[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -724,9 +707,8 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsUrchin[index];
-                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ")
                         trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
-                    }
                 }
                 ideal = idealsUrchin[Math.floor(Math.random() * 6)];
                 ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
@@ -824,7 +806,7 @@ function setAlignment(race, ideal) {
     if (order == moral) 
         moral = " ";
 
-    return "Alignment: " + order + " " + moral;
+    return order + " " + moral;
 } 
 
 var primary = 0;
@@ -1183,22 +1165,21 @@ function getCharacter() {
         speedPrevious = speed;
 
         charactersCreated ++;
+
         document.getElementById("infoText").innerHTML = "Your creation is a " + setRace() + setClass();
-        document.getElementById("background").innerHTML = "I'm a(n) " + setBackground() + ".";
-        document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
-        document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice) + "</br>" + setHealth() + "</br>" + setSpeed();
+        document.getElementById("background").innerHTML = "I'm a(n) " + setBackground() + ". This means that I'm " + setAlignment(race, ideal) + ".";
+        document.getElementById("scores").innerHTML = generateScores(primary, secondary, race, subrace, classChoice);
+        document.getElementById("health").innerHTML = setHealth();
+        document.getElementById("speed").innerHTML = setSpeed();
 }
 
 function getPreviousCharacter() {
     if (charactersCreated >= 2) {
-        document.getElementById("consoleDescriptions").innerHTML = "Race: " + subracePrevious + racePrevious + 
-            "</br> Class: " + classChoicePrevious + 
-            "</br> Background: " + backgroundPrevious + 
-            "</br> Personality Trait One: " + trait1Previous + "</br> Personality Trait Two: " + trait2Previous + "</br>" + "Ideal: " + idealPrevious + 
-            "</br> Alignment: " + orderPrevious + " " + moralPrevious;
-        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strengthPrevious + " (" + modsPrevious[0] + ")</br> Dexterity: " + dexterityPrevious + " (" + modsPrevious[1] + ")</br> Constitution: " + constitutionPrevious + " (" + modsPrevious[2] + ")</br> Intelligence: " + intelligencePrevious + " (" + modsPrevious[3] + ")</br> Wisdom: " + wisdomPrevious + " (" + modsPrevious[4] + ")</br> Charisma: " + charismaPrevious + " (" + modsPrevious[5] + ")" +
-            "</br> Max HP: " + maxHPPrevious + 
-            "</br> Speed: " + speedPrevious;
+        document.getElementById("infoText").innerHTML = "Your creation is a " + racePrevious + " " + subracePrevious + " " + classChoicePrevious;
+        document.getElementById("background").innerHTML = "I'm a(n) " + backgroundPrevious + ": " + trait1Previous + " and " + trait2Previous + ". I idolize " + idealPrevious + ". This means that I'm " + orderPrevious + " " + moralPrevious + ".";
+        document.getElementById("scores").innerHTML = "Strength: " + strengthPrevious + " (" + modsPrevious[0] + ")</br> Dexterity: " + dexterityPrevious + " (" + modsPrevious[1] + ")</br> Constitution: " + constitutionPrevious + " (" + modsPrevious[2] + ")</br> Intelligence: " + intelligencePrevious + " (" + modsPrevious[3] + ")</br> Wisdom: " + wisdomPrevious + " (" + modsPrevious[4] + ")</br> Charisma: " + charismaPrevious + " (" + modsPrevious[5] + ")";
+        document.getElementById("health").innerHTML = "Max HP: " + maxHPPrevious;
+        document.getElementById("speed").innerHTML = "Speed: " + speedPrevious;
     }
 }
 
@@ -1309,14 +1290,11 @@ function loadCharacter() {
         if (typeof saveinfo.wisModPrevious !== "undefined") wisModPrevious = saveinfo.wisModPrevious;
         if (typeof saveinfo.chaModPrevious !== "undefined") chaModPrevious = saveinfo.chaModPrevious;
         if (typeof saveinfo.charactersCreated !== "undefined") charactersCreated = saveinfo.charactersCreated;
-        document.getElementById("consoleDescriptions").innerHTML = "Race: " + subrace + race + 
-                "</br> Class: " + classChoice + 
-                "</br> Background: " + backgroundSelect + 
-                "</br> Personality Trait One: " + trait1 + "</br> Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal + 
-                "</br> Alignment: " + order + " " + moral;
-        document.getElementById("consoleStatistics").innerHTML = "Strength: " + strength + " (" + mods[0] + ")</br> Dexterity: " + dexterity + " (" + mods[1] + ")</br> Constitution: " + constitution + " (" + mods[2] + ")</br> Intelligence: " + intelligence + " (" + mods[3] + ")</br> Wisdom: " + wisdom + " (" + mods[4] + ")</br> Charisma: " + charisma + " (" + mods[5] + ")" +
-                "</br> Max HP: " + maxHP + 
-                "</br> Speed: " + speed;
+        document.getElementById("infoText").innerHTML = "Your creation is a " + race + " " + subrace + " " + classChoice;
+        document.getElementById("background").innerHTML = "I'm a(n) " + backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal + ". This means that I'm " + order + " " + moral + ".";
+        document.getElementById("scores").innerHTML = "Strength: " + strength + " (" + mods[0] + ")</br> Dexterity: " + dexterity + " (" + mods[1] + ")</br> Constitution: " + constitution + " (" + mods[2] + ")</br> Intelligence: " + intelligence + " (" + mods[3] + ")</br> Wisdom: " + wisdom + " (" + mods[4] + ")</br> Charisma: " + charisma + " (" + mods[5] + ")";
+        document.getElementById("health").innerHTML = "Max HP: " + maxHP;
+        document.getElementById("speed").innerHTML = "Speed: " + speed;
     } 
 }
 
