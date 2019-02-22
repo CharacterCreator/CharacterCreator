@@ -105,7 +105,7 @@ function setRaceManual(raceNumber) {
         	manualRace = false;
         	race = "";
         	subrace = "";
-        	document.getElementById("dropdownMenuButton").innerHTML = "Random";
+        	document.getElementById("dropdownMenuButton").innerHTML = "Race Selection";
         	break;
     }
 }
