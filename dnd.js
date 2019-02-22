@@ -25,7 +25,7 @@ function setRace() {
 	            subrace = "";
 	    }
 	}  
-    return "Race: " + subrace + race + " ";
+    return subrace + race + " ";
 }
 
 function setRaceManual(raceNumber) {
@@ -119,7 +119,7 @@ function setClass() {
     var index = Math.floor(Math.random() * 11);
     classChoice = classes[index];
     hitDie = hitDice[index];
-    return "Class: " + classChoice + " ";
+    return classChoice + " ";
 }
 
 var backgroundSelect = "";
@@ -134,184 +134,184 @@ function setBackground() {
         //Personality Traits
 
         var personalityTraitsAcolyte = [
-            "I idolize a particular hero of my faith, and constantly refer to that person’s deeds and example.", 
-            "I can find common ground between the fiercest enemies, empathizing with them and always working toward peace.", 
-            "I see omens in every event and action. The gods try to speak to us, we just need to listen.", 
-            "Nothing can shake my optimistic attitude.", 
-            "I quote (or misquote) sacred texts and proverbs in almost every situation.", 
-            "I am tolerant (or intolerant) of other faiths and respect or condemn) the worship of other gods.", 
-            "I've enjoyed fine food, drink, and high society among my temple’s elite. Rough living grates on me.", 
-            "I’ve spent so long in the temple that I have little practical experience dealing with people in the outside world."];
+            "I idolize a particular hero of my faith, and constantly refer to that person’s deeds and example", 
+            "I can find common ground between the fiercest enemies, empathizing with them and always working toward peace", 
+            "I see omens in every event and action. The gods try to speak to us, we just need to listen", 
+            "Nothing can shake my optimistic attitude", 
+            "I quote (or misquote) sacred texts and proverbs in almost every situation", 
+            "I am tolerant (or intolerant) of other faiths and respect or condemn) the worship of other gods", 
+            "I've enjoyed fine food, drink, and high society among my temple’s elite. Rough living grates on me", 
+            "I’ve spent so long in the temple that I have little practical experience dealing with people in the outside world"];
 
         var personalityTraitsCharlatan = [
-            "I fall in and out of love easily, and am always pursuing someone.",
-            "I have a joke for every occasion, especially occasions where humor is inappropriate.",
-            "Flattery is my preferred trick for getting what I want.",
-            "I’m a born gambler who can't resist taking a risk for a potential payoff.",
-            "I lie about almost everything, even when there’s no good reason to.",
-            "Sarcasm and insults are my weapons of choice.", 
-            "I keep multiple holy symbols on me and invoke whatever deity might come in useful at any given moment.",
-            "I pocket anything I see that might have some value."];
+            "I fall in and out of love easily, and am always pursuing someone",
+            "I have a joke for every occasion, especially occasions where humor is inappropriate",
+            "Flattery is my preferred trick for getting what I want",
+            "I’m a born gambler who can't resist taking a risk for a potential payoff",
+            "I lie about almost everything, even when there’s no good reason to",
+            "Sarcasm and insults are my weapons of choice", 
+            "I keep multiple holy symbols on me and invoke whatever deity might come in useful at any given moment",
+            "I pocket anything I see that might have some value"];
              
         var personalityTraitsCriminal = [
-            "I always have a plan for what to do when things go wrong.", 
-            "I am calm. no matter what the situation. I never raise my voice or let my emotions control me.",
-            "The first thing I do in a new place is note the locations of everything valuable–or where such things could be hidden.",
-            "I would rather make a new friend than a new enemy.",
-            "I am incredibly slow to trust. Those who seem the fairest often have the most to hide.",
-            "I don't pay attention to the risks in a situation. Never tell me the odds.", 
-            "The best way to get me to do something is to tell me I can't do it.",
-            "I blow up at the slightest insult."];
+            "I always have a plan for what to do when things go wrong", 
+            "I am calm no matter what the situation. I never raise my voice or let my emotions control me",
+            "The first thing I do in a new place is note the locations of everything valuable–or where such things could be hidden",
+            "I would rather make a new friend than a new enemy",
+            "I am incredibly slow to trust. Those who seem the fairest often have the most to hide",
+            "I don't pay attention to the risks in a situation. Never tell me the odds", 
+            "The best way to get me to do something is to tell me I can't do it",
+            "I blow up at the slightest insult"];
             
         var personalityTraitsEntertainer = [
-            "I know a story relevant to almost every situation.",
-            "Whenever I come to a new place, I collect local rumors and spread gossip.",
+            "I know a story relevant to almost every situation",
+            "Whenever I come to a new place, I collect local rumors and spread gossip",
             "I’m a hopeless romantic, always searching for that \"special someone.\"",
-            "Nobody stays angry at me or around me for long, since I can defuse any amount of tension.",
-            "I love a good insult, even one directed at me.",
-            "I get bitter if I’m not the center of attention.",
-            "I’ll settle for nothing less than perfection.",
-            "I change my mood or my mind as quickly as I change key in a song."];
+            "Nobody stays angry at me or around me for long, since I can defuse any amount of tension",
+            "I love a good insult, even one directed at me",
+            "I get bitter if I’m not the center of attention",
+            "I’ll settle for nothing less than perfection",
+            "I change my mood or my mind as quickly as I change key in a song"];
             
         var personalityTraitsFolkHero = [
-            "I judge people by their actions, not their words.",
-            "If someone is in trouble, I’m always ready to lend help.",
+            "I judge people by their actions, not their words",
+            "If someone is in trouble, I’m always ready to lend help",
             "When I set my mind to something, I follow through no matter what gets in my way",
-            "I have a strong sense of fair play and always try to find the most equitable solution to arguments.",
-            "I’m confident in my own abilities and do what I can to instill confidence in others.",
-            "Thinking is for other people. I prefer action.",
+            "I have a strong sense of fair play and always try to find the most equitable solution to arguments",
+            "I’m confident in my own abilities and do what I can to instill confidence in others",
+            "Thinking is for other people. I prefer action",
             "I misuse long words in an attempt to sound smarter",
             "I get bored easily. When am I going to get on with my destiny?"];
             
         var personalityTraitsGladiator = [
-            "I know a story relevant to almost every situation.",
-            "Whenever I come to a new place, I collect local rumors and spread gossip.",
+            "I know a story relevant to almost every situation",
+            "Whenever I come to a new place, I collect local rumors and spread gossip",
             "I’m a hopeless romantic, always searching for that \"special someone.\"",
-            "Nobody stays angry at me or around me for long, since I can defuse any amount of tension.",
-            "I love a good insult, even one directed at me.",
-            "I get bitter if I’m not the center of attention.",
-            "I’ll settle for nothing less than perfection.",
-            "I change my mood or my mind as quickly as I change key in a song."];
+            "Nobody stays angry at me or around me for long, since I can defuse any amount of tension",
+            "I love a good insult, even one directed at me",
+            "I get bitter if I’m not the center of attention",
+            "I’ll settle for nothing less than perfection",
+            "I change my mood or my mind as quickly as I change key in a song"];
             
         var personalityTraitsGuildArtisan = [
-            "I believe that anything worth doing is worth doing right. I can’t help it—I’m a perfectionist.",
-            "I’m a snob who looks down on those who can’t appreciate fine art.",
-            "I always want to know how things work and what makes people tick.",
-            "I’m full of witty aphorisms and have a proverb for every occasion.",
-            "I’m rude to people who lack my commitment to hard work and fair play.",
-            "I like to talk at length about my profession.",
+            "I believe that anything worth doing is worth doing right. I can’t help it—I’m a perfectionist",
+            "I’m a snob who looks down on those who can’t appreciate fine art",
+            "I always want to know how things work and what makes people tick",
+            "I’m full of witty aphorisms and have a proverb for every occasion",
+            "I’m rude to people who lack my commitment to hard work and fair play",
+            "I like to talk at length about my profession",
             "I don’t part with my money easily and will haggle tirelessly to get the best deal possible",
-            "I’m well known for my work, and I want to make sure everyone appreciates it. I'm always taken aback when people haven’t heard of me."];
+            "I’m well known for my work, and I want to make sure everyone appreciates it. I'm always taken aback when people haven’t heard of me"];
             
         var personalityTraitsGuildMerchant = [
-            "I believe that anything worth doing is worth doing right. I can’t help it—I’m a perfectionist.",
-            "I’m a snob who looks down on those who can’t appreciate fine art.",
-            "I always want to know how things work and what makes people tick.",
-            "I’m full of witty aphorisms and have a proverb for every occasion.",
-            "I’m rude to people who lack my commitment to hard work and fair play.",
-            "I like to talk at length about my profession.",
+            "I believe that anything worth doing is worth doing right. I can’t help it—I’m a perfectionist",
+            "I’m a snob who looks down on those who can’t appreciate fine art",
+            "I always want to know how things work and what makes people tick",
+            "I’m full of witty aphorisms and have a proverb for every occasion",
+            "I’m rude to people who lack my commitment to hard work and fair play",
+            "I like to talk at length about my profession",
             "I don’t part with my money easily and will haggle tirelessly to get the best deal possible",
-            "I’m well known for my work, and I want to make sure everyone appreciates it. I'm always taken aback when people haven’t heard of me."];
+            "I’m well known for my work, and I want to make sure everyone appreciates it. I'm always taken aback when people haven’t heard of me"];
             
         var personalityTraitsHermit = [
-            "I’ve been isolated for so long that I rarely speak, preferring gestures and the occasional grunt.",
-            "I am utterly serene, even in the face of disaster.",
-            "The leader of my community had something wise to say on every topic, and I am eager to share that wisdom.",
-            "I feel tremendous empathy for all who suffer.",
-            "I’m oblivious to etiquette and social expectations.",
-            "I connect everything that happens to me to a grand, cosmic plan.",
-            "I often get lost in my own thoughts and contemplation, becoming oblivious to my surroundings.",
-            "I am working on a grand philosophical theory and love sharing my ideas."];
+            "I’ve been isolated for so long that I rarely speak, preferring gestures and the occasional grunt",
+            "I am utterly serene, even in the face of disaster",
+            "The leader of my community had something wise to say on every topic, and I am eager to share that wisdom",
+            "I feel tremendous empathy for all who suffer",
+            "I’m oblivious to etiquette and social expectations",
+            "I connect everything that happens to me to a grand, cosmic plan",
+            "I often get lost in my own thoughts and contemplation, becoming oblivious to my surroundings",
+            "I am working on a grand philosophical theory and love sharing my ideas"];
             
         var personalityTraitsKnight = [
-            "My eloquent flattery makes everyone I talk to feel like the most wonderful and important person in the world.",
-            "The common folk love me for my kindness and generosity.",
-            "No one could doubt by looking at my regal bearing that I am a cut above the unwashed masses.",
+            "My eloquent flattery makes everyone I talk to feel like the most wonderful and important person in the world",
+            "The common folk love me for my kindness and generosity",
+            "No one could doubt by looking at my regal bearing that I am a cut above the unwashed masses",
             "I take great pains to always look my best and follow the latest fashions",
-            "I don’t like to get my hands dirty, and I won’t be caught dead in unsuitable accommodations.",
-            "Despite my noble birth, I do not place myself above other folk. We all have the same blood.",
-            "My favor, once lost, is lost forever.",
-            "If you do me an injury, I will crush you, ruin your name, and salt your fields."];
+            "I don’t like to get my hands dirty, and I won’t be caught dead in unsuitable accommodations",
+            "Despite my noble birth, I do not place myself above other folk. We all have the same blood",
+            "My favor, once lost, is lost forever",
+            "If you do me an injury, I will crush you, ruin your name, and salt your fields"];
             
         var personalityTraitsNoble = [
-            "My eloquent flattery makes everyone I talk to feel like the most wonderful and important person in the world.",
-            "The common folk love me for my kindness and generosity.",
-            "No one could doubt by looking at my regal bearing that I am a cut above the unwashed masses.",
+            "My eloquent flattery makes everyone I talk to feel like the most wonderful and important person in the world",
+            "The common folk love me for my kindness and generosity",
+            "No one could doubt by looking at my regal bearing that I am a cut above the unwashed masses",
             "I take great pains to always look my best and follow the latest fashions",
-            "I don’t like to get my hands dirty, and I won’t be caught dead in unsuitable accommodations.",
-            "Despite my noble birth, I do not place myself above other folk. We all have the same blood.",
-            "My favor, once lost, is lost forever.",
-            "If you do me an injury, I will crush you, ruin your name, and salt your fields."];
+            "I don’t like to get my hands dirty, and I won’t be caught dead in unsuitable accommodations",
+            "Despite my noble birth, I do not place myself above other folk. We all have the same blood",
+            "My favor, once lost, is lost forever",
+            "If you do me an injury, I will crush you, ruin your name, and salt your fields"];
             
         var personalityTraitsOutlander = [
-            "I’m driven by a wanderlust that led me away from home.",
-            "I watch over my friends as if they were a litter of newborn pups.",
-            "I once ran twenty-five miles without stopping to warn to my clan of an approaching orc horde. I’d do it again if I had to.",
+            "I’m driven by a wanderlust that led me away from home",
+            "I watch over my friends as if they were a litter of newborn pups",
+            "I once ran twenty-five miles without stopping to warn to my clan of an approaching orc horde. I’d do it again if I had to",
             "I have a lesson for every situation, drawn from observing nature",
-            "I place no stock in wealthy or well-mannered folk. Money and manners won’t save you from a hungry owlbear.",
-            "I’m always picking things up, absently fiddling with them, and sometimes accidentally breaking them.",
-            "I feel far more comfortable around animals than people.",
-            "I was, in fact, raised by wolves."];
+            "I place no stock in wealthy or well-mannered folk. Money and manners won’t save you from a hungry owlbear",
+            "I’m always picking things up, absently fiddling with them, and sometimes accidentally breaking them",
+            "I feel far more comfortable around animals than people",
+            "I was, in fact, raised by wolves"];
         
         var personalityTraitsPirate = [
-            "My friends know they can rely on me, no matter what.",
-            "I work hard so that I can play hard when the work is done.",
-            "I enjoy sailing into new ports and making new friends over a flagon of ale.",
-            "I stretch the truth for the sake of a good story.",
-            "To me, a tavern brawl is a nice way to get to know a new city.",
-            "I never pass up a friendly wager.",
-            "My language is as foul as an otyugh nest.",
-            "I like a job well done, especially if I can convince someone else to do it."];
+            "My friends know they can rely on me, no matter what",
+            "I work hard so that I can play hard when the work is done",
+            "I enjoy sailing into new ports and making new friends over a flagon of ale",
+            "I stretch the truth for the sake of a good story",
+            "To me, a tavern brawl is a nice way to get to know a new city",
+            "I never pass up a friendly wager",
+            "My language is as foul as an otyugh nest",
+            "I like a job well done, especially if I can convince someone else to do it"];
             
         var personalityTraitsSage = [
-            "I use polysyllabic words that convey the impression of great erudition.",
-            "I've read every book in the world’s greatest libraries—or I like to boast that I have.",
-            "I'm used to helping out those who aren’t as smart as I am, and I patiently explain anything and everything to others.",
-            "There’s nothing I like more than a good mystery.",
-            "I’m willing to listen to every side of an argument before I make my own judgment.",
-            "I . . . speak . . . slowly . . . when talking . . . to idiots, . . . which . . . almost . . . everyone . . . is . . . compared . . . to me.",
-            "I am horribly, horribly awkward in social situations.",
-            "I’m convinced that people are always trying to steal my secrets."];
+            "I use polysyllabic words that convey the impression of great erudition",
+            "I've read every book in the world’s greatest libraries—or I like to boast that I have",
+            "I'm used to helping out those who aren’t as smart as I am, and I patiently explain anything and everything to others",
+            "There’s nothing I like more than a good mystery",
+            "I’m willing to listen to every side of an argument before I make my own judgment",
+            "I . . . speak . . . slowly . . . when talking . . . to idiots, . . . which . . . almost . . . everyone . . . is . . . compared . . . to me",
+            "I am horribly, horribly awkward in social situations",
+            "I’m convinced that people are always trying to steal my secrets"];
             
         var personalityTraitsSailor = [
-            "My friends know they can rely on me, no matter what.",
-            "I work hard so that I can play hard when the work is done.",
-            "I enjoy sailing into new ports and making new friends over a flagon of ale.",
-            "I stretch the truth for the sake of a good story.",
-            "To me, a tavern brawl is a nice way to get to know a new city.",
-            "I never pass up a friendly wager.",
-            "My language is as foul as an otyugh nest.",
-            "I like a job well done, especially if I can convince someone else to do it."];
+            "My friends know they can rely on me, no matter what",
+            "I work hard so that I can play hard when the work is done",
+            "I enjoy sailing into new ports and making new friends over a flagon of ale",
+            "I stretch the truth for the sake of a good story",
+            "To me, a tavern brawl is a nice way to get to know a new city",
+            "I never pass up a friendly wager",
+            "My language is as foul as an otyugh nest",
+            "I like a job well done, especially if I can convince someone else to do it"];
             
         var personalityTraitsSoldier = [
-            "I'm always polite and respectful.",
-            "I’m haunted by memories o f war. I can’t get the images of violence out of my mind.",
-            "I’ve lost too many friends, and I’m slow to make new ones.",
-            "I’m full of inspiring and cautionary tales from my military experience relevant to almost every combat situation.",
-            "I can stare down a hell hound without flinching.",
-            "I enjoy being strong and like breaking things.",
-            "I have a crude sense of humor.",
-            "I face problems head-on. A simple, direct solution is the best path to success."];
+            "I'm always polite and respectful",
+            "I’m haunted by memories of war. I can’t get the images of violence out of my mind",
+            "I’ve lost too many friends, and I’m slow to make new ones",
+            "I’m full of inspiring and cautionary tales from my military experience relevant to almost every combat situation",
+            "I can stare down a hell hound without flinching",
+            "I enjoy being strong and like breaking things",
+            "I have a crude sense of humor",
+            "I face problems head-on. A simple, direct solution is the best path to success"];
             
         var personalityTraitsSpy = [
-            "I always have a plan for what to do when things go wrong.", 
-            "I am calm. no matter what the situation. I never raise my voice or let my emotions control me.",
-            "The first thing I do in a new place is note the locations of everything valuable–or where such things could be hidden.",
-            "I would rather make a new friend than a new enemy.",
-            "I am incredibly slow to trust. Those who seem the fairest often have the most to hide.",
-            "I don't pay attention to the risks in a situation. Never tell me the odds.", 
-            "The best way to get me to do something is to tell me I can't do it.",
-            "I blow up at the slightest insult."];
+            "I always have a plan for what to do when things go wrong", 
+            "I am calm. no matter what the situation. I never raise my voice or let my emotions control me",
+            "The first thing I do in a new place is note the locations of everything valuable–or where such things could be hidden",
+            "I would rather make a new friend than a new enemy",
+            "I am incredibly slow to trust. Those who seem the fairest often have the most to hide",
+            "I don't pay attention to the risks in a situation. Never tell me the odds", 
+            "The best way to get me to do something is to tell me I can't do it",
+            "I blow up at the slightest insult"];
             
         var personalityTraitsUrchin = [
-            "I hide scraps of food and trinkets away in my pockets.",
-            "I ask a lot of questions.",
-            "I like to squeeze into small places where no one else can get to me.",
-            "I sleep with my back to a wall or tree, with everything I own wrapped in a bundle in my arms.",
-            "I eat like a pig and have bad manners.",
-            "I think anyone who’s nice to me is hiding evil intent.",
-            "I don’t like to bathe.",
-            "I bluntly say what other people are hinting at or hiding."];
+            "I hide scraps of food and trinkets away in my pockets",
+            "I ask a lot of questions",
+            "I like to squeeze into small places where no one else can get to me",
+            "I sleep with my back to a wall or tree, with everything I own wrapped in a bundle in my arms",
+            "I eat like a pig and have bad manners",
+            "I think anyone who’s nice to me is hiding evil intent",
+            "I don’t like to bathe",
+            "I bluntly say what other people are hinting at or hiding"];
 
         //Ideals
 
@@ -469,9 +469,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsAcolyte[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) == " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsAcolyte[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Charlatan":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsCharlatan[index];
@@ -480,9 +484,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsCharlatan[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsCharlatan[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Criminal":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsCriminal[index];
@@ -491,9 +499,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsCriminal[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsCriminal[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Entertainer":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsEntertainer[index];
@@ -502,9 +514,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsEntertainer[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsEntertainer[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Folk Hero":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsFolkHero[index];
@@ -513,9 +529,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsFolkHero[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsFolkHero[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Gladiator":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsGladiator[index];
@@ -524,9 +544,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsGladiator[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsGladiator[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Guild Artisan":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsGuildArtisan[index];
@@ -535,9 +559,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsGuildArtisan[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsGuildArtisan[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Guild Merchant":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsGuildMerchant[index];
@@ -546,9 +574,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsGuildMerchant[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsGuildMerchant[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Hermit":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsHermit[index];
@@ -557,9 +589,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsHermit[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsHermit[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Knight":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsKnight[index];
@@ -568,9 +604,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsKnight[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsKnight[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Noble":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsNoble[index];
@@ -579,9 +619,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsNoble[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsNoble[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Outlander":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsOutlander[index];
@@ -590,9 +634,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsOutlander[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsOutlander[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Pirate":    
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsPirate[index];
@@ -601,9 +649,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsPirate[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsPirate[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Sage":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsSage[index];
@@ -612,9 +664,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsSage[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsSage[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Sailor":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsSailor[index];
@@ -623,9 +679,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsSailor[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsSailor[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Soldier":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsSoldier[index];
@@ -634,9 +694,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsSoldier[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsSoldier[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Spy":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsSpy[index];
@@ -645,9 +709,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsSpy[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsSpy[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;
             case "Urchin":
                 index = Math.floor(Math.random() * 8);
                 trait1 = personalityTraitsUrchin[index];
@@ -656,9 +724,13 @@ function setBackground() {
                 while (trait2 == "") {
                     index = Math.floor(Math.random() * 8);
                     trait2 = personalityTraitsUrchin[index];
+                    if (trait2.charAt(0) !== "I" && trait2.charAt(1) !== " ") {
+                        trait2 = trait2.charAt(0).toLowerCase() + trait2.substring(1, trait2.length);
+                    }
                 }
                 ideal = idealsUrchin[Math.floor(Math.random() * 6)];
-                return "Background: " + backgroundSelect + "</br>" + "Personality Trait One: " + trait1 + "</br>" + "Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal;         
+                ideal = ideal.charAt(0).toLowerCase() + ideal.substring(1, ideal.length);
+                return backgroundSelect + ": " + trait1 + " and " + trait2 + ". I idolize " + ideal;         
     }
 }
 
@@ -1111,6 +1183,8 @@ function getCharacter() {
         speedPrevious = speed;
 
         charactersCreated ++;
+        document.getElementById("infoText").innerHTML = "Your creation is a " + setRace() + setClass();
+        document.getElementById("background").innerHTML = "I'm a(n) " + setBackground() + ".";
         document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
         document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice) + "</br>" + setHealth() + "</br>" + setSpeed();
 }
