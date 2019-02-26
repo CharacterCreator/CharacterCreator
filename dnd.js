@@ -1962,7 +1962,8 @@ function setSubclass() {
                     subclass = "War Domain ";
                     break;
             }
-            return subclass + classChoice;
+            subclass = subclass + classChoice;
+            return subclass;
         case "Sorcerer":
             var choice = Math.floor(Math.random() * 2);
             switch (choice) {
@@ -1973,7 +1974,8 @@ function setSubclass() {
                     subclass = "Wild Magic ";
                     break;
             }
-            return subclass + classChoice;
+            subclass = subclass + classChoice;
+            return subclass;
         case "Warlock":
             var choice = Math.floor(Math.random() * 3);
             switch (choice) {
@@ -1987,7 +1989,8 @@ function setSubclass() {
                     subclass = " of The Great Old One";
                     break;
             }
-            return classChoice + subclass;
+            subclass = classChoice + subclass;
+            return subclass;
     }
     if (level >= 2) {
         switch (classChoice) {
@@ -2028,7 +2031,8 @@ function setSubclass() {
                         subclass = "Circle of the Moon ";
                         break;
                 }
-                return subclass + classChoice;
+                subclass = subclass + classChoice;
+                return subclass;
             case "Wizard":
                 var choice = Math.floor(Math.random() * 8);
                 switch (choice) {
@@ -2057,7 +2061,8 @@ function setSubclass() {
                     	subclass = "School of Transmutation ";
                         break;
                 }
-                return subclass + classChoice;
+                subclass = subclass + classChoice;
+                return subclass;
         }
     }
     if (level >= 3) {
@@ -2072,7 +2077,8 @@ function setSubclass() {
             			subclass = "Path of the Totem Warrior ";
             			break;
             	}
-            	return subclass + classChoice;
+                subclass = subclass + classChoice;
+            	return subclass;
             case "Bard":
             	var choice = Math.floor(Math.random() * 2);
             	switch (choice) {
@@ -2083,7 +2089,8 @@ function setSubclass() {
             			subclass = "College of Valor ";
             			break;
             	}
-            	return subclass + classChoice;
+                subclass = subclass + classChoice;
+            	return subclass;
             case "Fighter":
             	var choice = Math.floor(Math.random() * 3);
             	switch (choice) {
@@ -2097,7 +2104,8 @@ function setSubclass() {
             			subclass = " (Eldritch Knight)";
             			break;
             	}
-                return classChoice + subclass;
+                subclass = classChoice + subclass;
+                return subclass;
             case "Monk":
             	var choice = Math.floor(Math.random() * 3);
             	switch (choice) {
@@ -2111,7 +2119,8 @@ function setSubclass() {
             			subclass = "Way of the Four Elements ";
             			break;
             	}
-                return subclass + classChoice;
+                subclass = subclass + classChoice;
+                return subclass;
             case "Paladin":
             	var choice = Math.floor(Math.random() * 3);
             	switch (choice) {
@@ -2125,7 +2134,8 @@ function setSubclass() {
             			subclass = "Oath of Vengeance ";
             			break;
             	}
-                return subclass + classChoice;
+                subclass = subclass + classChoice;
+                return subclass;
             case "Ranger":
             	var choice = Math.floor(Math.random() * 2);
             	switch (choice) {
@@ -2136,7 +2146,8 @@ function setSubclass() {
             			subclass = " (Beastmaster)";
             			break;
             	}
-                return classChoice + subclass;
+                subclass = classChoice + subclass;
+                return subclass;
             case "Rogue":
             	var choice = Math.floor(Math.random() * 3);
             	switch (choice) {
@@ -2150,10 +2161,12 @@ function setSubclass() {
             			subclass = " (Arcane Trickster)";
             			break;
             	}
-                return classChoice + subclass;
+                subclass = classChoice + subclass;
+                return subclass;
         }
-        return classChoice;
     }
+    subclass = classChoice;
+    return subclass;
 }
 
 function getFeatures() {
