@@ -252,7 +252,7 @@ function setClass() {
                     break;
             }
             subclass = subclass + classChoice;
-            return subclass;
+            return "Class: " + subclass;
         case "Sorcerer":
             var choice = Math.floor(Math.random() * 2);
             switch (choice) {
@@ -264,7 +264,7 @@ function setClass() {
                     break;
             }
             subclass = subclass + classChoice;
-            return subclass;
+            return "Class: " + subclass;
         case "Warlock":
             var choice = Math.floor(Math.random() * 3);
             switch (choice) {
@@ -279,7 +279,7 @@ function setClass() {
                     break;
             }
             subclass = classChoice + subclass;
-            return subclass;
+            return "Class: " + subclass;
     }
     if (level >= 2) {
         switch (classChoice) {
@@ -321,7 +321,7 @@ function setClass() {
                         break;
                 }
                 subclass = subclass + classChoice;
-                return subclass;
+                return "Class: " + subclass;
             case "Wizard":
                 var choice = Math.floor(Math.random() * 8);
                 switch (choice) {
@@ -351,7 +351,7 @@ function setClass() {
                         break;
                 }
                 subclass = subclass + classChoice;
-                return subclass;
+                return "Class: " + subclass;
         }
     }
     if (level >= 3) {
@@ -367,7 +367,7 @@ function setClass() {
             			break;
             	}
                 subclass = subclass + classChoice;
-            	return subclass;
+            	return "Class: " + subclass;
             case "Bard":
             	var choice = Math.floor(Math.random() * 2);
             	switch (choice) {
@@ -379,7 +379,7 @@ function setClass() {
             			break;
             	}
                 subclass = subclass + classChoice;
-            	return subclass;
+            	return "Class: " + subclass;
             case "Fighter":
             	var choice = Math.floor(Math.random() * 3);
             	switch (choice) {
@@ -394,7 +394,7 @@ function setClass() {
             			break;
             	}
                 subclass = classChoice + subclass;
-                return subclass;
+                return "Class: " + subclass;
             case "Monk":
             	var choice = Math.floor(Math.random() * 3);
             	switch (choice) {
@@ -409,7 +409,7 @@ function setClass() {
             			break;
             	}
                 subclass = subclass + classChoice;
-                return subclass;
+                return "Class: " + subclass;
             case "Paladin":
             	var choice = Math.floor(Math.random() * 3);
             	switch (choice) {
@@ -424,7 +424,7 @@ function setClass() {
             			break;
             	}
                 subclass = subclass + classChoice;
-                return subclass;
+                return "Class: " + subclass;
             case "Ranger":
             	var choice = Math.floor(Math.random() * 2);
             	switch (choice) {
@@ -436,7 +436,7 @@ function setClass() {
             			break;
             	}
                 subclass = classChoice + subclass;
-                return subclass;
+                return "Class: " + subclass;
             case "Rogue":
             	var choice = Math.floor(Math.random() * 3);
             	switch (choice) {
@@ -451,12 +451,11 @@ function setClass() {
             			break;
             	}
                 subclass = classChoice + subclass;
-                return subclass;
+                return "Class: " + subclass;
         }
     }
     subclass = classChoice;
-    return subclass;
-    return "Class: " + classChoice + " ";
+    return "Class: " + subclass;
 }
 
 function setBackground() {
