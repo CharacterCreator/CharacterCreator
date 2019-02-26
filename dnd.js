@@ -2235,6 +2235,7 @@ function getCharacter() {
         subracePrevious = subrace;
 
         classChoicePrevious = classChoice;
+        subclassPrevious = subclass;
 
         backgroundPrevious = backgroundSelect;
         trait1Previous = trait1;
@@ -2272,7 +2273,7 @@ function getCharacter() {
 function getPreviousCharacter() {
     if (charactersCreated >= 2) {
       document.getElementById("consoleDescriptions").innerHTML = "Race: " + subracePrevious + racePrevious +
-          "</br> Class: " + classChoicePrevious +
+          "</br> Class: " + subclassPrevious +
           "</br> Background: " + backgroundPrevious +
           "</br> Personality Trait One: " + trait1Previous + "</br> Personality Trait Two: " + trait2Previous + "</br>" + "Ideal: " + idealPrevious +
           "</br> Alignment: " + orderPrevious + " " + moralPrevious;
@@ -2286,6 +2287,7 @@ function saveCharacter() {
         race: race,
         subrace: subrace,
         classChoice: classChoice,
+        subclass: subclass,
         backgroundSelect: backgroundSelect,
         trait1: trait1,
         trait2: trait2,
@@ -2310,6 +2312,7 @@ function saveCharacter() {
         racePrevious: racePrevious,
         subracePrevious: subracePrevious,
         classChoicePrevious: classChoicePrevious,
+        subclassPrevious: subclassPrevious,
         backgroundPrevious: backgroundPrevious,
         trait1Previous: trait1Previous,
         trait2Previous: trait2Previous,
@@ -2342,6 +2345,7 @@ function loadCharacter() {
         if (typeof saveinfo.race !== "undefined") race = saveinfo.race;
         if (typeof saveinfo.subrace !== "undefined") subrace = saveinfo.subrace;
         if (typeof saveinfo.classChoice !== "undefined") classChoice = saveinfo.classChoice;
+        if (typeof saveinfo.subclass !== "undefined") subclass = saveinfo.subclass;
         if (typeof saveinfo.backgroundSelect !== "undefined") backgroundSelect = saveinfo.backgroundSelect;
         if (typeof saveinfo.trait1 !== "undefined") trait1 = saveinfo.trait1;
         if (typeof saveinfo.trait2 !== "undefined") trait2 = saveinfo.trait2;
@@ -2366,6 +2370,7 @@ function loadCharacter() {
         if (typeof saveinfo.racePrevious !== "undefined") racePrevious = saveinfo.racePrevious;
         if (typeof saveinfo.subracePrevious !== "undefined") subracePrevious = saveinfo.subracePrevious;
         if (typeof saveinfo.classChoicePrevious !== "undefined") classChoicePrevious = saveinfo.classChoicePrevious;
+        if (typeof saveinfo.subclassPrevious !== "undefined") subclassPrevious = saveinfo.subclassPrevious;
         if (typeof saveinfo.backgroundPrevious !== "undefined") backgroundPrevious = saveinfo.backgroundPrevious;
         if (typeof saveinfo.trait1Previous !== "undefined") trait1Previous = saveinfo.trait1Previous;
         if (typeof saveinfo.trait2Previous !== "undefined") trait2Previous = saveinfo.trait2Previous;
@@ -2389,7 +2394,7 @@ function loadCharacter() {
         if (typeof saveinfo.chaModPrevious !== "undefined") chaModPrevious = saveinfo.chaModPrevious;
         if (typeof saveinfo.charactersCreated !== "undefined") charactersCreated = saveinfo.charactersCreated;
         document.getElementById("consoleDescriptions").innerHTML = "Race: " + subrace + race +
-                "</br> Class: " + classChoice +
+                "</br> Class: " + subclass +
                 "</br> Background: " + backgroundSelect +
                 "</br> Personality Trait One: " + trait1 + "</br> Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal +
                 "</br> Alignment: " + order + " " + moral;
