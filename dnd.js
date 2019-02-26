@@ -1349,6 +1349,7 @@ function setSpeed() {
 }
 
 function setProficiencies() {
+	//Proficiencies based on class
 	switch(classChoice) {
 		case "Barbarian":
 			saveProficiencies[0] = 1;
@@ -2161,6 +2162,67 @@ function setProficiencies() {
                     skillProficiencies[8] = 1;
                     break;
             }
+			break;
+	}
+	//Proficiencies based on subclass
+	switch (subclass) {
+		case "College of Lore ":
+			var skill1 = Math.floor(Math.random() * 18);
+            var skill2 = Math.floor(Math.random() * 18);
+            var skill3 = Math.floor(Math.random() * 18);
+            while (skill1 == skill2 || skill1 == skill3)
+                skill1 = Math.floor(Math.random() * 18);
+            while (skill2 == skill3)
+                skill3 = Math.floor(Math.random() * 18);
+            while (skillProficiencies[skill1] == 1)
+            	skill1 = Math.floor(Math.random() * 18);
+            while (skillProficiencies[skill2] == 1)
+            	skill2 = Math.floor(Math.random() * 18);
+            while (skillProficiencies[skill3] == 1)
+            	skill3 = Math.floor(Math.random() * 18);
+            skillProficiencies[skill1] = 1;
+            skillProficiencies[skill2] = 1;
+            skillProficiencies[skill3] = 1;
+			break;
+		case "College of Valor ":
+			armorProficiencies[1] = 1;
+			armorProficiencies[3] = 1;
+			weaponProficiencies[2] = 1;
+			weaponProficiencies[3] = 1;
+			break;
+		case "Knowledge Domain ":
+			var skill1 = Math.floor(Math.random() * 4);
+			var skill2 = Math.floor(Math.random() * 4);
+			while (skill1 == skill2)
+				skill2 = Math.floor(Math.random() * 4);
+			switch (skill1) {
+				case 0:
+					skillProficiencies[4] = 2;
+					break;
+				case 1:
+					skillProficiencies[5] = 2;
+					break;
+				case 2:
+					skillProficiencies[7] = 2;
+					break;
+				case 3:
+					skillProficiencies[8] = 2;
+					break;
+			}
+			switch (skill2) {
+				case 0:
+					skillProficiencies[4] = 2;
+					break;
+				case 1:
+					skillProficiencies[5] = 2;
+					break;
+				case 2:
+					skillProficiencies[7] = 2;
+					break;
+				case 3:
+					skillProficiencies[8] = 2;
+					break;
+			}
 			break;
 	}
 }
