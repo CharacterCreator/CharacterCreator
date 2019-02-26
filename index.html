@@ -46,6 +46,8 @@
 	        		</button>
 	      		</div>
 	      		<div class="modal-body">
+							<button class="btn btn-outline-secondary" data-dismiss="modal" onclick="getCharacter(); saveCharacter()">Create Character</button>
+						</br></br>
 							<div class="dropdown">
 								<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="raceSelection" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					    	Race Selection
@@ -74,18 +76,19 @@
 					    	Class Selection
 					  		</button>
 								<div class="dropdown-menu" aria-labelledby="classSelection">
-									<button class="dropdown-item" onclick="setClassManual(1)"></button>
-						  		<button class="dropdown-item" onclick="setClassManual(2)"></button>
-						  		<button class="dropdown-item" onclick="setClassManual(3)"></button>
-						  		<button class="dropdown-item" onclick="setClassManual(4)"></button>
-						  		<button class="dropdown-item" onclick="setClassManual(5)"></button>
-						  		<button class="dropdown-item" onclick="setClassManual(6)"></button>
-						  		<button class="dropdown-item" onclick="setClassManual(7)"></button>
-						  		<button class="dropdown-item" onclick="setClassManual(8)"></button>
-						  		<button class="dropdown-item" onclick="setClassManual(9)"></button>
-						  		<button class="dropdown-item" onclick="setClassManual(10)"></button>
-						  		<button class="dropdown-item" onclick="setClassManual(11)"></button>
-						  		<button class="dropdown-item" onclick="setClassManual(12)"></button>
+									<button class="dropdown-item" onclick="setClassManual(1)">Barbarian</button>
+						  		<button class="dropdown-item" onclick="setClassManual(2)">Bard</button>
+						  		<button class="dropdown-item" onclick="setClassManual(3)">Cleric</button>
+						  		<button class="dropdown-item" onclick="setClassManual(4)">Druid</button>
+						  		<button class="dropdown-item" onclick="setClassManual(5)">Fighter</button>
+						  		<button class="dropdown-item" onclick="setClassManual(6)">Monk</button>
+						  		<button class="dropdown-item" onclick="setClassManual(7)">Paladin</button>
+						  		<button class="dropdown-item" onclick="setClassManual(8)">Ranger</button>
+						  		<button class="dropdown-item" onclick="setClassManual(9)">Rogue</button>
+						  		<button class="dropdown-item" onclick="setClassManual(10)">Sorcerer</button>
+						  		<button class="dropdown-item" onclick="setClassManual(11)">Warlock</button>
+						  		<button class="dropdown-item" onclick="setClassManual(12)">Wizard</button>
+									<button class="dropdown-item" onclick="setClassManual(13)">Default</button>
 								</div>
 							</div>
 	      			<hr>
