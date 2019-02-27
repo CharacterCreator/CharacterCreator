@@ -6,7 +6,6 @@ var manualRace = false;
 /*For setClass*/
 var classChoice = "";
 var hitDie = 0;
-var manualClass = false;
 
 /*For setBackground*/
 var backgroundSelect = "";
@@ -58,8 +57,8 @@ var weaponTypeProficiencies = [0, 0, 0, 0];
 //Martial Melee: 14:Battleaxe, 15:Flail, 16:Glaive, 17:Greataxe, 18:Greatsword, 19:Halberd, 20:Lance, 21:Longsword, 22:Maul, 23:Morningstar, 24:Pike, 25:Rapier, 26:Scimitar, 27:Shortsword, 28:Trident, 29:War Pick, 30:Warhammer, 31:Whip
 //Martial Ranged: 32:Blowgun, 33:Hand Crossbow, 34:Heavy Crossbow, 35:Longbow, 36:Net
 var weaponProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-//0:Alchemist's Supplies, 1:Brewer's Supplies, 2: Calligrapher's Supplies, 3:Carpenter's Tools, 4: Cartographer's Tools, 5:Cobbler's Tools, 6:Cook's Utensils, 7:Glassblower's Tools, 8:Herbalism Kit, 9:Jeweler's Tools, 10:Leatherworker's Tools, 11:Mason's Tools, 12:Navigator's Tools, 13:Painter's Supplies, 14:Potter's Tools, 15:Smith's Tools, 16:Thieves' Tools, 17:Tinker's Tools, 18:Weaver's Tools, 19:Woodcarver's Tools
-var toolProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+//0:Alchemist's Supplies, 1:Brewer's Supplies, 2: Calligrapher's Supplies, 3:Carpenter's Tools, 4: Cartographer's Tools, 5:Cobbler's Tools, 6:Cook's Utensils, 7:Disguise Kit, 8:Forgery Kit, 9:Glassblower's Tools, 10:Herbalism Kit, 11:Jeweler's Tools, 12:Leatherworker's Tools, 13:Mason's Tools, 14:Navigator's Tools, 15:Painter's Supplies, 16:Poisoner's Kit, 17:Potter's Tools, 18:Smith's Tools, 19:Thieves' Tools, 20:Tinker's Tools, 21:Weaver's Tools, 22:Woodcarver's Tools
+var toolProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 //0:Dice Set, 1:Playing Card Set, 2:Dragonchess Set
 var gamingProficiencies = [0, 0, 0];
 //0:Bagpipes, 1:Drum, 2:Dulcimer, 3:Flute, 4:Lute, 5:Lyre, 6:Horn, 7:Pan Flute, 8:Shawm, 9:Viol
@@ -210,19 +209,22 @@ function setRaceManual(raceNumber) {
             manualRace = false;
             race = "";
             subrace = "";
-            document.getElementById("raceSelection").innerHTML = "Race Selection ";
+            document.getElementById("raceSelection").innerHTML = "Race Selection";
             break;
     }
 }
 
+//We'll come back to this ;)
+function setLevel() {
+    level = 1;
+}
+
 function setClass() {
-    if (!manualClass) {
-      var classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
-      var hitDice = [12, 8, 8, 8, 10, 8, 10, 10, 8, 6, 8, 6];
-      var index = Math.floor(Math.random() * 11);
-      classChoice = classes[index];
-      hitDie = hitDice[index];
-    }
+    var classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
+    var hitDice = [12, 8, 8, 8, 10, 8, 10, 10, 8, 6, 8, 6];
+    var index = Math.floor(Math.random() * 11);
+    classChoice = classes[index];
+    hitDie = hitDice[index];
     switch (classChoice) {
         case "Cleric":
             var choice = Math.floor(Math.random() * 7);
@@ -454,65 +456,6 @@ function setClass() {
     }
     subclass = classChoice;
     return "Class: " + subclass;
-}
-
-function setClassManual(classNumber) {
-    manualClass = true;
-    switch (classNumber) {
-        case 1:
-            classChoice = "Barbarian";
-            document.getElementById("classSelection").innerHTML = "Barbarian";
-            break;
-        case 2:
-            classChoice = "Bard";
-            document.getElementById("classSelection").innerHTML = "Bard";
-            break;
-        case 3:
-            classChoice = "Cleric";
-            document.getElementById("classSelection").innerHTML = "Cleric";
-            break;
-        case 4:
-            classChoice = "Druid";
-            document.getElementById("classSelection").innerHTML = "Druid";
-            break;
-        case 5:
-            classChoice = "Fighter";
-            document.getElementById("classSelection").innerHTML = "Fighter";
-            break;
-        case 6:
-            classChoice = "Monk";
-            document.getElementById("classSelection").innerHTML = "Monk";
-            break;
-        case 7:
-            classChoice = "Paladin";
-            document.getElementById("classSelection").innerHTML = "Paladin";
-            break;
-        case 8:
-            classChoice = "Ranger";
-            document.getElementById("classSelection").innerHTML = "Ranger";
-            break;
-        case 9:
-            classChoice = "Rogue";
-            document.getElementById("classSelection").innerHTML = "Rogue";
-            break;
-        case 10:
-            classChoice = "Sorcerer";
-            document.getElementById("classSelection").innerHTML = "Sorcerer";
-            break;
-        case 11:
-            classChoice = "Warlock";
-            document.getElementById("classSelection").innerHTML = "Warlock";
-            break;
-        case 12:
-            classChoice = "Wizard";
-            document.getElementById("classSelection").innerHTML = "Wizard";
-            break;
-        case 13:
-            classChoice = "";
-            manualClass = false;
-            document.getElementById("classSelection").innerHTML = "Class Selection ";
-            break;
-    }
 }
 
 function setBackground() {
@@ -1557,7 +1500,7 @@ function setProficiencies() {
 			weaponProficiencies[11] = 1;
 			weaponProficiencies[13] = 1;
 			weaponProficiencies[26] = 1;
-			toolProficiencies[8] = 1;
+			toolProficiencies[10] = 1;
 			var skill1 = Math.floor(Math.random() * 8);
             var skill2 = Math.floor(Math.random() * 8);
             while (skill1 == skill2)
@@ -1692,7 +1635,7 @@ function setProficiencies() {
 			var choice = Math.floor(Math.random() * 2);
             switch (choice) {
                 case 0:
-                    toolProficiencies[Math.floor(Math.random() * 20)] = 1;
+                    toolProficiencies[Math.floor(Math.random() * 23)] = 1;
                     break;
                 case 1:
                     instrumentProficiencies[Math.floor(Math.random() * 10)] = 1;
@@ -1830,6 +1773,7 @@ function setProficiencies() {
                     skillProficiencies[6] = 1;
                     break;
                 case 4:
+         			//New York City
                     skillProficiencies[7] = 1;
                     break;
                 case 5:
@@ -1905,7 +1849,7 @@ function setProficiencies() {
 			weaponProficiencies[25] = 1;
 			weaponProficiencies[27] = 1;
 			weaponProficiencies[33] = 1;
-			toolProficiencies[16] = 1;
+			toolProficiencies[19] = 1;
 			var skill1 = Math.floor(Math.random() * 11);
             var skill2 = Math.floor(Math.random() * 11);
             var skill3 = Math.floor(Math.random() * 11);
@@ -2072,6 +2016,7 @@ function setProficiencies() {
             switch (skill1) {
                 case 0:
                     skillProficiencies[4] = 1;
+                    //Class of 2019
                     break;
                 case 1:
                     skillProficiencies[14] = 1;
@@ -2244,8 +2189,8 @@ function setProficiencies() {
 		case "College of Valor ":
 			armorProficiencies[1] = 1;
 			armorProficiencies[3] = 1;
-			weaponProficiencies[2] = 1;
-			weaponProficiencies[3] = 1;
+			weaponTypeProficiencies[2] = 1;
+			weaponTypeProficiencies[3] = 1;
 			break;
 		case "Knowledge Domain ":
 			var skill1 = Math.floor(Math.random() * 4);
@@ -2281,236 +2226,76 @@ function setProficiencies() {
 					break;
 			}
 			break;
+		case "Life Domain ":
+			armorProficiencies[2] = 1;
+			break;
+		case "Nature Domain ":
+			armorProficiencies[2] = 1;
+			var skill = Math.floor(Math.random() * 3);
+			switch (skill) {
+				case 0:
+					skillProficiencies[7] = 1;
+					break;
+				case 1:
+					skillProficiencies[9] = 1;
+					break;
+				case 2:
+					skillProficiencies[13] = 1;
+					break;
+			}
+			break;
+		case "Tempest Domain ":
+			weaponTypeProficiencies[2] = 1;
+			weaponTypeProficiencies[3] = 1;
+			armorProficiencies[2] = 1;
+			break;
+		case "War Domain ":
+			weaponTypeProficiencies[2] = 1;
+			weaponTypeProficiencies[3] = 1;
+			armorProficiencies[2] = 1;
+			break;
+		case " (Battle Master)":
+			var tool = Math.floor(Math.random() * 23);
+			toolProficiencies[tool] = 1;
+			break;
+		case " (Assassin)":
+			toolProficiencies[7] = 1;
+			toolProficiencies[16] = 1;
+			break;
+	}
+	//Proficiencies based on background
+	switch (background) {
+		case "Acolyte":
+			skillProficiencies[8] = 1;
+			skillProficiencies[10] = 1;
+			break;
+		case "Charlatan":
+			skillProficiencies[2]= 1;
+			skillProficiencies[14] = 1;
+			toolProficiencies[7] = 1;
+			toolProficiencies[8] = 1;
+			break;
+		case "Criminal":
+			skillProficiencies[3] = 1;
+			skillProficiencies[14] = 1;
+			toolProficiencies[19] = 1;
+			var gaming = Math.floor(Math.random() * 3);
+			gamingProficiencies[gaming] = 1;
+			break;
+		case "Entertainer":
+			break;
+		case "Folk Hero":
+			break;
+		case "Guild Artisan":
+			break;
+		case "Hermit":
+			break;
+		case "Noble":
+			break;
 	}
 }
 
-//We'll come back to this ;)
-function setLevel() {
-    level = 1;
-}
-
-function setSubclass() {
-    switch (classChoice) {
-        case "Cleric":
-            var choice = Math.floor(Math.random() * 7);
-            switch (choice) {
-                case 0:
-                    subclass = "Knowledge Domain ";
-                    break;
-                case 1:
-                    subclass = "Life Domain ";
-                    break;
-                case 2:
-                    subclass = "Light Domain ";
-                    break;
-                case 3:
-                    subclass = "Nature Domain ";
-                    break;
-                case 4:
-                    subclass = "Tempest Domain ";
-                    break;
-                case 5:
-                    subclass = "Trickery Domain ";
-                    break;
-                case 6:
-                    subclass = "War Domain ";
-                    break;
-            }
-            return subclass + classChoice;
-        case "Sorcerer":
-            var choice = Math.floor(Math.random() * 2);
-            switch (choice) {
-                case 0:
-                    subclass = "Draconic Bloodline ";
-                    break;
-                case 1:
-                    subclass = "Wild Magic ";
-                    break;
-            }
-            return subclass + classChoice;
-        case "Warlock":
-            var choice = Math.floor(Math.random() * 3);
-            switch (choice) {
-                case 0:
-                    subclass = " of The Archfey";
-                    break;
-                case 1:
-                    subclass = " of The Fiend";
-                    break;
-                case 2:
-                    subclass = " of The Great Old One";
-                    break;
-            }
-            return classChoice + subclass;
-    }
-    if (level >= 2) {
-        switch (classChoice) {
-            case "Druid":
-                var choice = Math.floor(Math.random() * 2);
-                switch (choice) {
-                    case 0:
-                        choice = Math.floor(Math.random() * 8);
-                        subclass = "Circle of the Land ";
-                        switch (choice) {
-                            case 0:
-                                subclass += "(Arctic) ";
-                                break;
-                            case 1:
-                                subclass += "(Coast) ";
-                                break;
-                            case 2:
-                                subclass += "(Desert) ";
-                                break;
-                            case 3:
-                                subclass += "(Forest) ";
-                                break;
-                            case 4:
-                                subclass += "(Grassland) ";
-                                break;
-                            case 5:
-                                subclass += "(Mountain) ";
-                                break;
-                            case 6:
-                                subclass += "(Swamp) ";
-                                break;
-                            case 7:
-                                subclass += "(Underdark) ";
-                                break;
-                        }
-                        break;
-                    case 1:
-                        subclass = "Circle of the Moon ";
-                        break;
-                }
-                return subclass + classChoice;
-            case "Wizard":
-                var choice = Math.floor(Math.random() * 8);
-                switch (choice) {
-                    case 0:
-                    	subclass = "School of Abjuration ";
-                        break;
-                    case 1:
-                    	subclass = "School of Conjuration ";
-                        break;
-                    case 2:
-                    	subclass = "School of Divination";
-                        break;
-                    case 3:
-                    	subclass = "School of Enchantment";
-                        break;
-                    case 4:
-                    	subclass = "School of Evocation";
-                        break;
-                    case 5:
-                    	subclass = "School of Illusion";
-                        break;
-                    case 6:
-                    	subclass = "School of Necromancy ";
-                        break;
-                    case 7:
-                    	subclass = "School of Transmutation ";
-                        break;
-                }
-                return subclass + classChoice;
-        }
-    }
-    if (level >= 3) {
-        switch (classChoice) {
-            case "Barbarian":
-            	var choice = Math.floor(Math.random() * 2);
-            	switch (choice) {
-            		case 0:
-            			subclass = "Path of the Berserker ";
-            			break;
-            		case 1:
-            			subclass = "Path of the Totem Warrior ";
-            			break;
-            	}
-            	return subclass + classChoice;
-            case "Bard":
-            	var choice = Math.floor(Math.random() * 2);
-            	switch (choice) {
-            		case 0:
-            			subclass = "College of Lore ";
-            			break;
-            		case 1:
-            			subclass = "College of Valor ";
-            			break;
-            	}
-            	return subclass + classChoice;
-            case "Fighter":
-            	var choice = Math.floor(Math.random() * 3);
-            	switch (choice) {
-            		case 0:
-            			subclass = " (Champion)";
-            			break;
-            		case 1:
-            			subclass = " (Battle Master)";
-            			break;
-            		case 2:
-            			subclass = " (Eldritch Knight)";
-            			break;
-            	}
-                return classChoice + subclass;
-            case "Monk":
-            	var choice = Math.floor(Math.random() * 3);
-            	switch (choice) {
-            		case 0:
-            			subclass = "Way of the Open Hand ";
-            			break;
-            		case 1:
-            			subclass = "Way of Shadow ";
-            			break;
-            		case 2:
-            			subclass = "Way of the Four Elements ";
-            			break;
-            	}
-                return subclass + classChoice;
-            case "Paladin":
-            	var choice = Math.floor(Math.random() * 3);
-            	switch (choice) {
-            		case 0:
-            			subclass = "Oath of Devotion ";
-            			break;
-            		case 1:
-            			subclass = "Oath of the Ancients ";
-            			break;
-            		case 2:
-            			subclass = "Oath of Vengeance ";
-            			break;
-            	}
-                return subclass + classChoice;
-            case "Ranger":
-            	var choice = Math.floor(Math.random() * 2);
-            	switch (choice) {
-            		case 0:
-            			subclass = " (Hunter)";
-            			break;
-            		case 1:
-            			subclass = " (Beastmaster)";
-            			break;
-            	}
-                return classChoice + subclass;
-            case "Rogue":
-            	var choice = Math.floor(Math.random() * 3);
-            	switch (choice) {
-            		case 0:
-            			subclass = " (Thief)";
-            			break;
-            		case 1:
-            			subclass = " (Assassin)";
-            			break;
-            		case 2:
-            			subclass = " (Arcane Trickster)";
-            			break;
-            	}
-                return classChoice + subclass;
-        }
-        return classChoice;
-    }
-}
-
-function getFeatures() {
+function setFeatures() {
 	switch (classChoice) {
 		case "Barbarian":
 			//Rages
@@ -2580,6 +2365,7 @@ function getCharacter() {
         subracePrevious = subrace;
 
         classChoicePrevious = classChoice;
+        subclassPrevious = subclass;
 
         backgroundPrevious = backgroundSelect;
         trait1Previous = trait1;
@@ -2617,7 +2403,7 @@ function getCharacter() {
 function getPreviousCharacter() {
     if (charactersCreated >= 2) {
       document.getElementById("consoleDescriptions").innerHTML = "Race: " + subracePrevious + racePrevious +
-          "</br> Class: " + classChoicePrevious +
+          "</br> Class: " + subclassPrevious +
           "</br> Background: " + backgroundPrevious +
           "</br> Personality Trait One: " + trait1Previous + "</br> Personality Trait Two: " + trait2Previous + "</br>" + "Ideal: " + idealPrevious +
           "</br> Alignment: " + orderPrevious + " " + moralPrevious;
@@ -2631,6 +2417,7 @@ function saveCharacter() {
         race: race,
         subrace: subrace,
         classChoice: classChoice,
+        subclass: subclass,
         backgroundSelect: backgroundSelect,
         trait1: trait1,
         trait2: trait2,
@@ -2655,6 +2442,7 @@ function saveCharacter() {
         racePrevious: racePrevious,
         subracePrevious: subracePrevious,
         classChoicePrevious: classChoicePrevious,
+        subclassPrevious: subclassPrevious,
         backgroundPrevious: backgroundPrevious,
         trait1Previous: trait1Previous,
         trait2Previous: trait2Previous,
@@ -2687,6 +2475,7 @@ function loadCharacter() {
         if (typeof saveinfo.race !== "undefined") race = saveinfo.race;
         if (typeof saveinfo.subrace !== "undefined") subrace = saveinfo.subrace;
         if (typeof saveinfo.classChoice !== "undefined") classChoice = saveinfo.classChoice;
+        if (typeof saveinfo.subclass !== "undefined") subclass = saveinfo.subclass;
         if (typeof saveinfo.backgroundSelect !== "undefined") backgroundSelect = saveinfo.backgroundSelect;
         if (typeof saveinfo.trait1 !== "undefined") trait1 = saveinfo.trait1;
         if (typeof saveinfo.trait2 !== "undefined") trait2 = saveinfo.trait2;
@@ -2711,6 +2500,7 @@ function loadCharacter() {
         if (typeof saveinfo.racePrevious !== "undefined") racePrevious = saveinfo.racePrevious;
         if (typeof saveinfo.subracePrevious !== "undefined") subracePrevious = saveinfo.subracePrevious;
         if (typeof saveinfo.classChoicePrevious !== "undefined") classChoicePrevious = saveinfo.classChoicePrevious;
+        if (typeof saveinfo.subclassPrevious !== "undefined") subclassPrevious = saveinfo.subclassPrevious;
         if (typeof saveinfo.backgroundPrevious !== "undefined") backgroundPrevious = saveinfo.backgroundPrevious;
         if (typeof saveinfo.trait1Previous !== "undefined") trait1Previous = saveinfo.trait1Previous;
         if (typeof saveinfo.trait2Previous !== "undefined") trait2Previous = saveinfo.trait2Previous;
@@ -2734,7 +2524,7 @@ function loadCharacter() {
         if (typeof saveinfo.chaModPrevious !== "undefined") chaModPrevious = saveinfo.chaModPrevious;
         if (typeof saveinfo.charactersCreated !== "undefined") charactersCreated = saveinfo.charactersCreated;
         document.getElementById("consoleDescriptions").innerHTML = "Race: " + subrace + race +
-                "</br> Class: " + classChoice +
+                "</br> Class: " + subclass +
                 "</br> Background: " + backgroundSelect +
                 "</br> Personality Trait One: " + trait1 + "</br> Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal +
                 "</br> Alignment: " + order + " " + moral;
