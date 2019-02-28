@@ -46,7 +46,7 @@ var speed = 0;
 /*For setProficiencies*/
 //0:STR, 1:DEX, 2:CON, 3:INT, 4:WIS, 5:CHA
 var saveProficiencies = [0, 0, 0, 0, 0, 0];
-//[0:Athletics], [1:Acrobatics, 2:Sleight of Hand, 3:Stealth], [4:Arcana, 5:History, 6:Investigation, 7:Nature, 8:Religion], 
+//[0:Athletics], [1:Acrobatics, 2:Sleight of Hand, 3:Stealth], [4:Arcana, 5:History, 6:Investigation, 7:Nature, 8:Religion],
 //[9:Animal Handling, 10:Insight, 11:Medicine, 12:Perception, 13:Survival], [14: Deception, 15:Intimidation, 16: Performance, 17:Persuasion]
 var skillProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 //0:Light, 1:Medium, 2:Heavy, 3:Shields
@@ -55,12 +55,12 @@ var armorProficiencies = [0, 0, 0, 0];
 var weaponTypeProficiencies = [0, 0, 0, 0];
 //Simple Melee: 0:Club, 1:Dagger, 2:Greatclub, 3:Handaxe, 4:Javelin, 5:Light Hammer, 6:Mace, 7:Quarterstaff, 8:Sickle, 9:Spear
 //Simple Ranged: 10:Light Crossbow, 11:Dart, 12:Shortbow, 13:Sling
-//Martial Melee: 14:Battleaxe, 15:Flail, 16:Glaive, 17:Greataxe, 18:Greatsword, 19:Halberd, 20:Lance, 21:Longsword, 22:Maul, 23:Morningstar, 24:Pike, 25:Rapier, 26:Scimitar, 
+//Martial Melee: 14:Battleaxe, 15:Flail, 16:Glaive, 17:Greataxe, 18:Greatsword, 19:Halberd, 20:Lance, 21:Longsword, 22:Maul, 23:Morningstar, 24:Pike, 25:Rapier, 26:Scimitar,
 //Martial Melee: 27:Shortsword, 28:Trident, 29:War Pick, 30:Warhammer, 31:Whip
 //Martial Ranged: 32:Blowgun, 33:Hand Crossbow, 34:Heavy Crossbow, 35:Longbow, 36:Net
 var weaponProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-//0:Alchemist's Supplies, 1:Brewer's Supplies, 2: Calligrapher's Supplies, 3:Carpenter's Tools, 4: Cartographer's Tools, 5:Cobbler's Tools, 6:Cook's Utensils, 7:Disguise Kit, 
-//8:Forgery Kit, 9:Glassblower's Tools, 10:Herbalism Kit, 11:Jeweler's Tools, 12:Leatherworker's Tools, 13:Mason's Tools, 14:Navigator's Tools, 15:Painter's Supplies, 16:Poisoner's Kit, 
+//0:Alchemist's Supplies, 1:Brewer's Supplies, 2: Calligrapher's Supplies, 3:Carpenter's Tools, 4: Cartographer's Tools, 5:Cobbler's Tools, 6:Cook's Utensils, 7:Disguise Kit,
+//8:Forgery Kit, 9:Glassblower's Tools, 10:Herbalism Kit, 11:Jeweler's Tools, 12:Leatherworker's Tools, 13:Mason's Tools, 14:Navigator's Tools, 15:Painter's Supplies, 16:Poisoner's Kit,
 //17:Potter's Tools, 18:Smith's Tools, 19:Thieves' Tools, 20:Tinker's Tools, 21:Weaver's Tools, 22:Woodcarver's Tools, 23:Land Vehicles, 24:Water Vehicles
 var toolProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 //0:Dice Set, 1:Playing Card Set, 2:Dragonchess Set
@@ -82,13 +82,13 @@ var rages = 0;
 var rageDamage = 0;
 
 /*For setSpells*/
-/*var spells = [
-  //["ID", "Name", "Type", "Level", "Casting Time", "Range", "Components", "Duration", "Description"]
-  [0, ],
-  [1, ],
-  [2, ],
-  [3, ],
-  [4, ],
+var spells = [
+  //["ID", "Name", "Type", "Level", "Ritual Casting", "Casting Time", "Range", "Components", "Duration", "Concentration", "Description"]
+  [0, "Acid Splash", "Conjuration", "Cantrip", false, "1 Action", "60 Feet", "V, S", "Instantaneous", false, "You hurl a bubble of acid. Choose one creature within range, or choose two creatures within range that are within 5 feet o f each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage. This spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6)."],
+  [1, "Aid", "Abjuration", "2nd-level", false, "1 Action", "30 Feet", "V, S, M (a tiny strip of white cloth)", "8 Hours", false, "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target’s hit point maximum and current hit points increase by 5 for the duration. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 3rd level or higher, a target’s hit points increase by an additional 5 for each slot level above 2nd."],
+  [2, "Alarm", "Abjuration", "1st-level", true, "1 Minute", "30 Feet", "V, S, M (a tiny bell and a piece of fine silver wire)", "8 Hours", "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the warded area. When you cast the spell, you can designate creatures that won’t set off the alarm. You also choose whether the alarm is mental or audible. A mental alarm alerts you with a ping in your mind if you are within 1 mile of the warded area. This ping awakens you if you are sleeping. An audible alarm produces the sound of a hand bell for 10 seconds within 60 feet."],
+  [3, "Alter Self", "Transmutation", "2nd-level", false, "1 Action", "Self", "V, S", "1 Hour", true, "You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one. <b>Aquatic Adaptation.</b> You adapt your body to an aquatic environment, sprouting gills and growing webbing between your fingers. You can breathe underwater and gain a swimming speed equal to your walking speed. <b>Change Appearance.</b> You transform your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing characteristics, if any. You can make yourself appear as a m em ber of another race, though none of your statistics change. You also can’t appear as a creature of a different size than you, and your basic shape stays the same; if you're bipedal, you can’t use this spell to become quadrupedal, for instance. At any time for the duration of the spell, you can use your action to change your appearance in this way again. <b>Natural Weapons.</b> You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal 1d6 bludgeoning, piercing, or slashing damage, as appropriate to the natural weapon you chose, and you are proficient with your unarmed strikes. Finally, the natural weapon is magic and you have a +1 bonus to the attack and damage rolls you make using it."],
+  [4, "Animal Friendship", "Enchantment", "1st-level", false, "1 Action", ],
   [5, ],
   [6, ],
   [7, ],
@@ -443,7 +443,7 @@ var rageDamage = 0;
   [359, ],
   [360, ],
   [361, ]
-];*/
+];
 
 //For all of the saving and loading functions: getCharacter, getPreviousCharacter, saveCharacter, loadCharacter, deleteCharacter
 var racePrevious = race;
@@ -2634,7 +2634,7 @@ function setProficiencies() {
             break;
     }
     //Proficiencies based on background
-    switch (background) {
+    switch (backgroundSelect) {
         case "Acolyte":
             if (skillProficiencies[8] == 0)
                 skillProficiencies[8] = 1;
@@ -3021,19 +3021,58 @@ function setProficiencies() {
 }
 
 function displayProficiencies() {
+  setProficiencies();
 	var display = "";
 	var armor = ["Light Armor", "Medium Armor", "Heavy Armor", "Shields"];
 	var gaming = ["Dice", "Playing Card Set", "Dragonchess Set"];
 	var instrument = ["Bagpipes", "Drum", "Dulcimer", "Flute", "Lute", "Lyre", "Horn", "Pan Flute", "Shawm", "Viol"];
-	var skill = ["Athletics", "Acrobatics", "Sleight of Hand", "Stealth", "Arcana", "History", "Investigation", "Nature", "Religion", "Animal Handling", "Insight", "Medicine", "Perception", "Survival", "Deception", "Intimidation", "Performance", "Persuasion"];
-	var tool = ["Alchemist's Supplies", "Brewer's Supplies", "Calligrapher's Supplies", "Carpenter's Tools", "Cartographer's Tools", "Cobbler's Tools", "Cook's Utensils", "Disguise Kit", "Forgery Kit", 
-				"Glassblower's Tools", "Herbalism Kit", "Jeweler's Tools", "Leatherworker's Tools", "Mason's Tools", "Navigator's Tools", "Painter's Supplies", "Poisoner's Kit", "Potter's Tools", "Smith's Tools", 
+	var tool = ["Alchemist's Supplies", "Brewer's Supplies", "Calligrapher's Supplies", "Carpenter's Tools", "Cartographer's Tools", "Cobbler's Tools", "Cook's Utensils", "Disguise Kit", "Forgery Kit",
+				"Glassblower's Tools", "Herbalism Kit", "Jeweler's Tools", "Leatherworker's Tools", "Mason's Tools", "Navigator's Tools", "Painter's Supplies", "Poisoner's Kit", "Potter's Tools", "Smith's Tools",
 				"Thieves' Tools", "Tinker's Tools", "Weaver's Tools", "Woodcarver's Tools", "Land Vehicles", "Water Vehicles"];
 	var weaponType = ["Simple Melee Weapons", "Simple Ranged Weapons", "Martial Melee Weapons", "Martial Ranged Weapons"];
 	var weapon = ["Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear", "Light Crossbow", "Dart", "Shortbow", "Sling",
-				"Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", 
+				"Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar",
 				"Shortsword", "Trident", "War Pick", "Warhammer", "Whip", "Blowgun", "Hand Crossbow", "Heavy Crossbow", "Longbow", "Net"];
-	return "";
+  display += "Armor: ";
+  for (var e = 0; e < armorProficiencies.length; e++) {
+    if (armorProficiencies[e] == 1)
+      display += armor[e] + ", ";
+  }
+  display = display.substring(0, display.length - 2) + "</br>";
+  display += "Weapons: ";
+  for (var e = 0; e < weaponTypeProficiencies.length; e++) {
+    if (weaponTypeProficiencies[e] == 1)
+      display += weaponType[e] + ", ";
+  }
+  for (var e = 0; e < weaponProficiencies.length; e++) {
+    if (weaponProficiencies[e] == 1)
+      display += weapon[e] + ", ";
+  }
+  display = display.substring(0, display.length - 2) + "</br>";
+  display += "Tools: ";
+  for (var e = 0; e < toolProficiencies.length; e++) {
+    if (toolProficiencies[e] == 1)
+      display += tool[e] + ", ";
+  }
+  display = display.substring(0, display.length - 2) + "</br>";
+  display += "Instruments: ";
+  for (var e = 0; e < instrumentProficiencies.length; e++) {
+    if (instrumentProficiencies[e] == 1)
+      display += instrument[e] + ", ";
+  }
+  display = display.substring(0, display.length - 2) + "</br>";
+  display += "Gaming Sets: ";
+  for (var e = 0; e < gamingProficiencies.length; e++) {
+    if (gamingProficiencies[e] == 1)
+      display += gaming[e] + ", ";
+  }
+  display = display.substring(0, display.length - 2) + "</br>";
+	return display;
+}
+
+function displaySkills() {
+  var skill = ["Athletics", "Acrobatics", "Sleight of Hand", "Stealth", "Arcana", "History", "Investigation", "Nature", "Religion", "Animal Handling", "Insight", "Medicine", "Perception", "Survival", "Deception", "Intimidation", "Performance", "Persuasion"];
+
 }
 
 function setFeatures() {
@@ -3095,6 +3134,11 @@ function setFeatures() {
     }
 }
 
+//Why did we decide to do this
+function setSpells() {
+
+}
+
 var save = localStorage.getItem("save");
 
 if (save == null) {
@@ -3150,7 +3194,8 @@ function getPreviousCharacter() {
           "</br> Personality Trait One: " + trait1Previous + "</br> Personality Trait Two: " + trait2Previous + "</br>" + "Ideal: " + idealPrevious +
           "</br> Alignment: " + orderPrevious + " " + moralPrevious;
       document.getElementById("consoleStatistics").innerHTML = "Strength: " + strengthPrevious + " (" + modsPrevious[0] + ")</br> Dexterity: " + dexterityPrevious + " (" + modsPrevious[1] + ")</br> Constitution: " + constitutionPrevious + " (" + modsPrevious[2] + ")</br> Intelligence: " + intelligencePrevious + " (" + modsPrevious[3] + ")</br> Wisdom: " + wisdomPrevious + " (" + modsPrevious[4] + ")</br> Charisma: " + charismaPrevious + " (" + modsPrevious[5] + ")" +
-          "</br> Max HP: " + maxHPPrevious;
+          "</br> Max HP: " + maxHPPrevious +
+          "</br> Speed: " + speedPrevious;
     }
 }
 
@@ -3271,7 +3316,8 @@ function loadCharacter() {
                 "</br> Personality Trait One: " + trait1 + "</br> Personality Trait Two: " + trait2 + "</br>" + "Ideal: " + ideal +
                 "</br> Alignment: " + order + " " + moral;
         document.getElementById("consoleStatistics").innerHTML = "Strength: " + strength + " (" + mods[0] + ")</br> Dexterity: " + dexterity + " (" + mods[1] + ")</br> Constitution: " + constitution + " (" + mods[2] + ")</br> Intelligence: " + intelligence + " (" + mods[3] + ")</br> Wisdom: " + wisdom + " (" + mods[4] + ")</br> Charisma: " + charisma + " (" + mods[5] + ")" +
-                "</br> Max HP: " + maxHP;
+                "</br> Max HP: " + maxHP +
+                "</br> Speed: " + speed;
     }
 }
 
