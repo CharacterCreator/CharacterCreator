@@ -314,134 +314,132 @@ var rageDamage = 0;
   [233, ],
   [234, ],
   [235, ],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  []
+  [236, ],
+  [237, ],
+  [238, ],
+  [239, ],
+  [240, ],
+  [241, ],
+  [242, ],
+  [243, ],
+  [244, ],
+  [245, ],
+  [246, ],
+  [247, ],
+  [248, ],
+  [249, ],
+  [250, ],
+  [251, ],
+  [252, ],
+  [253, ],
+  [254, ],
+  [255, ],
+  [256, ],
+  [257, ],
+  [258, ],
+  [259, ],
+  [260, ],
+  [261, ],
+  [262, ],
+  [263, ],
+  [264, ],
+  [265, ],
+  [266, ],
+  [267, ],
+  [268, ],
+  [269, ],
+  [270, ],
+  [271, ],
+  [272, ],
+  [273, ],
+  [274, ],
+  [275, ],
+  [276, ],
+  [277, ],
+  [278, ],
+  [279, ],
+  [280, ],
+  [281, ],
+  [282, ],
+  [283, ],
+  [284, ],
+  [285, ],
+  [286, ],
+  [287, ],
+  [288, ],
+  [289, ],
+  [290, ],
+  [291, ],
+  [292, ],
+  [293, ],
+  [294, ],
+  [295, ],
+  [296, ],
+  [297, ],
+  [298, ],
+  [299, ],
+  [300, ],
+  [301, ],
+  [302, ],
+  [303, ],
+  [304, ],
+  [305, ],
+  [306, ],
+  [307, ],
+  [308, ],
+  [309, ],
+  [310, ],
+  [311, ],
+  [312, ],
+  [313, ],
+  [314, ],
+  [315, ],
+  [316, ],
+  [317, ],
+  [318, ],
+  [319, ],
+  [320, ],
+  [321, ],
+  [323, ],
+  [324, ],
+  [325, ],
+  [326, ],
+  [327, ],
+  [328, ],
+  [329, ],
+  [330, ],
+  [331, ],
+  [332, ],
+  [333, ],
+  [334, ],
+  [335, ],
+  [336, ],
+  [337, ],
+  [338, ],
+  [339, ],
+  [340, ],
+  [341, ],
+  [342, ],
+  [343, ],
+  [344, ],
+  [345, ],
+  [346, ],
+  [347, ],
+  [348, ],
+  [349, ],
+  [350, ],
+  [351, ],
+  [352, ],
+  [353, ],
+  [354, ],
+  [355, ],
+  [356, ],
+  [357, ],
+  [358, ],
+  [359, ],
+  [360, ],
+  [361, ],
+  [362, ]
 ];*/
 
 //For all of the saving and loading functions: getCharacter, getPreviousCharacter, saveCharacter, loadCharacter, deleteCharacter
@@ -693,28 +691,28 @@ function setClass() {
                 var choice = Math.floor(Math.random() * 8);
                 switch (choice) {
                     case 0:
-                    	subclass = "School of Abjuration ";
+                        subclass = "School of Abjuration ";
                         break;
                     case 1:
-                    	subclass = "School of Conjuration ";
+                        subclass = "School of Conjuration ";
                         break;
                     case 2:
-                    	subclass = "School of Divination";
+                        subclass = "School of Divination";
                         break;
                     case 3:
-                    	subclass = "School of Enchantment";
+                        subclass = "School of Enchantment";
                         break;
                     case 4:
-                    	subclass = "School of Evocation";
+                        subclass = "School of Evocation";
                         break;
                     case 5:
-                    	subclass = "School of Illusion";
+                        subclass = "School of Illusion";
                         break;
                     case 6:
-                    	subclass = "School of Necromancy ";
+                        subclass = "School of Necromancy ";
                         break;
                     case 7:
-                    	subclass = "School of Transmutation ";
+                        subclass = "School of Transmutation ";
                         break;
                 }
                 subclass = subclass + classChoice;
@@ -724,99 +722,99 @@ function setClass() {
     if (level >= 3) {
         switch (classChoice) {
             case "Barbarian":
-            	var choice = Math.floor(Math.random() * 2);
-            	switch (choice) {
-            		case 0:
-            			subclass = "Path of the Berserker ";
-            			break;
-            		case 1:
-            			subclass = "Path of the Totem Warrior ";
-            			break;
-            	}
+                var choice = Math.floor(Math.random() * 2);
+                switch (choice) {
+                    case 0:
+                        subclass = "Path of the Berserker ";
+                        break;
+                    case 1:
+                        subclass = "Path of the Totem Warrior ";
+                        break;
+                }
                 subclass = subclass + classChoice;
-            	return "Class: " + subclass;
+                return "Class: " + subclass;
             case "Bard":
-            	var choice = Math.floor(Math.random() * 2);
-            	switch (choice) {
-            		case 0:
-            			subclass = "College of Lore ";
-            			break;
-            		case 1:
-            			subclass = "College of Valor ";
-            			break;
-            	}
+                var choice = Math.floor(Math.random() * 2);
+                switch (choice) {
+                    case 0:
+                        subclass = "College of Lore ";
+                        break;
+                    case 1:
+                        subclass = "College of Valor ";
+                        break;
+                }
                 subclass = subclass + classChoice;
-            	return "Class: " + subclass;
+                return "Class: " + subclass;
             case "Fighter":
-            	var choice = Math.floor(Math.random() * 3);
-            	switch (choice) {
-            		case 0:
-            			subclass = " (Champion)";
-            			break;
-            		case 1:
-            			subclass = " (Battle Master)";
-            			break;
-            		case 2:
-            			subclass = " (Eldritch Knight)";
-            			break;
-            	}
+                var choice = Math.floor(Math.random() * 3);
+                switch (choice) {
+                    case 0:
+                        subclass = " (Champion)";
+                        break;
+                    case 1:
+                        subclass = " (Battle Master)";
+                        break;
+                    case 2:
+                        subclass = " (Eldritch Knight)";
+                        break;
+                }
                 subclass = classChoice + subclass;
                 return "Class: " + subclass;
             case "Monk":
-            	var choice = Math.floor(Math.random() * 3);
-            	switch (choice) {
-            		case 0:
-            			subclass = "Way of the Open Hand ";
-            			break;
-            		case 1:
-            			subclass = "Way of Shadow ";
-            			break;
-            		case 2:
-            			subclass = "Way of the Four Elements ";
-            			break;
-            	}
+                var choice = Math.floor(Math.random() * 3);
+                switch (choice) {
+                    case 0:
+                        subclass = "Way of the Open Hand ";
+                        break;
+                    case 1:
+                        subclass = "Way of Shadow ";
+                        break;
+                    case 2:
+                        subclass = "Way of the Four Elements ";
+                        break;
+                }
                 subclass = subclass + classChoice;
                 return "Class: " + subclass;
             case "Paladin":
-            	var choice = Math.floor(Math.random() * 3);
-            	switch (choice) {
-            		case 0:
-            			subclass = "Oath of Devotion ";
-            			break;
-            		case 1:
-            			subclass = "Oath of the Ancients ";
-            			break;
-            		case 2:
-            			subclass = "Oath of Vengeance ";
-            			break;
-            	}
+                var choice = Math.floor(Math.random() * 3);
+                switch (choice) {
+                    case 0:
+                        subclass = "Oath of Devotion ";
+                        break;
+                    case 1:
+                        subclass = "Oath of the Ancients ";
+                        break;
+                    case 2:
+                        subclass = "Oath of Vengeance ";
+                        break;
+                }
                 subclass = subclass + classChoice;
                 return "Class: " + subclass;
             case "Ranger":
-            	var choice = Math.floor(Math.random() * 2);
-            	switch (choice) {
-            		case 0:
-            			subclass = " (Hunter)";
-            			break;
-            		case 1:
-            			subclass = " (Beastmaster)";
-            			break;
-            	}
+                var choice = Math.floor(Math.random() * 2);
+                switch (choice) {
+                    case 0:
+                        subclass = " (Hunter)";
+                        break;
+                    case 1:
+                        subclass = " (Beastmaster)";
+                        break;
+                }
                 subclass = classChoice + subclass;
                 return "Class: " + subclass;
             case "Rogue":
-            	var choice = Math.floor(Math.random() * 3);
-            	switch (choice) {
-            		case 0:
-            			subclass = " (Thief)";
-            			break;
-            		case 1:
-            			subclass = " (Assassin)";
-            			break;
-            		case 2:
-            			subclass = " (Arcane Trickster)";
-            			break;
-            	}
+                var choice = Math.floor(Math.random() * 3);
+                switch (choice) {
+                    case 0:
+                        subclass = " (Thief)";
+                        break;
+                    case 1:
+                        subclass = " (Assassin)";
+                        break;
+                    case 2:
+                        subclass = " (Arcane Trickster)";
+                        break;
+                }
                 subclass = classChoice + subclass;
                 return "Class: " + subclass;
         }
@@ -1716,18 +1714,18 @@ function setSpeed() {
 }
 
 function setProficiencies() {
-	//Proficiencies based on class
-	switch(classChoice) {
-		case "Barbarian":
-			saveProficiencies[0] = 1;
-			saveProficiencies[2] = 1;
-			armorProficiencies[0] = 1;
-			armorProficiencies[1] = 1;
-			armorProficiencies[3] = 1;
-			weaponTypeProficiencies[0] = 1;
-			weaponTypeProficiencies[1] = 1;
-			weaponTypeProficiencies[2] = 1;
-			weaponTypeProficiencies[3] = 1;
+    //Proficiencies based on class
+    switch(classChoice) {
+        case "Barbarian":
+            saveProficiencies[0] = 1;
+            saveProficiencies[2] = 1;
+            armorProficiencies[0] = 1;
+            armorProficiencies[1] = 1;
+            armorProficiencies[3] = 1;
+            weaponTypeProficiencies[0] = 1;
+            weaponTypeProficiencies[1] = 1;
+            weaponTypeProficiencies[2] = 1;
+            weaponTypeProficiencies[3] = 1;
             var skill1 = Math.floor(Math.random() * 6);
             var skill2 = Math.floor(Math.random() * 6);
             while (skill2 == skill1)
@@ -1772,18 +1770,18 @@ function setProficiencies() {
                     skillProficiencies[13] = 1;
                     break;
             }
-			break;
-		case "Bard":
-			saveProficiencies[1] = 1;
-			saveProficiencies[5] = 1;
-			armorProficiencies[0] = 1;
-			weaponTypeProficiencies[0] = 1;
-			weaponTypeProficiencies[1] = 1;
-			weaponProficiencies[21] = 1;
-			weaponProficiencies[25] = 1;
-			weaponProficiencies[27] = 1;
-			weaponProficiencies[33] = 1;
-			var instrument1 = Math.floor(Math.random() * 10);
+            break;
+        case "Bard":
+            saveProficiencies[1] = 1;
+            saveProficiencies[5] = 1;
+            armorProficiencies[0] = 1;
+            weaponTypeProficiencies[0] = 1;
+            weaponTypeProficiencies[1] = 1;
+            weaponProficiencies[21] = 1;
+            weaponProficiencies[25] = 1;
+            weaponProficiencies[27] = 1;
+            weaponProficiencies[33] = 1;
+            var instrument1 = Math.floor(Math.random() * 10);
             var instrument2 = Math.floor(Math.random() * 10);
             var instrument3 = Math.floor(Math.random() * 10);
             while (instrument1 == instrument2 || instrument1 == instrument3)
@@ -1793,7 +1791,7 @@ function setProficiencies() {
             instrumentProficiencies[instrument1] = 1;
             instrumentProficiencies[instrument2] = 1;
             instrumentProficiencies[instrument3] = 1;
-			var skill1 = Math.floor(Math.random() * 18);
+            var skill1 = Math.floor(Math.random() * 18);
             var skill2 = Math.floor(Math.random() * 18);
             var skill3 = Math.floor(Math.random() * 18);
             while (skill1 == skill2 || skill1 == skill3)
@@ -1803,16 +1801,16 @@ function setProficiencies() {
             skillProficiencies[skill1] = 1;
             skillProficiencies[skill2] = 1;
             skillProficiencies[skill3] = 1;
-			break;
-		case "Cleric":
-			saveProficiencies[4] = 1;
-			saveProficiencies[5] = 1;
-			armorProficiencies[0] = 1;
-			armorProficiencies[1] = 1;
-			armorProficiencies[3] = 1;
-			weaponTypeProficiencies[0] = 1;
-			weaponTypeProficiencies[1] = 1;
-			var skill1 = Math.floor(Math.random() * 5);
+            break;
+        case "Cleric":
+            saveProficiencies[4] = 1;
+            saveProficiencies[5] = 1;
+            armorProficiencies[0] = 1;
+            armorProficiencies[1] = 1;
+            armorProficiencies[3] = 1;
+            weaponTypeProficiencies[0] = 1;
+            weaponTypeProficiencies[1] = 1;
+            var skill1 = Math.floor(Math.random() * 5);
             var skill2 = Math.floor(Math.random() * 5);
             while (skill1 == skill2)
                 skill2 = Math.floor(Math.random() * 5);
@@ -1850,25 +1848,25 @@ function setProficiencies() {
                     skillProficiencies[8] = 1;
                     break;
             }
-			break;
-		case "Druid":
-			saveProficiencies[3] = 1;
-			saveProficiencies[4] = 1;
-			armorProficiencies[0] = 1;
-			armorProficiencies[1] = 1;
-			armorProficiencies[3] = 1;
-			weaponProficiencies[0] = 1;
-			weaponProficiencies[1] = 1;
-			weaponProficiencies[4] = 1;
-			weaponProficiencies[6] = 1;
-			weaponProficiencies[7] = 1;
-			weaponProficiencies[8] = 1;
-			weaponProficiencies[9] = 1;
-			weaponProficiencies[11] = 1;
-			weaponProficiencies[13] = 1;
-			weaponProficiencies[26] = 1;
-			toolProficiencies[10] = 1;
-			var skill1 = Math.floor(Math.random() * 8);
+            break;
+        case "Druid":
+            saveProficiencies[3] = 1;
+            saveProficiencies[4] = 1;
+            armorProficiencies[0] = 1;
+            armorProficiencies[1] = 1;
+            armorProficiencies[3] = 1;
+            weaponProficiencies[0] = 1;
+            weaponProficiencies[1] = 1;
+            weaponProficiencies[4] = 1;
+            weaponProficiencies[6] = 1;
+            weaponProficiencies[7] = 1;
+            weaponProficiencies[8] = 1;
+            weaponProficiencies[9] = 1;
+            weaponProficiencies[11] = 1;
+            weaponProficiencies[13] = 1;
+            weaponProficiencies[26] = 1;
+            toolProficiencies[10] = 1;
+            var skill1 = Math.floor(Math.random() * 8);
             var skill2 = Math.floor(Math.random() * 8);
             while (skill1 == skill2)
                 skill2 = Math.floor(Math.random() * 8);
@@ -1924,19 +1922,19 @@ function setProficiencies() {
                     skillProficiencies[13] = 1;
                     break;
             }
-			break;
-		case "Fighter":
-			saveProficiencies[0] = 1;
-			saveProficiencies[2] = 1;
-			armorProficiencies[0] = 1;
-			armorProficiencies[1] = 1;
-			armorProficiencies[2] = 1;
-			armorProficiencies[3] = 1;
-			weaponTypeProficiencies[0] = 1;
-			weaponTypeProficiencies[1] = 1;
-			weaponTypeProficiencies[2] = 1;
-			weaponTypeProficiencies[3] = 1;
-			var skill1 = Math.floor(Math.random() * 8);
+            break;
+        case "Fighter":
+            saveProficiencies[0] = 1;
+            saveProficiencies[2] = 1;
+            armorProficiencies[0] = 1;
+            armorProficiencies[1] = 1;
+            armorProficiencies[2] = 1;
+            armorProficiencies[3] = 1;
+            weaponTypeProficiencies[0] = 1;
+            weaponTypeProficiencies[1] = 1;
+            weaponTypeProficiencies[2] = 1;
+            weaponTypeProficiencies[3] = 1;
+            var skill1 = Math.floor(Math.random() * 8);
             var skill2 = Math.floor(Math.random() * 8);
             while (skill1 == skill2)
                 skill2 = Math.floor(Math.random() * 8);
@@ -1992,14 +1990,14 @@ function setProficiencies() {
                     skillProficiencies[13] = 1;
                     break;
             }
-			break;
-		case "Monk":
-			saveProficiencies[0] = 1;
-			saveProficiencies[1] = 1;
-			weaponTypeProficiencies[0] = 1;
-			weaponTypeProficiencies[1] = 1;
-			weaponProficiencies[27] = 1;
-			var choice = Math.floor(Math.random() * 2);
+            break;
+        case "Monk":
+            saveProficiencies[0] = 1;
+            saveProficiencies[1] = 1;
+            weaponTypeProficiencies[0] = 1;
+            weaponTypeProficiencies[1] = 1;
+            weaponProficiencies[27] = 1;
+            var choice = Math.floor(Math.random() * 2);
             switch (choice) {
                 case 0:
                     toolProficiencies[Math.floor(Math.random() * 23)] = 1;
@@ -2008,7 +2006,7 @@ function setProficiencies() {
                     instrumentProficiencies[Math.floor(Math.random() * 10)] = 1;
                     break;
             }
-			var skill1 = Math.floor(Math.random() * 6);
+            var skill1 = Math.floor(Math.random() * 6);
             var skill2 = Math.floor(Math.random() * 6);
             while (skill2 == skill1)
                 skill2 = Math.floor(Math.random() * 6);
@@ -2052,19 +2050,19 @@ function setProficiencies() {
                     skillProficiencies[3] = 1;
                     break;
             }
-			break;
-		case "Paladin":
-			saveProficiencies[4] = 1;
-			saveProficiencies[5] = 1;
-			armorProficiencies[0] = 1;
-			armorProficiencies[1] = 1;
-			armorProficiencies[2] = 1;
-			armorProficiencies[3] = 1;
-			weaponTypeProficiencies[0] = 1;
-			weaponTypeProficiencies[1] = 1;
-			weaponTypeProficiencies[2] = 1;
-			weaponTypeProficiencies[3] = 1;
-			var skill1 = Math.floor(Math.random() * 6);
+            break;
+        case "Paladin":
+            saveProficiencies[4] = 1;
+            saveProficiencies[5] = 1;
+            armorProficiencies[0] = 1;
+            armorProficiencies[1] = 1;
+            armorProficiencies[2] = 1;
+            armorProficiencies[3] = 1;
+            weaponTypeProficiencies[0] = 1;
+            weaponTypeProficiencies[1] = 1;
+            weaponTypeProficiencies[2] = 1;
+            weaponTypeProficiencies[3] = 1;
+            var skill1 = Math.floor(Math.random() * 6);
             var skill2 = Math.floor(Math.random() * 6);
             while (skill2 == skill1)
                 skill2 = Math.floor(Math.random() * 6);
@@ -2108,18 +2106,18 @@ function setProficiencies() {
                     skillProficiencies[8] = 1;
                     break;
             }
-			break;
-		case "Ranger":
-			saveProficiencies[0] = 1;
-			saveProficiencies[1] = 1;
-			armorProficiencies[0] = 1;
-			armorProficiencies[1] = 1;
-			armorProficiencies[3] = 1;
-			weaponTypeProficiencies[0] = 1;
-			weaponTypeProficiencies[1] = 1;
-			weaponTypeProficiencies[2] = 1;
-			weaponTypeProficiencies[3] = 1;
-			var skill1 = Math.floor(Math.random() * 8);
+            break;
+        case "Ranger":
+            saveProficiencies[0] = 1;
+            saveProficiencies[1] = 1;
+            armorProficiencies[0] = 1;
+            armorProficiencies[1] = 1;
+            armorProficiencies[3] = 1;
+            weaponTypeProficiencies[0] = 1;
+            weaponTypeProficiencies[1] = 1;
+            weaponTypeProficiencies[2] = 1;
+            weaponTypeProficiencies[3] = 1;
+            var skill1 = Math.floor(Math.random() * 8);
             var skill2 = Math.floor(Math.random() * 8);
             var skill3 = Math.floor(Math.random() * 8);
             while (skill1 == skill2 || skill1 == skill3)
@@ -2140,7 +2138,7 @@ function setProficiencies() {
                     skillProficiencies[6] = 1;
                     break;
                 case 4:
-         			//New York City
+                    //New York City
                     skillProficiencies[7] = 1;
                     break;
                 case 5:
@@ -2205,19 +2203,19 @@ function setProficiencies() {
                     skillProficiencies[13] = 1;
                     break;
             }
-			break;
-		case "Rogue":
-			saveProficiencies[1] = 1;
-			saveProficiencies[3] = 1;
-			armorProficiencies[0] = 1;
-			weaponTypeProficiencies[0] = 1;
-			weaponTypeProficiencies[1] = 1;
-			weaponProficiencies[21] = 1;
-			weaponProficiencies[25] = 1;
-			weaponProficiencies[27] = 1;
-			weaponProficiencies[33] = 1;
-			toolProficiencies[19] = 1;
-			var skill1 = Math.floor(Math.random() * 11);
+            break;
+        case "Rogue":
+            saveProficiencies[1] = 1;
+            saveProficiencies[3] = 1;
+            armorProficiencies[0] = 1;
+            weaponTypeProficiencies[0] = 1;
+            weaponTypeProficiencies[1] = 1;
+            weaponProficiencies[21] = 1;
+            weaponProficiencies[25] = 1;
+            weaponProficiencies[27] = 1;
+            weaponProficiencies[33] = 1;
+            toolProficiencies[19] = 1;
+            var skill1 = Math.floor(Math.random() * 11);
             var skill2 = Math.floor(Math.random() * 11);
             var skill3 = Math.floor(Math.random() * 11);
             var skill4 = Math.floor(Math.random() * 11);
@@ -2367,16 +2365,16 @@ function setProficiencies() {
                     skillProficiencies[3] = 1;
                     break;
             }
-			break;
-		case "Sorcerer":
-			saveProficiencies[2] = 1;
-			saveProficiencies[5] = 1;
-			weaponProficiencies[1] = 1;
-			weaponProficiencies[7] = 1;
-			weaponProficiencies[10] = 1;
-			weaponProficiencies[11] = 1;
-			weaponProficiencies[13] = 1;
-			var skill1 = Math.floor(Math.random() * 6);
+            break;
+        case "Sorcerer":
+            saveProficiencies[2] = 1;
+            saveProficiencies[5] = 1;
+            weaponProficiencies[1] = 1;
+            weaponProficiencies[7] = 1;
+            weaponProficiencies[10] = 1;
+            weaponProficiencies[11] = 1;
+            weaponProficiencies[13] = 1;
+            var skill1 = Math.floor(Math.random() * 6);
             var skill2 = Math.floor(Math.random() * 6);
             while (skill2 == skill1)
                 skill2 = Math.floor(Math.random() * 6);
@@ -2421,14 +2419,14 @@ function setProficiencies() {
                     skillProficiencies[8] = 1;
                     break;
             }
-			break;
-		case "Warlock":
-			saveProficiencies[4] = 1;
-			saveProficiencies[5] = 1;
-			armorProficiencies[0] = 1;
-			weaponTypeProficiencies[0] = 1;
-			weaponTypeProficiencies[1] = 1;
-			var skill1 = Math.floor(Math.random() * 7);
+            break;
+        case "Warlock":
+            saveProficiencies[4] = 1;
+            saveProficiencies[5] = 1;
+            armorProficiencies[0] = 1;
+            weaponTypeProficiencies[0] = 1;
+            weaponTypeProficiencies[1] = 1;
+            var skill1 = Math.floor(Math.random() * 7);
             var skill2 = Math.floor(Math.random() * 7);
             while (skill2 == skill1)
                 skill2 = Math.floor(Math.random() * 7);
@@ -2478,16 +2476,16 @@ function setProficiencies() {
                     skillProficiencies[8] = 1;
                     break;
             }
-			break;
-		case "Wizard":
-			saveProficiencies[3] = 1;
-			saveProficiencies[4] = 1;
-			weaponProficiencies[1] = 1;
-			weaponProficiencies[7] = 1;
-			weaponProficiencies[10] = 1;
-			weaponProficiencies[11] = 1;
-			weaponProficiencies[13] = 1;
-			var skill1 = Math.floor(Math.random() * 6);
+            break;
+        case "Wizard":
+            saveProficiencies[3] = 1;
+            saveProficiencies[4] = 1;
+            weaponProficiencies[1] = 1;
+            weaponProficiencies[7] = 1;
+            weaponProficiencies[10] = 1;
+            weaponProficiencies[11] = 1;
+            weaponProficiencies[13] = 1;
+            var skill1 = Math.floor(Math.random() * 6);
             var skill2 = Math.floor(Math.random() * 6);
             while (skill2 == skill1)
                 skill2 = Math.floor(Math.random() * 6);
@@ -2531,12 +2529,12 @@ function setProficiencies() {
                     skillProficiencies[8] = 1;
                     break;
             }
-			break;
-	}
-	//Proficiencies based on subclass
-	switch (subclass) {
-		case "College of Lore ":
-			var skill1 = Math.floor(Math.random() * 18);
+            break;
+    }
+    //Proficiencies based on subclass
+    switch (subclass) {
+        case "College of Lore ":
+            var skill1 = Math.floor(Math.random() * 18);
             var skill2 = Math.floor(Math.random() * 18);
             var skill3 = Math.floor(Math.random() * 18);
             while (skill1 == skill2 || skill1 == skill3)
@@ -2544,181 +2542,181 @@ function setProficiencies() {
             while (skill2 == skill3)
                 skill3 = Math.floor(Math.random() * 18);
             while (skillProficiencies[skill1] == 1)
-            	skill1 = Math.floor(Math.random() * 18);
+                skill1 = Math.floor(Math.random() * 18);
             while (skillProficiencies[skill2] == 1)
-            	skill2 = Math.floor(Math.random() * 18);
+                skill2 = Math.floor(Math.random() * 18);
             while (skillProficiencies[skill3] == 1)
-            	skill3 = Math.floor(Math.random() * 18);
+                skill3 = Math.floor(Math.random() * 18);
             skillProficiencies[skill1] = 1;
             skillProficiencies[skill2] = 1;
             skillProficiencies[skill3] = 1;
-			break;
-		case "College of Valor ":
-			armorProficiencies[1] = 1;
-			armorProficiencies[3] = 1;
-			weaponTypeProficiencies[2] = 1;
-			weaponTypeProficiencies[3] = 1;
-			break;
-		case "Knowledge Domain ":
-			var skill1 = Math.floor(Math.random() * 4);
-			var skill2 = Math.floor(Math.random() * 4);
-			while (skill1 == skill2)
-				skill2 = Math.floor(Math.random() * 4);
-			switch (skill1) {
-				case 0:
-					skillProficiencies[4] = 2;
-					break;
-				case 1:
-					skillProficiencies[5] = 2;
-					break;
-				case 2:
-					skillProficiencies[7] = 2;
-					break;
-				case 3:
-					skillProficiencies[8] = 2;
-					break;
-			}
-			switch (skill2) {
-				case 0:
-					skillProficiencies[4] = 2;
-					break;
-				case 1:
-					skillProficiencies[5] = 2;
-					break;
-				case 2:
-					skillProficiencies[7] = 2;
-					break;
-				case 3:
-					skillProficiencies[8] = 2;
-					break;
-			}
-			break;
-		case "Life Domain ":
-			armorProficiencies[2] = 1;
-			break;
-		case "Nature Domain ":
-			armorProficiencies[2] = 1;
-			var skill = Math.floor(Math.random() * 3);
-			switch (skill) {
-				case 0:
-					skillProficiencies[7] = 1;
-					break;
-				case 1:
-					skillProficiencies[9] = 1;
-					break;
-				case 2:
-					skillProficiencies[13] = 1;
-					break;
-			}
-			break;
-		case "Tempest Domain ":
-			weaponTypeProficiencies[2] = 1;
-			weaponTypeProficiencies[3] = 1;
-			armorProficiencies[2] = 1;
-			break;
-		case "War Domain ":
-			weaponTypeProficiencies[2] = 1;
-			weaponTypeProficiencies[3] = 1;
-			armorProficiencies[2] = 1;
-			break;
-		case " (Battle Master)":
-			var tool = Math.floor(Math.random() * 23);
-			toolProficiencies[tool] = 1;
-			break;
-		case " (Assassin)":
-			toolProficiencies[7] = 1;
-			toolProficiencies[16] = 1;
-			break;
-	}
-	//Proficiencies based on background
-	switch (background) {
-		case "Acolyte":
-			skillProficiencies[8] = 1;
-			skillProficiencies[10] = 1;
-			break;
-		case "Charlatan":
-			skillProficiencies[2]= 1;
-			skillProficiencies[14] = 1;
-			toolProficiencies[7] = 1;
-			toolProficiencies[8] = 1;
-			break;
-		case "Criminal":
-			skillProficiencies[3] = 1;
-			skillProficiencies[14] = 1;
-			toolProficiencies[19] = 1;
-			var gaming = Math.floor(Math.random() * 3);
-			gamingProficiencies[gaming] = 1;
-			break;
-		case "Entertainer":
-			break;
-		case "Folk Hero":
-			break;
-		case "Guild Artisan":
-			break;
-		case "Hermit":
-			break;
-		case "Noble":
-			break;
-	}
+            break;
+        case "College of Valor ":
+            armorProficiencies[1] = 1;
+            armorProficiencies[3] = 1;
+            weaponTypeProficiencies[2] = 1;
+            weaponTypeProficiencies[3] = 1;
+            break;
+        case "Knowledge Domain ":
+            var skill1 = Math.floor(Math.random() * 4);
+            var skill2 = Math.floor(Math.random() * 4);
+            while (skill1 == skill2)
+                skill2 = Math.floor(Math.random() * 4);
+            switch (skill1) {
+                case 0:
+                    skillProficiencies[4] = 2;
+                    break;
+                case 1:
+                    skillProficiencies[5] = 2;
+                    break;
+                case 2:
+                    skillProficiencies[7] = 2;
+                    break;
+                case 3:
+                    skillProficiencies[8] = 2;
+                    break;
+            }
+            switch (skill2) {
+                case 0:
+                    skillProficiencies[4] = 2;
+                    break;
+                case 1:
+                    skillProficiencies[5] = 2;
+                    break;
+                case 2:
+                    skillProficiencies[7] = 2;
+                    break;
+                case 3:
+                    skillProficiencies[8] = 2;
+                    break;
+            }
+            break;
+        case "Life Domain ":
+            armorProficiencies[2] = 1;
+            break;
+        case "Nature Domain ":
+            armorProficiencies[2] = 1;
+            var skill = Math.floor(Math.random() * 3);
+            switch (skill) {
+                case 0:
+                    skillProficiencies[7] = 1;
+                    break;
+                case 1:
+                    skillProficiencies[9] = 1;
+                    break;
+                case 2:
+                    skillProficiencies[13] = 1;
+                    break;
+            }
+            break;
+        case "Tempest Domain ":
+            weaponTypeProficiencies[2] = 1;
+            weaponTypeProficiencies[3] = 1;
+            armorProficiencies[2] = 1;
+            break;
+        case "War Domain ":
+            weaponTypeProficiencies[2] = 1;
+            weaponTypeProficiencies[3] = 1;
+            armorProficiencies[2] = 1;
+            break;
+        case " (Battle Master)":
+            var tool = Math.floor(Math.random() * 23);
+            toolProficiencies[tool] = 1;
+            break;
+        case " (Assassin)":
+            toolProficiencies[7] = 1;
+            toolProficiencies[16] = 1;
+            break;
+    }
+    //Proficiencies based on background
+    switch (background) {
+        case "Acolyte":
+            skillProficiencies[8] = 1;
+            skillProficiencies[10] = 1;
+            break;
+        case "Charlatan":
+            skillProficiencies[2]= 1;
+            skillProficiencies[14] = 1;
+            toolProficiencies[7] = 1;
+            toolProficiencies[8] = 1;
+            break;
+        case "Criminal":
+            skillProficiencies[3] = 1;
+            skillProficiencies[14] = 1;
+            toolProficiencies[19] = 1;
+            var gaming = Math.floor(Math.random() * 3);
+            gamingProficiencies[gaming] = 1;
+            break;
+        case "Entertainer":
+            break;
+        case "Folk Hero":
+            break;
+        case "Guild Artisan":
+            break;
+        case "Hermit":
+            break;
+        case "Noble":
+            break;
+    }
 }
 
 function setFeatures() {
-	switch (classChoice) {
-		case "Barbarian":
-			//Rages
-			if (level < 3)
-				rages = 2;
-			else if (level < 6)
-				rages = 3;
-			else if (level < 12)
-				rages = 4;
-			else if (level < 17)
-				rages = 5;
-			else if (level < 20)
-				rages = 6;
-			else
-				rages = 100;
-			//Rage Damage
-			if (level < 9)
-				rageDamage = 2;
-			else if (level < 16)
-				rageDamage = 3;
-			else
-				rageDamage = 4;
-			//Level 1
-			if (level == 1) {
-				features += "Rage: PHB pg. 48 </br>    You have " + rages + " uses of Rage and you have a +" + rageDamage + " to damage rolls using Strength while raging.";
-				features += "Unarmored Defense: PHB pg. 48 </br>";
-			}
-			//Level 2
-			if (level == 2) {
-				//insert features
-			}
+    switch (classChoice) {
+        case "Barbarian":
+            //Rages
+            if (level < 3)
+                rages = 2;
+            else if (level < 6)
+                rages = 3;
+            else if (level < 12)
+                rages = 4;
+            else if (level < 17)
+                rages = 5;
+            else if (level < 20)
+                rages = 6;
+            else
+                rages = 100;
+            //Rage Damage
+            if (level < 9)
+                rageDamage = 2;
+            else if (level < 16)
+                rageDamage = 3;
+            else
+                rageDamage = 4;
+            //Level 1
+            if (level == 1) {
+                features += "Rage: PHB pg. 48 </br>    You have " + rages + " uses of Rage and you have a +" + rageDamage + " to damage rolls using Strength while raging.";
+                features += "Unarmored Defense: PHB pg. 48 </br>";
+            }
+            //Level 2
+            if (level == 2) {
+                //insert features
+            }
 
-			break;
-		case "Bard":
-			break;
-		case "Cleric":
-			break;
-		case "Druid":
-			break;
-		case "Fighter":
-			break;
-		case "Monk":
-			break;
-		case "Paladin":
-			break;
-		case "Ranger":
-			break;
-		case "Rogue":
-			break;
-		case "Sorcerer":
-			break;
-		case "Warlock":
-			break;
-		case "Wizard":
-			break;
-	}
+            break;
+        case "Bard":
+            break;
+        case "Cleric":
+            break;
+        case "Druid":
+            break;
+        case "Fighter":
+            break;
+        case "Monk":
+            break;
+        case "Paladin":
+            break;
+        case "Ranger":
+            break;
+        case "Rogue":
+            break;
+        case "Sorcerer":
+            break;
+        case "Warlock":
+            break;
+        case "Wizard":
+            break;
+    }
 }
 
 var save = localStorage.getItem("save");
