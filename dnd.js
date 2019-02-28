@@ -46,7 +46,8 @@ var speed = 0;
 /*For setProficiencies*/
 //0:STR, 1:DEX, 2:CON, 3:INT, 4:WIS, 5:CHA
 var saveProficiencies = [0, 0, 0, 0, 0, 0];
-//[0:Athletics], [1:Acrobatics, 2:Sleight of Hand, 3:Stealth], [4:Arcana, 5:History, 6:Investigation, 7:Nature, 8:Religion], [9:Animal Handling, 10:Insight, 11:Medicine, 12:Perception, 13:Survival], [14: Deception, 15:Intimidation, 16: Performance, 17:Persuasion]
+//[0:Athletics], [1:Acrobatics, 2:Sleight of Hand, 3:Stealth], [4:Arcana, 5:History, 6:Investigation, 7:Nature, 8:Religion], 
+//[9:Animal Handling, 10:Insight, 11:Medicine, 12:Perception, 13:Survival], [14: Deception, 15:Intimidation, 16: Performance, 17:Persuasion]
 var skillProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 //0:Light, 1:Medium, 2:Heavy, 3:Shields
 var armorProficiencies = [0, 0, 0, 0];
@@ -54,11 +55,14 @@ var armorProficiencies = [0, 0, 0, 0];
 var weaponTypeProficiencies = [0, 0, 0, 0];
 //Simple Melee: 0:Club, 1:Dagger, 2:Greatclub, 3:Handaxe, 4:Javelin, 5:Light Hammer, 6:Mace, 7:Quarterstaff, 8:Sickle, 9:Spear
 //Simple Ranged: 10:Light Crossbow, 11:Dart, 12:Shortbow, 13:Sling
-//Martial Melee: 14:Battleaxe, 15:Flail, 16:Glaive, 17:Greataxe, 18:Greatsword, 19:Halberd, 20:Lance, 21:Longsword, 22:Maul, 23:Morningstar, 24:Pike, 25:Rapier, 26:Scimitar, 27:Shortsword, 28:Trident, 29:War Pick, 30:Warhammer, 31:Whip
+//Martial Melee: 14:Battleaxe, 15:Flail, 16:Glaive, 17:Greataxe, 18:Greatsword, 19:Halberd, 20:Lance, 21:Longsword, 22:Maul, 23:Morningstar, 24:Pike, 25:Rapier, 26:Scimitar, 
+//Martial Melee: 27:Shortsword, 28:Trident, 29:War Pick, 30:Warhammer, 31:Whip
 //Martial Ranged: 32:Blowgun, 33:Hand Crossbow, 34:Heavy Crossbow, 35:Longbow, 36:Net
 var weaponProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-//0:Alchemist's Supplies, 1:Brewer's Supplies, 2: Calligrapher's Supplies, 3:Carpenter's Tools, 4: Cartographer's Tools, 5:Cobbler's Tools, 6:Cook's Utensils, 7:Disguise Kit, 8:Forgery Kit, 9:Glassblower's Tools, 10:Herbalism Kit, 11:Jeweler's Tools, 12:Leatherworker's Tools, 13:Mason's Tools, 14:Navigator's Tools, 15:Painter's Supplies, 16:Poisoner's Kit, 17:Potter's Tools, 18:Smith's Tools, 19:Thieves' Tools, 20:Tinker's Tools, 21:Weaver's Tools, 22:Woodcarver's Tools
-var toolProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+//0:Alchemist's Supplies, 1:Brewer's Supplies, 2: Calligrapher's Supplies, 3:Carpenter's Tools, 4: Cartographer's Tools, 5:Cobbler's Tools, 6:Cook's Utensils, 7:Disguise Kit, 
+//8:Forgery Kit, 9:Glassblower's Tools, 10:Herbalism Kit, 11:Jeweler's Tools, 12:Leatherworker's Tools, 13:Mason's Tools, 14:Navigator's Tools, 15:Painter's Supplies, 16:Poisoner's Kit, 
+//17:Potter's Tools, 18:Smith's Tools, 19:Thieves' Tools, 20:Tinker's Tools, 21:Weaver's Tools, 22:Woodcarver's Tools, 23:Land Vehicles, 24:Water Vehicles
+var toolProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 //0:Dice Set, 1:Playing Card Set, 2:Dragonchess Set
 var gamingProficiencies = [0, 0, 0];
 //0:Bagpipes, 1:Drum, 2:Dulcimer, 3:Flute, 4:Lute, 5:Lyre, 6:Horn, 7:Pan Flute, 8:Shawm, 9:Viol
@@ -2622,6 +2626,8 @@ function setProficiencies() {
             break;
         case " (Battle Master)":
             var tool = Math.floor(Math.random() * 23);
+            while (toolProficiencies[tool] == 1)
+                tool = Math.floor(Math.random() * 23);
             toolProficiencies[tool] = 1;
             break;
         case " (Assassin)":
@@ -2632,31 +2638,386 @@ function setProficiencies() {
     //Proficiencies based on background
     switch (background) {
         case "Acolyte":
-            skillProficiencies[8] = 1;
-            skillProficiencies[10] = 1;
+            if (skillProficiencies[8] == 0)
+                skillProficiencies[8] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[10] == 0)
+                skillProficiencies[10] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
             break;
         case "Charlatan":
-            skillProficiencies[2]= 1;
-            skillProficiencies[14] = 1;
+            if (skillProficiencies[2] == 0)
+                skillProficiencies[2] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[14] == 0)
+                skillProficiencies[14] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
             toolProficiencies[7] = 1;
             toolProficiencies[8] = 1;
             break;
         case "Criminal":
-            skillProficiencies[3] = 1;
-            skillProficiencies[14] = 1;
+            if (skillProficiencies[3] == 0)
+                skillProficiencies[3] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[14] == 0)
+                skillProficiencies[14] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
             toolProficiencies[19] = 1;
             var gaming = Math.floor(Math.random() * 3);
+            while (gamingProficiencies[gaming] == 1)
+                gaming = Math.floor(Math.random() * 3);
+            gamingProficiencies[gaming] = 1;
+            break;
+        case "Spy":
+            if (skillProficiencies[3] == 0)
+                skillProficiencies[3] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[14] == 0)
+                skillProficiencies[14] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            toolProficiencies[19] = 1;
+            var gaming = Math.floor(Math.random() * 3);
+            while (gamingProficiencies[gaming] == 1)
+                gaming = Math.floor(Math.random() * 3);
             gamingProficiencies[gaming] = 1;
             break;
         case "Entertainer":
+            if (skillProficiencies[1] == 0)
+                skillProficiencies[1] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[16] == 0)
+                skillProficiencies[16] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            toolProficiencies[7] = 1;
+            var instrument = Math.floor(Math.random() * 10);
+            while (instrumentProficiencies[instrument] == 1)
+                instrument = Math.floor(Math.random() * 10);
+            instrumentProficiencies[instrument] = 1;
+            break;
+        case "Gladiator":
+            if (skillProficiencies[1] == 0)
+                skillProficiencies[1] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[16] == 0)
+                skillProficiencies[16] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            toolProficiencies[7] = 1;
+            var instrument = Math.floor(Math.random() * 10);
+            while (instrumentProficiencies[instrument] == 1)
+                instrument = Math.floor(Math.random() * 10);
+            instrumentProficiencies[instrument] = 1;
             break;
         case "Folk Hero":
+            if (skillProficiencies[9] == 0)
+                skillProficiencies[9] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[13] == 0)
+                skillProficiencies[13] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            var tool = Math.floor(Math.random() * 23);
+            while (toolProficiencies[tool] == 1)
+                tool = Math.floor(Math.random() * 23);
+            toolProficiencies[tool] = 1;
+            toolProficiencies[23] = 1;
             break;
         case "Guild Artisan":
+            if (skillProficiencies[10] == 0)
+                skillProficiencies[10] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[17] == 0)
+                skillProficiencies[17] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            var tool = Math.floor(Math.random() * 23);
+            while (toolProficiencies[tool] == 1)
+                tool = Math.floor(Math.random() * 23);
+            toolProficiencies[tool] = 1;
+            break;
+        case "Guild Merchant":
+            if (skillProficiencies[10] == 0)
+                skillProficiencies[10] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[17] == 0)
+                skillProficiencies[17] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            var tool = Math.floor(Math.random() * 23);
+            while (toolProficiencies[tool] == 1)
+                tool = Math.floor(Math.random() * 23);
+            toolProficiencies[tool] = 1;
             break;
         case "Hermit":
+            if (skillProficiencies[8] == 0)
+                skillProficiencies[8] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[11] == 0)
+                skillProficiencies[11] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            toolProficiencies[10] = 1;
             break;
         case "Noble":
+            if (skillProficiencies[5] == 0)
+                skillProficiencies[5] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[17] == 0)
+                skillProficiencies[17] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            var gaming = Math.floor(Math.random() * 3);
+            while (gamingProficiencies[gaming] == 1)
+                gaming = Math.floor(Math.random() * 3);
+            gamingProficiencies[gaming] = 1;
+            break;
+        case "Knight":
+            if (skillProficiencies[5] == 0)
+                skillProficiencies[5] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[17] == 0)
+                skillProficiencies[17] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            var gaming = Math.floor(Math.random() * 3);
+            while (gamingProficiencies[gaming] == 1)
+                gaming = Math.floor(Math.random() * 3);
+            gamingProficiencies[gaming] = 1;
+            break;
+        case "Outlander":
+            if (skillProficiencies[0] == 0)
+                skillProficiencies[0] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[13] == 0)
+                skillProficiencies[13] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            var instrument = Math.floor(Math.random() * 10);
+            while (instrumentProficiencies[instrument] == 1)
+                instrument = Math.floor(Math.random() * 10);
+            break;
+        case "Sage":
+            if (skillProficiencies[4] == 0)
+                skillProficiencies[4] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[5] == 0)
+                skillProficiencies[5] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            break;
+        case "Sailor":
+            if (skillProficiencies[0] == 0)
+                skillProficiencies[0] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[12] == 0)
+                skillProficiencies[12] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            toolProficiencies[14] = 1;
+            toolProficiencies[24] = 1;
+            break;
+        case "Pirate":
+            if (skillProficiencies[0] == 0)
+                skillProficiencies[0] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[12] == 0)
+                skillProficiencies[12] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            toolProficiencies[14] = 1;
+            toolProficiencies[24] = 1;
+            break;
+        case "Soldier":
+            if (skillProficiencies[0] == 0)
+                skillProficiencies[0] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[15] == 0)
+                skillProficiencies[15] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            var gaming = Math.floor(Math.random() * 3);
+            while (gamingProficiencies[gaming] == 1)
+                gaming = Math.floor(Math.random() * 3);
+            gamingProficiencies[gaming] = 1;
+            toolProficiencies[23] = 1;
+            break;
+        case "Urchin":
+            if (skillProficiencies[2] == 0)
+                skillProficiencies[2] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            if (skillProficiencies[3] == 0)
+                skillProficiencies[3] = 1;
+            else {
+                var skill = Math.floor(Math.random() * 18);
+                while (skillProficiencies[skill] !== 0)
+                    skill = Math.floor(Math.random() * 18);
+                skillProficiencies[skill] = 1;
+            }
+            toolProficiencies[7] = 1;
+            toolProficiencies[19] = 1;
             break;
     }
 }
