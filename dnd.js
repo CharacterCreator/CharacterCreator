@@ -439,7 +439,8 @@ var rageDamage = 0;
   [359, ],
   [360, ],
   [361, ],
-  [362, ]
+  [362, ],
+  [363, ]
 ];*/
 
 //For all of the saving and loading functions: getCharacter, getPreviousCharacter, saveCharacter, loadCharacter, deleteCharacter
