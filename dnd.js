@@ -3507,14 +3507,22 @@ if (save == null) {
 }
 
 function getCharacter() {
-        saveProficiencies = [0, 0, 0, 0, 0, 0];
-        skillProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        armorProficiencies = [0, 0, 0, 0];
-        weaponTypeProficiencies = [0, 0, 0, 0];
-        weaponProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        toolProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        gamingProficiencies = [0, 0, 0];
-        instrumentProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        for (var e = 0; e < saveProficiencies.length; e++)
+          saveProficiencies[e] = 0;
+        for (var e = 0; e < skillProficiencies.length; e++)
+          skillProficiencies[e] = 0;
+        for (var e = 0; e < armorProficiencies.length; e++)
+          armorProficiencies[e] = 0;
+        for (var e = 0; e < weaponTypeProficiencies.length; e++)
+          weaponTypeProficiencies[e] = 0;
+        for (var e = 0; e < weaponProficiencies.length; e++)
+          weaponProficiencies[e] = 0;
+        for (var e = 0; e < toolProficiencies.length; e++)
+          toolProficiencies[e] = 0;
+        for (var e = 0; e < gamingProficiencies.length; e++)
+          gamingProficiencies[e] = 0;
+        for (var e = 0; e < instrumentProficiencies.length; e++)
+          instrumentProficiencies[e] = 0;
 
         racePrevious = race;
         subracePrevious = subrace;
