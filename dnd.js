@@ -3126,7 +3126,7 @@ function setProficiencies() {
                 instrument = Math.floor(Math.random() * 10);
             instrumentProficiencies[instrument] = 1;
             break;
-        case "Folk Hero":
+        /*case "Folk Hero":
             if (skillProficiencies[9] == 0)
                 skillProficiencies[9] = 1;
             else {
@@ -3148,7 +3148,7 @@ function setProficiencies() {
                 tool = Math.floor(Math.random() * 23);
             toolProficiencies[tool] = 1;
             toolProficiencies[23] = 1;
-            break;
+            break;*/
         /*case "Guild Artisan":
             if (skillProficiencies[10] == 0)
                 skillProficiencies[10] = 1;
@@ -3193,7 +3193,7 @@ function setProficiencies() {
                 tool = Math.floor(Math.random() * 23);
             toolProficiencies[tool] = 1;
             break;*/
-        case "Hermit":
+        /*case "Hermit":
             if (skillProficiencies[8] == 0)
                 skillProficiencies[8] = 1;
             else {
@@ -3211,7 +3211,7 @@ function setProficiencies() {
                 skillProficiencies[skill] = 1;
             }
             toolProficiencies[10] = 1;
-            break;
+            break;*/
         /*case "Noble":
             if (skillProficiencies[5] == 0)
                 skillProficiencies[5] = 1;
@@ -3358,7 +3358,7 @@ function setProficiencies() {
             gamingProficiencies[gaming] = 1;
             toolProficiencies[23] = 1;
             break;*/
-        case "Urchin":
+        /*case "Urchin":
             if (skillProficiencies[2] == 0)
                 skillProficiencies[2] = 1;
             else {
@@ -3377,7 +3377,7 @@ function setProficiencies() {
             }
             toolProficiencies[7] = 1;
             toolProficiencies[19] = 1;
-            break;
+            break;*/
     }
 }
 
