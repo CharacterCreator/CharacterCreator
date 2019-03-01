@@ -2995,8 +2995,8 @@ function setProficiencies() {
             break;
     }
     //Proficiencies based on background
-    /*switch (backgroundSelect) {
-        /*case "Acolyte":
+    switch (backgroundSelect) {
+        case "Acolyte":
             if (skillProficiencies[8] == 0)
                 skillProficiencies[8] = 1;
             else {
@@ -3013,8 +3013,8 @@ function setProficiencies() {
                     skill = Math.floor(Math.random() * 18);
                 skillProficiencies[skill] = 1;
             }
-            break;*/
-        /*case "Charlatan":
+            break;
+        case "Charlatan":
             if (skillProficiencies[2] == 0)
                 skillProficiencies[2] = 1;
             else {
@@ -3034,7 +3034,7 @@ function setProficiencies() {
             toolProficiencies[7] = 1;
             toolProficiencies[8] = 1;
             break;
-        /*case "Criminal":
+        case "Criminal":
             if (skillProficiencies[3] == 0)
                 skillProficiencies[3] = 1;
             else {
@@ -3079,8 +3079,8 @@ function setProficiencies() {
             while (gamingProficiencies[gaming] == 1)
                 gaming = Math.floor(Math.random() * 3);
             gamingProficiencies[gaming] = 1;
-            break;*/
-        /*case "Entertainer":
+            break;
+        case "Entertainer":
             if (skillProficiencies[1] == 0)
                 skillProficiencies[1] = 1;
             else {
@@ -3126,7 +3126,7 @@ function setProficiencies() {
                 instrument = Math.floor(Math.random() * 10);
             instrumentProficiencies[instrument] = 1;
             break;
-        /*case "Folk Hero":
+        case "Folk Hero":
             if (skillProficiencies[9] == 0)
                 skillProficiencies[9] = 1;
             else {
@@ -3148,8 +3148,8 @@ function setProficiencies() {
                 tool = Math.floor(Math.random() * 23);
             toolProficiencies[tool] = 1;
             toolProficiencies[23] = 1;
-            break;*/
-        /*case "Guild Artisan":
+            break;
+        case "Guild Artisan":
             if (skillProficiencies[10] == 0)
                 skillProficiencies[10] = 1;
             else {
@@ -3192,8 +3192,8 @@ function setProficiencies() {
             while (toolProficiencies[tool] == 1)
                 tool = Math.floor(Math.random() * 23);
             toolProficiencies[tool] = 1;
-            break;*/
-        /*case "Hermit":
+            break;
+        case "Hermit":
             if (skillProficiencies[8] == 0)
                 skillProficiencies[8] = 1;
             else {
@@ -3211,8 +3211,8 @@ function setProficiencies() {
                 skillProficiencies[skill] = 1;
             }
             toolProficiencies[10] = 1;
-            break;*/
-        /*case "Noble":
+            break;
+        case "Noble":
             if (skillProficiencies[5] == 0)
                 skillProficiencies[5] = 1;
             else {
@@ -3255,8 +3255,8 @@ function setProficiencies() {
             while (gamingProficiencies[gaming] == 1)
                 gaming = Math.floor(Math.random() * 3);
             gamingProficiencies[gaming] = 1;
-            break;*/
-        /*case "Outlander":
+            break;
+        case "Outlander":
             if (skillProficiencies[0] == 0)
                 skillProficiencies[0] = 1;
             else {
@@ -3277,7 +3277,7 @@ function setProficiencies() {
             while (instrumentProficiencies[instrument] == 1)
                 instrument = Math.floor(Math.random() * 10);
             break;
-        /*case "Sage":
+        case "Sage":
             if (skillProficiencies[4] == 0)
                 skillProficiencies[4] = 1;
             else {
@@ -3294,8 +3294,8 @@ function setProficiencies() {
                     skill = Math.floor(Math.random() * 18);
                 skillProficiencies[skill] = 1;
             }
-            break;*/
-        /*case "Sailor":
+            break;
+        case "Sailor":
             if (skillProficiencies[0] == 0)
                 skillProficiencies[0] = 1;
             else {
@@ -3334,8 +3334,8 @@ function setProficiencies() {
             }
             toolProficiencies[14] = 1;
             toolProficiencies[24] = 1;
-            break;*/
-        /*case "Soldier":
+            break;
+        case "Soldier":
             if (skillProficiencies[0] == 0)
                 skillProficiencies[0] = 1;
             else {
@@ -3357,8 +3357,8 @@ function setProficiencies() {
                 gaming = Math.floor(Math.random() * 3);
             gamingProficiencies[gaming] = 1;
             toolProficiencies[23] = 1;
-            break;*/
-        /*case "Urchin":
+            break;
+        case "Urchin":
             if (skillProficiencies[2] == 0)
                 skillProficiencies[2] = 1;
             else {
@@ -3377,7 +3377,7 @@ function setProficiencies() {
             }
             toolProficiencies[7] = 1;
             toolProficiencies[19] = 1;
-            break;*/
+            break;
     }
 }
 
@@ -3507,6 +3507,23 @@ if (save == null) {
 }
 
 function getCharacter() {
+        for (var e = 0; e < saveProficiencies.length; e++)
+          saveProficiencies[e] = 0;
+        for (var e = 0; e < skillProficiencies.length; e++)
+          skillProficiencies[e] = 0;
+        for (var e = 0; e < armorProficiencies.length; e++)
+          armorProficiencies[e] = 0;
+        for (var e = 0; e < weaponTypeProficiencies.length; e++)
+          weaponTypeProficiencies[e] = 0;
+        for (var e = 0; e < weaponProficiencies.length; e++)
+          weaponProficiencies[e] = 0;
+        for (var e = 0; e < toolProficiencies.length; e++)
+          toolProficiencies[e] = 0;
+        for (var e = 0; e < gamingProficiencies.length; e++)
+          gamingProficiencies[e] = 0;
+        for (var e = 0; e < instrumentProficiencies.length; e++)
+          instrumentProficiencies[e] = 0;
+
         racePrevious = race;
         subracePrevious = subrace;
 
