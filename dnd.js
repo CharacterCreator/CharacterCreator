@@ -2995,7 +2995,7 @@ function setProficiencies() {
             break;
     }
     //Proficiencies based on background
-    switch (backgroundSelect) {
+    /*switch (backgroundSelect) {
         /*case "Acolyte":
             if (skillProficiencies[8] == 0)
                 skillProficiencies[8] = 1;
@@ -3014,7 +3014,7 @@ function setProficiencies() {
                 skillProficiencies[skill] = 1;
             }
             break;*/
-        case "Charlatan":
+        /*case "Charlatan":
             if (skillProficiencies[2] == 0)
                 skillProficiencies[2] = 1;
             else {
@@ -3080,7 +3080,7 @@ function setProficiencies() {
                 gaming = Math.floor(Math.random() * 3);
             gamingProficiencies[gaming] = 1;
             break;*/
-        case "Entertainer":
+        /*case "Entertainer":
             if (skillProficiencies[1] == 0)
                 skillProficiencies[1] = 1;
             else {
@@ -3256,7 +3256,7 @@ function setProficiencies() {
                 gaming = Math.floor(Math.random() * 3);
             gamingProficiencies[gaming] = 1;
             break;*/
-        case "Outlander":
+        /*case "Outlander":
             if (skillProficiencies[0] == 0)
                 skillProficiencies[0] = 1;
             else {
