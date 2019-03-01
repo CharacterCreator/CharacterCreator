@@ -3507,7 +3507,7 @@ if (save == null) {
 }
 
 function getCharacter() {
-        for (var e = 0; e < saveProficiencies.length; e++)
+        /*for (var e = 0; e < saveProficiencies.length; e++)
           saveProficiencies[e] = 0;
         for (var e = 0; e < skillProficiencies.length; e++)
           skillProficiencies[e] = 0;
@@ -3522,7 +3522,7 @@ function getCharacter() {
         for (var e = 0; e < gamingProficiencies.length; e++)
           gamingProficiencies[e] = 0;
         for (var e = 0; e < instrumentProficiencies.length; e++)
-          instrumentProficiencies[e] = 0;
+          instrumentProficiencies[e] = 0;*/
 
         racePrevious = race;
         subracePrevious = subrace;
