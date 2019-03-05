@@ -3454,6 +3454,7 @@ function displaySkills() {
         break;
     }
   }
+  return display;
 }
 
 function setFeatures() {
