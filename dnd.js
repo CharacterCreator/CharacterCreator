@@ -3434,19 +3434,19 @@ function displaySkills() {
   var display = "";
   var skill = ["Athletics", "Acrobatics", "Sleight of Hand", "Stealth", "Arcana", "History", "Investigation", "Nature", "Religion", "Animal Handling", "Insight", "Medicine", "Perception", "Survival", "Deception", "Intimidation", "Performance", "Persuasion"];
   var save = ["Strength Saving Throw", "Dexterity Saving Throw", "Constitution Saving Throw", "Intelligence Saving Throw", "Wisdom Saving Throw", "Charisma Saving Throw"];
-  display += "<h1>Saving Throws</h1>";
+  display += "Saving Throws</br>";
   for (var e = 0; e < save.length; e++) {
     var proficient = false;
     if (saveProficiencies[e] == 1)
       proficient = true;
-    if (proficient)
+    if (proficient == true)
       display += "[P] ";
     else
-      display += "[ ]";
+      display += "[ ] ";
     display += save[e] + ": ";
     switch (e) {
       case 0:
-        if (proficient)
+        if (proficient == true)
           if (strMod + profBonus >= 0)
             display += "+" + (strMod + profBonus);
           else
