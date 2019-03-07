@@ -962,299 +962,305 @@ function setLevel() {
 }
 
 function setClass() {
-    if (!manualClass) {
-      var classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
-      var hitDice = [12, 8, 8, 8, 10, 8, 10, 10, 8, 6, 8, 6];
-      var index = Math.floor(Math.random() * 11);
-      classChoice = classes[index];
-    }
-
+  var classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
+  var hitDice = [12, 8, 8, 8, 10, 8, 10, 10, 8, 6, 8, 6];
+  if (!manualClass) {
+    var index = Math.floor(Math.random() * 11);
+    classChoice = classes[index];
     hitDie = hitDice[index];
-    switch (classChoice) {
-        case "Cleric":
-            var choice = Math.floor(Math.random() * 7);
-            switch (choice) {
-                case 0:
-                    subclass = "Knowledge Domain ";
-                    break;
-                case 1:
-                    subclass = "Life Domain ";
-                    break;
-                case 2:
-                    subclass = "Light Domain ";
-                    break;
-                case 3:
-                    subclass = "Nature Domain ";
-                    break;
-                case 4:
-                    subclass = "Tempest Domain ";
-                    break;
-                case 5:
-                    subclass = "Trickery Domain ";
-                    break;
-                case 6:
-                    subclass = "War Domain ";
-                    break;
-            }
-            subclass = subclass + classChoice;
-            return "Class: " + subclass;
-        case "Sorcerer":
-            var choice = Math.floor(Math.random() * 2);
-            switch (choice) {
-                case 0:
-                    subclass = "Draconic Bloodline ";
-                    break;
-                case 1:
-                    subclass = "Wild Magic ";
-                    break;
-            }
-            subclass = subclass + classChoice;
-            return "Class: " + subclass;
-        case "Warlock":
-            var choice = Math.floor(Math.random() * 3);
-            switch (choice) {
-                case 0:
-                    subclass = " of the Archfey";
-                    break;
-                case 1:
-                    subclass = " of the Fiend";
-                    break;
-                case 2:
-                    subclass = " of the Great Old One";
-                    break;
-            }
-            subclass = classChoice + subclass;
-            return "Class: " + subclass;
+  } else {
+    for (var i = 0; i < classes.length; i++) {
+      if (classChoice == classes[i]) {
+        hitDie = hitDice[i];
+        break;
+      }
     }
-    if (level >= 2) {
-        switch (classChoice) {
-            case "Druid":
-                var choice = Math.floor(Math.random() * 2);
-                switch (choice) {
-                    case 0:
-                        choice = Math.floor(Math.random() * 8);
-                        subclass = "Circle of the Land ";
-                        switch (choice) {
-                            case 0:
-                                subclass += "(Arctic) ";
-                                break;
-                            case 1:
-                                subclass += "(Coast) ";
-                                break;
-                            case 2:
-                                subclass += "(Desert) ";
-                                break;
-                            case 3:
-                                subclass += "(Forest) ";
-                                break;
-                            case 4:
-                                subclass += "(Grassland) ";
-                                break;
-                            case 5:
-                                subclass += "(Mountain) ";
-                                break;
-                            case 6:
-                                subclass += "(Swamp) ";
-                                break;
-                            case 7:
-                                subclass += "(Underdark) ";
-                                break;
-                        }
-                        break;
-                    case 1:
-                        subclass = "Circle of the Moon ";
-                        break;
-                }
-                subclass = subclass + classChoice;
-                return "Class: " + subclass;
-            case "Wizard":
-                var choice = Math.floor(Math.random() * 8);
-                switch (choice) {
-                    case 0:
-                        subclass = "School of Abjuration ";
-                        break;
-                    case 1:
-                        subclass = "School of Conjuration ";
-                        break;
-                    case 2:
-                        subclass = "School of Divination";
-                        break;
-                    case 3:
-                        subclass = "School of Enchantment";
-                        break;
-                    case 4:
-                        subclass = "School of Evocation";
-                        break;
-                    case 5:
-                        subclass = "School of Illusion";
-                        break;
-                    case 6:
-                        subclass = "School of Necromancy ";
-                        break;
-                    case 7:
-                        subclass = "School of Transmutation ";
-                        break;
-                }
-                subclass = subclass + classChoice;
-                return "Class: " + subclass;
-        }
-    }
-    if (level >= 3) {
-        switch (classChoice) {
-            case "Barbarian":
-                var choice = Math.floor(Math.random() * 2);
-                switch (choice) {
-                    case 0:
-                        subclass = "Path of the Berserker ";
-                        break;
-                    case 1:
-                        subclass = "Path of the Totem Warrior ";
-                        break;
-                }
-                subclass = subclass + classChoice;
-                return "Class: " + subclass;
-            case "Bard":
-                var choice = Math.floor(Math.random() * 2);
-                switch (choice) {
-                    case 0:
-                        subclass = "College of Lore ";
-                        break;
-                    case 1:
-                        subclass = "College of Valor ";
-                        break;
-                }
-                subclass = subclass + classChoice;
-                return "Class: " + subclass;
-            case "Fighter":
-                var choice = Math.floor(Math.random() * 3);
-                switch (choice) {
-                    case 0:
-                        subclass = " (Champion)";
-                        break;
-                    case 1:
-                        subclass = " (Battle Master)";
-                        break;
-                    case 2:
-                        subclass = " (Eldritch Knight)";
-                        break;
-                }
-                subclass = classChoice + subclass;
-                return "Class: " + subclass;
-            case "Monk":
-                var choice = Math.floor(Math.random() * 3);
-                switch (choice) {
-                    case 0:
-                        subclass = "Way of the Open Hand ";
-                        break;
-                    case 1:
-                        subclass = "Way of Shadow ";
-                        break;
-                    case 2:
-                        subclass = "Way of the Four Elements ";
-                        break;
-                }
-                subclass = subclass + classChoice;
-                return "Class: " + subclass;
-            case "Paladin":
-                var choice = Math.floor(Math.random() * 3);
-                switch (choice) {
-                    case 0:
-                        subclass = "Oath of Devotion ";
-                        break;
-                    case 1:
-                        subclass = "Oath of the Ancients ";
-                        break;
-                    case 2:
-                        subclass = "Oath of Vengeance ";
-                        break;
-                }
-                subclass = subclass + classChoice;
-                return "Class: " + subclass;
-            case "Ranger":
-                var choice = Math.floor(Math.random() * 2);
-                switch (choice) {
-                    case 0:
-                        subclass = " (Hunter)";
-                        break;
-                    case 1:
-                        subclass = " (Beastmaster)";
-                        break;
-                }
-                subclass = classChoice + subclass;
-                return "Class: " + subclass;
-            case "Rogue":
-                var choice = Math.floor(Math.random() * 3);
-                switch (choice) {
-                    case 0:
-                        subclass = " (Thief)";
-                        break;
-                    case 1:
-                        subclass = " (Assassin)";
-                        break;
-                    case 2:
-                        subclass = " (Arcane Trickster)";
-                        break;
-                }
-                subclass = classChoice + subclass;
-                return "Class: " + subclass;
-        }
-    }
-    subclass = classChoice;
-    return "Class: " + subclass;
+  }
+  switch (classChoice) {
+      case "Cleric":
+          var choice = Math.floor(Math.random() * 7);
+          switch (choice) {
+              case 0:
+                  subclass = "Knowledge Domain ";
+                  break;
+              case 1:
+                  subclass = "Life Domain ";
+                  break;
+              case 2:
+                  subclass = "Light Domain ";
+                  break;
+              case 3:
+                  subclass = "Nature Domain ";
+                  break;
+              case 4:
+                  subclass = "Tempest Domain ";
+                  break;
+              case 5:
+                  subclass = "Trickery Domain ";
+                  break;
+              case 6:
+                  subclass = "War Domain ";
+                  break;
+          }
+          subclass = subclass + classChoice;
+          return "Class: " + subclass;
+      case "Sorcerer":
+          var choice = Math.floor(Math.random() * 2);
+          switch (choice) {
+              case 0:
+                  subclass = "Draconic Bloodline ";
+                  break;
+              case 1:
+                  subclass = "Wild Magic ";
+                  break;
+          }
+          subclass = subclass + classChoice;
+          return "Class: " + subclass;
+      case "Warlock":
+          var choice = Math.floor(Math.random() * 3);
+          switch (choice) {
+              case 0:
+                  subclass = " of the Archfey";
+                  break;
+              case 1:
+                  subclass = " of the Fiend";
+                  break;
+              case 2:
+                  subclass = " of the Great Old One";
+                  break;
+          }
+          subclass = classChoice + subclass;
+          return "Class: " + subclass;
+  }
+  if (level >= 2) {
+      switch (classChoice) {
+          case "Druid":
+              var choice = Math.floor(Math.random() * 2);
+              switch (choice) {
+                  case 0:
+                      choice = Math.floor(Math.random() * 8);
+                      subclass = "Circle of the Land ";
+                      switch (choice) {
+                          case 0:
+                              subclass += "(Arctic) ";
+                              break;
+                          case 1:
+                              subclass += "(Coast) ";
+                              break;
+                          case 2:
+                              subclass += "(Desert) ";
+                              break;
+                          case 3:
+                              subclass += "(Forest) ";
+                              break;
+                          case 4:
+                              subclass += "(Grassland) ";
+                              break;
+                          case 5:
+                              subclass += "(Mountain) ";
+                              break;
+                          case 6:
+                              subclass += "(Swamp) ";
+                              break;
+                          case 7:
+                              subclass += "(Underdark) ";
+                              break;
+                      }
+                      break;
+                  case 1:
+                      subclass = "Circle of the Moon ";
+                      break;
+              }
+              subclass = subclass + classChoice;
+              return "Class: " + subclass;
+          case "Wizard":
+              var choice = Math.floor(Math.random() * 8);
+              switch (choice) {
+                  case 0:
+                      subclass = "School of Abjuration ";
+                      break;
+                  case 1:
+                      subclass = "School of Conjuration ";
+                      break;
+                  case 2:
+                      subclass = "School of Divination";
+                      break;
+                  case 3:
+                      subclass = "School of Enchantment";
+                      break;
+                  case 4:
+                      subclass = "School of Evocation";
+                      break;
+                  case 5:
+                      subclass = "School of Illusion";
+                      break;
+                  case 6:
+                      subclass = "School of Necromancy ";
+                      break;
+                  case 7:
+                      subclass = "School of Transmutation ";
+                      break;
+              }
+              subclass = subclass + classChoice;
+              return "Class: " + subclass;
+      }
+  }
+  if (level >= 3) {
+      switch (classChoice) {
+          case "Barbarian":
+              var choice = Math.floor(Math.random() * 2);
+              switch (choice) {
+                  case 0:
+                      subclass = "Path of the Berserker ";
+                      break;
+                  case 1:
+                      subclass = "Path of the Totem Warrior ";
+                      break;
+              }
+              subclass = subclass + classChoice;
+              return "Class: " + subclass;
+          case "Bard":
+              var choice = Math.floor(Math.random() * 2);
+              switch (choice) {
+                  case 0:
+                      subclass = "College of Lore ";
+                      break;
+                  case 1:
+                      subclass = "College of Valor ";
+                      break;
+              }
+              subclass = subclass + classChoice;
+              return "Class: " + subclass;
+          case "Fighter":
+              var choice = Math.floor(Math.random() * 3);
+              switch (choice) {
+                  case 0:
+                      subclass = " (Champion)";
+                      break;
+                  case 1:
+                      subclass = " (Battle Master)";
+                      break;
+                  case 2:
+                      subclass = " (Eldritch Knight)";
+                      break;
+              }
+              subclass = classChoice + subclass;
+              return "Class: " + subclass;
+          case "Monk":
+              var choice = Math.floor(Math.random() * 3);
+              switch (choice) {
+                  case 0:
+                      subclass = "Way of the Open Hand ";
+                      break;
+                  case 1:
+                      subclass = "Way of Shadow ";
+                      break;
+                  case 2:
+                      subclass = "Way of the Four Elements ";
+                      break;
+              }
+              subclass = subclass + classChoice;
+              return "Class: " + subclass;
+          case "Paladin":
+              var choice = Math.floor(Math.random() * 3);
+              switch (choice) {
+                  case 0:
+                      subclass = "Oath of Devotion ";
+                      break;
+                  case 1:
+                      subclass = "Oath of the Ancients ";
+                      break;
+                  case 2:
+                      subclass = "Oath of Vengeance ";
+                      break;
+              }
+              subclass = subclass + classChoice;
+              return "Class: " + subclass;
+          case "Ranger":
+              var choice = Math.floor(Math.random() * 2);
+              switch (choice) {
+                  case 0:
+                      subclass = " (Hunter)";
+                      break;
+                  case 1:
+                      subclass = " (Beastmaster)";
+                      break;
+              }
+              subclass = classChoice + subclass;
+              return "Class: " + subclass;
+          case "Rogue":
+              var choice = Math.floor(Math.random() * 3);
+              switch (choice) {
+                  case 0:
+                      subclass = " (Thief)";
+                      break;
+                  case 1:
+                      subclass = " (Assassin)";
+                      break;
+                  case 2:
+                      subclass = " (Arcane Trickster)";
+                      break;
+              }
+              subclass = classChoice + subclass;
+              return "Class: " + subclass;
+      }
+  }
+  subclass = classChoice;
+  return "Class: " + subclass;
 }
 
 function setClassManual(classNumber) {
   manualClass = true;
   switch (classNumber) {
-    case 0:
+    case 1:
       classChoice = "Barbarian";
       document.getElementById("classSelection").innerHTML = "Barbarian";
       break;
-    case 1:
+    case 2:
       classChoice = "Bard";
       document.getElementById("classSelection").innerHTML = "Bard";
       break;
-    case 2:
+    case 3:
       classChoice = "Cleric";
       document.getElementById("classSelection").innerHTML = "Cleric";
       break;
-    case 3:
+    case 4:
       classChoice = "Druid";
       document.getElementById("classSelection").innerHTML = "Druid";
       break;
-    case 4:
+    case 5:
       classChoice = "Fighter";
       document.getElementById("classSelection").innerHTML = "Fighter";
       break;
-    case 5:
+    case 6:
       classChoice = "Monk";
       document.getElementById("classSelection").innerHTML = "Monk";
       break;
-    case 6:
+    case 7:
       classChoice = "Paladin";
       document.getElementById("classSelection").innerHTML = "Paladin";
       break;
-    case 7:
+    case 8:
       classChoice = "Ranger";
       document.getElementById("classSelection").innerHTML = "Ranger";
       break;
-    case 8:
+    case 9:
       classChoice = "Rogue";
       document.getElementById("classSelection").innerHTML = "Rogue";
       break;
-    case 9:
+    case 10:
       classChoice = "Sorcerer";
       document.getElementById("classSelection").innerHTML = "Sorcerer";
       break;
-    case 10:
+    case 11:
       classChoice = "Warlock";
       document.getElementById("classSelection").innerHTML = "Warlock";
       break;
-    case 11:
+    case 12:
       classChoice = "Wizard";
       document.getElementById("classSelection").innerHTML = "Wizard";
       break;
-    case 12:
+    case 13:
       classChoice = "";
       manualClass = false;
       document.getElementById("Class Selection").innerHTML = "Class Selection";
@@ -3505,7 +3511,7 @@ function displayProficiencies() {
 }
 
 function displaySkills() {
-  var display = "";
+  var saveDisplay = "";
   var skill = ["Athletics", "Acrobatics", "Sleight of Hand", "Stealth", "Arcana", "History", "Investigation", "Nature", "Religion", "Animal Handling", "Insight", "Medicine", "Perception", "Survival", "Deception", "Intimidation", "Performance", "Persuasion"];
   var save = ["Strength Saving Throw", "Dexterity Saving Throw", "Constitution Saving Throw", "Intelligence Saving Throw", "Wisdom Saving Throw", "Charisma Saving Throw"];
   for (var e = 0; e < save.length; e++) {
@@ -3513,95 +3519,95 @@ function displaySkills() {
     if (saveProficiencies[e] == 1)
       proficient = 1;
     if (proficient == 1) {
-      display += "[P] ";
+      saveDisplay += "[P] ";
     }
     else {
-      display += "[ ] ";
+      saveDisplay += "[ ] ";
     }
-    display += save[e] + ": ";
+    saveDisplay += save[e] + ": ";
     switch (e) {
       case 0:
         if (proficient == 1) {
           if (strMod + profBonus >= 0)
-            display += "+" + (strMod + profBonus);
+            saveDisplay += "+" + (strMod + profBonus);
           else
-            display += (strMod + profBonus);
+            saveDisplay += (strMod + profBonus);
         }
         else
           if (strMod >= 0)
-            display += "+" + strMod;
+            saveDisplay += "+" + strMod;
           else
-            display += strMod;
+            saveDisplay += strMod;
         break;
       case 1:
         if (proficient == 1) {
           if (dexMod + profBonus >= 0)
-            display += "+" + (dexMod + profBonus);
+            saveDisplay += "+" + (dexMod + profBonus);
           else
-            display += (dexMod + profBonus);
+            saveDisplay += (dexMod + profBonus);
         }
         else
           if (dexMod >= 0)
-            display += "+" + dexMod;
+            saveDisplay += "+" + dexMod;
           else
-            display += dexMod;
+            saveDisplay += dexMod;
         break;
       case 2:
         if (proficient == 1) {
           if (conMod + profBonus >= 0)
-            display += "+" + (conMod + profBonus);
+            saveDisplay += "+" + (conMod + profBonus);
           else
-            display += (conMod + profBonus);
+            saveDisplay += (conMod + profBonus);
         }
         else
           if (conMod >= 0)
-            display += "+" + conMod;
+            saveDisplay += "+" + conMod;
           else
-            display += conMod;
+            saveDisplay += conMod;
         break;
       case 3:
         if (proficient == 1) {
           if (intMod + profBonus >= 0)
-            display += "+" + (intMod + profBonus);
+            saveDisplay += "+" + (intMod + profBonus);
           else
-            display += (intMod + profBonus);
+            saveDisplay += (intMod + profBonus);
         }
         else
           if (intMod >= 0)
-            display += "+" + intMod;
+            saveDisplay += "+" + intMod;
           else
-            display += intMod;
+            saveDisplay += intMod;
         break;
       case 4:
         if (proficient == 1) {
           if (conMod + profBonus >= 0)
-            display += "+" + (wisMod + profBonus);
+            saveDisplay += "+" + (wisMod + profBonus);
           else
-            display += (wisMod + profBonus);
+            saveDisplay += (wisMod + profBonus);
         }
         else
           if (wisMod >= 0)
-            display += "+" + wisMod;
+            saveDisplay += "+" + wisMod;
           else
-            display += wisMod;
+            saveDisplay += wisMod;
         break;
       case 5:
         if (proficient == 1) {
           if (conMod + profBonus >= 0)
-            display += "+" + (chaMod + profBonus);
+            saveDisplay += "+" + (chaMod + profBonus);
           else
-            display += (chaMod + profBonus);
+            saveDisplay += (chaMod + profBonus);
         }
         else
           if (chaMod >= 0)
-            display += "+" + chaMod;
+            saveDisplay += "+" + chaMod;
           else
-            display += chaMod;
+            saveDisplay += chaMod;
         break;
     }
-    display += "</br>";
+    saveDisplay += "</br>";
   }
-  return "Saving Throws</br>" + display;
+  return "<b>Saving Throws</b></br>" + saveDisplay + "<b>Skills</b></br>";
 }
 
 function setFeatures() {
@@ -3663,7 +3669,7 @@ function setFeatures() {
     }
 }
 
-//Why did we decide to do this</a>
+//Why did we decide to do this</eeeee>
 function setSpells() {
   return "<a data-toggle=\"collapse\" href=\"#collapseSpells\" aria-expanded=\"false\" aria-controls=\"collapseExample\">" + spells[0][1] + "</a><div class=\"collapse\" id=\"collapseSpells\"><div class=\"card card-body\">Spell Type: " + spells[0][2] + "</br>Spell Level: " + spells[0][3] + "</div></div>";
 }
