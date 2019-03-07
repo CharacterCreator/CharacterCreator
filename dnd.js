@@ -301,11 +301,11 @@ var spells = [
   // Test to see if a </br> is needed after the end of unordered list
   [105, "Divine Word", "Evocation", "7th-level", false, "1 Bonus Action", "30 Feet", "V", "Instantaneous", false, "You utter a divine word, imbued with the power that shaped the world at the dawn of creation. Choose any number of creatures you can see within range. Each creature that can hear you must make a Charisma saving throw. On a failed save, a creature suffers an effect based on its current hit points: <ul><li>50 hit points or fewer: deafened for 1 minute</li> <li>40 hit points or fewer: deafened and blinded for 10 minutes</li> <li>30 hit points or fewer: blinded, deafened, and stunned for 1 hour</li> <li>20 hit points or fewer: killed instantly</li> </ul> Regardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn’t there already) and can’t return to your current plane for 24 hours by any means short of a wish spell."],
 
-  [106, "Dominate Beast", "Enchantment", "4th-level", false, "1 Action", "60 Feet", "V, S"],
+  [106, "Dominate Beast", "Enchantment", "4th-level", false, "1 Action", "60 Feet", "V, S", "1 Minute", true, "You attempt to beguile a beast that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw. While the beast is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as “Attack that creature,” “Run over there,” or “Fetch that object.” If the creature completes the order and doesn’t receive further direction from you, it defends and preserves itself to the best of its ability. You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well. Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends. <b>At Higher Levels.</b> When you cast this spell with a 5th-level spell slot, the Duration is Concentration, up to 10 minutes. When you use a 6th-level spell slot, the Duration is Concentration, up to 1 hour. When you use a spell slot of 7th level or higher, the Duration is Concentration, up to 8 hours."],
 
-  [107, ""],
+  [107, "Dominate Monster", "Enchantment", "8th-level", false, "1 Action", "60 Feet", "V, S", "1 Hour", true, "You attempt to beguile a creature that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw. While the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \“Attack that creature,\” \“Run over there,\” or \“Fetch that object.\” If the creature completes the order and doesn’t receive further direction from you, it defends and preserves itself to the best of its ability. You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well. Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends. <b>At Higher Levels.</b> When you cast this spell with a 9th-level spell slot, the duration is concentration, up to 8 hours."],
 
-  [108, ""],
+  [108, "Dominate Person", "Enchantment", "5th-level", false, ""1 Action],
 
   [109, ""],
 
@@ -3610,10 +3610,16 @@ function displaySkills() {
   }
   for (var e = 0; e < skill.length; e++) {
     var proficient = 0;
+    var expertise = 0;
     if (skillProficiencies[e] == 1)
       proficient = 1;
+    if (skillProficiencies[e] == 2)
+      expertise = 1;
     if (proficient == 1) {
-      skillDisplay += "[P] ";
+      skillDisplay += "[<b>P</b>] ";
+    }
+    else if (expertise == 1) {
+      skillDisplay += "[<b>E</b>] ";
     }
     else {
       skillDisplay += "[ ] ";
@@ -3689,6 +3695,8 @@ function displaySkills() {
   return "<b>Saving Throws</b></br>" + saveDisplay + "<b>Skills</b></br>" + skillDisplay;
 }
 
+
+
 function setFeatures() {
     switch (classChoice) {
         case "Barbarian":
@@ -3750,8 +3758,12 @@ function setFeatures() {
 
 //Why did we decide to do this</eeeee>
 function setSpells() {
-  var spell = Math.floor(Math.random() * 104);
-  return "<a data-toggle=\"collapse\" href=\"#collapseSpells\" aria-expanded=\"false\" aria-controls=\"collapseExample\">" + spells[spell][1] + "</a><div class=\"collapse\" id=\"collapseSpells\"><div class=\"card card-body\">Spell Type: " + spells[spell][2] + "</br>Spell Level: " + spells[spell][3] + "</div></div>";
+  switch (classChoice) {
+    case "Barbarian":
+    case ""
+  }
+
+  //return "<a data-toggle=\"collapse\" href=\"#collapseSpells\" aria-expanded=\"false\" aria-controls=\"collapseExample\">" + spells[spell][1] + "</a><div class=\"collapse\" id=\"collapseSpells\"><div class=\"card card-body\">Spell Type: " + spells[spell][2] + "</br>Spell Level: " + spells[spell][3] + "</div></div>";
 }
 
 var save = localStorage.getItem("save");
@@ -3934,7 +3946,7 @@ function loadCharacter() {
         if (typeof saveinfo.intelligencePrevious !== "undefined") intelligencePrevious = saveinfo.intelligencePrevious;
         if (typeof saveinfo.wisdomPrevious !== "undefined") wisdomPrevious = saveinfo.wisdomPrevious;
         if (typeof saveinfo.charismaPrevious !== "undefined") charismaPrevious = saveinfo.charismaPrevious;
-        if (typeof saveinfo.maxHPPrevious !== "undefined") maxHPPrevious = saveinfo.maxHPPrevious;
+        if (typeof saveinfo.maxHPPrevious !== "undefined") maxHPPrevious = saveinfo.maxHPPrevious
         if (typeof saveinfo.speedPrevious !== "undefined") speedPrevious = saveinfo.speedPrevious;
         if (typeof saveinfo.modsPrevious !== "undefined") modsPrevious = saveinfo.modsPrevious;
         if (typeof saveinfo.strModPrevious !== "undefined") strModPrevious = saveinfo.strModPrevious;
