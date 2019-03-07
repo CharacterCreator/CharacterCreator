@@ -327,7 +327,7 @@ var spells = [
 
   [118, ],
 
-  [119, ],a
+  [119, ],
 
   [120, ],
 
@@ -1200,9 +1200,12 @@ function setClass() {
     return "Class: " + subclass;
 }
 
-function setClassManual() {
+function setClassManual(classNumber) {
   manualClass = true;
-switch ()
+  switch (classNumber) {
+    case 0:
+      classChoice
+  }
 }
 
 function setBackground() {
