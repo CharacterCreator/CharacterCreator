@@ -290,9 +290,9 @@ var spells = [
 
   [100, "Dispel Evil and Good", "Abjuration", "5th-level", false, "1 Action", "Self", "V, S, M (holy water or powdered silver and iron)", "1 Minute", true, "Shimmering energy surrounds and protects you from fey, undead, and creatures originating from beyond the Material Plane. For the duration, celestials, elementals, fey, fiends, and undead have disadvantage on attack rolls against you. You can end the spell early by using either of the following special functions. </br><b>Break Enchantment.</b> As your action, you touch a creature you can reach that is charmed, frightened, or possessed by a celestial, an elemental, a fey, a fiend, or an undead. The creature you touch is no longer charmed, frightened, or possessed by such creatures. </br><b>Dismissal.</b> As your action, make a melee spell attack against a celestial, an elemental, a fey, a fiend, or an undead you can reach. On a hit, you attempt to drive the creature back to its home plane. The creature must succeed on a Charisma saving throw or be sent back to its home plane (if it isn’t there already). If they aren’t on their home plane, undead are sent to the Shadowfell, and fey are sent to the Feywild."],
 
-  [101, "Dispel Magic", "Abjuration", "3rd-Level", false, "1 Action", "120 Feet", "V, S", "Instantaneous", false, ""],
+  [101, "Dispel Magic", "Abjuration", "3rd-Level", false, "1 Action", "120 Feet", "V, S", "Instantaneous", false, "Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends. For each spell of 4th level or higher on the target, make an ability check using your spellcasting ability. The DC equals 10 + the spell’s level. On a successful check, the spell ends. <br><b>At Higher Levels</b> When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell's level is equal to or less than the level of the spell slot you used."],
 
-  [102, ],
+  [102, "Dissonant Whispers", "Enchantment", "1st-Level", false, "1 Action", "60 Feet", "V", "Instantaneous", false, "You whisper a discordant melody that only one creature of your choice within range can hear, wracking it with terrible pain. The target must m ake a Wisdom saving throw. On a failed save, it takes 3d6 psychic damage and must immediately use its reaction, if available, to move as far as its speed allows away from you. The creature doesn’t move into obviously dangerous ground, such as a fire or a pit. On a successful save, the target takes half as much damage and doesn’t have to move away. A deafened creature automatically succeeds on the save. <br><b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."],
 
   [103, ],
 
@@ -1786,7 +1786,6 @@ function setAlignment(race, ideal) {
             else
                 moral = alignmentMoral[Math.floor(Math.random() * 3)];
             break;
-            //New York City
         case "Dragonborn":
             if (order == (""))
                 order = alignmentOrder[Math.floor(Math.random() * 3)];
@@ -3602,8 +3601,8 @@ function getCharacter() {
 
         document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
         document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice) + "</br>" + sethealth() + "</br>" + setSpeed();
-        document.getElementById("consoleSkills").innerHTML = displaySkills();
         document.getElementById("consoleProficiencies").innerHTML = displayProficiencies();
+        document.getElementById("consoleSkills").innerHTML = displaySkills();
         document.getElementById("consoleSpells").innerHTML = setSpells();
 }
 
