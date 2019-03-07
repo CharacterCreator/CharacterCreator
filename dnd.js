@@ -3512,6 +3512,7 @@ function displayProficiencies() {
 
 function displaySkills() {
   var saveDisplay = "";
+  var skillDisplay = "";
   var skill = ["Athletics", "Acrobatics", "Sleight of Hand", "Stealth", "Arcana", "History", "Investigation", "Nature", "Religion", "Animal Handling", "Insight", "Medicine", "Perception", "Survival", "Deception", "Intimidation", "Performance", "Persuasion"];
   var save = ["Strength Saving Throw", "Dexterity Saving Throw", "Constitution Saving Throw", "Intelligence Saving Throw", "Wisdom Saving Throw", "Charisma Saving Throw"];
   for (var e = 0; e < save.length; e++) {
@@ -3580,7 +3581,7 @@ function displaySkills() {
         break;
       case 4:
         if (proficient == 1) {
-          if (conMod + profBonus >= 0)
+          if (wisMod + profBonus >= 0)
             saveDisplay += "+" + (wisMod + profBonus);
           else
             saveDisplay += (wisMod + profBonus);
@@ -3593,7 +3594,7 @@ function displaySkills() {
         break;
       case 5:
         if (proficient == 1) {
-          if (conMod + profBonus >= 0)
+          if (chaMod + profBonus >= 0)
             saveDisplay += "+" + (chaMod + profBonus);
           else
             saveDisplay += (chaMod + profBonus);
@@ -3607,7 +3608,33 @@ function displaySkills() {
     }
     saveDisplay += "</br>";
   }
-  return "<b>Saving Throws</b></br>" + saveDisplay + "<b>Skills</b></br>";
+  for (var e = 0; e < skill.length; e++) {
+    var proficient = 0;
+    if (skillProficiencies[e] == 1)
+      proficient = 1;
+    if (proficient == 1) {
+      skillDisplay += "[P] ";
+    }
+    else {
+      skillDisplay += "[ ] ";
+    }
+    skillDisplay += save[e] + ": ";
+    if (e == 0) {
+      if (proficient == 1) {
+        if (strMod + profBonus >= 0)
+          skillDisplay += "+" + (strMod + profBonus);
+        else
+          skillDisplay += (strMod + profBonus);
+      }
+      else
+        if (strMod >= 0)
+          skillDisplay += "+" + strMod;
+        else
+          skillDisplay += strMod;
+    }
+    skillDisplay += "</br>";
+  }
+  return "<b>Saving Throws</b></br>" + saveDisplay + "<b>Skills</b></br>" + skillDisplay;
 }
 
 function setFeatures() {
@@ -3671,7 +3698,8 @@ function setFeatures() {
 
 //Why did we decide to do this</eeeee>
 function setSpells() {
-  return "<a data-toggle=\"collapse\" href=\"#collapseSpells\" aria-expanded=\"false\" aria-controls=\"collapseExample\">" + spells[0][1] + "</a><div class=\"collapse\" id=\"collapseSpells\"><div class=\"card card-body\">Spell Type: " + spells[0][2] + "</br>Spell Level: " + spells[0][3] + "</div></div>";
+  var spell = Math.floor(Math.random() * 104);
+  return "<a data-toggle=\"collapse\" href=\"#collapseSpells\" aria-expanded=\"false\" aria-controls=\"collapseExample\">" + spells[spell][1] + "</a><div class=\"collapse\" id=\"collapseSpells\"><div class=\"card card-body\">Spell Type: " + spells[spell][2] + "</br>Spell Level: " + spells[spell][3] + "</div></div>";
 }
 
 var save = localStorage.getItem("save");
