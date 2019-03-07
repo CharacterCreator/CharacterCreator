@@ -3695,8 +3695,6 @@ function displaySkills() {
   return "<b>Saving Throws</b></br>" + saveDisplay + "<b>Skills</b></br>" + skillDisplay;
 }
 
-
-
 function setFeatures() {
     switch (classChoice) {
         case "Barbarian":
@@ -3756,13 +3754,1092 @@ function setFeatures() {
     }
 }
 
-//Why did we decide to do this</eeeee>
+//Still a massive W.I.P. and is most likely broken
 function setSpells() {
   switch (classChoice) {
     case "Barbarian":
-    case ""
+      switch (subclass) {
+        case "Path of the Berserker ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Path of the Totem Warrior":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+      }
+      break;
+    case "Bard":
+      switch (subclass) {
+        case "College of Lore ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "College of Valor ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+      }
+      break;
+    case "Cleric":
+      switch (subclass) {
+        case "Knowledge Domain ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Life Domain ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Light Domain ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Nature Domain ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Tempest Domain ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Trickery Domain ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "War Domain ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+      }
+      break;
+    case "Druid":
+      switch (subclass) {
+        case "Circle of the Land (Arctic)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Circle of the Land (Coast)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Circle of the Land (Desert)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Circle of the Land (Forest)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Circle of the Land (Grassland)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Circle of the Land (Mountain)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Circle of the Land (Swamp)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Circle of the Land (Underdark)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Circle of the Moon ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+      }
+      break;
+    case "Fighter":
+      switch (subclass) {
+        case " (Champion)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case " (Battle Master)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case " (Eldritch Knight)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+      }
+      break;
+    case "Monk":
+      switch (subclass) {
+        case "Way of the Open Hand ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Way of Shadow ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Way of the Four Elements ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+      }
+      break;
+    case "Paladin":
+      switch (subclass) {
+        case "Oath of Devotion ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Oath of the Ancients ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "Oath of Vengeance ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+      }
+      break;
+    case "Ranger":
+      switch (subclass) {
+        case " (Hunter)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case " (Beastmaster)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+      }
+      break;
+    case "Rogue":
+      switch (subclass) {
+        case " (Thief)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case " (Assassin)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case " (Arcane Trickster)":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+      }
+      break;
+    case "Sorcerer":
+      switch (subclass) {
+        case " Draconic Bloodline":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case " Wild Magic":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+      }
+      break;
+    case "Warlock":
+      switch (subclass) {
+        case " of the Archfey":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case " of the Fiend":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case " of the Great Old One":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+      }
+      break;
+    case "Wizard":
+      switch (subclass) {
+        case "School of Abjuration ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "School of Conjuration ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "School of Diviniation ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "School of Enchantment ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "School of Evocation ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "School of Illusion ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "School of Necromancy ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+        case "School of Transmutation ":
+          switch (race) {
+            case "Dwarf":
+              break;
+            case "Elf":
+              break;
+            case "Halfling":
+              break;
+            case "Human":
+              break;
+            case "Dragonborn":
+              break;
+            case "Gnome":
+              break;
+            case "Half-Elf":
+              break;
+            case "Half-Orc":
+              break;
+            case "Tiefling":
+              break;
+          }
+          break;
+      }
+      break;
   }
-
   //return "<a data-toggle=\"collapse\" href=\"#collapseSpells\" aria-expanded=\"false\" aria-controls=\"collapseExample\">" + spells[spell][1] + "</a><div class=\"collapse\" id=\"collapseSpells\"><div class=\"card card-body\">Spell Type: " + spells[spell][2] + "</br>Spell Level: " + spells[spell][3] + "</div></div>";
 }
 
@@ -3829,7 +4906,7 @@ function getCharacter() {
         document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice) + "</br>" + sethealth() + "</br>" + setSpeed();
         document.getElementById("consoleProficiencies").innerHTML = displayProficiencies();
         document.getElementById("consoleSkills").innerHTML = displaySkills();
-        document.getElementById("consoleSpells").innerHTML = setSpells();
+        //document.getElementById("consoleSpells").innerHTML = setSpells();
 }
 
 function getPreviousCharacter() {
