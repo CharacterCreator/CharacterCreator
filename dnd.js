@@ -241,7 +241,6 @@ var spells = [
 
   [76, "Cordon of Arrows", "Transmutation", "2nd-level", false, "1 Action", "5 Feet", "V, S, M (four or more arrows or bolts)", "8 Hours", false, "You plant four pieces of nonmagical ammunition – arrows or crossbow bolts – in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take 1d6 piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains. When you cast this spell, you can designate any creatures you choose, and the spell ignores them. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 3rd level or higher, the amount of ammunition that can be affected increases by two for each slot level above 2nd."],
 
-  // Check formatting on Casting Time (should all words be in Caps?)
   [77, "Counterspell", "Abjuration", "3rd-level", false, "1 Reaction, which you take when you see a creature within 60 feet of you casting a spell", "60 Feet", "S", "Instantaneous", false, "You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell’s level. On a success, the creature’s spell fails and has no effect. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used."],
 
   [78, "Create Food and Water", "Conjuration", "3rd-level", false, "1 Action", "30 Feet", "V, S", "Instantaneous", false, "You create 45 pounds of food and 30 gallons of water on the ground or in containers within range, enough to sustain up to fifteen humanoids or five steeds for 24 hours. The food is bland but nourishing, and spoils if uneaten after 24 hours. The water is clean and doesn’t go bad."],
@@ -297,11 +296,12 @@ var spells = [
 
   [103, "Divination", "Divination", "4th-Level", true, "1 Action", "Self", "V, S, M (incense and a sacrificial offering appropriate to your religion, together worth at least 25 gp, which the spell consumes)", "Instantaneous", false, "Your magic and an offering put you in contact with a god or a god’s servants. You ask a single question concerning a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply. The reply might be a short phrase, a cryptic rhyme, or an omen. <br>The spell doesn’t take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion. <br>If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The GM makes this roll in secret."],
 
-  [104, ""],
+  [104, "Divine Favor", "Evocation", "1st-level", false, "1 Bonus Action", "Self", "V, S", "1 Minute", true, "Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit."],
 
-  [105, ""],
+  // Test to see if a </br> is needed after the end of unordered list
+  [105, "Divine Word", "Evocation", "7th-level", false, "1 Bonus Action", "30 Feet", "V", "Instantaneous", false, "You utter a divine word, imbued with the power that shaped the world at the dawn of creation. Choose any number of creatures you can see within range. Each creature that can hear you must make a Charisma saving throw. On a failed save, a creature suffers an effect based on its current hit points: <ul><li>50 hit points or fewer: deafened for 1 minute</li> <li>40 hit points or fewer: deafened and blinded for 10 minutes</li> <li>30 hit points or fewer: blinded, deafened, and stunned for 1 hour</li> <li>20 hit points or fewer: killed instantly</li> </ul> Regardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn’t there already) and can’t return to your current plane for 24 hours by any means short of a wish spell."],
 
-  [106, ""],
+  [106, "Dominate Beast", "Enchantment", "4th-level", false, "1 Action", "60 Feet", "V, S"],
 
   [107, ""],
 
@@ -3513,7 +3513,7 @@ function displayProficiencies() {
 function displaySkills() {
   var saveDisplay = "";
   var skillDisplay = "";
-  var skill = ["Athletics", "Acrobatics", "Sleight of Hand", "Stealth", "Arcana", "History", "Investigation", "Nature", "Religion", "Animal Handling", "Insight", "Medicine", "Perception", "Survival", "Deception", "Intimidation", "Performance", "Persuasion"];
+  var skill = ["Athletics (STR)", "Acrobatics (DEX)", "Sleight of Hand (DEX)", "Stealth (DEX)", "Arcana (INT)", "History (INT)", "Investigation (INT)", "Nature (INT)", "Religion (INT)", "Animal Handling (WIS)", "Insight (WIS)", "Medicine (WIS)", "Perception (WIS)", "Survival (WIS)", "Deception (CHA)", "Intimidation (CHA)", "Performance (CHA)", "Persuasion (CHA)"];
   var save = ["Strength Saving Throw", "Dexterity Saving Throw", "Constitution Saving Throw", "Intelligence Saving Throw", "Wisdom Saving Throw", "Charisma Saving Throw"];
   for (var e = 0; e < save.length; e++) {
     var proficient = 0;
@@ -3618,7 +3618,7 @@ function displaySkills() {
     else {
       skillDisplay += "[ ] ";
     }
-    skillDisplay += save[e] + ": ";
+    skillDisplay += skill[e] + ": ";
     if (e == 0) {
       if (proficient == 1) {
         if (strMod + profBonus >= 0)
@@ -3631,6 +3631,58 @@ function displaySkills() {
           skillDisplay += "+" + strMod;
         else
           skillDisplay += strMod;
+    }
+    else if (e <= 3) {
+      if (proficient == 1) {
+        if (dexMod + profBonus >= 0)
+          skillDisplay += "+" + (dexMod + profBonus);
+        else
+          skillDisplay += (dexMod + profBonus);
+      }
+      else
+        if (dexMod >= 0)
+          skillDisplay += "+" + dexMod;
+        else
+          skillDisplay += dexMod;
+    }
+    else if (e <= 8) {
+      if (proficient == 1) {
+        if (intMod + profBonus >= 0)
+          skillDisplay += "+" + (intMod + profBonus);
+        else
+          skillDisplay += (intMod + profBonus);
+      }
+      else
+        if (intMod >= 0)
+          skillDisplay += "+" + intMod;
+        else
+          skillDisplay += intMod;
+    }
+    else if (e <= 13) {
+      if (proficient == 1) {
+        if (wisMod + profBonus >= 0)
+          skillDisplay += "+" + (wisMod + profBonus);
+        else
+          skillDisplay += (wisMod + profBonus);
+      }
+      else
+        if (wisMod >= 0)
+          skillDisplay += "+" + wisMod;
+        else
+          skillDisplay += wisMod;
+    }
+    else if (e <= 17) {
+      if (proficient == 1) {
+        if (chaMod + profBonus >= 0)
+          skillDisplay += "+" + (chaMod + profBonus);
+        else
+          skillDisplay += (chaMod + profBonus);
+      }
+      else
+        if (chaMod >= 0)
+          skillDisplay += "+" + chaMod;
+        else
+          skillDisplay += chaMod;
     }
     skillDisplay += "</br>";
   }
