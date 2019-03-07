@@ -290,524 +290,533 @@ var spells = [
 
   [100, "Dispel Evil and Good", "Abjuration", "5th-level", false, "1 Action", "Self", "V, S, M (holy water or powdered silver and iron)", "1 Minute", true, "Shimmering energy surrounds and protects you from fey, undead, and creatures originating from beyond the Material Plane. For the duration, celestials, elementals, fey, fiends, and undead have disadvantage on attack rolls against you. You can end the spell early by using either of the following special functions. </br><b>Break Enchantment.</b> As your action, you touch a creature you can reach that is charmed, frightened, or possessed by a celestial, an elemental, a fey, a fiend, or an undead. The creature you touch is no longer charmed, frightened, or possessed by such creatures. </br><b>Dismissal.</b> As your action, make a melee spell attack against a celestial, an elemental, a fey, a fiend, or an undead you can reach. On a hit, you attempt to drive the creature back to its home plane. The creature must succeed on a Charisma saving throw or be sent back to its home plane (if it isn’t there already). If they aren’t on their home plane, undead are sent to the Shadowfell, and fey are sent to the Feywild."],
 
-  [101, "Aventura is trash"],
+  [101, "Dispel Magic", "Abjuration", "3rd-Level", false, "1 Action", "120 Feet", "V, S", "Instantaneous", false, ""],
 
-  [102, "Aventura is trash"],
+  [102, ],
 
-  [103, "Aventura is trash"],
+  [103, ],
 
-  [104, "Aventura is trash"],
+  [104, ],
 
-  [105, "Aventura is trash"],
+  [105, ],
 
-  [106, "Aventura is trash"],
+  [106, ],
 
-  [107, "Aventura is trash"],
+  [107, ],
 
-  [108, "Aventura is trash"],
+  [108, ],
 
-  [109, "Aventura is trash"],
+  [109, ],
 
-  [110, "Aventura is trash"],
+  [110, ],
 
-  [111, "Aventura is trash"],
+  [111, ],
 
-  [112, "Aventura is trash"],
+  [112, ],
 
-  [113, "Aventura is trash"],
+  [113, ],
 
-  [114, "Aventura is trash"],
+  [114, ],
 
-  [115, "Aventura is trash"],
+  [115, ],
 
-  [116, "Aventura is trash"],
+  [116, ],
 
-  [117, "Aventura is trash"],
+  [117, ],
 
-  [118, "Aventura is trash"],
+  [118, ],
 
-  [119, "Aventura is trash"],
+  [119, ],
 
-  [120, "Aventura is trash"],
+  [120, ],
 
-  [121, "Aventura is trash"],
+  [121, ],
 
-  [122, "Aventura is trash"],
+  [122, ],
 
-  [123, "Aventura is trash"],
+  [123, ],
 
-  [124, "Aventura is trash"],
+  [124, ],
 
-  [125, "Aventura is trash"],
+  [125, ],
 
-  [126, "Aventura is trash"],
+  [126, ],
 
-  [127, "Aventura is trash"],
+  [127, ],
 
-  [128, "Aventura is trash"],
+  [128, ],
 
-  [129, "Aventura is trash"],
+  [129, ],
 
-  [130, "Aventura is trash"],
+  [130, ],
 
-  [131, "Aventura is trash"],
+  [131, ],
 
-  [132, "Aventura is trash"],
+  [132, ],
 
-  [133, "Aventura is trash"],
+  [133, ],
 
-  [134, "Aventura is trash"],
+  [134, ],
 
-  [135, "Aventura is trash"],
+  [135, ],
 
-  [136, "Aventura is trash"],
+  [136, ],
 
-  [137, "Aventura is trash"],
+  [137, ],
 
-  [138, "Aventura is trash"],
+  [138, ],
 
-  [139, "Aventura is trash"],
+  [139, ],
 
-  [140, "Aventura is trash"],
+  [140, ],
 
-  [141, "Aventura is trash"],
+  [141, ],
 
-  [142, "Aventura is trash"],
+  [142, ],
 
-  [143, "Aventura is trash"],
+  [143, ],
 
-  [144, "Aventura is trash"],
+  [144, ],
 
-  [145, "Aventura is trash"],
+  [145, ],
 
-  [146, "Aventura is trash"],
+  [146, ],
 
-  [147, "Aventura is trash"],
+  [147, ],
 
-  [148, "Aventura is trash"],
+  [148, ],
 
-  [149, "Aventura is trash"],
+  [149, ],
 
-  [150, "Aventura is trash"],
+  [150, ],
 
-  [151, "Aventura is trash"],
+  [151, ],
 
-  [152, "Aventura is trash"],
+  [152, ],
 
-  [153, "Aventura is trash"],
+  [153, ],
 
-  [154, "Aventura is trash"],
+  [154, ],
 
-  [155, "Aventura is trash"],
+  [155, ],
 
-  [156, "Aventura is trash"],
+  [156, ],
 
-  [157, "Aventura is trash"],
+  [157, ],
 
-  [158, "Aventura is trash"],
+  [158, ],
 
-  [159, "Aventura is trash"],
+  [159, ],
 
-  [160, "Aventura is trash"],
+  [160, ],
 
-  [161, "Aventura is trash"],
+  [161, ],
 
-  [162, "Aventura is trash"],
+  [162, ],
 
-  [163, "Aventura is trash"],
+  [163, ],
 
-  [164, "Aventura is trash"],
+  [164, ],
 
-  [165, "Aventura is trash"],
+  [165, ],
 
-  [166, "Aventura is trash"],
+  [166, ],
 
-  [167, "Aventura is trash"],
+  [167, ],
 
-  [168, "Aventura is trash"],
+  [168, ],
 
-  [169, "Aventura is trash"],
+  [169, ],
 
-  [170, "Aventura is trash"],
+  [170, ],
 
-  [171, "Aventura is trash"],
+  [171, ],
 
-  [172, "Aventura is trash"],
+  [172, ],
 
-  [173, "Aventura is trash"],
+  [173, ],
 
-  [174, "Aventura is trash"],
+  [174, ],
 
-  [175, "Aventura is trash"],
+  [175, ],
 
-  [176, "Aventura is trash"],
+  [176, ],
 
-  [177, "Aventura is trash"],
+  [177, ],
 
-  [178, "Aventura is trash"],
+  [178, ],
 
-  [179, "Aventura is trash"],
+  [179, ],
 
-  [180, "Aventura is trash"],
+  [180, ],
 
-  [181, "Aventura is trash"],
+  [181, ],
 
-  [182, "Aventura is trash"],
+  [182, ],
 
-  [183, "Aventura is trash"],
+  [183, ],
 
-  [184, "Aventura is trash"],
+  [184, ],
 
-  [185, "Aventura is trash"],
+  [185, ],
 
-  [186, "Aventura is trash"],
+  [186, ],
 
-  [187, "Aventura is trash"],
+  [187, ],
 
-  [188, "Aventura is trash"],
+  [188, ],
 
-  [189, "Aventura is trash"],
+  [189, ],
 
-  [190, "Aventura is trash"],
+  [190, ],
 
-  [191, "Aventura is trash"],
+  [191, ],
 
-  [192, "Aventura is trash"],
+  [192, ],
 
-  [193, "Aventura is trash"],
+  [193, ],
 
-  [194, "Aventura is trash"],
+  [194, ],
 
-  [195, "Aventura is trash"],
+  [195, ],
 
-  [196, "Aventura is trash"],
+  [196, ],
 
-  [197, "Aventura is trash"],
+  [197, ],
 
-  [198, "Aventura is trash"],
+  [198, ],
 
-  [199, "Aventura is trash"],
+  [199, ],
 
-  [200, "Aventura is trash"],
+  [200, ],
 
-  [201, "Aventura is trash"],
+  [201, ],
 
-  [202, "Aventura is trash"],
+  [202, ],
 
-  [203, "Aventura is trash"],
+  [203, ],
 
-  [204, "Aventura is trash"],
+  [204, ],
 
-  [205, "Aventura is trash"],
+  [205, ],
 
-  [206, "Aventura is trash"],
+  [206, ],
 
-  [207, "Aventura is trash"],
+  [207, ],
 
-  [208, "Aventura is trash"],
+  [208, ],
 
-  [209, "Aventura is trash"],
+  [209, ],
 
-  [210, "Aventura is trash"],
+  [210, ],
 
-  [211, "Aventura is trash"],
+  [211, ],
 
-  [212, "Aventura is trash"],
+  [212, ],
 
-  [213, "Aventura is trash"],
+  [213, ],
 
-  [214, "Aventura is trash"],
+  [214, ],
 
-  [215, "Aventura is trash"],
+  [215, ],
 
-  [216, "Aventura is trash"],
+  [216, ],
 
-  [217, "Aventura is trash"],
+  [217, ],
 
-  [218, "Aventura is trash"],
+  [218, ],
 
-  [219, "Aventura is trash"],
+  [219, ],
 
-  [220, "Aventura is trash"],
+  [220, ],
 
-  [221, "Aventura is trash"],
+  [221, ],
 
-  [223, "Aventura is trash"],
+  [223, ],
 
-  [224, "Aventura is trash"],
+  [224, ],
 
-  [225, "Aventura is trash"],
+  [225, ],
 
-  [226, "Aventura is trash"],
+  [226, ],
 
-  [227, "Aventura is trash"],
+  [227, ],
 
-  [228, "Aventura is trash"],
+  [228, ],
 
-  [229, "Aventura is trash"],
+  [229, ],
 
-  [230, "Aventura is trash"],
+  [230, ],
 
-  [231, "Aventura is trash"],
+  [231, ],
 
-  [232, "Aventura is trash"],
+  [232, ],
 
-  [233, "Aventura is trash"],
+  [233, ],
 
-  [234, "Aventura is trash"],
+  [234, ],
 
-  [235, "Aventura is trash"],
+  [235, ],
 
-  [236, "Aventura is trash"],
+  [236, ],
 
-  [237, "Aventura is trash"],
+  [237, ],
 
-  [238, "Aventura is trash"],
+  [238, ],
 
-  [239, "Aventura is trash"],
+  [239, ],
 
-  [240, "Aventura is trash"],
+  [240, ],
 
-  [241, "Aventura is trash"],
+  [241, ],
 
-  [242, "Aventura is trash"],
+  [242, ],
 
-  [243, "Aventura is trash"],
+  [243, ],
 
-  [244, "Aventura is trash"],
+  [244, ],
 
-  [245, "Aventura is trash"],
+  [245, ],
 
-  [246, "Aventura is trash"],
+  [246, ],
 
-  [247, "Aventura is trash"],
+  [247, ],
 
-  [248, "Aventura is trash"],
+  [248, ],
 
-  [249, "Aventura is trash"],
+  [249, ],
 
-  [250, "Aventura is trash"],
+  [250, ],
 
-  [251, "Aventura is trash"],
+  [251, ],
 
-  [252, "Aventura is trash"],
+  [252, ],
 
-  [253, "Aventura is trash"],
+  [253, ],
 
-  [254, "Aventura is trash"],
+  [254, ],
 
-  [255, "Aventura is trash"],
+  [255, ],
 
-  [256, "Aventura is trash"],
+  [256, ],
 
-  [257, "Aventura is trash"],
+  [257, ],
 
-  [258, "Aventura is trash"],
+  [258, ],
 
-  [259, "Aventura is trash"],
+  [259, ],
 
-  [260, "Aventura is trash"],
+  [260, ],
 
-  [261, "Aventura is trash"],
+  [261, ],
 
-  [262, "Aventura is trash"],
+  [262, ],
 
-  [263, "Aventura is trash"],
+  [263, ],
 
-  [264, "Aventura is trash"],
+  [264, ],
 
-  [265, "Aventura is trash"],
+  [265, ],
 
-  [266, "Aventura is trash"],
+  [266, ],
 
-  [267, "Aventura is trash"],
+  [267, ],
 
-  [268, "Aventura is trash"],
+  [268, ],
 
-  [269, "Aventura is trash"],
+  [269, ],
 
-  [270, "Aventura is trash"],
+  [270, ],
 
-  [271, "Aventura is trash"],
+  [271, ],
 
-  [272, "Aventura is trash"],
+  [272, ],
 
-  [273, "Aventura is trash"],
+  [273, ],
 
-  [274, "Aventura is trash"],
+  [274, ],
 
-  [275, "Aventura is trash"],
+  [275, ],
 
-  [276, "Aventura is trash"],
+  [276, ],
 
-  [277, "Aventura is trash"],
+  [277, ],
 
-  [278, "Aventura is trash"],
+  [278, ],
 
-  [279, "Aventura is trash"],
+  [279, ],
 
-  [280, "Aventura is trash"],
+  [280, ],
 
-  [281, "Aventura is trash"],
+  [281, ],
 
-  [282, "Aventura is trash"],
+  [282, ],
 
-  [283, "Aventura is trash"],
+  [283, ],
 
-  [284, "Aventura is trash"],
+  [284, ],
 
-  [285, "Aventura is trash"],
+  [285, ],
 
-  [286, "Aventura is trash"],
+  [286, ],
 
-  [287, "Aventura is trash"],
+  [287, ],
 
-  [288, "Aventura is trash"],
+  [288, ],
 
-  [289, "Aventura is trash"],
+  [289, ],
 
-  [290, "Aventura is trash"],
+  [290, ],
 
-  [291, "Aventura is trash"],
+  [291, ],
 
-  [292, "Aventura is trash"],
+  [292, ],
 
-  [293, "Aventura is trash"],
+  [293, ],
 
-  [294, "Aventura is trash"],
+  [294, ],
 
-  [295, "Aventura is trash"],
+  [295, ],
 
-  [296, "Aventura is trash"],
+  [296, ],
 
-  [297, "Aventura is trash"],
+  [297, ],
 
-  [298, "Aventura is trash"],
+  [298, ],
 
-  [299, "Aventura is trash"],
+  [299, ],
 
-  [300, "Aventura is trash"],
+  [300, ],
 
-  [301, "Aventura is trash"],
+  [301, ],
 
-  [302, "Aventura is trash"],
+  [302, ],
 
-  [303, "Aventura is trash"],
+  [303, ],
 
-  [304, "Aventura is trash"],
+  [304, ],
 
-  [305, "Aventura is trash"],
+  [305, ],
 
-  [306, "Aventura is trash"],
+  [306, ],
 
-  [307, "Aventura is trash"],
+  [307, ],
 
-  [308, "Aventura is trash"],
+  [308, ],
 
-  [309, "Aventura is trash"],
+  [309, ],
 
-  [310, "Aventura is trash"],
+  [310, ],
 
-  [311, "Aventura is trash"],
+  [311, ],
 
-  [312, "Aventura is trash"],
+  [312, ],
 
-  [313, "Aventura is trash"],
+  [313, ],
 
-  [314, "Aventura is trash"],
+  [314, ],
 
-  [315, "Aventura is trash"],
+  [315, ],
 
-  [316, "Aventura is trash"],
+  [316, ],
 
-  [317, "Aventura is trash"],
+  [317, ],
 
-  [318, "Aventura is trash"],
+  [318, ],
 
-  [319, "Aventura is trash"],
+  [319, ],
 
-  [320, "Aventura is trash"],
+  [320, ],
 
-  [321, "Aventura is trash"],
+  [321, ],
 
-  [323, "Aventura is trash"],
+  [323, ],
 
-  [324, "Aventura is trash"],
+  [324, ],
 
-  [325, "Aventura is trash"],
+  [325, ],
 
-  [326, "Aventura is trash"],
+  [326, ],
 
-  [327, "Aventura is trash"],
+  [327, ],
 
-  [328, "Aventura is trash"],
+  [328, ],
 
-  [329, "Aventura is trash"],
+  [329, ],
 
-  [330, "Aventura is trash"],
+  [330, ],
 
-  [331, "Aventura is trash"],
+  [331, ],
 
-  [332, "Aventura is trash"],
+  [332, ],
 
-  [333, "Aventura is trash"],
+  [333, ],
 
-  [334, "Aventura is trash"],
+  [334, ],
 
-  [335, "Aventura is trash"],
+  [335, ],
 
-  [336, "Aventura is trash"],
+  [336, ],
 
-  [337, "Aventura is trash"],
+  [337, ],
 
-  [338, "Aventura is trash"],
+  [338, ],
 
-  [339, "Aventura is trash"],
+  [339, ],
 
-  [340, "Aventura is trash"],
+  [340, ],
 
-  [341, "Aventura is trash"],
+  [341, ],
 
-  [342, "Aventura is trash"],
+  [342, ],
 
-  [343, "Aventura is trash"],
+  [343, ],
 
-  [344, "Aventura is trash"],
+  [344, ],
 
-  [345, "Aventura is trash"],
+  [345, ],
 
-  [346, "Aventura is trash"],
+  [346, ],
 
-  [347, "Aventura is trash"],
+  [347, ],
 
-  [348, "Aventura is trash"],
+  [348, ],
 
-  [349, "Aventura is trash"],
+  [349, ],
 
-  [350, "Aventura is trash"],
+  [350, ],
 
-  [351, "Aventura is trash"],
+  [351, ],
 
-  [352, "Aventura is trash"],
+  [352, ],
 
-  [353, "Aventura is trash"],
+  [353, ],
 
-  [354, "Aventura is trash"],
+  [354, ],
 
-  [355, "Aventura is trash"],
+  [355, ],
 
-  [356, "Aventura is trash"],
+  [356, ],
 
-  [357, "Aventura is trash"],
+  [357, ],
 
-  [358, "Aventura is trash"],
+  [358, ],
 
-  [359, "Aventura is trash"],
+  [359, ],
 
-  [360, "Aventura is trash"],
+  [360, ],
 
-  [361, "Aventura is trash"]
+  [361, ]
 ];
+
+var spellsBard = [];
+var spellsCleric = [];
+var spellsDruid = [];
+var spellsPaladin = [];
+var spellsRanger = [];
+var spellsSorcerer = [];
+var spellsWarlock = [];
+var spellsWizard = [];
 
 //For all of the saving and loading functions: getCharacter, getPreviousCharacter, saveCharacter, loadCharacter, deleteCharacter
 var racePrevious = race;
@@ -3438,10 +3447,10 @@ function displaySkills() {
   var skill = ["Athletics", "Acrobatics", "Sleight of Hand", "Stealth", "Arcana", "History", "Investigation", "Nature", "Religion", "Animal Handling", "Insight", "Medicine", "Perception", "Survival", "Deception", "Intimidation", "Performance", "Persuasion"];
   var save = ["Strength Saving Throw", "Dexterity Saving Throw", "Constitution Saving Throw", "Intelligence Saving Throw", "Wisdom Saving Throw", "Charisma Saving Throw"];
   for (var e = 0; e < save.length; e++) {
-    var proficient = false;
+    var proficient = 0;
     if (saveProficiencies[e] == 1)
-      proficient = true;
-    if (proficient) {
+      proficient = 1;
+    if (proficient == 1) {
       display += "[P] ";
     }
     else {
@@ -3450,7 +3459,7 @@ function displaySkills() {
     display += save[e] + ": ";
     switch (e) {
       case 0:
-        if (proficient) {
+        if (proficient == 1) {
           if (strMod + profBonus >= 0)
             display += "+" + (strMod + profBonus);
           else
