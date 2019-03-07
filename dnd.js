@@ -5,6 +5,7 @@ var manualRace = false;
 
 /*For setClass*/
 var classChoice = "";
+var manualClass = false;
 var hitDie = 0;
 
 /*For setBackground*/
@@ -292,9 +293,9 @@ var spells = [
 
   [101, "Dispel Magic", "Abjuration", "3rd-Level", false, "1 Action", "120 Feet", "V, S", "Instantaneous", false, "Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends. For each spell of 4th level or higher on the target, make an ability check using your spellcasting ability. The DC equals 10 + the spell’s level. On a successful check, the spell ends. <br><b>At Higher Levels</b> When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell's level is equal to or less than the level of the spell slot you used."],
 
-  [102, "Dissonant Whispers", "Enchantment", "1st-Level", false, "1 Action", "60 Feet", "V", "Instantaneous", false, "You whisper a discordant melody that only one creature of your choice within range can hear, wracking it with terrible pain. The target must m ake a Wisdom saving throw. On a failed save, it takes 3d6 psychic damage and must immediately use its reaction, if available, to move as far as its speed allows away from you. The creature doesn’t move into obviously dangerous ground, such as a fire or a pit. On a successful save, the target takes half as much damage and doesn’t have to move away. A deafened creature automatically succeeds on the save. <br><b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."],
+  [102, "Dissonant Whispers", "Enchantment", "1st-Level", false, "1 Action", "60 Feet", "V", "Instantaneous", false, "You whisper a discordant melody that only one creature of your choice within range can hear, wracking it with terrible pain. The target must make a Wisdom saving throw. On a failed save, it takes 3d6 psychic damage and must immediately use its reaction, if available, to move as far as its speed allows away from you. The creature doesn’t move into obviously dangerous ground, such as a fire or a pit. On a successful save, the target takes half as much damage and doesn’t have to move away. A deafened creature automatically succeeds on the save. <br><b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."],
 
-  [103, ],
+  [103, "Divination", "Divination", "4th-Level", true, "1 Action", "Self", "V, S, M (incense and a sacrificial offering appropriate to your religion, together worth at least 25 gp, which the spell consumes)", "Instantaneous", false, "Your magic and an offering put you in contact with a god or a god’s servants. You ask a single question concerning a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply. The reply might be a short phrase, a cryptic rhyme, or an omen. <br>The spell doesn’t take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion. <br>If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The GM makes this roll in secret."],
 
   [104, ],
 
@@ -326,7 +327,7 @@ var spells = [
 
   [118, ],
 
-  [119, ],
+  [119, ],a
 
   [120, ],
 
@@ -874,85 +875,85 @@ function setRace() {
 }
 
 function setRaceManual(raceNumber) {
-    manualRace = true;
-    switch (raceNumber) {
-        case 1:
-            race = "Dwarf";
-            subrace = "Hill ";
-            document.getElementById("raceSelection").innerHTML = "Hill Dwarf";
-            break;
-        case 2:
-            race = "Dwarf";
-            subrace = "Mountain ";
-            document.getElementById("raceSelection").innerHTML = "Mountain Dwarf";
-            break;
-        case 3:
-            race = "Elf";
-            subrace = "High ";
-            document.getElementById("raceSelection").innerHTML = "High Elf";
-            break;
-        case 4:
-            race = "Elf";
-            subrace = "Wood ";
-            document.getElementById("raceSelection").innerHTML = "Wood Elf";
-            break;
-        case 5:
-            race = "Elf";
-            subrace = "Dark ";
-            document.getElementById("raceSelection").innerHTML = "Dark Elf";
-            break;
-        case 6:
-            race = "Halfling";
-            subrace = "Lightfoot ";
-            document.getElementById("raceSelection").innerHTML = "Lightfoot Halfling";
-            break;
-        case 7:
-            race = "Halfling";
-            subrace = "Stout ";
-            document.getElementById("raceSelection").innerHTML = "Stout Halfling";
-            break;
-        case 8:
-            race = "Human";
-            subrace = "";
-            document.getElementById("raceSelection").innerHTML = "Human";
-            break;
-        case 9:
-            race = "Dragonborn";
-            subrace = "";
-            document.getElementById("raceSelection").innerHTML = "Dragonborn";
-            break;
-        case 10:
-            race = "Gnome";
-            subrace = "Forest ";
-            document.getElementById("raceSelection").innerHTML = "Forest Gnome";
-            break;
-        case 11:
-            race = "Gnome";
-            subrace = "Rock ";
-            document.getElementById("raceSelection").innerHTML = "Rock Gnome";
-            break;
-        case 12:
-            race = "Half-Elf";
-            subrace = "";
-            document.getElementById("raceSelection").innerHTML = "Half-Elf";
-            break;
-        case 13:
-            race = "Half-Orc";
-            subrace = "";
-            document.getElementById("raceSelection").innerHTML = "Half-Orc";
-            break;
-        case 14:
-            race = "Tiefling";
-            subrace = "";
-            document.getElementById("raceSelection").innerHTML = "Tiefling";
-            break;
-        case 15:
-            manualRace = false;
-            race = "";
-            subrace = "";
-            document.getElementById("raceSelection").innerHTML = "Race Selection";
-            break;
-    }
+  manualRace = true;
+  switch (raceNumber) {
+      case 1:
+          race = "Dwarf";
+          subrace = "Hill ";
+          document.getElementById("raceSelection").innerHTML = "Hill Dwarf";
+          break;
+      case 2:
+          race = "Dwarf";
+          subrace = "Mountain ";
+          document.getElementById("raceSelection").innerHTML = "Mountain Dwarf";
+          break;
+      case 3:
+          race = "Elf";
+          subrace = "High ";
+          document.getElementById("raceSelection").innerHTML = "High Elf";
+          break;
+      case 4:
+          race = "Elf";
+          subrace = "Wood ";
+          document.getElementById("raceSelection").innerHTML = "Wood Elf";
+          break;
+      case 5:
+          race = "Elf";
+          subrace = "Dark ";
+          document.getElementById("raceSelection").innerHTML = "Dark Elf";
+          break;
+      case 6:
+          race = "Halfling";
+          subrace = "Lightfoot ";
+          document.getElementById("raceSelection").innerHTML = "Lightfoot Halfling";
+          break;
+      case 7:
+          race = "Halfling";
+          subrace = "Stout ";
+          document.getElementById("raceSelection").innerHTML = "Stout Halfling";
+          break;
+      case 8:
+          race = "Human";
+          subrace = "";
+          document.getElementById("raceSelection").innerHTML = "Human";
+          break;
+      case 9:
+          race = "Dragonborn";
+          subrace = "";
+          document.getElementById("raceSelection").innerHTML = "Dragonborn";
+          break;
+      case 10:
+          race = "Gnome";
+          subrace = "Forest ";
+          document.getElementById("raceSelection").innerHTML = "Forest Gnome";
+          break;
+      case 11:
+          race = "Gnome";
+          subrace = "Rock ";
+          document.getElementById("raceSelection").innerHTML = "Rock Gnome";
+          break;
+      case 12:
+          race = "Half-Elf";
+          subrace = "";
+          document.getElementById("raceSelection").innerHTML = "Half-Elf";
+          break;
+      case 13:
+          race = "Half-Orc";
+          subrace = "";
+          document.getElementById("raceSelection").innerHTML = "Half-Orc";
+          break;
+      case 14:
+          race = "Tiefling";
+          subrace = "";
+          document.getElementById("raceSelection").innerHTML = "Tiefling";
+          break;
+      case 15:
+          manualRace = false;
+          race = "";
+          subrace = "";
+          document.getElementById("raceSelection").innerHTML = "Race Selection";
+          break;
+  }
 }
 
 //We'll come back to this ;)
@@ -1197,6 +1198,11 @@ function setClass() {
     }
     subclass = classChoice;
     return "Class: " + subclass;
+}
+
+function setClassManual() {
+  manualClass = true;
+switch ()
 }
 
 function setBackground() {
@@ -3469,6 +3475,71 @@ function displaySkills() {
             display += "+" + strMod;
           else
             display += strMod;
+        break;
+      case 1:
+        if (proficient == 1) {
+          if (dexMod + profBonus >= 0)
+            display += "+" + (dexMod + profBonus);
+          else
+            display += (dexMod + profBonus);
+        }
+        else
+          if (dexMod >= 0)
+            display += "+" + dexMod;
+          else
+            display += dexMod;
+        break;
+      case 2:
+        if (proficient == 1) {
+          if (conMod + profBonus >= 0)
+            display += "+" + (conMod + profBonus);
+          else
+            display += (conMod + profBonus);
+        }
+        else
+          if (conMod >= 0)
+            display += "+" + conMod;
+          else
+            display += conMod;
+        break;
+      case 3:
+        if (proficient == 1) {
+          if (intMod + profBonus >= 0)
+            display += "+" + (intMod + profBonus);
+          else
+            display += (intMod + profBonus);
+        }
+        else
+          if (intMod >= 0)
+            display += "+" + intMod;
+          else
+            display += intMod;
+        break;
+      case 4:
+        if (proficient == 1) {
+          if (conMod + profBonus >= 0)
+            display += "+" + (wisMod + profBonus);
+          else
+            display += (wisMod + profBonus);
+        }
+        else
+          if (wisMod >= 0)
+            display += "+" + wisMod;
+          else
+            display += wisMod;
+        break;
+      case 5:
+        if (proficient == 1) {
+          if (conMod + profBonus >= 0)
+            display += "+" + (chaMod + profBonus);
+          else
+            display += (chaMod + profBonus);
+        }
+        else
+          if (chaMod >= 0)
+            display += "+" + chaMod;
+          else
+            display += chaMod;
         break;
     }
     display += "</br>";
