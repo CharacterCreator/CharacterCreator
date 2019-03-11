@@ -305,101 +305,101 @@ var spells = [
 
   [107, "Dominate Monster", "Enchantment", "8th-level", false, "1 Action", "60 Feet", "V, S", "1 Hour", true, "You attempt to beguile a creature that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw. While the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \“Attack that creature,\” \“Run over there,\” or \“Fetch that object.\” If the creature completes the order and doesn’t receive further direction from you, it defends and preserves itself to the best of its ability. You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well. Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends. <b>At Higher Levels.</b> When you cast this spell with a 9th-level spell slot, the duration is concentration, up to 8 hours."],
 
-  [108, "Dominate Person", "Enchantment", "5th-level", false, ""1 Action],
+  //[108, "Dominate Person", "Enchantment", "5th-level", false, "1 Action", "60 Feet", "V, S", "1 Minute", true, "You attempt to beguile a humanoid that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw. While the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as “Attack that creature,” “Run over there,” or “Fetch that object.” If the creature completes the order and doesn’t receive further direction from you, it defends and preserves itself to the best of its ability. You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well. Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends. <b>At Higher Levels.</b> When you cast this spell using a 6th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 7th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 8th level or higher, the duration is concentration, up to 8 hours."],
 
-  [109, ""],
+  [109, "Drawmij's Instant Summons", "Conjuration", "6th-level", true, "1 Minute", "Touch", "V, S, M (a sapphire worth 1,000 gp)", "Until Dispelled", false, "You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire. At any time thereafter, you can use your action to speak the item’s name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends. If another creature is holding or carrying the item, crushing the sapphire doesn’t transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment. Dispel magic or a similar effect successfully applied to the sapphire ends this spell’s effect."],
 
-  [110, ""],
+  [110, "Dream", "Illusion", "5th-level", false, "1 Minute", "Special", "V, S, M (a handful of sand, a dab of ink, and a writing quill plucked from a sleeping bird)", "8 Hours", false, "This spell shapes a creature’s dreams. Choose a creature known to you as the target of this spell. The target must be on the same plane of existence as you. Creatures that don’t sleep, such as elves, can’t be contacted by this spell. You, or a willing creature you touch, enters a trance state, acting as a messenger. While in the trance, the messenger is aware of his or her surroundings, but can’t take actions or move. If the target is asleep, the messenger appears in the target’s dreams and can converse with the target as long as it remains asleep, through the duration of the spell. The messenger can also shape the environment of the dream, creating landscapes, objects, and other images. The messenger can emerge from the trance at any time, ending the effect of the spell early. The target recalls the dream perfectly upon waking. If the target is awake when you cast the spell, the messenger knows it, and can either end the trance (and the spell) or wait for the target to fall asleep, at which point the messenger appears in the target’s dreams. You can make the messenger appear monstrous and terrifying to the target. If you do, the messenger can deliver a message of no more than ten words and then the target must make a Wisdom saving throw. On a failed save, echoes of the phantasmal monstrosity spawn a nightmare that lasts the duration of the target’s sleep and prevents the target from gaining any benefit from that rest. In addition, when the target wakes up, it takes 3d6 psychic damage. If you have a body part, lock of hair, clipping from a nail, or similar portion of the target’s body, the target makes its saving throw with disadvantage."],
 
-  [111, ""],
+  [111, "Druidcraft", "Transmutation", "Cantrip", false, "1 Action", "30 Feet", "V, S", "Instantaneous", false, "Whispering to the spirits of nature, you create one of the following effects within range: <ul> <li>You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, falling snowflakes for snow, and so on. This effect persists for 1 round.</li> <li>You instantly make a flower blossom, a seed pod open, or a leaf bud bloom.</li> <li>You create an instantaneous, harmless sensory effect, such as falling leaves, a puff of wind, the sound of a small animal, or the faint odor of skunk. The effect must fit in a 5-foot cube.</li> <li>You instantly light or snuff out a candle, a torch, or a small campfire.</li> </ul>"],
 
-  [112, ""],
+  [112, "Earthquake", "Evocation", "8th-level", false, "1 Action", "500 Feet", "V, S, M (a pinch of dirt, a piece of rock, and a lump of clay)", "1 Minute", true, "You create a seismic disturbance at a point on the ground that you can see within range. For the duration, an intense tremor rips through the ground in a 100-foot-radius circle centered on that point and shakes creatures and structures in contact with the ground in that area. The ground in the area becomes difficult terrain. Each creature on the ground that is concentrating must make a Constitution saving throw. On a failed save, the creature’s concentration is broken. When you cast this spell and at the end of each turn you spend concentrating on it, each creature on the ground in the area must make a Dexterity saving throw. On a failed save, the creature is knocked prone. This spell can have additional effects depending on the terrain in the area, as determined by the GM. </br><b>Fissures.</b> Fissures open throughout the spell’s area at the start of your next turn after you cast the spell. A total of 1d6 such fissures open in locations chosen by the DM. Each is 1d10 × 10 feet deep, 10 feet wide, and extends from one edge of the spell’s area to the opposite side. A creature standing on a spot where a fissure opens must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure’s edge as it opens. A fissure that opens beneath a structure causes it to automatically collapse (see below). </br><b>Structures.</b> The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start of each of your turns until the spell ends. If a structure drops to 0 hit points, it collapses and potentially damages nearby creatures. A creature within half the distance of a structure’s height must make a Dexterity saving throw. On a failed save, the creature takes 5d6 bludgeoning damage, is knocked prone, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. The GM can adjust the DC higher or lower, depending on the nature of the rubble. On a successful save, the creature takes half as much damage and doesn’t fall prone or become buried."],
 
-  [113, ""],
+  [113, "Eldritch Blast", "Evocation", "Cantrip", false, "1 Action", "120 Feet", "V, S", "Instantaneous", false, "A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage. The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam."],
 
-  [114, ""],
+  [114, "Elemental Weapon", "Transmutation", "3rd-level", false, "1 Action", "Touch", "V, S", "1 Hour", true, "A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage of the chosen type when it hits. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 5th or 6th level, the bonus to attack rolls increases to +2 and the extra damage increases to 2d4. When you use a spell slot of 7th level or higher, the bonus increases to +3 and the extra damage increases to 3d4."],
 
-  [115, ""],
+  [115, "Enhance Ability", "Transmutation", "2nd-level", false, "1 Action", "Touch", "V, S, M (fur or a feather from a beast)", "1 Hour", true, "You touch a creature and bestow upon it a magical enhancement. Choose one of the following effects; the target gains that effect until the spell ends. </br><b>Bear’s Endurance.</b> The target has advantage on Constitution checks. It also gains 2d6 temporary hit points, which are lost when the spell ends. </br><b>Bull’s Strength.</b> The target has advantage on Strength checks, and his or her carrying capacity doubles. </br><b>Cat’s Grace.</b> The target has advantage on Dexterity checks. It also doesn’t take damage from falling 20 feet or less if it isn’t incapacitated. </br><b>Eagle’s Splendor.</b> The target has advantage on Charisma checks. </br><b>Fox’s Cunning.</b> The target has advantage on Intelligence checks. </br><b>Owl’s Wisdom.</b> The target has advantage on Wisdom checks. </br><b>At Higher Levels.</b> When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."],
 
-  [116, ""],
+  [116, "Enlarge/Reduce", "Transmutation", "2nd-level", false, "1 Action", "30 Feet", "V, S, M (a pinch of powdered iron)", "1 Minute", true, "You cause a creature or an object you can see within range to grow larger or smaller for the duration. Choose either a creature or an object that is neither worn nor carried. If the target is unwilling, it can make a Constitution saving throw. On a success, the spell has no effect. If the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once. </br><b>Enlarge.</b> The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category - from Medium to Large, for example. If there isn't enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size. While these weapons are enlarged, the target's attack with them deal 1d4 extra damage. </br><b>Reduce.</b> The target's size is halved in all dimensions, and its weight is reduced to one-eighth of normal. This reduction decreases its size by one category - from Medium to Small, for example. Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. The target's weapons also shrink to match its new size. While these weapons are reduced, the target's attacks with them deal 1d4 less damage (this can't reduce the damage below 1)."],
 
-  [117, ""],
+  [117, "Ensnaring Strike", "Conjuration", "1st-level", false, "1 Bonus Action", "Self", "V", "1 Minute", true, "The next time you hit a creature with a weapon attack before this spell ends, a writhing mass of thorny vines appears at the point of impact, and the target must succeed on a Strength saving throw or be restrained by the magical vines until the spell ends. A Large or larger creature has advantage on this saving throw. If the target succeeds on the save, the vines shrivel away. While restrained by this spell, the target takes 1d6 piercing damage at the start of each of its turns. A creature restrained by the vines or one that can touch the creature can use its action to make a Strength check against your spell save DC. On a success, the target is freed. <b>At Higher Levels.</b> If you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."],
 
-  [118, ""],
+  [118, "Entangle", "Conjuration", "1st-level", false, "1 Action", "90 Feet", "V, S", "1 Minute", true, "Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range. For the duration, these plants turn the ground in the area into difficult terrain. A creature in the area when you cast the spell must succeed on a Strength saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself. When the spell ends, the conjured plants wilt away."],
 
-  [119, ""],
+  [119, "Enthrall", "Enchantment", "2nd-level", false, "1 Action", "60 Feet", "V, S", "1 Minute", "You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a Wisdom saving throw. Any creature that can’t be charmed succeeds on this saving throw automatically, and if you or your companions are fighting a creature, it has advantage on the save. On a failed save, the target has disadvantage on Wisdom (Perception) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you. The spell ends if you are incapacitated or can no longer speak."],
 
-  [120, ""],
+  [120, "Etherealness", "Transmutation", "7th-level", false, "1 Action", "Self", "V, S", "Up to 8 Hours", "You step into the border regions of the Ethereal Plane, in the area where it overlaps with your current plane. You remain in the Border Ethereal for the duration or until you use your action to dismiss the spell. During this time, you can move in any direction. If you move up or down, every foot of movement costs an extra foot. You can see and hear the plane you originated from, but everything there looks gray, and you can’t see anything more than 60 feet away. While on the Ethereal Plane, you can only affect and be affected by other creatures on that plane. Creatures that aren’t on the Ethereal Plane can’t perceive you and can’t interact with you, unless a special ability or magic has given them the ability to do so. You ignore all objects and effects that aren’t on the Ethereal Plane, allowing you to move through objects you perceive on the plane you originated from. When the spell ends, you immediately return to the plane you originated from in the spot you currently occupy. If you occupy the same spot as a solid object or creature when this happens, you are immediately shunted to the nearest unoccupied space that you can occupy and take force damage equal to twice the number of feet you are moved. This spell has no effect if you cast it while you are on the Ethereal Plane or a plane that doesn’t border it, such as one of the Outer Planes. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 8th level or higher, you can target up to three willing creatures (including you) for each slot level above 7th. The creatures must be within 10 feet of you when you cast the spell."],
 
-  [121, ""],
+  [121, "Evard's Black Tentacles", "Conjuration", "4th-level", false, "1 Action", "90 Feet", "V, S, M (a piece of tentacle from a giant octopus or a giant squid)", "1 Minute", true, "Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in the area into difficult terrain. When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the tentacles until the spell ends. A creature that starts its turn in the area and is already restrained by the tentacles takes 3d6 bludgeoning damage. A creature restrained by the tentacles can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself."],
 
-  [122, ""],
+  [122, "Expeditious Retreat", "Transmutation", "1st-level", false, "1 Bonus Action", "Self", "V, S", "10 Minutes", true, "This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action."],
 
-  [123, ""],
+  [123, "Eyebite", "Necromancy", "6th-level", false, "1 Action", "Self", "V, S", "1 Minute", true, "For the spell’s duration, your eyes become an inky void imbued with dread power. One creature of your choice within 60 feet of you that you can see must succeed on a Wisdom saving throw or be affected by one of the following effects of your choice for the duration. On each of your turns until the spell ends, you can use your action to target another creature but can’t target a creature again if it has succeeded on a saving throw against this casting of eyebite. </br><b>Asleep.</b> The target falls unconscious. It wakes up if it takes any damage or if another creature uses its action to shake the sleeper awake. </br><b>Panicked.</b> The target is frightened of you. On each of its turns, the frightened creature must take the Dash action and move away from you by the safest and shortest available route, unless there is nowhere to move. If the target moves to a place at least 60 feet away from you where it can no longer see you, this effect ends. </br><b>Sickened.</b> The target has disadvantage on attack rolls and ability checks. At the end of each of its turns, it can make another Wisdom saving throw. If it succeeds, the effect ends."],
 
-  [124, ""],
+  [124, "Fabricate", "Transmutation", "4th-level", false, "10 Minutes", "120 Feet", "V, S", "Instantaneous", false, "You convert raw materials into products of the same material. For example, you can fabricate a wooden bridge from a clump of trees, a rope from a patch of hemp, and clothes from flax or wool. Choose raw materials that you can see within range. You can fabricate a Large or smaller object (contained within a 10-foot cube, or eight connected 5-foot cubes), given a sufficient quantity of raw material. If you are working with metal, stone, or another mineral substance, however, the fabricated object can be no larger than Medium (contained within a single 5-foot cube). The quality of objects made by the spell is commensurate with the quality of the raw materials. Creatures or magic items can’t be created or transmuted by this spell. You also can’t use it to create items that ordinarily require a high degree of craftsmanship, such as jewelry, weapons, glass, or armor, unless you have proficiency with the type of artisan’s tools used to craft such objects."],
 
-  [125, ""],
+  [125, "Faerie Fire", "Evocation", "1st-level", false, "1 Action", "60 Feet", "V", "1 Minute", true, "Each object in a 20-foot cube within range is outlined in blue, green, or violet light (your choice). Any creature in the area when the spell is cast is also outlined in light if it fails a Dexterity saving throw. For the duration, objects and affected creatures shed dim light in a 10-foot radius. Any attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can’t benefit from being invisible."],
 
-  [126, ""],
+  [126, "False Life", "Necromancy", "1st-level", false, "1 Action", "Self", "V, S, M (a small amount of alcohol or distilled spirits)", "1 Hour", false, "Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 temporary hit points for the duration. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, you gain 5 additional Temporary Hit Points for each slot level above 1st."],
 
-  [127, ""],
+  [127, "Fear", "Illusion", "3rd-level", false "1 Action", "Self (30-foot cone)", "V, S, M (a white feather or the heart of a hen)", "1 Minute", true, "You project a phantasmal image of a creature’s worst fears. Each creature in a 30-foot cone must succeed on a Wisdom saving throw or drop whatever it is holding and become frightened for the duration. While frightened by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn’t have line of sight to you, the creature can make a Wisdom saving throw. On a successful save, the spell ends for that creature."],
 
-  [128, ""],
+  [128, "Feather Fall", "Transmutation", "1st-level", false, "1 Reaction, which you take when you or a creature within 60 feet of you falls", "60 Feet", "V, M (a small feather or piece of down)", "1 Minute", false, "Choose up to five falling creatures within range. A falling creature’s rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature."],
 
-  [129, ""],
+  [129, "Feeblemind", "Enchantment", "8th-level", false, "1 Action", "150 Feet", "V, S, M (a handful of clay, crystal, glass or mineral spheres)", "Instantaneous", false, "You blast the mind of a creature that you can see within range, attempting to shatter its intellect and personality. The target takes 4d6 psychic damage and must make an Intelligence saving throw. On a failed save, the creature’s Intelligence and Charisma scores become 1. The creature can’t cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them. At the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends. The spell can also be ended by greater restoration, heal, or wish."],
 
-  [130, ""],
+  [130, "Feign Death", "Necromancy", "3rd-level", true, "1 Action", "Touch", "V, S, M (a pinch of graveyard dirt)", "1 Hour", false, "You touch a willing creature and put it into a cataleptic state that is indistinguishable from death. For the spell’s duration, or until you use an action to touch the target and dismiss the spell, the target appears dead to all outward inspection and to spells used to determine the target’s status. The target is blinded and incapacitated, and its speed drops to 0. The target has resistance to all damage except psychic damage. If the target is diseased or poisoned when you cast the spell, or becomes diseased or poisoned while under the spell’s effect, the disease and poison have no effect until the spell ends."],
 
-  [131, ""],
+  [131, "Find Familiar", "Conjuration", "1st-level", true, "1 Hour", "10 Feet", "V, S, M (10 gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier)", "Instantaneous", false, "You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), hawk, lizard, octopus, owl, poisonous snake, fish (quipper), rat, raven, sea horse, spider, or weasel. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of a beast. Your familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can’t attack, but it can take other actions as normal. When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again. While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar’s eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses. As an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits your summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you. You can’t have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature. Finally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your attack modifier for the roll."],
 
-  [132, ""],
+  [132, "Find Steed", "Conjuration", "2nd-level", false, "10 Minutes", "30 Feet", "V, S", "Instantaneous", false, "You summon a spirit that assumes the form of an unusually intelligent, strong, and loyal steed, creating a long-lasting bond with it. Appearing in an unoccupied space within range, the steed takes on a form that you choose: a warhorse, a pony, a camel, an elk, or a mastiff. (Your GM might allow other animals to be summoned as steeds.) The steed has the statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of its normal type. Additionally, if your steed has an Intelligence of 5 or less, its Intelligence becomes 6, and it gains the ability to understand one language of your choice that you speak. Your steed serves you as a mount, both in combat and out, and you have an instinctive bond with it that allows you to fight as a seamless unit. While mounted on your steed, you can make any spell you cast that targets only you also target your steed. When the steed drops to 0 hit points, it disappears, leaving behind no physical form. You can also dismiss your steed at any time as an action, causing it to disappear. In either case, casting this spell again summons the same steed, restored to its hit point maximum. While your steed is within 1 mile of you, you can communicate with it telepathically. You can’t have more than one steed bonded by this spell at a time. As an action, you can release the steed from its bond at any time, causing it to disappear."],
 
-  [133, ""],
+  [133, "Find the Path", "Divination", "6th-level", false, "1 Minute", "Self", "V, S, M (a set of divinatory tools - such as bones, ivory sticks, cards, teeth, or carved runes - worth 100 gp and an object from the location you wish to find)", "1 Day", true, "This spell allows you to find the shortest, most direct physical route to a specific fixed location that you are familiar with on the same plane of existence. If you name a destination on another plane of existence, a destination that moves (such as a mobile fortress), or a destination that isn’t specific (such as “a green dragon’s lair”), the spell fails. For the duration, as long as you are on the same plane of existence as the destination, you know how far it is and in what direction it lies. While you are traveling there, whenever you are presented with a choice of paths along the way, you automatically determine which path is the shortest and most direct route (but not necessarily the safest route) to the destination."],
 
-  [134, ""],
+  [134, "Find Traps", "Divination", "2nd-level", false, "1 Action", "120 Feet", "V, S", "Instantaneous", false, "You sense the presence of any trap within range that is within line of sight. A trap, for the purpose of this spell, includes anything that would inflict a sudden or unexpected effect you consider harmful or undesirable, which was specifically intended as such by its creator. Thus, the spell would sense an area affected by the alarm spell, a glyph of warding, or a mechanical pit trap, but it would not reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole. This spell merely reveals that a trap is present. You don’t learn the location of each trap, but you do learn the general nature of the danger posed by a trap you sense."],
 
-  [135, ""],
+  [135, "Finger of Death", "Necromancy", "7th-level", false, "1 Action", "60 Feet", "V, S", "Instantaneous", false, "You send negative energy coursing through a creature that you can see within range, causing it searing pain. The target must make a Constitution saving throw. It takes 7d8 + 30 necrotic damage on a failed save, or half as much damage on a successful one. A humanoid killed by this spell rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability."],
 
-  [136, ""],
+  [136, "Fireball", "Evocation", "3rd-level", false ,"1 Action", "150 Feet", "V, S, M (a tiny ball of bat guano and sulfur)", "Instantaneous", false, "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 8d6 fire damage on a failed save, or half as much damage on a successful one. The fire spreads around corners. It ignites flammable objects in the area that aren’t being worn or carried. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."],
 
-  [137, ""],
+  [137, "Fire Bolt", "Evocation", "Cantrip", false, "1 Action", "120 Feet", "V, S", "Instantaneous", false, "You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn’t being worn or carried. This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10)."],
 
-  [138, ""],
+  [138, "Fire Shield", "Evocation", "4th-level", false, "1 Action", "Self", "V, S, M (a bit of phosphorous or a firefly)", "10 Minutes", false, "Thin and wispy flames wreathe your body for the duration, shedding bright light in a 10-foot radius and dim light for an additional 10 feet. You can end the spell early by using an action to dismiss it. The flames provide you with a warm shield or a chill shield, as you choose. The warm shield grants you resistance to cold damage, and the chill shield grants you resistance to fire damage. In addition, whenever a creature within 5 feet of you hits you with a melee attack, the shield erupts with flame. The attacker takes 2d8 fire damage from a warm shield, or 2d8 cold damage from a cold shield."],
 
-  [139, ""],
+  [139, "Fire Storm", "Evocation", "7th-level", false, "1 Action", "150 Feet", "V, S", "Instantaneous", false, "A storm made up of sheets of roaring flame appears in a location you choose within range. The area of the storm consists of up to ten 10-foot cubes, which you can arrange as you wish. Each cube must have at least one face adjacent to the face of another cube. Each creature in the area must make a Dexterity saving throw. It takes 7d10 fire damage on a failed save, or half as much damage on a successful one. The fire damages objects in the area and ignites flammable objects that aren’t being worn or carried. If you choose, plant life in the area is unaffected by this spell."],
 
-  [140, ""],
+  [140, "Flame Blade", "Evocation", "2nd-level", false, "1 Bonus Action", "Self", "V, S, M (leaf of sumac)", "10 Minutes", true, "You evoke a fiery blade in your free hand. The blade is similar in size and shape to a scimitar, and it lasts for the duration. If you let go of the blade, it disappears, but you can evoke the blade again as a bonus action. You can use your action to make a melee spell attack with the fiery blade. On a hit, the target takes 3d6 fire damage. The flaming blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for every two slot levels above 2nd."],
 
-  [141, ""],
+  [141, "Flame Strike", "Evocation", "5th-level", false, "1 Action", "60 Feet", "V, S, M (pinch of sulfur)", "Instantaneous", false, "A vertical column of divine fire roars down from the heavens in a location you specify. Each creature in a 10-foot-radius, 40-foot-high cylinder centered on a point within range must make a Dexterity saving throw. A creature takes 4d6 fire damage and 4d6 radiant damage on a failed save, or half as much damage on a successful one. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 6th level or higher, the fire damage or the radiant damage (your choice) increases by 1d6 for each slot level above 5th."],
 
-  [142, ""],
+  [142, "Flaming Sphere", "Conjuration", "2nd-level", false, "1 Action", "60 Feet", "V, S, M (a bit of tallow, a pinch of brimstone, and a dusting of powdered iron)", "1 Minute", true, "A 5-foot-diameter sphere of fire appears in an unoccupied space of your choice within range and lasts for the duration. Any creature that ends its turn within 5 feet of the sphere must make a Dexterity saving throw. The creature takes 2d6 fire damage on a failed save, or half as much damage on a successful one. As a bonus action, you can move the sphere up to 30 feet. If you ram the sphere into a creature, that creature must make the saving throw against the sphere’s damage, and the sphere stops moving this turn. When you move the sphere, you can direct it over barriers up to 5 feet tall and jump it across pits up to 10 feet wide. The sphere ignites flammable objects not being worn or carried, and it sheds bright light in a 20-foot radius and dim light for an additional 20 feet. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd."],
 
-  [143, ""],
+  [143, "Flesh to Stone", "Transmutation", "6th-level", false, "1 Action", "60 Feet", "V, S, M (a pinch of lime, water, and earth)", "1 Minute", true, "You attempt to turn one creature that you can see within range into stone. If the target’s body is made of flesh, the creature must make a Constitution saving throw. On a failed save, it is restrained as its flesh begins to harden. On a successful save, the creature isn’t affected. A creature restrained by this spell must make another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and subjected to the petrified condition for the duration. The successes and failures don’t need to be consecutive; keep track of both until the target collects three of a kind. If the creature is physically broken while petrified, it suffers from similar deformities if it reverts to its original state. If you maintain your concentration on this spell for the entire possible duration, the creature is turned to stone until the effect is removed."],
 
-  [144, ""],
+  [144, "Fly", "Transmutation", "3rd-level", false, "1 Action", "Touch", "V, S, M (a wing feather from any bird)", "10 Minutes", true, "You touch a willing creature. The target gains a flying speed of 60 feet for the duration. When the spell ends, the target falls if it is still aloft, unless it can stop the fall. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd."],
 
-  [145, ""],
+  [145, "Fog Cloud", "Conjuration", "1st-level", false, "1 Action", "120 Feet", "V, S", "1 Hour", true, "You create a 20-foot-radius sphere of fog centered on a point within range. The sphere spreads around corners, and its area is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, the radius of the fog increases by 20 feet for each slot level above 1st."],
 
-  [146, ""],
+  [146, "Forbiddance", "Abjuration", "6th-level", true, "10 Minutes", "Touch", "V, S, M (a sprinkling of holy water, rare incense, and powdered ruby worth at least 1,000 gp)", "1 Day", false, "You create a ward against magical travel that protects up to 40,000 square feet of floor space to a height of 30 feet above the floor. For the duration, creatures can’t teleport into the area or use portals, such as those created by the gate spell, to enter the area. The spell proofs the area against planar travel, and therefore prevents creatures from accessing the area by way of the Astral Plane, Ethereal Plane, Feywild, Shadowfell, or the plane shift spell. In addition, the spell damages types of creatures that you choose when you cast it. Choose one or more of the following: celestials, elementals, fey, fiends, and undead. When a chosen creature enters the spell’s area for the first time on a turn or starts its turn there, the creature takes 5d10 radiant or necrotic damage (your choice when you cast this spell). When you cast this spell, you can designate a password. A creature that speaks the password as it enters the area takes no damage from the spell. The spell’s area can’t overlap with the area of another forbiddance spell. If you cast forbiddance every day for 30 days in the same location, the spell lasts until it is dispelled, and the material components are consumed on the last casting."],
 
-  [147, ""],
+  [147, "Forcecage", "Evocation", "7th-level", false, "1 Action", "100 Feet", "V, S, M (ruby dust worth 1,500 gp)", "1 Hour", false, "An immobile, invisible, cube-shaped prison composed of magical force springs into existence around an area you choose within range. The prison can be a cage or a solid box, as you choose. A prison in the shape of a cage can be up to 20 feet on a side and is made from 1/2-inch diameter bars spaced 1/2 inch apart. A prison in the shape of a box can be up to 10 feet on a side, creating a solid barrier that prevents any matter from passing through it and blocking any spells cast into or out from the area. When you cast the spell, any creature that is completely inside the cage’s area is trapped. Creatures only partially within the area, or those too large to fit inside the area, are pushed away from the center of the area until they are completely outside the area. A creature inside the cage can’t leave it by nonmagical means. If the creature tries to use teleportation or interplanar travel to leave the cage, it must first make a Charisma saving throw. On a success, the creature can use that magic to exit the cage. On a failure, the creature can’t exit the cage and wastes the use of the spell or effect. The cage also extends into the Ethereal Plane, blocking ethereal travel. This spell can’t be dispelled by dispel magic."],
 
-  [148, ""],
+  [148, "Foresight", "Divination", "9th-level", false, "1 Minute", "Touch", "V, S, M (a hummingbird feather)", "8 Hours", false, "You touch a willing creature and bestow a limited ability to see into the immediate future. For the duration, the target can’t be surprised and has advantage on attack rolls, ability checks, and saving throws. Additionally, other creatures have disadvantage on attack rolls against the target for the duration. This spell immediately ends if you cast it again before its duration ends."],
 
-  [149, ""],
+  [149, "Freedom of Movement", "Abjuration", "4th-level", false, "1 Action", "Touch", "V, S, M (a leather strap, bound around the arm or a similar appendage)", "1 Hour", false, "You touch a willing creature. For the duration, the target’s movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target’s speed nor cause the target to be paralyzed or restrained. The target can also spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature that has it grappled. Finally, being underwater imposes no penalties on the target’s movement or attacks."],
 
-  [150, ""],
+  [150, "Friends", "Enchantment", "Cantrip", false, "1 Action", "Self", "S, M (a small amount of makeup applied to the face as this spell is cast)", "1 Minute", true, "For the duration, you have advantage on all Charisma checks directed at one creature of your choice that isn’t hostile toward you. When the spell ends, the creature realizes that you used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM’s discretion), depending on the nature of your interaction with it."],
 
-  [151, ""],
+  [151, "Gaseous Form", "Transmutation", "3rd-level", false, "1 Action", "Touch", "V, S, M (a bit of gauze and a wisp of smoke)", "1 Hour", true, "You transform a willing creature you touch, along with everything it’s wearing and carrying, into a misty cloud for the duration. The spell ends if the creature drops to 0 hit points. An incorporeal creature isn’t affected. While in this form, the target’s only method of movement is a flying speed of 10 feet. The target can enter and occupy the space of another creature. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can’t fall and remains hovering in the air even when stunned or otherwise incapacitated. While in the form of a misty cloud, the target can’t talk or manipulate objects, and any objects it was carrying or holding can’t be dropped, used, or otherwise interacted with. The target can’t attack or cast spells."],
 
-  [152, ""],
+  [152, "Gate", "Conjuration", "9th-level", false, "1 Action", "60 Feet", "V, S, M (a diamond worth at least 5,000 gp)", "1 Minute", true, "You conjure a portal linking an unoccupied space you can see within range to a precise location on a different plane of existence. The portal is a circular opening, which you can make 5 to 20 feet in diameter. You can orient the portal in any direction you choose. The portal lasts for the duration. The portal has a front and a back on each plane where it appears. Travel through the portal is possible only by moving through its front. Anything that does so is instantly transported to the other plane, appearing in the unoccupied space nearest to the portal. Deities and other planar rulers can prevent portals created by this spell from opening in their presence or anywhere within their domains. When you cast this spell, you can speak the name of a specific creature (a pseudonym, title, or nickname doesn’t work). If that creature is on a plane other than the one you are on, the portal opens in the named creature’s immediate vicinity and draws the creature through it to the nearest unoccupied space on your side of the portal. You gain no special power over the creature, and it is free to act as the GM deems appropriate. It might leave, attack you, or help you."],
 
-  [153, ""],
+  [153, "Geas", "Enchantment", "5th-level", false, "1 Minute", "60 Feet", "V", "30 Days", false, "You place a magical command on a creature that you can see within range, forcing it to carry out some service or refrain from some action or course of activity as you decide. If the creature can understand you, it must succeed on a Wisdom saving throw or become charmed by you for the duration. While the creature is charmed by you, it takes 5d10 psychic damage each time it acts in a manner directly counter to your instructions, but no more than once each day. A creature that can’t understand you is unaffected by the spell. You can issue any command you choose, short of an activity that would result in certain death. Should you issue a suicidal command, the spell ends. You can end the spell early by using an action to dismiss it. A remove curse, greater restoration, or wish spell also ends it. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 7th or 8th level, the Duration is 1 year. When you cast this spell using a spell slot of 9th level, the spell lasts until it is ended by one of the Spells mentioned above."],
 
-  [154, ""],
+  [154, "Gentle Repose", "Necromancy", "2nd-level", true, "1 Action", "Touch", "V, S, M (a pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration)", "10 Days", false, "You touch a corpse or other remains. For the duration, the target is protected from decay and can’t become undead. The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don’t count against the time limit of spells such as raise dead."],
 
-  [155, ""],
+  [155, "Giant Insect", "Tranmsutation", "4th-level", false, "1 Action", "30 Feet", "V, S", "10 Minutes", true, "You transform up to ten centipedes, three spiders, five wasps, or one scorpion within range into giant versions of their natural forms for the duration. A centipede becomes a giant centipede, a spider becomes a giant spider, a wasp becomes a giant wasp, and a scorpion becomes a giant scorpion. Each creature obeys your verbal commands, and in combat, they act on your turn each round. The DM has the statistics for these creatures and resolves their actions and movement. A creature remains in its giant size for the duration, until it drops to 0 hit points, or until you use an action to dismiss the effect on it. The DM might allow you to choose different targets. For example, if you transform a bee, its giant version might have the same statistics as a giant wasp."],
 
   [156, ""],
 
@@ -3760,1086 +3760,223 @@ function setSpells() {
     case "Barbarian":
       switch (subclass) {
         case "Path of the Berserker ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Path of the Totem Warrior":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
       }
       break;
     case "Bard":
       switch (subclass) {
         case "College of Lore ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "College of Valor ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
       }
       break;
     case "Cleric":
       switch (subclass) {
         case "Knowledge Domain ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Life Domain ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Light Domain ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Nature Domain ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Tempest Domain ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Trickery Domain ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "War Domain ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
       }
       break;
     case "Druid":
       switch (subclass) {
         case "Circle of the Land (Arctic)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Circle of the Land (Coast)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Circle of the Land (Desert)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Circle of the Land (Forest)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Circle of the Land (Grassland)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Circle of the Land (Mountain)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Circle of the Land (Swamp)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Circle of the Land (Underdark)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Circle of the Moon ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
       }
       break;
     case "Fighter":
       switch (subclass) {
         case " (Champion)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case " (Battle Master)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case " (Eldritch Knight)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
       }
       break;
     case "Monk":
       switch (subclass) {
         case "Way of the Open Hand ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Way of Shadow ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Way of the Four Elements ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
       }
       break;
     case "Paladin":
       switch (subclass) {
         case "Oath of Devotion ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Oath of the Ancients ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "Oath of Vengeance ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
       }
       break;
     case "Ranger":
       switch (subclass) {
         case " (Hunter)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case " (Beastmaster)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
       }
       break;
     case "Rogue":
       switch (subclass) {
         case " (Thief)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case " (Assassin)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case " (Arcane Trickster)":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
       }
       break;
     case "Sorcerer":
       switch (subclass) {
         case " Draconic Bloodline":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case " Wild Magic":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
       }
       break;
     case "Warlock":
       switch (subclass) {
         case " of the Archfey":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case " of the Fiend":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case " of the Great Old One":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
       }
       break;
     case "Wizard":
       switch (subclass) {
         case "School of Abjuration ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "School of Conjuration ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "School of Diviniation ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "School of Enchantment ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "School of Evocation ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "School of Illusion ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "School of Necromancy ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
         case "School of Transmutation ":
-          switch (race) {
-            case "Dwarf":
-              break;
-            case "Elf":
-              break;
-            case "Halfling":
-              break;
-            case "Human":
-              break;
-            case "Dragonborn":
-              break;
-            case "Gnome":
-              break;
-            case "Half-Elf":
-              break;
-            case "Half-Orc":
-              break;
-            case "Tiefling":
-              break;
-          }
+
           break;
       }
       break;
   }
+  switch (race) {
+    case "Dwarf":
+
+      break;
+    case "Elf":
+
+      break;
+    case "Halfling":
+
+      break;
+    case "Human":
+
+      break;
+    case "Dragonborn":
+
+      break;
+    case "Gnome":
+
+      break;
+    case "Half-Elf":
+
+      break;
+    case "Half-Orc":
+
+      break;
+    case "Tiefling":
+
+      break;
+  }
+
   //return "<a data-toggle=\"collapse\" href=\"#collapseSpells\" aria-expanded=\"false\" aria-controls=\"collapseExample\">" + spells[spell][1] + "</a><div class=\"collapse\" id=\"collapseSpells\"><div class=\"card card-body\">Spell Type: " + spells[spell][2] + "</br>Spell Level: " + spells[spell][3] + "</div></div>";
 }
 
