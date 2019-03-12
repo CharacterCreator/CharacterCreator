@@ -2976,7 +2976,7 @@ function setProficiencies() {
     }
     //Proficiencies based on subclass
     switch (subclass) {
-        case "College of Lore ":
+        case "College of Lore Bard":
             var skill1 = Math.floor(Math.random() * 18);
             var skill2 = Math.floor(Math.random() * 18);
             var skill3 = Math.floor(Math.random() * 18);
@@ -2994,13 +2994,13 @@ function setProficiencies() {
             skillProficiencies[skill2] = 1;
             skillProficiencies[skill3] = 1;
             break;
-        case "College of Valor ":
+        case "College of Valor Bard":
             armorProficiencies[1] = 1;
             armorProficiencies[3] = 1;
             weaponTypeProficiencies[2] = 1;
             weaponTypeProficiencies[3] = 1;
             break;
-        case "Knowledge Domain ":
+        case "Knowledge Domain Cleric":
             var skill1 = Math.floor(Math.random() * 4);
             var skill2 = Math.floor(Math.random() * 4);
             while (skill1 == skill2)
@@ -3034,10 +3034,10 @@ function setProficiencies() {
                     break;
             }
             break;
-        case "Life Domain ":
+        case "Life Domain Cleric":
             armorProficiencies[2] = 1;
             break;
-        case "Nature Domain ":
+        case "Nature Domain Cleric":
             armorProficiencies[2] = 1;
             var skill = Math.floor(Math.random() * 3);
             switch (skill) {
@@ -3052,23 +3052,23 @@ function setProficiencies() {
                     break;
             }
             break;
-        case "Tempest Domain ":
+        case "Tempest Domain Cleric":
             weaponTypeProficiencies[2] = 1;
             weaponTypeProficiencies[3] = 1;
             armorProficiencies[2] = 1;
             break;
-        case "War Domain ":
+        case "War Domain Cleric":
             weaponTypeProficiencies[2] = 1;
             weaponTypeProficiencies[3] = 1;
             armorProficiencies[2] = 1;
             break;
-        case " (Battle Master)":
+        case "Fighter (Battle Master)":
             var tool = Math.floor(Math.random() * 23);
             while (toolProficiencies[tool] == 1)
                 tool = Math.floor(Math.random() * 23);
             toolProficiencies[tool] = 1;
             break;
-        case " (Assassin)":
+        case "Rogue (Assassin)":
             toolProficiencies[7] = 1;
             toolProficiencies[16] = 1;
             break;
@@ -3632,6 +3632,12 @@ function displaySkills() {
         else
           skillDisplay += (strMod + profBonus);
       }
+      else if (expertise == 1) {
+        if (strMod + (profBonus * 2) >= 0)
+          skillDisplay += "+" + (strMod + (profBonus * 2));
+        else
+          skillDisplay += (strMod + (profBonus * 2));
+      }
       else
         if (strMod >= 0)
           skillDisplay += "+" + strMod;
@@ -3644,6 +3650,12 @@ function displaySkills() {
           skillDisplay += "+" + (dexMod + profBonus);
         else
           skillDisplay += (dexMod + profBonus);
+      }
+      else if (expertise == 1) {
+        if (dexMod + (profBonus * 2) >= 0)
+          skillDisplay += "+" + (dexMod + (profBonus * 2));
+        else
+          skillDisplay += (dexMod + (profBonus * 2));
       }
       else
         if (dexMod >= 0)
@@ -3658,6 +3670,12 @@ function displaySkills() {
         else
           skillDisplay += (intMod + profBonus);
       }
+      else if (expertise == 1) {
+        if (intMod + (profBonus * 2) >= 0)
+          skillDisplay += "+" + (intMod + (profBonus * 2));
+        else
+          skillDisplay += (intMod + (profBonus * 2));
+      }
       else
         if (intMod >= 0)
           skillDisplay += "+" + intMod;
@@ -3671,6 +3689,12 @@ function displaySkills() {
         else
           skillDisplay += (wisMod + profBonus);
       }
+      else if (expertise == 1) {
+        if (wisMod + (profBonus * 2) >= 0)
+          skillDisplay += "+" + (wisMod + (profBonus * 2));
+        else
+          skillDisplay += (wisMod + (profBonus * 2));
+      }
       else
         if (wisMod >= 0)
           skillDisplay += "+" + wisMod;
@@ -3683,6 +3707,12 @@ function displaySkills() {
           skillDisplay += "+" + (chaMod + profBonus);
         else
           skillDisplay += (chaMod + profBonus);
+      }
+      else if (expertise == 1) {
+        if (chaMod + (profBonus * 2) >= 0)
+          skillDisplay += "+" + (chaMod + (profBonus * 2));
+        else
+          skillDisplay += (chaMod + (profBonus * 2));
       }
       else
         if (chaMod >= 0)
@@ -3710,7 +3740,7 @@ function setFeatures() {
             else if (level < 20)
                 rages = 6;
             else
-                rages = 100;
+                rages = 17033;
             //Rage Damage
             if (level < 9)
                 rageDamage = 2;
@@ -3731,7 +3761,25 @@ function setFeatures() {
             break;
         case "Bard":
             //Inspiration
-
+            if (level < 5)
+                inspiration = "d6";
+            else if (level < 10)
+                inspiration = "d8";
+            else if (level < 15)
+                inspiration = "d10";
+            else
+                inspiration = "d12";
+            //Song of Rest
+            if (level == 1)
+                songOfRest = undefined;
+            else if (level < 9)
+                songOfRest = "d6";
+            else if (level < 13)
+                songOfRest = "d8";
+            else if (level < 17)
+                songOfRest = "d10";
+            else
+                songOfRest = "d12";
             break;
         case "Cleric":
             break;
@@ -3764,7 +3812,7 @@ function setSpells() {
         case "Path of the Berserker ":
 
           break;
-        case "Path of the Totem Warrior":
+        case "Path of the Totem Warrior ":
 
           break;
       }
