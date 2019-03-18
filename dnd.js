@@ -69,6 +69,43 @@ var gamingProficiencies = [0, 0, 0];
 //0:Bagpipes, 1:Drum, 2:Dulcimer, 3:Flute, 4:Lute, 5:Lyre, 6:Horn, 7:Pan Flute, 8:Shawm, 9:Viol
 var instrumentProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
+/*For setEquipment*/
+//0:Abacus, 1:Acid (vial), 2:Alchemist's Fire (flask), 3:Arrow, 4:Blowgun Needle, 5:Crossbow Bolt, 6:Sling Bullet, 7:Antitoxin (vial), 8:Crystal, 9:Orb, 10:Rod, 11:Staff, 12:Wand, 13:Backpack, 14:Ball Bearing, 15:Barrel, 16:Basket, 17:Bedroll, 18:Bell,
+//19:Blanket, 20:Block and Tackle, Book, 21:Bottle (glass), 22:Bucket, 23:Caltrops, 24:Candle, 25:Case (crossbow bolt), 26: Case (map or scroll), 27:Chain, 28:Chalk, 29:Chest, 30:Clothes (common), 31:Clothes (costume), 32:Clothes (fine), 33:Clothes (traveler's),
+//34:Component Pouch, 35:Crowbar, 36:Sprig of Mistletoe, 37:Totem, 38:Wooden Staff, 39:Yew Wand, 40:Fishing Tackle, 41:Flask, 42:Grappling Hook, 43:Hammer, 44:Sledge Hammer, 45:Amulet, 46:Emblem, 47:Reliquary, 48:Holy Water (flask), 49:Hourglass, 50:Hunting Trap,
+//51:Ink (bottle), 52:Ink Pen, 53:Pitcher, 54:Climber's Kit, 55:Disguise Kit, 56:Forgery Kit, 57:Herbalism Kit, 58:Healer's Kit, 59:Mess Kit, 60:Poisoner's Kit, 61:Ladder, 62:Lamp, 63:Lantern (bullseye), 64:Lantern (hooded), 65:Lock, 66:Magnifying Glass,
+//67:Manacles, 68:Steel Mirror, 69:Oil (flask), 70:Paper (sheet), 71:Parchment (sheet), 72:Perfume (vial), 73:Pick (miner's), 74:Piton, 75:Basic Posion (vial), 76:Pole, 77:Pot (iron), 78:Potion of Healing, 79:Pouch, 80:Quiver, 81:Ram (portable), 82:Rations,
+//83:Robe, 84:Rope (hempen), 85:Rope (silk), 86:Sack, 87:Merchant's Scale, 88:Sealing Wax, 89:Shovel, 90:Signal Whistle, 91:Signet Ring, 92:Soap, 93:Spellbook, 94:Spike (iron), 95:Spyglass, 96:Tent (two-person), 97:Tinderbox, 98:Torch, 99:Vial, 100:Waterskin, 101:Whetstone
+var adventuringGear = ["Abacus (es)", "Vial (s) of Acid", "Flask (s) of Alchemist's Fire", "Arrow (s)", "Blowgun Needle (s)", "Crossbow Bolt (s)", "Sling Bullet (s)", "Vial (s) of Antitoxin", "Crystal (s)", "Orb (s)", "Rod (s)", "Staff (s)", "Wand (s)", "Backpack (s)", "Ball Bearing (s)",
+                      "Barrel (s)", "Basket (s)", "Bedroll (s)", "Bell (s)", "Blanket (s)", "Block (s) and Tackle (s)", "Book (s)", "Glass Bottle (s)", "Bucket (s)", "Caltrop (s)", "Candle (s)", "Crossbow Bolt Case (s)", "Scroll Case (s)", "feet of Chain", "piece (s) of Chalk",
+                      "Chest (s)", "set (s) of Common Clothes", "Costume (s)", "set (s) of Fine Clothes", "set (s) of Traveler's Clothes", "Component Pouch (es)", "Crowbar (s)", "Sprig (s) of Mistletoe", "Totem (s)", "Wooden Staff (s)", "Yew Wand (s)", "Fishing Tackle (s)",
+                      "Flask (s)", "Grappling Hook (s)", "Hammer (s)", "Sledge Hammer (s)", "Amulet (s)", "Emblem (s)", "Reliquary(ies)", "flask (s) of Holy Water", "Hourglass (es)", "Hunting Trap (s)", "bottle (s) of Ink", "Ink Pen (s)", "Pitcher (s)", "Climber's Kit (s)",
+                      "Disguise Kit (s)", "Forgery Kit (s)", "Herbalism Kit (s)", "Healer's Kit (s)", "Mess Kit (s)", "Posioner's Kit (s)", "Ladder (s)", "Lamp (s)", "Bullseye Lantern (s)", "Hooded Lantern (s)", "Lock (s)", "Magnifying Glass (es)", "set (s) of Manacles",
+                      "Steel Mirror (s)", "Flask (s) of Oil", "sheet (s) of Paper", "sheet (s) of Parchment", "Vial (s) of Perfume", "Miner's Pick (s)", "Piton (s)", "Vial (s) of Basic Posion", "Pole (s)", "Iron Pot (s)", "Potion (s) of Healing", "Pouch (es)", "Quiver (s)",
+                      "Portable Ram (s)", "day (s) of Rations", "Robe (s)", "feet of Hempen Rope", "feet of Silk Rope", "Sack (s)", "Merchant's Scale (s)", "Sealing Wax", "Shovel (s)", "Signal Whistle (s)", "Signet Ring (s)", "Soap (s)", "Spellbook (s)", "Iron Spike (s)",
+                      "Spyglass (es)", "Two-Person Tent (s)", "Tinderbox (es)", "Torch (es)", "Vial (s)", "Waterskin (s)", "Whetstone (s)"];
+//0:Club, 1:Dagger, 2:Greatclub, 3:Handaxe, 4:Javelin, 5:Light Hammer, 6:Mace, 7:Quarterstaff, 8:Sickle, 9:Spear
+var simpleMeleeWeapons = ["Club (s)", "Dagger (s)", "Greatclub (s)", "Handaxe (s)", "Javelin (s)", "Light Hammer (s)", "Mace (s)", "Quarterstaff (s)", "Sickle (s)", "Spear (s)"];
+//0:Light Crossbow, 1:Dart, 2:Shortbow, 3:Sling
+var simpleRangedWeapons = ["Light Crossbow (s)", "Dart (s)", "Shortbow (s)", "Sling (s)"];
+//0:Battleaxe, 1:Flail, 2:Glaive, 3:Greataxe, 4:Greatsword, 5:Halberd, 6:Lance, 7:Longsword, 8:Maul, 9:Morningstar, 10:Pike, 11:Rapier, 12:Scimitar, 13:Shortsword, 14:Trident, 15:War Pick, 16:Warhammer, 17:Whip
+var martialMeleeWeapons = ["Battleaxe (s)", "Flail (s)", "Glaive (s)", "Greataxe (s)", "Greatsword (s)", "Halberd (s)", "Lance (s)", "Longsword (s)", "Maul (s)", "Morningstar (s)", "Pike (s)", "Rapier (s)",
+                          "Scimitar (s)", "Shortsword (s)", "Trident (s)", "War Pick (s)", "Warhammer (s)", "Whip (s)"];
+//0:Blowgun, 1:Hand Crossbow, 2:Heavy Crossbow, 3:Longbow, 4:Net
+var martialRangedWeapons = ["Blowgun (s)", "Hand Crossbow (s)", "Heavy Crossbow (s)", "Longbow (s)", "Net (s)"];
+
+//0:Alchemist's Supplies, 1:Brewer's Supplies, 2:Calligrapher's Supplies, 3:Carpenter's Tools, 4:Cartographer's Tools, 5:Cobbler's Tools, 6:Cook's Utensils, 7:Disguise Kit,
+//8:Forgery Kit, 9:Glassblower's Tools, 10:Herbalism Kit, 11:Jeweler's Tools, 12:Leatherworker's Tools, 13:Mason's Tools, 14:Navigator's Tools, 15:Painter's Supplies, 16:Poisoner's Kit,
+//17:Potter's Tools, 18:Smith's Tools, 19:Thieves' Tools, 20:Tinker's Tools, 21:Weaver's Tools, 22:Woodcarver's Tools
+var artisansTools = ["Alchemist's Supplies", "Brewer's Supplies", "Calligrapher's Supplies", "Carpenter's Tools", "Cartographer's Tools", "Cobbler's Tools", "Cook's Utensils",
+                    "Disguise Kit (s)", "Forgery Kit (s)", "Glassblower's Tools", "Herbalism Kit (s)", "Jeweler's Tools", "Leatherworker's Tools", "Mason's Tools", "Navigator's Tools",
+                    "Painter's Supplies", "Poisoner's Kit (s)", "Potter's Tools", "Smith's Tools", "Thieves' Tools", "Tinker's Tools", "Weaver's Tools", "Woodcarver's Tools"];
+//0:Dice Set, 1:Dragonchess Set, 2:Playing Card Set, 3:Three-Dragon Ante Set
+var gamingSets = ["Dice Set (s)", "Dragonchess Set (s)", "Playing Card Set (s)", "Three-Dragon Ante Set (s)"];
+//0:Bagpipes, 1:Drum, 2:Dulcimer, 3:Flute, 4:Lute, 5:Lyre, 6:Horn, 7:Pan Flute, 8:Shawm, 9:Viol
+var instruments = ["Bagpipes", "Drum (s)", "Dulcimer (s)", "Flute (s)", "Lute (s)", "Lyre (s)", "Horn (s)", "Pan Flute (s)", "Shawm (s)", "Viol (s)"];
+var equipment = [["Name", "Quantity"]];
+
 //For setLevel
 var level = 1;
 var profBonus = 2;
@@ -305,7 +342,7 @@ var spells = [
 
   [107, "Dominate Monster", "Enchantment", "8th-level", false, "1 Action", "60 Feet", "V, S", "1 Hour", true, "You attempt to beguile a creature that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw. While the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \“Attack that creature,\” \“Run over there,\” or \“Fetch that object.\” If the creature completes the order and doesn’t receive further direction from you, it defends and preserves itself to the best of its ability. You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well. Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends. <b>At Higher Levels.</b> When you cast this spell with a 9th-level spell slot, the duration is concentration, up to 8 hours."],
 
-  //[108, "Dominate Person", "Enchantment", "5th-level", false, "1 Action", "60 Feet", "V, S", "1 Minute", true, "You attempt to beguile a humanoid that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw. While the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as “Attack that creature,” “Run over there,” or “Fetch that object.” If the creature completes the order and doesn’t receive further direction from you, it defends and preserves itself to the best of its ability. You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well. Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends. <b>At Higher Levels.</b> When you cast this spell using a 6th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 7th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 8th level or higher, the duration is concentration, up to 8 hours."],
+  [108, "Dominate Person", "Enchantment", "5th-level", false, "1 Action", "60 Feet", "V, S", "1 Minute", true, "You attempt to beguile a humanoid that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw. While the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as “Attack that creature,” “Run over there,” or “Fetch that object.” If the creature completes the order and doesn’t receive further direction from you, it defends and preserves itself to the best of its ability. You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well. Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends. <b>At Higher Levels.</b> When you cast this spell using a 6th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 7th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 8th level or higher, the duration is concentration, up to 8 hours."],
 
   [109, "Drawmij's Instant Summons", "Conjuration", "6th-level", true, "1 Minute", "Touch", "V, S, M (a sapphire worth 1,000 gp)", "Until Dispelled", false, "You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire. At any time thereafter, you can use your action to speak the item’s name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends. If another creature is holding or carrying the item, crushing the sapphire doesn’t transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment. Dispel magic or a similar effect successfully applied to the sapphire ends this spell’s effect."],
 
@@ -401,423 +438,416 @@ var spells = [
 
   [155, "Giant Insect", "Tranmsutation", "4th-level", false, "1 Action", "30 Feet", "V, S", "10 Minutes", true, "You transform up to ten centipedes, three spiders, five wasps, or one scorpion within range into giant versions of their natural forms for the duration. A centipede becomes a giant centipede, a spider becomes a giant spider, a wasp becomes a giant wasp, and a scorpion becomes a giant scorpion. Each creature obeys your verbal commands, and in combat, they act on your turn each round. The DM has the statistics for these creatures and resolves their actions and movement. A creature remains in its giant size for the duration, until it drops to 0 hit points, or until you use an action to dismiss the effect on it. The DM might allow you to choose different targets. For example, if you transform a bee, its giant version might have the same statistics as a giant wasp."],
 
-  [156, ""],
+  [156, "Glibness", "Transmutation", "8th-level", false, "1 Action", "Self", "V", "1 Hour", false, "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful."],
 
-  [157, ""],
+  [157, "Globe of Invulnerability", "Abjuration", "6th-level", false, "1 Action", "Self (10-foot radius)", "V, S, M (a glass or crystal bead that shatters when the spell ends)", "1 Minute", true, "An immobile, faintly shimmering barrier springs into existence in a 10-foot radius around you and remains for the duration.</br>Any spell of 5th level or lower cast from outside the barrier can't affect creatures or objects within it, even if the spell is cast using a higher level spell slot. Such a spell can target creatures and objects within the barrier, but the spell has no effect on them. Similarly, the area within the barrier is excluded from the areas affected by such spells. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 7th level or higher, the barrier blocks spells of one level higher for each slot level above 6th."],
 
-  [158, ""],
+  [158, "Glyph of Warding", "Abjuration", "3rd-level", false, "1 Hour", "Touch", "V, S, M (incense and powdered diamond worth at least 200 gp, which the spell consume)", "Until dispelled or triggered", false, "When you cast this spell, you inscribe a glyph that harms other creatures, either upon a surface (such as a table or a section of floor or wall)"],
 
-  [159, ""],
+  [159, "Goodberry"],
 
-  [160, ""],
+  [160, "Grasping Vine"],
 
-  [161, ""],
+  [161, "Grease"],
 
-  [162, ""],
+  [162, "Greater Invisibility"],
 
-  [163, ""],
+  [163, "Greater Restoration"],
 
-  [164, ""],
+  [164, "Guardian of Faith"],
 
-  [165, ""],
+  [165, "Guards and Wards"],
 
-  [166, ""],
+  [166, "Guidance"],
 
-  [167, ""],
+  [167, "Guiding Bolt"],
 
-  [168, ""],
+  [168, "Gust of Wind"],
 
-  [169, ""],
+  [169, "Hall of Thorns"],
 
-  [170, ""],
+  [170, "Hallow"],
 
-  [171, ""],
+  [171, "Hallucinatory Terrain"],
 
-  [172, ""],
+  [172, "Harm"],
 
-  [173, ""],
+  [173, "Haste"],
 
-  [174, ""],
+  [174, "Heal"],
 
-  [175, ""],
+  [175, "Healing Word"],
 
-  [176, ""],
+  [176, "Heat Metal"],
 
-  [177, ""],
+  [177, "Hellish Rebuke"],
 
-  [178, ""],
+  [178, "Heroes' Feast"],
 
-  [179, ""],
+  [179, "Heroism"],
 
-  [180, ""],
+  [180, "Hex"],
 
-  [181, ""],
+  [181, "Hold Monster"],
 
-  [182, ""],
+  [182, "Hold Person"],
 
-  [183, ""],
+  [183, "Holy Aura"],
 
-  [184, ""],
+  [184, "Hunger of Hadar"],
 
-  [185, ""],
+  [185, "Hunter's Mark"],
 
-  [186, ""],
+  [186, "Hypnotic Pattern"],
 
-  [187, ""],
+  [187, "Ice Storm"],
 
-  [188, ""],
+  [188, "Identify"],
 
-  [189, ""],
+  [189, "Illusory Script"],
 
-  [190, ""],
+  [190, "Imprisonment"],
 
-  [191, ""],
+  [191, "Incendiary Cloud"],
 
-  [192, ""],
+  [192, "Inflict Wounds"],
 
-  [193, ""],
+  [193, "Insect Plague"],
 
-  [194, ""],
+  [194, "Invisibility"],
 
-  [195, ""],
+  [195, "Jump"],
 
-  [196, ""],
+  [196, "Knock"],
 
-  [197, ""],
+  [197, "Legend Lore"],
 
-  [198, ""],
+  [198, "Leomund's Secret Chest"],
 
-  [199, ""],
+  [199, "Leomund's Tiny Hut"],
 
-  [200, ""],
+  [200, "Lesser Restoration"],
 
-  [201, ""],
+  [201, "Levitate"],
 
-  [202, ""],
+  [202, "Light"],
 
-  [203, ""],
+  [203, "Lightning Arrow"],
 
-  [204, ""],
+  [204, "Lightning Bolt"],
 
-  [205, ""],
+  [205, "Locate Animals or Plants"],
 
-  [206, ""],
+  [206, "Locate Creature"],
 
-  [207, ""],
+  [207, "Locate Object"],
 
-  [208, ""],
+  [208, "Longstrider"],
 
-  [209, ""],
+  [209, "Mage Armor"],
 
-  [210, ""],
+  [210, "Mage Hand"],
 
-  [211, ""],
+  [211, "Magic Circle"],
 
-  [212, ""],
+  [212, "Magic Jar"],
 
-  [213, ""],
+  [213, "Magic Missle"],
 
-  [214, ""],
+  [214, "Magic Mouth"],
 
-  [215, ""],
+  [215, "Magic Weapon"],
 
-  [216, ""],
+  [216, "Major Image"],
 
-  [217, ""],
+  [217, "Mass Cure Wounds"],
 
-  [218, ""],
+  [218, "Mass Heal"],
 
-  [219, ""],
+  [219, "Mass Healing Word"],
 
-  [220, ""],
+  [220, "Mass Sugestion"],
 
-  [221, ""],
+  [221, "Maze"],
 
-  [223, ""],
+  [222, "Meld Into Stone"],
 
-  [224, ""],
+  [223, "Melf's Acid Arrow"],
 
-  [225, ""],
+  [224, "Mending"],
 
-  [226, ""],
+  [225, "Message"],
 
-  [227, ""],
+  [226, "Meteor Swarm"],
 
-  [228, ""],
+  [227, "Mind Blank"],
 
-  [229, ""],
+  [228, "Minor Illusion"],
 
-  [230, ""],
+  [229, "Mirage Arcane"],
 
-  [231, ""],
+  [230, "Mirror Image"],
 
-  [232, ""],
+  [231, "Mislead"],
 
-  [233, ""],
+  [232, "Misty Step"],
 
-  [234, ""],
+  [233, "Modify Memory"],
 
-  [235, ""],
+  [234, "Moonbeam"],
 
-  [236, ""],
+  [235, "Mordenkainen's Faithful Hound"],
 
-  [237, ""],
+  [236, "Mordenkainen's Magnificent Mansion"],
 
-  [238, ""],
+  [237, "Mordenkainen's Private Sanctum"],
 
-  [239, ""],
+  [238, "Mordenkainen's Sword"],
 
-  [240, ""],
+  [239, "Move Earth"],
 
-  [241, ""],
+  [240, "Nondetection"],
 
-  [242, ""],
+  [241, "Nystul's Magic Aura"],
 
-  [243, ""],
+  [242, "Otiluke's Freezing Sphere"],
 
-  [244, ""],
+  [243, "Otiluke's Resilient Sphere"],
 
-  [245, ""],
+  [244, "Otto's Irresistible Dance"],
 
-  [246, ""],
+  [245, "Pass Without Trace"],
 
-  [247, ""],
+  [246, "Passwall"],
 
-  [248, ""],
+  [247, "Phantasmal Force"],
 
-  [249, ""],
+  [248, "Phantasmal Killer"],
 
-  [250, ""],
+  [249, "Phantom Steed"],
 
-  [251, ""],
+  [250, "Planar Ally"],
 
-  [252, ""],
+  [251, "Planar Binding"],
 
-  [253, ""],
+  [252, "Plane Shift"],
 
-  [254, ""],
+  [253, "Plant Growth"],
 
-  [255, ""],
+  [254, "Poison Spray"],
 
-  [256, ""],
+  [255, "Polymorph"],
 
-  [257, ""],
+  [256, "Power Word Heal"],
 
-  [258, ""],
+  [257, "Power Word Kill"],
 
-  [259, ""],
+  [258, "Power Word Stun"],
 
-  [260, ""],
+  [259, "Prayer of Healing"],
 
-  [261, ""],
+  [260, "Prestidigitation"],
 
-  [262, ""],
+  [261, "Prismatic Spray"],
 
-  [263, ""],
+  [262, "Prismatic Wall"],
 
-  [264, ""],
+  [263, "Produce Flame"],
 
-  [265, ""],
+  [264, "Programmed Illusion"],
 
-  [266, ""],
+  [265, "Project Image"],
 
-  [267, ""],
+  [266, "Protection from Energy"],
 
-  [268, ""],
+  [267, "Protection From Evil And Good"],
 
-  [269, ""],
+  [268, "Protection From Poison"],
 
-  [270, ""],
+  [269, "Purify Food and Drink"],
 
-  [271, ""],
+  [270, "Raise Dead"],
 
-  [272, ""],
+  [271, "Rary's Telepathic Bond"],
 
-  [273, ""],
+  [272, "Ray of Enfeeblement"],
 
-  [274, ""],
+  [273, "Ray of Frost"],
 
-  [275, ""],
+  [274, "Ray of Sickness"],
 
-  [276, ""],
+  [275, "Regenerate"],
 
-  [277, ""],
+  [276, "Reincarnate"],
 
-  [278, ""],
+  [277, "Remove Curse"],
 
-  [279, ""],
+  [278, "Resistance"],
 
-  [280, ""],
+  [279, "Resurrection"],
 
-  [281, ""],
+  [280, "Reverse Gravity"],
 
-  [282, ""],
+  [281, "Revivify"],
 
-  [283, ""],
+  [282, "Rope Trick"],
 
-  [284, ""],
+  [283, "Sacred Flame"],
 
-  [285, ""],
+  [284, "Sanctuary"],
 
-  [286, ""],
+  [285, "Scorching Ray"],
 
-  [287, ""],
+  [286, "Scrying"],
 
-  [288, ""],
+  [287, "Searing Smite"],
 
-  [289, ""],
+  [288, "See Invisibility"],
 
-  [290, ""],
+  [289, "Seeming"],
 
-  [291, ""],
+  [290, "Sending"],
 
-  [292, ""],
+  [291, "Sequester"],
 
-  [293, ""],
+  [292, "Shapechange"],
 
-  [294, ""],
+  [293, "Shatter"],
 
-  [295, ""],
+  [294, "Shield"],
 
-  [296, ""],
+  [295, "Shield of Faith"],
 
-  [297, ""],
+  [296, "Shillelagh"],
 
-  [298, ""],
+  [297, "Shocking Grasp"],
 
-  [299, ""],
+  [298, "Silence"],
 
-  [300, ""],
+  [299, "Silent Image"],
 
-  [301, ""],
+  [300, "Simulacrum"],
 
-  [302, ""],
+  [301, "Sleep"],
 
-  [303, ""],
+  [302, "Sleet Storm"],
 
-  [304, ""],
+  [303, "Slow"],
 
-  [305, ""],
+  [304, "Spare the Dying"],
 
-  [306, ""],
+  [305, "Speak with Animals"],
 
-  [307, ""],
+  [306, "Speak with Dead"],
 
-  [308, ""],
+  [307, "Speak with Plants"],
 
-  [309, ""],
+  [308, "Spider Climb"],
 
-  [310, ""],
+  [309, "Spike Growth"],
 
-  [311, ""],
+  [310, "Spirit Guardians"],
 
-  [312, ""],
+  [311, "Spiritual Weapon"],
 
-  [313, ""],
+  [312, "Staggering Smite"],
 
-  [314, ""],
+  [313, "Stinking Cloud"],
 
-  [315, ""],
+  [314, "Stone Shape"],
 
-  [316, ""],
+  [315, "Stoneskin"],
 
-  [317, ""],
+  [316, "Storm of Vengeance"],
 
-  [318, ""],
+  [317, "Suggestion"],
 
-  [319, ""],
+  [318, "Sunbeam"],
 
-  [320, ""],
+  [319, "Sunburst"],
 
-  [321, ""],
+  [320, "Swift Quiver"],
 
-  [323, ""],
+  [321, "Symbol"],
 
-  [324, ""],
+  [322, "Tasha's Hideous Laughter"],
 
-  [325, ""],
+  [323, "Telekinesis"],
 
-  [326, ""],
+  [324, "Telepathy"],
 
-  [327, ""],
+  [325, "Teleport"],
 
-  [328, ""],
+  [326, "Teleportation Circle"],
 
-  [329, ""],
+  [327, "Tenser's Floating Disk"],
 
-  [330, ""],
+  [328, "Thaumaturgy"],
 
-  [331, ""],
+  [329, "Thorn Whip"],
 
-  [332, ""],
+  [330, "Thunderous Smite"],
 
-  [333, ""],
+  [331, "Thunderwave"],
 
-  [334, ""],
+  [332, "Time Stop"],
 
-  [335, ""],
+  [333, "Tongues"],
 
-  [336, ""],
+  [334, "Transport via Plants"],
 
-  [337, ""],
+  [335, "Tree Stride"],
 
-  [338, ""],
+  [336, "True Polymorph"],
 
-  [339, ""],
+  [337, "True Resurrection"],
 
-  [340, ""],
+  [338, "True Seeing"],
 
-  [341, ""],
+  [339, "True Strike"],
 
-  [342, ""],
+  [340, "Tsunami"],
 
-  [343, ""],
+  [341, "Unseen Servant"],
 
-  [344, ""],
+  [342, "Vampiric Touch"],
 
-  [345, ""],
+  [343, "Vicious Mockery"],
 
-  [346, ""],
+  [344, "Wall of Fire"],
 
-  [347, ""],
+  [345, "Wall of Force"],
 
-  [348, ""],
+  [346, "Wall of Ice"],
 
-  [349, ""],
+  [347, "Wall of Stone"],
 
-  [350, ""],
+  [348, "Wall of Thorns"],
 
-  [351, ""],
+  [349, "Warding Bond"],
 
-  [352, ""],
+  [350, "Water Breathing"],
 
-  [353, ""],
+  [351, "Water Walk"],
 
-  [354, ""],
+  [352, "Web"],
 
-  [355, ""],
+  [353, "Weird"],
 
-  [356, ""],
+  [354, "Wind Walk"],
 
-  [357, ""],
+  [355, "Wind Wall"],
 
-  [358, ""],
+  [356, "Wish"],
 
-  [359, ""],
+  [357, "Witch Bolt"],
 
-  [360, ""],
+  [358, "Word of Recall"],
 
-  [361, ""]
+  [359, "Wrathful Smite"],
+
+  [360, "Zone of Truth"]
 ];
-
-var spellsBard = [];
-var spellsCleric = [];
-var spellsDruid = [];
-var spellsPaladin = [];
-var spellsRanger = [];
-var spellsSorcerer = [];
-var spellsWarlock = [];
-var spellsWizard = [];
 
 //For all of the saving and loading functions: getCharacter, getPreviousCharacter, saveCharacter, loadCharacter, deleteCharacter
 var racePrevious = race;
@@ -1263,7 +1293,7 @@ function setClassManual(classNumber) {
     case 13:
       classChoice = "";
       manualClass = false;
-      document.getElementById("Class Selection").innerHTML = "Class Selection";
+      document.getElementById("ClassSelection").innerHTML = "Class Selection";
       break;
   }
 }
@@ -3481,6 +3511,14 @@ function displayProficiencies() {
   display = display.substring(0, display.length - 2) + "</br>";
   display += "Weapons: ";
   for (var e = 0; e < weaponTypeProficiencies.length; e++) {
+    /*if (weaponTypeProficiencies[0] == 1 && weaponTypeProficiencies[1] == 1) {
+      display += "Simple Weapons, ";
+      e = 2;
+    }
+    if (e >= 2 && weaponTypeProficiencies[2] == 1 && weaponTypeProficiencies[3] == 1) {
+      display += "Martial Weapons, ";
+      e = 4;
+    }*/
     if (weaponTypeProficiencies[e] == 1)
       display += weaponType[e] + ", ";
   }
@@ -3725,6 +3763,25 @@ function displaySkills() {
   return "<b>Saving Throws</b></br>" + saveDisplay + "<b>Skills</b></br>" + skillDisplay;
 }
 
+function setEquipment() {
+    switch (classChoice) {
+      case "Barbarian":
+        break;
+      case "Bard":
+        break;
+      case "Cleric":
+        break;
+      case "Druid":
+        break;
+      case "Fighter":
+        break;
+      case "Monk":
+        break;
+      case "":
+        break;
+    }
+}
+
 function setFeatures() {
     switch (classChoice) {
         case "Barbarian":
@@ -3806,18 +3863,43 @@ function setFeatures() {
 
 //Still a massive W.I.P. and is most likely broken
 function setSpells() {
+  var index = 0;
+  var spellsChosen = "";
+  var cantripsAvailable = 0;
+  var spellsKnown = 0;
   switch (classChoice) {
     case "Barbarian":
       switch (subclass) {
-        case "Path of the Berserker ":
-
-          break;
         case "Path of the Totem Warrior ":
 
           break;
       }
       break;
     case "Bard":
+      var spellsBard = [
+        /*Cantrips*/[spells[32], spells[85], spells[150], spells[202], spells[210], spells[224], spells[225], spells[228], spells[260], spells[339], spells[343]],
+        /*Level One*/[spells[4], spells[23], spells[44], spells[58], spells[84], spells[94], spells[98], spells[102], spells[125], spells[128], spells[175], spells[179], spells[188], spells[189], spells[208], spells[299], spells[301], spells[305], spells[322], spells[331], spells[341]]
+      ];
+      if (level >= 1 && level <= 3)
+        cantripsAvailable = 2;
+      else if (level >= 4 && level <= 9)
+        cantripsAvailable = 3;
+      else if (level >= 10)
+        cantripsAvailable = 4;
+      for (var i = cantripsAvailable; i > 0; i--) {
+        index = Math.floor(Math.random() * spellsBard[0].length);
+        spellsChosen += spellsBard[0][index] + "<br>";
+      }
+      if ((level >= 1 && level <= 9) || (level >= 12 && level <= 13) || (level >= 16 && level <= 17))
+        spellsKnown = level + 3;
+      else if ((level >= 10 && level <= 11) || (level >= 14 && level <= 15))
+        spellsKnown = level + 4;
+      else
+        spellsKnown = 22;
+      for (var i = spellsKnown; i > 0; i--) {
+        index = Math.floor(Math.random() * spellsBard[1].length);
+        spellsChosen += spellsBard[1][index] + "<br>";
+      }
       switch (subclass) {
         case "College of Lore ":
 
@@ -3885,26 +3967,7 @@ function setSpells() {
       break;
     case "Fighter":
       switch (subclass) {
-        case " (Champion)":
-
-          break;
-        case " (Battle Master)":
-
-          break;
         case " (Eldritch Knight)":
-
-          break;
-      }
-      break;
-    case "Monk":
-      switch (subclass) {
-        case "Way of the Open Hand ":
-
-          break;
-        case "Way of Shadow ":
-
-          break;
-        case "Way of the Four Elements ":
 
           break;
       }
@@ -3934,12 +3997,6 @@ function setSpells() {
       break;
     case "Rogue":
       switch (subclass) {
-        case " (Thief)":
-
-          break;
-        case " (Assassin)":
-
-          break;
         case " (Arcane Trickster)":
 
           break;
@@ -3998,36 +4055,28 @@ function setSpells() {
       break;
   }
   switch (race) {
-    case "Dwarf":
-
-      break;
     case "Elf":
+      switch (subclass) {
+        case "High ":
 
-      break;
-    case "Halfling":
+          break;
+        case "Dark ":
 
-      break;
-    case "Human":
-
-      break;
-    case "Dragonborn":
-
+          break;
+      }
       break;
     case "Gnome":
+      switch (subclass) {
+        case "Forest ":
 
-      break;
-    case "Half-Elf":
-
-      break;
-    case "Half-Orc":
-
+          break;
+      }
       break;
     case "Tiefling":
 
       break;
   }
-
-  //return "<a data-toggle=\"collapse\" href=\"#collapseSpells\" aria-expanded=\"false\" aria-controls=\"collapseExample\">" + spells[spell][1] + "</a><div class=\"collapse\" id=\"collapseSpells\"><div class=\"card card-body\">Spell Type: " + spells[spell][2] + "</br>Spell Level: " + spells[spell][3] + "</div></div>";
+  return spellsChosen;
 }
 
 var save = localStorage.getItem("save");
@@ -4093,7 +4142,7 @@ function getCharacter() {
         document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice) + "</br>" + sethealth() + "</br>" + setSpeed();
         document.getElementById("consoleProficiencies").innerHTML = displayProficiencies();
         document.getElementById("consoleSkills").innerHTML = displaySkills();
-        //document.getElementById("consoleSpells").innerHTML = setSpells();
+        document.getElementById("consoleSpells").innerHTML = setSpells();
 }
 
 function getPreviousCharacter() {
