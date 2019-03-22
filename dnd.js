@@ -84,6 +84,8 @@ var adventuringGear = ["Abacus (es)", "Vial (s) of Acid", "Flask (s) of Alchemis
                       "Steel Mirror (s)", "Flask (s) of Oil", "sheet (s) of Paper", "sheet (s) of Parchment", "Vial (s) of Perfume", "Miner's Pick (s)", "Piton (s)", "Vial (s) of Basic Posion", "Pole (s)", "Iron Pot (s)", "Potion (s) of Healing", "Pouch (es)", "Quiver (s)",
                       "Portable Ram (s)", "day (s) of Rations", "Robe (s)", "feet of Hempen Rope", "feet of Silk Rope", "Sack (s)", "Merchant's Scale (s)", "Sealing Wax", "Shovel (s)", "Signal Whistle (s)", "Signet Ring (s)", "Soap (s)", "Spellbook (s)", "Iron Spike (s)",
                       "Spyglass (es)", "Two-Person Tent (s)", "Tinderbox (es)", "Torch (es)", "Vial (s)", "Waterskin (s)", "Whetstone (s)"];
+//0:Padded, 1:Leather, 2:Studded Leather, 3:Hide, 4:Chain Shirt, 5:Scale Mail, 6:Breastplate, 7:Half Plate, 8:Ring Mail, 9:Chain Mail, 10:Splint, 11:Plate, 12:Shield
+var armor = ["Padded Armor", "Leather Armor", "Studded Leather Armor", "Hide Armor", "Chain Shirt", "Scale Mail Armor", "Breastplate (s)", "Half Plate Armor", "Ring Mail Armor", "Chain Mail Armor", "Splint Armor", "Plate Armor", "Shield"];
 //0:Club, 1:Dagger, 2:Greatclub, 3:Handaxe, 4:Javelin, 5:Light Hammer, 6:Mace, 7:Quarterstaff, 8:Sickle, 9:Spear
 var simpleMeleeWeapons = ["Club (s)", "Dagger (s)", "Greatclub (s)", "Handaxe (s)", "Javelin (s)", "Light Hammer (s)", "Mace (s)", "Quarterstaff (s)", "Sickle (s)", "Spear (s)"];
 //0:Light Crossbow, 1:Dart, 2:Shortbow, 3:Sling
@@ -107,7 +109,7 @@ var instruments = ["Bagpipes", "Drum (s)", "Dulcimer (s)", "Flute (s)", "Lute (s
 var equipment = [["Name", "Quantity"]];
 
 //For setLevel
-var level = 1;
+var level = 9;
 var profBonus = 2;
 
 //For setSubclass
@@ -442,11 +444,11 @@ var spells = [
 
   [157, "Globe of Invulnerability", "Abjuration", "6th-level", false, "1 Action", "Self (10-foot radius)", "V, S, M (a glass or crystal bead that shatters when the spell ends)", "1 Minute", true, "An immobile, faintly shimmering barrier springs into existence in a 10-foot radius around you and remains for the duration.</br>Any spell of 5th level or lower cast from outside the barrier can't affect creatures or objects within it, even if the spell is cast using a higher level spell slot. Such a spell can target creatures and objects within the barrier, but the spell has no effect on them. Similarly, the area within the barrier is excluded from the areas affected by such spells. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 7th level or higher, the barrier blocks spells of one level higher for each slot level above 6th."],
 
-  [158, "Glyph of Warding", "Abjuration", "3rd-level", false, "1 Hour", "Touch", "V, S, M (incense and powdered diamond worth at least 200 gp, which the spell consume)", "Until dispelled or triggered", false, "When you cast this spell, you inscribe a glyph that harms other creatures, either upon a surface (such as a table or a section of floor or wall)"],
+  [158, "Glyph of Warding", "Abjuration", "3rd-level", false, "1 Hour", "Touch", "V, S, M (incense and powdered diamond worth at least 200 gp, which the spell consume)", "Until dispelled or triggered", false, "When you cast this spell, you inscribe a glyph that harms other creatures, either upon a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. If you choose a surface, the glyph can cover an area of the surface no larger than 10 feet in diameter. If you choose an object, that object must remain in its place; if the object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered. The glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found. You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most common triggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends. You can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don’t trigger the glyph, such as those who say a certain password. When you inscribe the glyph, choose explosive runes or a spell glyph. </br><b>Explosive Runes.</b> When triggered, the glyph erupts with magical energy in a 20-foot-radius sphere centered on the glyph. The sphere spreads around corners. Each creature in the area must make a Dexterity saving throw. A creature takes 5d8 acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one. </br><b>Spell Glyph.</b> You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration. </br><b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, the damage of an explosive runes glyph increases by 1d8 for each slot level above 3rd. If you create a spell glyph, you can store any spell of up to the same level as the slot you use for the glyph of warding."],
 
-  [159, "Goodberry"],
+  [159, "Goodberry", "Transmutation", "1st-level", false, "1 Action", "Touch", "V, S, M (a sprig of mistletoe)", "Instantaneous", false, "Up to ten berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for one day. The berries lose their potency if they have not been consumed within 24 hours of the casting of this spell."],
 
-  [160, "Grasping Vine"],
+  [160, "Grasping Vine", "Conjuration", "4th-level", false, "1 Bonus Action", "30 Feet", "V, S", "1 Minute", true, "You conjure a vine that sprouts from the ground in an unoccupied space of your choice that you can see within range. When you cast this spell, you can direct the vine to lash out at a creature within 30 feet of it that you can see. That creature must succeed on a Dexterity saving throw or be pulled 20 feet directly toward the vine. Until the spell ends, you can direct the vine to lash out at the same creature or another one as a bonus action on each of your turns."],
 
   [161, "Grease"],
 
@@ -1113,16 +1115,16 @@ function setClass() {
                       subclass = "School of Conjuration ";
                       break;
                   case 2:
-                      subclass = "School of Divination";
+                      subclass = "School of Divination ";
                       break;
                   case 3:
-                      subclass = "School of Enchantment";
+                      subclass = "School of Enchantment ";
                       break;
                   case 4:
-                      subclass = "School of Evocation";
+                      subclass = "School of Evocation ";
                       break;
                   case 5:
-                      subclass = "School of Illusion";
+                      subclass = "School of Illusion ";
                       break;
                   case 6:
                       subclass = "School of Necromancy ";
@@ -3766,18 +3768,638 @@ function displaySkills() {
 function setEquipment() {
     switch (classChoice) {
       case "Barbarian":
+        var item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(martialMeleeWeapons[3], 1);
+            break;
+          case 1:
+            var choice = Math.floor(Math.random() * 2);
+            switch (choice) {
+              case 0:
+                addEquipment(martialMeleeWeapons[Math.floor(Math.random() * martialMeleeWeapons.length)], 1);
+                break;
+              case 1:
+                addEquipment(martialRangedWeapons[Math.floor(Math.random() * martialRangedWeapons.length)], 1);
+                break;
+            }
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(simpleMeleeWeapons[3], 2);
+            break;
+          case 1:
+            var choice = Math.floor(Math.random() * 2);
+            switch (choice) {
+              case 0:
+                addEquipment(simpleMeleeWeapons[Math.floor(Math.random() * simpleMeleeWeapons.length)], 1);
+                break;
+              case 1:
+                addEquipment(simpleRangedWeapons[Math.floor(Math.random() * simpleRangedWeapons.length)], 1);
+                break;
+            }
+            break;
+        }
+        addEquipment("Explorer's Pack", 0);
+        addEquipment(simpleMeleeWeapons[4], 4);
         break;
       case "Bard":
+        var item = Math.floor(Math.random() * 3);
+        switch (item) {
+          case 0:
+            addEquipment(martialMeleeWeapons[11], 1);
+            break;
+          case 1:
+            addEquipment(martialMeleeWeapons[7], 1);
+            break;
+          case 2:
+            var choice = Math.floor(Math.random() * 2);
+            switch (choice) {
+              case 0:
+                addEquipment(simpleMeleeWeapons[Math.floor(Math.random() * simpleMeleeWeapons.length)], 1);
+                break;
+              case 1:
+                addEquipment(simpleRangedWeapons[Math.floor(Math.random() * simpleRangedWeapons.length)], 1);
+                break;
+            }
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment("Diplomat's Pack", 0);
+            break;
+          case 1:
+            addEquipment("Entertainer's Pack", 0);
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(instruments[4], 1);
+            break;
+          case 1:
+            addEquipment(instruments[Math.floor(Math.random() * instruments.length)], 1);
+            break;
+        }
+        addEquipment(armor[1], 1);
+        addEquipment(simpleMeleeWeapons[1], 1);
         break;
       case "Cleric":
+        var item = Math.floor(Math.random() * 2);
+        if (weaponProficiencies[30] == 1 || weaponTypeProficiencies[2] == 1) {
+          switch (item) {
+            case 0:
+              addEquipment(simpleMeleeWeapons[6], 1);
+              break;
+            case 1:
+              addEquipment(martialMeleeWeapons[16], 1);
+              break;
+          }
+        }
+        else
+          addEquipment(simpleMeleeWeapons[6], 1);
+        if (armorProficiencies[2] == 1) {
+          item = Math.floor(Math.random() * 3);
+          switch (item) {
+            case 0:
+              addEquipment(armor[5], 1);
+              break;
+            case 1:
+              addEquipment(armor[1], 1);
+              break;
+            case 2:
+              addEquipment(armor[9], 1);
+              break;
+          }
+        }
+        else {
+          item = Math.floor(Math.random() * 2);
+          switch (item) {
+            case 0:
+              addEquipment(simpleRangedWeapons[0], 1);
+              addEquipment(adventuringGear[5], 20);
+              break;
+            case 1:
+              var choice = Math.floor(Math.random() * 2);
+              switch (choice) {
+                case 0:
+                  addEquipment(simpleMeleeWeapons[Math.floor(Math.random() * simpleMeleeWeapons.length)], 1);
+                  break;
+                case 1:
+                  addEquipment(simpleRangedWeapons[Math.floor(Math.random() * simpleRangedWeapons.length)], 1);
+                  break;
+              }
+              break;
+          }
+          item = Math.floor(Math.random() * 2);
+          switch (item) {
+            case 0:
+              addEquipment("Priest's Pack", 0);
+              break;
+            case 1:
+              addEquipment("Explorer's Pack", 0);
+              break;
+          }
+          item = Math.floor(Math.random() * 3);
+          switch (item) {
+            case 0:
+              addEquipment(adventuringGear[45], 1);
+              break;
+            case 1:
+              addEquipment(adventuringGear[46], 1);
+              break;
+            case 2:
+              addEquipment(adventuringGear[47], 1);
+              break;
+          }
+          addEquipment(armor[12], 1);
+        }
         break;
       case "Druid":
+        var item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(armor[12], 1);
+            break;
+          case 1:
+            var choice = Math.floor(Math.random() * 2);
+            switch (choice) {
+              case 0:
+                addEquipment(simpleMeleeWeapons[Math.floor(Math.random() * simpleMeleeWeapons.length)], 1);
+                break;
+              case 1:
+                addEquipment(simpleRangedWeapons[Math.floor(Math.random() * simpleRangedWeapons.length)], 1);
+                break;
+            }
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(martialMeleeWeapons[12], 1);
+            break;
+          case 1:
+            addEquipment(simpleMeleeWeapons[Math.floor(Math.random() * simpleMeleeWeapons.length)], 1);
+            break;
+        }
+        addEquipment(armor[1], 1);
+        addEquipment("Exlorer's Pack", 0);
+        item = Math.floor(Math.random() * 4);
+        switch (item) {
+          case 0:
+            addEquipment(adventuringGear[36], 1);
+            break;
+          case 1:
+            addEquipment(adventuringGear[37], 1);
+            break;
+          case 2:
+            addEquipment(adventuringGear[38], 1);
+            break;
+          case 3:
+            addEquipment(adventuringGear[39], 1);
+            break;
+        }
         break;
       case "Fighter":
+        var item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(armor[9], 1);
+            break;
+          case 1:
+            addEquipment(armor[1], 1);
+            addEquipment(martialRangedWeapons[3], 1);
+            addEquipment(adventuringGear[3], 20);
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            var choice = Math.floor(Math.random() * 2);
+            switch (choice) {
+              case 0:
+                addEquipment(martialMeleeWeapons[Math.floor(Math.random() * martialMeleeWeapons.length)], 1);
+                break;
+              case 1:
+                addEquipment(martialRangedWeapons[Math.floor(Math.random() * martialRangedWeapons.length)], 1);
+                break;
+            }
+            addEquipment(armor[12], 1);
+            break;
+          case 1:
+            var choice = Math.floor(Math.random() * 2);
+            switch (choice) {
+              case 0:
+                addEquipment(martialMeleeWeapons[Math.floor(Math.random() * martialMeleeWeapons.length)], 1);
+                break;
+              case 1:
+                addEquipment(martialRangedWeapons[Math.floor(Math.random() * martialRangedWeapons.length)], 1);
+                break;
+            }
+            choice = Math.floor(Math.random() * 2);
+            switch (choice) {
+              case 0:
+                addEquipment(martialMeleeWeapons[Math.floor(Math.random() * martialMeleeWeapons.length)], 1);
+                break;
+              case 1:
+                addEquipment(martialRangedWeapons[Math.floor(Math.random() * martialRangedWeapons.length)], 1);
+                break;
+            }
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(simpleRangedWeapons[0], 1);
+            addEquipment(adventuringGear[5], 20);
+            break;
+          case 1:
+            addEquipment(simpleMeleeWeapons[3], 1);
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment("Dungeoneer's Pack", 0);
+            break;
+          case 1:
+            addEquipment("Explorer's Pack", 0);
+            break;
+        }
         break;
       case "Monk":
+        var item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(martialMeleeWeapons[13], 1);
+            break;
+          case 1:
+            var choice = Math.floor(Math.random() * 2);
+            switch (choice) {
+              case 0:
+                addEquipment(simpleMeleeWeapons[Math.floor(Math.random() * simpleMeleeWeapons.length)], 1);
+                break;
+              case 1:
+                addEquipment(simpleRangedWeapons[Math.floor(Math.random() * simpleRangedWeapons.length)], 1);
+                break;
+            }
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment("Dungeoneer's Pack", 0);
+            break;
+          case 1:
+            addEquipment("Explorer's Pack", 0);
+            break;
+        }
+        addEquipment(simpleRangedWeapons[1], 10);
         break;
-      case "":
+      case "Paladin":
+        var item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            var choice = Math.floor(Math.random() * 2);
+            switch (choice) {
+              case 0:
+                addEquipment(martialMeleeWeapons[Math.floor(Math.random() * martialMeleeWeapons.length)], 1);
+                break;
+              case 1:
+                addEquipment(martialRangedWeapons[Math.floor(Math.random() * martialRangedWeapons.length)], 1);
+                break;
+            }
+            addEquipment(armor[12], 1);
+            break;
+          case 1:
+            var choice = Math.floor(Math.random() * 2);
+            switch (choice) {
+              case 0:
+                addEquipment(martialMeleeWeapons[Math.floor(Math.random() * martialMeleeWeapons.length)], 1);
+                break;
+              case 1:
+                addEquipment(martialRangedWeapons[Math.floor(Math.random() * martialRangedWeapons.length)], 1);
+                break;
+            }
+            choice = Math.floor(Math.random() * 2);
+            switch (choice) {
+              case 0:
+                addEquipment(martialMeleeWeapons[Math.floor(Math.random() * martialMeleeWeapons.length)], 1);
+                break;
+              case 1:
+                addEquipment(martialRangedWeapons[Math.floor(Math.random() * martialRangedWeapons.length)], 1);
+                break;
+            }
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(simpleMeleeWeapons[4], 5);
+            break;
+          case 1:
+            addEquipment(simpleMeleeWeapons[Math.floor(Math.random() * simpleMeleeWeapons.length)], 1);
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment("Priest's Pack", 0);
+            break;
+          case 1:
+            addEquipment("Explorer's Pack", 0);
+            break;
+        }
+        addEquipment(armor[9], 1);
+        item = Math.floor(Math.random() * 3);
+        switch (item) {
+          case 0:
+            addEquipment(adventuringGear[45], 1);
+            break;
+          case 1:
+            addEquipment(adventuringGear[46], 1);
+            break;
+          case 2:
+            addEquipment(adventuringGear[47], 1);
+            break;
+        }
+        break;
+      case "Ranger":
+        var item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(armor[5], 1);
+            break;
+          case 1:
+            addEquipment(armor[1], 1);
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(martialMeleeWeapons[13], 2);
+            break;
+          case 1:
+            addEquipment(simpleMeleeWeapons[Math.floor(Math.random() * simpleMeleeWeapons.length)], 1);
+            addEquipment(simpleMeleeWeapons[Math.floor(Math.random() * simpleMeleeWeapons.length)], 1);
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment("Dungeoneer's Pack", 0);
+            break;
+          case 1:
+            addEquipment("Explorer's Pack", 0);
+            break;
+        }
+        addEquipment(martialRangedWeapons[3], 1);
+        addEquipment(adventuringGear[3], 20);
+        break;
+      case "Rogue":
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(martialMeleeWeapons[11], 1);
+            break;
+          case 1:
+            addEquipment(martialMeleeWeapons[13], 1);
+            break;
+        }
+        switch (item) {
+          case 0:
+            addEquipment(simpleRangedWeapons[2], 1);
+            addEquipment(adventuringGear[80], 1);
+            addEquipment(adventuringGear[3], 20);
+            break;
+          case 1:
+            addEquipment(martialMeleeWeapons[13], 1);
+        }
+        item = Math.floor(Math.random() * 3);
+        switch (item) {
+          case 0:
+            addEquipment("Burglar's Pack", 0);
+            break;
+          case 1:
+            addEquipment("Dungeoneer's Pack", 0);
+            break;
+          case 2:
+            addEquipment("Explorer's Pack", 0);
+            break;
+        }
+        addEquipment(armor[1], 1);
+        addEquipment(simpleMeleeWeapons[1], 2);
+        addEquipment(artisansTools[19], 1);
+        break;
+      case "Sorcerer":
+        var item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(simpleRangedWeapons[0], 1);
+            addEquipment(adventuringGear[5], 20);
+            break;
+          case 1:
+            var choice = Math.floor(Math.random() * 2);
+            switch (choice) {
+              case 0:
+                addEquipment(simpleMeleeWeapons[Math.floor(Math.random() * simpleMeleeWeapons.length)], 1);
+                break;
+              case 1:
+                addEquipment(simpleRangedWeapons[Math.floor(Math.random() * simpleRangedWeapons.length)], 1);
+                break;
+            }
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(adventuringGear[34], 1);
+            break;
+          case 1:
+            var choice = Math.floor(Math.random() * 5);
+            switch (choice) {
+              case 0:
+                addEquipment(adventuringGear[8], 1);
+                break;
+              case 1:
+                addEquipment(adventuringGear[9], 1);
+                break;
+              case 2:
+                addEquipment(adventuringGear[10], 1);
+                break;
+              case 3:
+                addEquipment(adventuringGear[11], 1);
+                break;
+              case 4:
+                addEquipment(adventuringGear[12], 1);
+                break;
+            }
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment("Dungeoneer's Pack", 0);
+            break;
+          case 1:
+            addEquipment("Explorer's Pack", 0);
+            break;
+        }
+        addEquipment(simpleMeleeWeapons[1], 2);
+        break;
+      case "Warlock":
+        var item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(simpleRangedWeapons[0], 1);
+            addEquipment(adventuringGear[5], 20);
+            break;
+          case 1:
+            var choice = Math.floor(Math.random() * 2);
+            switch (choice) {
+              case 0:
+                addEquipment(simpleMeleeWeapons[Math.floor(Math.random() * simpleMeleeWeapons.length)], 1);
+                break;
+              case 1:
+                addEquipment(simpleRangedWeapons[Math.floor(Math.random() * simpleRangedWeapons.length)], 1);
+                break;
+            }
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(adventuringGear[34], 1);
+            break;
+          case 1:
+            var choice = Math.floor(Math.random() * 5);
+            switch (choice) {
+              case 0:
+                addEquipment(adventuringGear[8], 1);
+                break;
+              case 1:
+                addEquipment(adventuringGear[9], 1);
+                break;
+              case 2:
+                addEquipment(adventuringGear[10], 1);
+                break;
+              case 3:
+                addEquipment(adventuringGear[11], 1);
+                break;
+              case 4:
+                addEquipment(adventuringGear[12], 1);
+                break;
+            }
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment("Scholar's Pack", 0);
+            break;
+          case 1:
+            addEquipment("Dungeoneer's Pack", 0);
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(simpleMeleeWeapons[Math.floor(Math.random() * simpleMeleeWeapons.length)], 1);
+            break;
+          case 1:
+            addEquipment(simpleRangedWeapons[Math.floor(Math.random() * simpleRangedWeapons.length)], 1);
+            break;
+        }
+        addEquipment(armor[1], 1);
+        addEquipment(simpleMeleeWeapons[1], 2);
+        break;
+      case "Wizard":
+        var item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(simpleMeleeWeapons[7], 1);
+            break;
+          case 1:
+            addEquipment(simpleMeleeWeapons[1], 1);
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(adventuringGear[34], 1);
+            break;
+          case 1:
+            var choice = Math.floor(Math.random() * 5);
+            switch (choice) {
+              case 0:
+                addEquipment(adventuringGear[8], 1);
+                break;
+              case 1:
+                addEquipment(adventuringGear[9], 1);
+                break;
+              case 2:
+                addEquipment(adventuringGear[10], 1);
+                break;
+              case 3:
+                addEquipment(adventuringGear[11], 1);
+                break;
+              case 4:
+                addEquipment(adventuringGear[12], 1);
+                break;
+            }
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment("Scholar's Pack", 0);
+            break;
+          case 1:
+            addEquipment("Explorer's Pack", 0);
+            break;
+        }
+        addEquipment(adventuringGear[93], 1);
+        break;
+    }
+    switch (backgroundSelect) {
+      case "Acolyte":
+        break;
+      case "Charlatan":
+        break;
+      case "Criminal":
+        break;
+      case "Entertainer":
+        break;
+      case "Folk Hero":
+        break;
+      case "Gladiator":
+        break;
+      case "Guild Artisan":
+        break;
+      case "Guild Merchant":
+        break;
+      case "Hermit":
+        break;
+      case "Knight":
+        break;
+      case "Noble":
+        break;
+      case "Outlander":
+        break;
+      case "Pirate":
+        break;
+      case "Sage":
+        break;
+      case "Sailor":
+        break;
+      case "Soldier":
+        break;
+      case "Spy":
+        break;
+      case "Urchin":
         break;
     }
 }
@@ -3861,25 +4483,33 @@ function setFeatures() {
     }
 }
 
-//Still a massive W.I.P. and is most likely broken
 function setSpells() {
   var index = 0;
   var spellsChosen = "";
   var cantripsAvailable = 0;
-  var spellsKnown = 0;
+  var spellsKnown = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   switch (classChoice) {
     case "Barbarian":
       switch (subclass) {
-        case "Path of the Totem Warrior ":
-
+        case "Path of the Totem Warrior Barbarian":
+            spellsChosen += spells[28] + "<br>" + spells[305];
           break;
       }
       break;
     case "Bard":
       var spellsBard = [
-        /*Cantrips*/[spells[32], spells[85], spells[150], spells[202], spells[210], spells[224], spells[225], spells[228], spells[260], spells[339], spells[343]],
-        /*Level One*/[spells[4], spells[23], spells[44], spells[58], spells[84], spells[94], spells[98], spells[102], spells[125], spells[128], spells[175], spells[179], spells[188], spells[189], spells[208], spells[299], spells[301], spells[305], spells[322], spells[331], spells[341]]
+        /*Cantrips*/[spells[32][1], spells[85][1], spells[150][1], spells[202][1], spells[210][1], spells[224][1], spells[225][1], spells[228][1], spells[260][1], spells[339][1], spells[343][1]],
+        /*Level One*/[spells[4][1], spells[23][1], spells[44][1], spells[58][1], spells[84][1], spells[94][1], spells[98][1], spells[102][1], spells[125][1], spells[128][1], spells[175][1], spells[179][1], spells[188][1], spells[189][1], spells[208][1], spells[299][1], spells[301][1], spells[305][1], spells[322][1], spells[331][1], spells[341][1]],
+        /*Level Two*/[spells[5][1], spells[36][1], spells[42][1], spells[51][1], spells[82][1], spells[96][1], spells[115][1], spells[119][1], spells[176][1], spells[182][1], spells[194][1], spells[196][1], spells[200][1], spells[205][1], spells[207][1], spells[214][1], spells[247][1], spells[288][1], spells[293][1], spells[298][1], spells[317][1], spells[360][1]],
+        /*Level Three*/[spells[29][1], spells[49][1], spells[101][1], spells[127][1], spells[130][1], spells[158][1], spells[186][1], spells[199][1], spells[216][1], spells[240][1], spells[253][1], spells[290][1], spells[306][1], spells[307][1], spells[313][1], spells[333][1]],
+        /*Level Four*/[spells[59][1], spells[61][1], spells[97][1], spells[149][1], spells[162][1], spells[171][1], spells[206][1], spells[255][1]],
+        /*Level Five*/[],
+        /*Level Six*/[],
+        /*Level Seven*/[],
+        /*Level Eight*/[],
+        /*Level Nine*/[]
       ];
+      /*Selects Cantrips*/
       if (level >= 1 && level <= 3)
         cantripsAvailable = 2;
       else if (level >= 4 && level <= 9)
@@ -3888,17 +4518,151 @@ function setSpells() {
         cantripsAvailable = 4;
       for (var i = cantripsAvailable; i > 0; i--) {
         index = Math.floor(Math.random() * spellsBard[0].length);
+        while (spellsBard[0][index] == "e")
+          index = Math.floor(Math.random() * spellsBard[0].length);
         spellsChosen += spellsBard[0][index] + "<br>";
+        spellsBard[0][index] = "e";
       }
+      /*Selects Spells*/
       if ((level >= 1 && level <= 9) || (level >= 12 && level <= 13) || (level >= 16 && level <= 17))
-        spellsKnown = level + 3;
+        spellsKnown[0] = level + 3;
       else if ((level >= 10 && level <= 11) || (level >= 14 && level <= 15))
-        spellsKnown = level + 4;
+        spellsKnown[0] = level + 4;
       else
-        spellsKnown = 22;
-      for (var i = spellsKnown; i > 0; i--) {
+        spellsKnown[0] = 22;
+      if (level >= 1 && level <= 2) {
+        spellsKnown[1] = spellsKnown[0]
+      } else if (level >= 3 && level <= 4) {
+        spellsKnown[1] = spellsKnown[0] / 2;
+        spellsKnown[2] = spellsKnown[0] / 2;
+      } else if (level >= 5 && level <= 6) {
+        spellsKnown[1] = spellsKnown[0] / 3;
+        spellsKnown[2] = spellsKnown[0] / 3;
+        spellsKnown[3] = spellsKnown[0] / 3;
+      } else if (level >= 7 && level <= 8) {
+        spellsKnown[1] = spellsKnown[0] / 4;
+        spellsKnown[2] = spellsKnown[0] / 4;
+        spellsKnown[3] = spellsKnown[0] / 4;
+        spellsKnown[4] = spellsKnown[0] / 4;
+      } else if (level >= 9 && level <= 10) {
+        spellsKnown[1] = spellsKnown[0] / 5;
+        spellsKnown[2] = spellsKnown[0] / 5;
+        spellsKnown[3] = spellsKnown[0] / 5;
+        spellsKnown[4] = spellsKnown[0] / 5;
+        spellsKnown[5] = spellsKnown[0] / 5;
+      } else if (level >= 11 && level <= 12) {
+        spellsKnown[1] = spellsKnown[0] / 6;
+        spellsKnown[2] = spellsKnown[0] / 6;
+        spellsKnown[3] = spellsKnown[0] / 6;
+        spellsKnown[4] = spellsKnown[0] / 6;
+        spellsKnown[5] = spellsKnown[0] / 6;
+        spellsKnown[6] = spellsKnown[0] / 6;
+      } else if (level >= 13 && level <= 14) {
+        spellsKnown[1] = spellsKnown[0] / 7;
+        spellsKnown[2] = spellsKnown[0] / 7;
+        spellsKnown[3] = spellsKnown[0] / 7;
+        spellsKnown[4] = spellsKnown[0] / 7;
+        spellsKnown[5] = spellsKnown[0] / 7;
+        spellsKnown[6] = spellsKnown[0] / 7;
+        spellsKnown[7] = spellsKnown[0] / 7;
+      } else if (level >= 15 && level <= 16) {
+        spellsKnown[1] = spellsKnown[0] / 8;
+        spellsKnown[2] = spellsKnown[0] / 8;
+        spellsKnown[3] = spellsKnown[0] / 8;
+        spellsKnown[4] = spellsKnown[0] / 8;
+        spellsKnown[5] = spellsKnown[0] / 8;
+        spellsKnown[6] = spellsKnown[0] / 8;
+        spellsKnown[7] = spellsKnown[0] / 8;
+        spellsKnown[8] = spellsKnown[0] / 8;
+      } else {
+        spellsKnown[1] = spellsKnown[0] / 9;
+        spellsKnown[2] = spellsKnown[0] / 9;
+        spellsKnown[3] = spellsKnown[0] / 9;
+        spellsKnown[4] = spellsKnown[0] / 9;
+        spellsKnown[5] = spellsKnown[0] / 9;
+        spellsKnown[6] = spellsKnown[0] / 9;
+        spellsKnown[7] = spellsKnown[0] / 9;
+        spellsKnown[8] = spellsKnown[0] / 9;
+        spellsKnown[9] = spellsKnown[0] / 9;
+      }
+      for (var i = spellsKnown[1]; i > 0; i--) {
         index = Math.floor(Math.random() * spellsBard[1].length);
+        while (spellsBard[1][index] == "e")
+          index = Math.floor(Math.random() * spellsBard[1].length);
         spellsChosen += spellsBard[1][index] + "<br>";
+        spellsBard[1][index] = "e";
+      }
+      if (spellsKnown[2] !== 0) {
+        for (var i = spellsKnown[2]; i > 0; i--) {
+          index = Math.floor(Math.random() * spellsBard[2].length);
+          while (spellsBard[2][index] == "e")
+            index = Math.floor(Math.random() * spellsBard[2].length);
+          spellsChosen += spellsBard[2][index] + "<br>";
+          spellsBard[2][index] = "e";
+        }
+      }
+      if (spellsKnown[3] !== 0) {
+        for (var i = spellsKnown[3]; i > 0; i--) {
+          index = Math.floor(Math.random() * spellsBard[3].length);
+          while (spellsBard[3][index] == "e")
+            index = Math.floor(Math.random() * spellsBard[3].length);
+          spellsChosen += spellsBard[3][index] + "<br>";
+          spellsBard[3][index] = "e";
+        }
+      }    
+      if (spellsKnown[4] !== 0) {
+        for (var i = spellsKnown[4]; i > 0; i--) {
+          index = Math.floor(Math.random() * spellsBard[4].length);
+          while (spellsBard[4][index] == "e")
+            index = Math.floor(Math.random() * spellsBard[4].length);
+          spellsChosen += spellsBard[4][index] + "<br>";
+          spellsBard[4][index] = "e";
+        }
+      }
+      if (spellsKnown[5] !== 0) {
+        for (var i = spellsKnown[5]; i > 0; i--) {
+          index = Math.floor(Math.random() * spellsBard[5].length);
+          while (spellsBard[5][index] == "e")
+            index = Math.floor(Math.random() * spellsBard[5].length);
+          spellsChosen += spellsBard[5][index] + "<br>";
+          spellsBard[5][index] = "e";
+        }
+      }
+      if (spellsKnown[6] !== 0) {
+        for (var i = spellsKnown[6]; i > 0; i--) {
+          index = Math.floor(Math.random() * spellsBard[6].length);
+          while (spellsBard[6][index] == "e")
+            index = Math.floor(Math.random() * spellsBard[6].length);
+          spellsChosen += spellsBard[6][index] + "<br>";
+          spellsBard[6][index] = "e";
+        }
+      }
+      if (spellsKnown[7] !== 0) {
+        for (var i = spellsKnown[7]; i > 0; i--) {
+          index = Math.floor(Math.random() * spellsBard[7].length);
+          while (spellsBard[7][index] == "e")
+            index = Math.floor(Math.random() * spellsBard[7].length);
+          spellsChosen += spellsBard[7][index] + "<br>";
+          spellsBard[7][index] = "e";
+        }
+      }
+      if (spellsKnown[8] !== 0) {
+        for (var i = spellsKnown[8]; i > 0; i--) {
+          index = Math.floor(Math.random() * spellsBard[8].length);
+          while (spellsBard[8][index] == "e")
+            index = Math.floor(Math.random() * spellsBard[8].length);
+          spellsChosen += spellsBard[8][index] + "<br>";
+          spellsBard[8][index] = "e";
+        }
+      }
+      if (spellsKnown[9] !== 0) {
+        for (var i = spellsKnown[9]; i > 0; i--) {
+          index = Math.floor(Math.random() * spellsBard[9].length);
+          while (spellsBard[9][index] == "e")
+            index = Math.floor(Math.random() * spellsBard[9].length);
+          spellsChosen += spellsBard[9][index] + "<br>";
+          spellsBard[9][index] = "e";
+        }
       }
       switch (subclass) {
         case "College of Lore ":
@@ -3910,6 +4674,10 @@ function setSpells() {
       }
       break;
     case "Cleric":
+      var clericSpells = [
+        /*Cantrips*/[spells[166][1], spells[202][1], spells[224][1], spells[278][1], spells[283][1], spells[304][1], spells[328][1]],
+        /*Level One*/[spells[23][1], spells[33]]
+      ];
       switch (subclass) {
         case "Knowledge Domain ":
 
