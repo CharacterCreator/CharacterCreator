@@ -109,7 +109,7 @@ var instruments = ["Bagpipes", "Drum (s)", "Dulcimer (s)", "Flute (s)", "Lute (s
 var equipment = [["Name", "Quantity"]];
 
 //For setLevel
-var level = 9;
+var level = 1;
 var profBonus = 2;
 
 //For setSubclass
@@ -568,7 +568,7 @@ var spells = [
 
   [219, "Mass Healing Word"],
 
-  [220, "Mass Sugestion"],
+  [220, "Mass Suggestion"],
 
   [221, "Maze"],
 
@@ -3765,6 +3765,104 @@ function displaySkills() {
   return "<b>Saving Throws</b></br>" + saveDisplay + "<b>Skills</b></br>" + skillDisplay;
 }
 
+function addEquipment(item, quantity) {
+  if (quantity == 0) {
+    switch (item) {
+      case "Burglar's Pack":
+        addEquipment(adventuringGear[13], 1);
+        addEquipment(adventuringGear[14], 1000);
+        addEquipment("feet of String", 10);
+        addEquipment(adventuringGear[18], 1);
+        addEquipment(adventuringGear[24], 5);
+        addEquipment(adventuringGear[35], 1);
+        addEquipment(adventuringGear[43], 1);
+        addEquipment(adventuringGear[74], 10);
+        addEquipment(adventuringGear[64], 1);
+        addEquipment(adventuringGear[69], 2);
+        addEquipment(adventuringGear[82], 5);
+        addEquipment(adventuringGear[97], 1);
+        addEquipment(adventuringGear[100], 1);
+        addEquipment(adventuringGear[84], 50);
+        break;
+      case "Diplomat's Pack":
+        addEquipment(adventuringGear[29], 1);
+        addEquipment(adventuringGear[26], 2);
+        addEquipment(adventuringGear[32], 1);
+        addEquipment(adventuringGear[51], 1);
+        addEquipment(adventuringGear[52], 1);
+        addEquipment(adventuringGear[62], 1);
+        addEquipment(adventuringGear[69], 2);
+        addEquipment(adventuringGear[70], 5);
+        addEquipment(adventuringGear[72], 1);
+        addEquipment(adventuringGear[88], 1);
+        addEquipment(adventuringGear[92], 1);
+        break;
+      case "Dungeoneer's Pack":
+        addEquipment(adventuringGear[13], 1);
+        addEquipment(adventuringGear[35], 1);
+        addEquipment(adventuringGear[43], 1);
+        addEquipment(adventuringGear[74], 10);
+        addEquipment(adventuringGear[98], 10);
+        addEquipment(adventuringGear[97], 1);
+        addEquipment(adventuringGear[82], 10);
+        addEquipment(adventuringGear[100], 1);
+        addEquipment(adventuringGear[84], 50);
+        break;
+      case "Entertainer's Pack":
+        addEquipment(adventuringGear[13], 1);
+        addEquipment(adventuringGear[17], 1);
+        addEquipment(adventuringGear[31], 2);
+        addEquipment(adventuringGear[24], 5);
+        addEquipment(adventuringGear[82], 5);
+        addEquipment(adventuringGear[100], 1);
+        addEquipment(artisansTools[7], 1);
+        break;
+      case "Explorer's Pack":
+        addEquipment(adventuringGear[13], 1);
+        addEquipment(adventuringGear[17], 1);
+        addEquipment(adventuringGear[59], 1);
+        addEquipment(adventuringGear[97], 1);
+        addEquipment(adventuringGear[98], 10);
+        addEquipment(adventuringGear[82], 10);
+        addEquipment(adventuringGear[100], 1);
+        addEquipment(adventuringGear[84], 50);
+        break;
+      case "Priest's Pack":
+        addEquipment(adventuringGear[13], 1);
+        addEquipment(adventuringGear[19], 1);
+        addEquipment(adventuringGear[24], 10);
+        addEquipment(adventuringGear[97], 1);
+        addEquipment("Alms Box (es)", 1);
+        addEquipment("Block (s) of Incense", 2);
+        addEquipment("Censer (s)", 1);
+        addEquipment("Vestments", 1);
+        addEquipment(adventuringGear[82], 2);
+        addEquipment(adventuringGear[100], 1);
+        break;
+      case "Scholar's Pack":
+        addEquipment(adventuringGear[13], 1);
+        addEquipment("Book (s) of Lore", 1);
+        addEquipment(adventuringGear[51], 1);
+        addEquipment(adventuringGear[52], 1);
+        addEquipment(adventuringGear[71], 1);
+        break;
+    }
+  }
+  else {
+    if (item.includes("(")) {
+      if (quantity == 1) {
+        if (item.charAt(item.indexOf("(") - 1) == ' ')
+          item = item.substring(0, item.indexOf("(") - 1) + item.substring(item.indexOf(")") + 1);
+        else
+          item = item.substring(0, item.indexOf("(")) + item.substring(item.indexOf(")") + 1);
+      }
+      else
+        item = item.substring(0, item.indexOf("(") - 1) + item.substring(item.indexOf("(") + 1, item.indexOf(")")) + item.substring(item.indexOf(")") + 1);
+    }
+    equipment.push([item, quantity]);
+  }
+}
+
 function setEquipment() {
     switch (classChoice) {
       case "Barbarian":
@@ -4366,42 +4464,135 @@ function setEquipment() {
     }
     switch (backgroundSelect) {
       case "Acolyte":
+        var item = Math.floor(Math.random() * 3);
+        switch (item) {
+          case 0:
+            addEquipment(adventuringGear[45], 1);
+            break;
+          case 1:
+            addEquipment(adventuringGear[46], 1);
+            break;
+          case 2:
+            addEquipment(adventuringGear[47], 1);
+            break;
+        }
+        item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment("Prayer Book (s)", 1);
+            break;
+          case 1:
+            addEquipment("Prayer Wheel (s)", 1);
+            break;
+        }
+        addEquipment("Stick (s) of Incense", 5);
+        addEquipment("Vestments", 1);
+        addEquipment(adventuringGear[30], 1);
+        //15 gp
         break;
       case "Charlatan":
+        addEquipment(adventuringGear[32], 1);
+        addEquipment(artisansTools[7], 1);
+        //15 gp
         break;
       case "Criminal":
+        addEquipment(adventuringGear[35], 1);
+        addEquipment(adventuringGear[30], 1);
+        //15 gp
         break;
       case "Entertainer":
+        addEquipment(instruments[Math.floor(Math.random() * instruments.length)], 1);
+        addEquipment(adventuringGear[31], 1);
+        //15 gp
         break;
       case "Folk Hero":
+        addEquipment(artisansTools[Math.floor(Math.random() * artisansTools.length)], 1);
+        addEquipment(adventuringGear[89], 1);
+        addEquipment(adventuringGear[77], 1);
+        addEquipment(adventuringGear[30], 1);
+        //10 gp
         break;
       case "Gladiator":
+        addEquipment(instruments[Math.floor(Math.random() * instruments.length)], 1);
+        addEquipment(adventuringGear[31], 1);
+        //15 gp
         break;
       case "Guild Artisan":
+        addEquipment(artisansTools[Math.floor(Math.random() * artisansTools.length)], 1);
+        addEquipment(adventuringGear[33], 1);
+        //15 gp
         break;
       case "Guild Merchant":
+        addEquipment(artisansTools[Math.floor(Math.random() * artisansTools.length)], 1);
+        addEquipment(adventuringGear[33], 1);
+        //15 gp
         break;
       case "Hermit":
+        addEquipment(adventuringGear[26], 1);
+        addEquipment(adventuringGear[19], 1);
+        addEquipment(adventuringGear[30], 1);
+        addEquipment(artisansTools[57], 1);
+        //5 gp
         break;
       case "Knight":
+        addEquipment(adventuringGear[32], 1);
+        addEquipment(adventuringGear[91], 1);
+        //25 gp
         break;
       case "Noble":
+        addEquipment(adventuringGear[32], 1);
+        addEquipment(adventuringGear[91], 1);
+        //25 gp
         break;
       case "Outlander":
+        addEquipment(adventuringGear[11], 1);
+        addEquipment(adventuringGear[50], 1);
+        addEquipment(adventuringGear[33], 1);
+        //10 gp
         break;
       case "Pirate":
+        addEquipment(adventuringGear[85], 50);
+        addEquipment(adventuringGear[30], 1);
+        //10 gp
         break;
       case "Sage":
+        addEquipment(adventuringGear[51], 1);
+        addEquipment("Quill (s)", 1);
+        addEquipment("Small Knife", 1);
+        addEquipment(adventuringGear[30], 1);
         break;
       case "Sailor":
+        addEquipment(adventuringGear[85], 50);
+        addEquipment(adventuringGear[30], 1);
+        //10 gp
         break;
       case "Soldier":
+        var item = Math.floor(Math.random() * 2);
+        switch (item) {
+          case 0:
+            addEquipment(gamingSets[0], 1);
+            break;
+          case 1:
+            addEquipment(gamingSets[2], 1);
+            break;
+        }
+        addEquipment(adventuringGear[30], 1);
+        //10 gp
         break;
       case "Spy":
+        addEquipment(adventuringGear[35], 1);
+        addEquipment(adventuringGear[30], 1);
+        //15 gp
         break;
       case "Urchin":
+        addEquipment("Small Knife", 1);
+        addEquipment("Map (s)", 1);
+        addEquipment("Pet Mouse", 1);
+        addEquipment(adventuringGear[30], 1);
+        //10 gp
         break;
     }
+    return equipment;
 }
 
 function setFeatures() {
@@ -4503,11 +4694,11 @@ function setSpells() {
         /*Level Two*/[spells[5][1], spells[36][1], spells[42][1], spells[51][1], spells[82][1], spells[96][1], spells[115][1], spells[119][1], spells[176][1], spells[182][1], spells[194][1], spells[196][1], spells[200][1], spells[205][1], spells[207][1], spells[214][1], spells[247][1], spells[288][1], spells[293][1], spells[298][1], spells[317][1], spells[360][1]],
         /*Level Three*/[spells[29][1], spells[49][1], spells[101][1], spells[127][1], spells[130][1], spells[158][1], spells[186][1], spells[199][1], spells[216][1], spells[240][1], spells[253][1], spells[290][1], spells[306][1], spells[307][1], spells[313][1], spells[333][1]],
         /*Level Four*/[spells[59][1], spells[61][1], spells[97][1], spells[149][1], spells[162][1], spells[171][1], spells[206][1], spells[255][1]],
-        /*Level Five*/[],
-        /*Level Six*/[],
-        /*Level Seven*/[],
-        /*Level Eight*/[],
-        /*Level Nine*/[]
+        /*Level Five*/[spells[8][1], spells[22][1], spells[108][1], spells[110][1], spells[153][1], spells[163][1], spells[181][1], spells[197][1], spells[217][1], spells[231][1], spells[233][1], spells[251][1], spells[270][1], spells[286][1], spells[289][1], spells[326][1]],
+        /*Level Six*/[spells[123][1], spells[133][1], spells[165][1], spells[220][1], spells[244][1], spells[264][1], spells[338][1]],
+        /*Level Seven*/[spells[120][1], spells[147][1], spells[229][1], spells[236][1], spells[238][1], spells[265][1], spells[275][1], spells[279][1], spells[321][1], spells[325][1]],
+        /*Level Eight*/[spells[107][1], spells[129][1], spells[156][1], spells[227][1], spells[258][1]],
+        /*Level Nine*/[spells[148][1], spells[256][1], spells[257][1], spells[336][1]]
       ];
       /*Selects Cantrips*/
       if (level >= 1 && level <= 3)
@@ -4530,8 +4721,9 @@ function setSpells() {
         spellsKnown[0] = level + 4;
       else
         spellsKnown[0] = 22;
+        /*Fix spell distribution*/
       if (level >= 1 && level <= 2) {
-        spellsKnown[1] = spellsKnown[0]
+        spellsKnown[1] = spellsKnown[0];
       } else if (level >= 3 && level <= 4) {
         spellsKnown[1] = spellsKnown[0] / 2;
         spellsKnown[2] = spellsKnown[0] / 2;
@@ -4609,7 +4801,7 @@ function setSpells() {
           spellsChosen += spellsBard[3][index] + "<br>";
           spellsBard[3][index] = "e";
         }
-      }    
+      }
       if (spellsKnown[4] !== 0) {
         for (var i = spellsKnown[4]; i > 0; i--) {
           index = Math.floor(Math.random() * spellsBard[4].length);
@@ -4665,11 +4857,13 @@ function setSpells() {
         }
       }
       switch (subclass) {
-        case "College of Lore ":
-
-          break;
-        case "College of Valor ":
-
+        case "College of Lore Bard":
+          if (level >= 6) {
+            for (var i = 0; i <= 2; i++) {
+              index = Math.floor(Math.random() * spells.length);
+              spellsChosen += spells[index][1] + "<br>";
+            }
+          }
           break;
       }
       break;
