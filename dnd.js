@@ -4592,7 +4592,10 @@ function setEquipment() {
         //10 gp
         break;
     }
-    return equipment;
+    eq = "";
+    for (var e = 0; e < equipment.length; e++)
+      eq += equipment[e][1] + " " + equipment[e][0];
+    return eq;
 }
 
 function setFeatures() {
