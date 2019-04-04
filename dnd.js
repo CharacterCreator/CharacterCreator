@@ -5104,6 +5104,7 @@ function getCharacter() {
         document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice) + "</br>" + sethealth() + "</br>" + setSpeed();
         document.getElementById("consoleProficiencies").innerHTML = displayProficiencies();
         document.getElementById("consoleSkills").innerHTML = displaySkills();
+        document.getElementById("consoleEquipment").innerHTML = setEquipment();
         document.getElementById("consoleSpells").innerHTML = setSpells();
 }
 
