@@ -71,11 +71,11 @@ var instrumentProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 /*For setEquipment*/
 //0:Abacus, 1:Acid (vial), 2:Alchemist's Fire (flask), 3:Arrow, 4:Blowgun Needle, 5:Crossbow Bolt, 6:Sling Bullet, 7:Antitoxin (vial), 8:Crystal, 9:Orb, 10:Rod, 11:Staff, 12:Wand, 13:Backpack, 14:Ball Bearing, 15:Barrel, 16:Basket, 17:Bedroll, 18:Bell,
-//19:Blanket, 20:Block and Tackle, Book, 21:Bottle (glass), 22:Bucket, 23:Caltrops, 24:Candle, 25:Case (crossbow bolt), 26: Case (map or scroll), 27:Chain, 28:Chalk, 29:Chest, 30:Clothes (common), 31:Clothes (costume), 32:Clothes (fine), 33:Clothes (traveler's),
-//34:Component Pouch, 35:Crowbar, 36:Sprig of Mistletoe, 37:Totem, 38:Wooden Staff, 39:Yew Wand, 40:Fishing Tackle, 41:Flask, 42:Grappling Hook, 43:Hammer, 44:Sledge Hammer, 45:Amulet, 46:Emblem, 47:Reliquary, 48:Holy Water (flask), 49:Hourglass, 50:Hunting Trap,
-//51:Ink (bottle), 52:Ink Pen, 53:Pitcher, 54:Climber's Kit, 55:Disguise Kit, 56:Forgery Kit, 57:Herbalism Kit, 58:Healer's Kit, 59:Mess Kit, 60:Poisoner's Kit, 61:Ladder, 62:Lamp, 63:Lantern (bullseye), 64:Lantern (hooded), 65:Lock, 66:Magnifying Glass,
-//67:Manacles, 68:Steel Mirror, 69:Oil (flask), 70:Paper (sheet), 71:Parchment (sheet), 72:Perfume (vial), 73:Pick (miner's), 74:Piton, 75:Basic Posion (vial), 76:Pole, 77:Pot (iron), 78:Potion of Healing, 79:Pouch, 80:Quiver, 81:Ram (portable), 82:Rations,
-//83:Robe, 84:Rope (hempen), 85:Rope (silk), 86:Sack, 87:Merchant's Scale, 88:Sealing Wax, 89:Shovel, 90:Signal Whistle, 91:Signet Ring, 92:Soap, 93:Spellbook, 94:Spike (iron), 95:Spyglass, 96:Tent (two-person), 97:Tinderbox, 98:Torch, 99:Vial, 100:Waterskin, 101:Whetstone
+//19:Blanket, 20:Block and Tackle, 21:Book, 22:Bottle (glass), 23:Bucket, 24:Caltrops, 25:Candle, 26:Case (crossbow bolt), 27: Case (map or scroll), 28:Chain, 29:Chalk, 30:Chest, 31:Clothes (common), 32:Clothes (costume), 33:Clothes (fine), 34:Clothes (traveler's),
+//35:Component Pouch, 36:Crowbar, 37:Sprig of Mistletoe, 38:Totem, 39:Wooden Staff, 40:Yew Wand, 41:Fishing Tackle, 42:Flask, 43:Grappling Hook, 44:Hammer, 45:Sledge Hammer, 46:Amulet, 47:Emblem, 48:Reliquary, 49:Holy Water (flask), 50:Hourglass, 51:Hunting Trap,
+//52:Ink (bottle), 53:Ink Pen, 54:Pitcher, 55:Climber's Kit, 56:Disguise Kit, 57:Forgery Kit, 58:Herbalism Kit, 59:Healer's Kit, 60:Mess Kit, 61:Poisoner's Kit, 62:Ladder, 63:Lamp, 64:Lantern (bullseye), 65:Lantern (hooded), 66:Lock, 67:Magnifying Glass,
+//68:Manacles, 69:Steel Mirror, 70:Oil (flask), 71:Paper (sheet), 72:Parchment (sheet), 73:Perfume (vial), 74:Pick (miner's), 75:Piton, 76:Basic Posion (vial), 77:Pole, 78:Pot (iron), 79:Potion of Healing, 80:Pouch, 81:Quiver, 82:Ram (portable), 83:Rations,
+//84:Robe, 85:Rope (hempen), 86:Rope (silk), 87:Sack, 88:Merchant's Scale, 89:Sealing Wax, 90:Shovel, 91:Signal Whistle, 92:Signet Ring, 93:Soap, 94:Spellbook, 95:Spike (iron), 96:Spyglass, 97:Tent (two-person), 98:Tinderbox, 99:Torch, 100:Vial, 101:Waterskin, 102:Whetstone
 var adventuringGear = ["Abacus (es)", "Vial (s) of Acid", "Flask (s) of Alchemist's Fire", "Arrow (s)", "Blowgun Needle (s)", "Crossbow Bolt (s)", "Sling Bullet (s)", "Vial (s) of Antitoxin", "Crystal (s)", "Orb (s)", "Rod (s)", "Staff (s)", "Wand (s)", "Backpack (s)", "Ball Bearing (s)",
                       "Barrel (s)", "Basket (s)", "Bedroll (s)", "Bell (s)", "Blanket (s)", "Block (s) and Tackle (s)", "Book (s)", "Glass Bottle (s)", "Bucket (s)", "Caltrop (s)", "Candle (s)", "Crossbow Bolt Case (s)", "Scroll Case (s)", "feet of Chain", "piece (s) of Chalk",
                       "Chest (s)", "set (s) of Common Clothes", "Costume (s)", "set (s) of Fine Clothes", "set (s) of Traveler's Clothes", "Component Pouch (es)", "Crowbar (s)", "Sprig (s) of Mistletoe", "Totem (s)", "Wooden Staff (s)", "Yew Wand (s)", "Fishing Tackle (s)",
@@ -3773,78 +3773,78 @@ function addEquipment(item, quantity) {
         addEquipment(adventuringGear[14], 1000);
         addEquipment("feet of String", 10);
         addEquipment(adventuringGear[18], 1);
-        addEquipment(adventuringGear[24], 5);
-        addEquipment(adventuringGear[35], 1);
-        addEquipment(adventuringGear[43], 1);
-        addEquipment(adventuringGear[74], 10);
-        addEquipment(adventuringGear[64], 1);
-        addEquipment(adventuringGear[69], 2);
-        addEquipment(adventuringGear[82], 5);
-        addEquipment(adventuringGear[97], 1);
-        addEquipment(adventuringGear[100], 1);
-        addEquipment(adventuringGear[84], 50);
+        addEquipment(adventuringGear[25], 5);
+        addEquipment(adventuringGear[36], 1);
+        addEquipment(adventuringGear[44], 1);
+        addEquipment(adventuringGear[75], 10);
+        addEquipment(adventuringGear[65], 1);
+        addEquipment(adventuringGear[70], 2);
+        addEquipment(adventuringGear[83], 5);
+        addEquipment(adventuringGear[98], 1);
+        addEquipment(adventuringGear[101], 1);
+        addEquipment(adventuringGear[85], 50);
         break;
       case "Diplomat's Pack":
-        addEquipment(adventuringGear[29], 1);
-        addEquipment(adventuringGear[26], 2);
-        addEquipment(adventuringGear[32], 1);
-        addEquipment(adventuringGear[51], 1);
+        addEquipment(adventuringGear[30], 1);
+        addEquipment(adventuringGear[27], 2);
+        addEquipment(adventuringGear[33], 1);
         addEquipment(adventuringGear[52], 1);
-        addEquipment(adventuringGear[62], 1);
-        addEquipment(adventuringGear[69], 2);
-        addEquipment(adventuringGear[70], 5);
-        addEquipment(adventuringGear[72], 1);
-        addEquipment(adventuringGear[88], 1);
-        addEquipment(adventuringGear[92], 1);
+        addEquipment(adventuringGear[53], 1);
+        addEquipment(adventuringGear[63], 1);
+        addEquipment(adventuringGear[70], 2);
+        addEquipment(adventuringGear[71], 5);
+        addEquipment(adventuringGear[73], 1);
+        addEquipment(adventuringGear[89], 1);
+        addEquipment(adventuringGear[93], 1);
         break;
       case "Dungeoneer's Pack":
         addEquipment(adventuringGear[13], 1);
-        addEquipment(adventuringGear[35], 1);
-        addEquipment(adventuringGear[43], 1);
-        addEquipment(adventuringGear[74], 10);
-        addEquipment(adventuringGear[98], 10);
-        addEquipment(adventuringGear[97], 1);
-        addEquipment(adventuringGear[82], 10);
-        addEquipment(adventuringGear[100], 1);
-        addEquipment(adventuringGear[84], 50);
+        addEquipment(adventuringGear[36], 1);
+        addEquipment(adventuringGear[44], 1);
+        addEquipment(adventuringGear[75], 10);
+        addEquipment(adventuringGear[99], 10);
+        addEquipment(adventuringGear[98], 1);
+        addEquipment(adventuringGear[83], 10);
+        addEquipment(adventuringGear[101], 1);
+        addEquipment(adventuringGear[85], 50);
         break;
       case "Entertainer's Pack":
         addEquipment(adventuringGear[13], 1);
         addEquipment(adventuringGear[17], 1);
-        addEquipment(adventuringGear[31], 2);
-        addEquipment(adventuringGear[24], 5);
-        addEquipment(adventuringGear[82], 5);
-        addEquipment(adventuringGear[100], 1);
+        addEquipment(adventuringGear[32], 2);
+        addEquipment(adventuringGear[25], 5);
+        addEquipment(adventuringGear[83], 5);
+        addEquipment(adventuringGear[101], 1);
         addEquipment(artisansTools[7], 1);
         break;
       case "Explorer's Pack":
         addEquipment(adventuringGear[13], 1);
         addEquipment(adventuringGear[17], 1);
-        addEquipment(adventuringGear[59], 1);
-        addEquipment(adventuringGear[97], 1);
-        addEquipment(adventuringGear[98], 10);
-        addEquipment(adventuringGear[82], 10);
-        addEquipment(adventuringGear[100], 1);
-        addEquipment(adventuringGear[84], 50);
+        addEquipment(adventuringGear[60], 1);
+        addEquipment(adventuringGear[98], 1);
+        addEquipment(adventuringGear[99], 10);
+        addEquipment(adventuringGear[83], 10);
+        addEquipment(adventuringGear[101], 1);
+        addEquipment(adventuringGear[85], 50);
         break;
       case "Priest's Pack":
         addEquipment(adventuringGear[13], 1);
         addEquipment(adventuringGear[19], 1);
-        addEquipment(adventuringGear[24], 10);
-        addEquipment(adventuringGear[97], 1);
+        addEquipment(adventuringGear[25], 10);
+        addEquipment(adventuringGear[98], 1);
         addEquipment("Alms Box (es)", 1);
         addEquipment("Block (s) of Incense", 2);
         addEquipment("Censer (s)", 1);
         addEquipment("Vestments", 1);
-        addEquipment(adventuringGear[82], 2);
-        addEquipment(adventuringGear[100], 1);
+        addEquipment(adventuringGear[83], 2);
+        addEquipment(adventuringGear[101], 1);
         break;
       case "Scholar's Pack":
         addEquipment(adventuringGear[13], 1);
         addEquipment("Book (s) of Lore", 1);
-        addEquipment(adventuringGear[51], 1);
         addEquipment(adventuringGear[52], 1);
-        addEquipment(adventuringGear[71], 1);
+        addEquipment(adventuringGear[53], 1);
+        addEquipment(adventuringGear[72], 1);
         break;
     }
   }
@@ -4004,13 +4004,13 @@ function setEquipment() {
           item = Math.floor(Math.random() * 3);
           switch (item) {
             case 0:
-              addEquipment(adventuringGear[45], 1);
-              break;
-            case 1:
               addEquipment(adventuringGear[46], 1);
               break;
-            case 2:
+            case 1:
               addEquipment(adventuringGear[47], 1);
+              break;
+            case 2:
+              addEquipment(adventuringGear[48], 1);
               break;
           }
           addEquipment(armor[12], 1);
@@ -4044,20 +4044,20 @@ function setEquipment() {
             break;
         }
         addEquipment(armor[1], 1);
-        addEquipment("Exlorer's Pack", 0);
+        addEquipment("Explorer's Pack", 0);
         item = Math.floor(Math.random() * 4);
         switch (item) {
           case 0:
-            addEquipment(adventuringGear[36], 1);
-            break;
-          case 1:
             addEquipment(adventuringGear[37], 1);
             break;
-          case 2:
+          case 1:
             addEquipment(adventuringGear[38], 1);
             break;
-          case 3:
+          case 2:
             addEquipment(adventuringGear[39], 1);
+            break;
+          case 3:
+            addEquipment(adventuringGear[40], 1);
             break;
         }
         break;
@@ -4215,13 +4215,13 @@ function setEquipment() {
         item = Math.floor(Math.random() * 3);
         switch (item) {
           case 0:
-            addEquipment(adventuringGear[45], 1);
-            break;
-          case 1:
             addEquipment(adventuringGear[46], 1);
             break;
-          case 2:
+          case 1:
             addEquipment(adventuringGear[47], 1);
+            break;
+          case 2:
+            addEquipment(adventuringGear[48], 1);
             break;
         }
         break;
@@ -4270,7 +4270,7 @@ function setEquipment() {
         switch (item) {
           case 0:
             addEquipment(simpleRangedWeapons[2], 1);
-            addEquipment(adventuringGear[80], 1);
+            addEquipment(adventuringGear[81], 1);
             addEquipment(adventuringGear[3], 20);
             break;
           case 1:
@@ -4314,7 +4314,7 @@ function setEquipment() {
         item = Math.floor(Math.random() * 2);
         switch (item) {
           case 0:
-            addEquipment(adventuringGear[34], 1);
+            addEquipment(adventuringGear[35], 1);
             break;
           case 1:
             var choice = Math.floor(Math.random() * 5);
@@ -4370,7 +4370,7 @@ function setEquipment() {
         item = Math.floor(Math.random() * 2);
         switch (item) {
           case 0:
-            addEquipment(adventuringGear[34], 1);
+            addEquipment(adventuringGear[35], 1);
             break;
           case 1:
             var choice = Math.floor(Math.random() * 5);
@@ -4427,7 +4427,7 @@ function setEquipment() {
         item = Math.floor(Math.random() * 2);
         switch (item) {
           case 0:
-            addEquipment(adventuringGear[34], 1);
+            addEquipment(adventuringGear[35], 1);
             break;
           case 1:
             var choice = Math.floor(Math.random() * 5);
@@ -4459,7 +4459,7 @@ function setEquipment() {
             addEquipment("Explorer's Pack", 0);
             break;
         }
-        addEquipment(adventuringGear[93], 1);
+        addEquipment(adventuringGear[94], 1);
         break;
     }
     switch (backgroundSelect) {
@@ -4467,13 +4467,13 @@ function setEquipment() {
         var item = Math.floor(Math.random() * 3);
         switch (item) {
           case 0:
-            addEquipment(adventuringGear[45], 1);
-            break;
-          case 1:
             addEquipment(adventuringGear[46], 1);
             break;
-          case 2:
+          case 1:
             addEquipment(adventuringGear[47], 1);
+            break;
+          case 2:
+            addEquipment(adventuringGear[48], 1);
             break;
         }
         item = Math.floor(Math.random() * 2);
@@ -4487,83 +4487,83 @@ function setEquipment() {
         }
         addEquipment("Stick (s) of Incense", 5);
         addEquipment("Vestments", 1);
-        addEquipment(adventuringGear[30], 1);
+        addEquipment(adventuringGear[31], 1);
         //15 gp
         break;
       case "Charlatan":
-        addEquipment(adventuringGear[32], 1);
+        addEquipment(adventuringGear[33], 1);
         addEquipment(artisansTools[7], 1);
         //15 gp
         break;
       case "Criminal":
-        addEquipment(adventuringGear[35], 1);
-        addEquipment(adventuringGear[30], 1);
+        addEquipment(adventuringGear[36], 1);
+        addEquipment(adventuringGear[31], 1);
         //15 gp
         break;
       case "Entertainer":
         addEquipment(instruments[Math.floor(Math.random() * instruments.length)], 1);
-        addEquipment(adventuringGear[31], 1);
+        addEquipment(adventuringGear[32], 1);
         //15 gp
         break;
       case "Folk Hero":
         addEquipment(artisansTools[Math.floor(Math.random() * artisansTools.length)], 1);
-        addEquipment(adventuringGear[89], 1);
-        addEquipment(adventuringGear[77], 1);
-        addEquipment(adventuringGear[30], 1);
+        addEquipment(adventuringGear[90], 1);
+        addEquipment(adventuringGear[78], 1);
+        addEquipment(adventuringGear[31], 1);
         //10 gp
         break;
       case "Gladiator":
         addEquipment(instruments[Math.floor(Math.random() * instruments.length)], 1);
-        addEquipment(adventuringGear[31], 1);
+        addEquipment(adventuringGear[32], 1);
         //15 gp
         break;
       case "Guild Artisan":
         addEquipment(artisansTools[Math.floor(Math.random() * artisansTools.length)], 1);
-        addEquipment(adventuringGear[33], 1);
+        addEquipment(adventuringGear[34], 1);
         //15 gp
         break;
       case "Guild Merchant":
         addEquipment(artisansTools[Math.floor(Math.random() * artisansTools.length)], 1);
-        addEquipment(adventuringGear[33], 1);
+        addEquipment(adventuringGear[34], 1);
         //15 gp
         break;
       case "Hermit":
-        addEquipment(adventuringGear[26], 1);
+        addEquipment(adventuringGear[27], 1);
         addEquipment(adventuringGear[19], 1);
-        addEquipment(adventuringGear[30], 1);
+        addEquipment(adventuringGear[31], 1);
         addEquipment(artisansTools[57], 1);
         //5 gp
         break;
       case "Knight":
-        addEquipment(adventuringGear[32], 1);
-        addEquipment(adventuringGear[91], 1);
+        addEquipment(adventuringGear[33], 1);
+        addEquipment(adventuringGear[92], 1);
         //25 gp
         break;
       case "Noble":
-        addEquipment(adventuringGear[32], 1);
-        addEquipment(adventuringGear[91], 1);
+        addEquipment(adventuringGear[33], 1);
+        addEquipment(adventuringGear[92], 1);
         //25 gp
         break;
       case "Outlander":
         addEquipment(adventuringGear[11], 1);
-        addEquipment(adventuringGear[50], 1);
-        addEquipment(adventuringGear[33], 1);
+        addEquipment(adventuringGear[51], 1);
+        addEquipment(adventuringGear[34], 1);
         //10 gp
         break;
       case "Pirate":
-        addEquipment(adventuringGear[85], 50);
-        addEquipment(adventuringGear[30], 1);
+        addEquipment(adventuringGear[86], 50);
+        addEquipment(adventuringGear[31], 1);
         //10 gp
         break;
       case "Sage":
-        addEquipment(adventuringGear[51], 1);
+        addEquipment(adventuringGear[52], 1);
         addEquipment("Quill (s)", 1);
         addEquipment("Small Knife", 1);
-        addEquipment(adventuringGear[30], 1);
+        addEquipment(adventuringGear[31], 1);
         break;
       case "Sailor":
-        addEquipment(adventuringGear[85], 50);
-        addEquipment(adventuringGear[30], 1);
+        addEquipment(adventuringGear[86], 50);
+        addEquipment(adventuringGear[31], 1);
         //10 gp
         break;
       case "Soldier":
@@ -4576,25 +4576,25 @@ function setEquipment() {
             addEquipment(gamingSets[2], 1);
             break;
         }
-        addEquipment(adventuringGear[30], 1);
+        addEquipment(adventuringGear[31], 1);
         //10 gp
         break;
       case "Spy":
-        addEquipment(adventuringGear[35], 1);
-        addEquipment(adventuringGear[30], 1);
+        addEquipment(adventuringGear[36], 1);
+        addEquipment(adventuringGear[31], 1);
         //15 gp
         break;
       case "Urchin":
         addEquipment("Small Knife", 1);
         addEquipment("Map (s)", 1);
         addEquipment("Pet Mouse", 1);
-        addEquipment(adventuringGear[30], 1);
+        addEquipment(adventuringGear[31], 1);
         //10 gp
         break;
     }
     eq = "";
-    for (var e = 0; e < equipment.length; e++)
-      eq += equipment[e][1] + " " + equipment[e][0];
+    for (var e = 1; e < equipment.length; e++)
+      eq += equipment[e][1] + " " + equipment[e][0] + "</br>";
     return eq;
 }
 
@@ -5067,6 +5067,8 @@ function getCharacter() {
           gamingProficiencies[e] = 0;
         for (var e = 0; e < instrumentProficiencies.length; e++)
           instrumentProficiencies[e] = 0;
+        for (var e = 1; e < equipment.length; e++)
+          equipment.splice(e);
 
         racePrevious = race;
         subracePrevious = subrace;
