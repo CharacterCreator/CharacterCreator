@@ -4648,10 +4648,10 @@ function setFeatures() {
           //Level 1
           if (level >= 1) {
             if (rages == 100)
-              features += "<b>Rage</b>: PHB pg. 48 </br>    You have unlimited uses of Rage per long rest and you have a +" + rageDamage + " to damage rolls using Strength while raging. </br>";
+              features += "<b>Rage</b>: PHB pg. 48 </br>&nbsp;&nbsp;&nbsp;&nbsp;You have unlimited uses of Rage per long rest and you have a +" + rageDamage + " to damage rolls using Strength while raging. </br>";
             else
-              features += "<b>Rage</b>: PHB pg. 48 </br>    You have " + rages + " uses of Rage per long rest and you have a +" + rageDamage + " to damage rolls using Strength while raging. </br>";
-            features += "<b>Unarmored Defense</b>: PHB pg. 48 </br>    Your armor class is equal to 10 + your Dexterity modifier + your Constitution modifier while you are not wearing armor. </br>";
+              features += "<b>Rage</b>: PHB pg. 48 </br>&nbsp;&nbsp;&nbsp;&nbsp;You have " + rages + " uses of Rage per long rest and you have a +" + rageDamage + " to damage rolls using Strength while raging. </br>";
+            features += "<b>Unarmored Defense</b>: PHB pg. 48 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your armor class is equal to 10 + your Dexterity modifier + your Constitution modifier while you are not wearing armor. </br>";
           }
           break;
         case "Bard":
@@ -4678,9 +4678,9 @@ function setFeatures() {
           //Level 1
           if (level >= 1) {
             if (level < 5)
-              features += "<b>Bardic Inspiration</b>: PHB pg. 53-54 </br>    Your Inspiration die is a " + inspiration + ". You can use this feature " + chaMod + " times per long rest. </br>";
+              features += "<b>Bardic Inspiration</b>: PHB pg. 53-54 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your Inspiration die is a " + inspiration + ". You can use this feature " + chaMod + " times per long rest. </br>";
             else
-              features += "<b>Bardic Inspiration</b>: PHB pg. 53-54 </br>    Your Inspiration die is a " + inspiration + ". You can use this feature " + chaMod + " times per short or long rest. </br>";
+              features += "<b>Bardic Inspiration</b>: PHB pg. 53-54 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your Inspiration die is a " + inspiration + ". You can use this feature " + chaMod + " times per short or long rest. </br>";
           }
           break;
         case "Cleric":
@@ -4688,30 +4688,30 @@ function setFeatures() {
           if (level >= 1) {
             switch (subclass) {
               case "Knowledge Domain Cleric":
-                features += "<b>Blessings of Knowledge</b>: PHB pg. 59 </br>    You are proficient in two skills from: Arcana, History, Nature, or Religion. Your proficiency bonus is doubled for these two skills. </br>";
+                features += "<b>Blessings of Knowledge</b>: PHB pg. 59 </br>&nbsp;&nbsp;&nbsp;&nbsp;You are proficient in two skills from: Arcana, History, Nature, or Religion. Your proficiency bonus is doubled for these two skills. </br>";
                 break;
               case "Life Domain Cleric":
-                features += "<b>Bonus Proficiency</b>: PHB pg. 60 </br>    You are proficient with heavy armor. </br>";
-                features += "<b>Disciple of Life</b>: PHB pg. 60 </br>    Your healing spells heal additional hit points equal to 2 + the spell's level. </br>";
+                features += "<b>Bonus Proficiency</b>: PHB pg. 60 </br>&nbsp;&nbsp;&nbsp;&nbsp;You are proficient with heavy armor. </br>";
+                features += "<b>Disciple of Life</b>: PHB pg. 60 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your healing spells heal additional hit points equal to 2 + the spell's level. </br>";
                 break;
               case "Light Domain Cleric":
-                features += "<b>Bonus Cantrip</b>: PHB pg. 61 </br>    You know the Light cantrip.";
-                features += "<b>Warding Flare</b>: PHB pg. 61 </br>    When a creature within 30 feet of you attacks you, you can use your reaction to impose disadvantage on the attack. You can use this feature " + wisMod + " times per long rest. </br>";
+                features += "<b>Bonus Cantrip</b>: PHB pg. 61 </br>&nbsp;&nbsp;&nbsp;&nbsp;You know the Light cantrip.";
+                features += "<b>Warding Flare</b>: PHB pg. 61 </br>&nbsp;&nbsp;&nbsp;&nbsp;When a creature within 30 feet of you attacks you, you can use your reaction to impose disadvantage on the attack. You can use this feature " + wisMod + " times per long rest. </br>";
                 break;
               case "Nature Domain Cleric":
-                features += "<b>Acolyte of Nature</b>: PHB pg. 62 </br>    You gain one druid cantrip of your choice. You also gain proficiency in one skill from: Animal Handling, Nature, or Survival. </br>";
-                features += "<b>Bonus Proficiency</b>: PHB pg. 62 </br>    You are proficient with heavy armor. </br>";
+                features += "<b>Acolyte of Nature</b>: PHB pg. 62 </br>&nbsp;&nbsp;&nbsp;&nbsp;You gain one druid cantrip of your choice. You also gain proficiency in one skill from: Animal Handling, Nature, or Survival. </br>";
+                features += "<b>Bonus Proficiency</b>: PHB pg. 62 </br>&nbsp;&nbsp;&nbsp;&nbsp;You are proficient with heavy armor. </br>";
                 break;
               case "Tempest Domain Cleric":
-                features += "<b>Bonus Proficiencies</b>: PHB pg. 62 </br>    You are proficient with martial weapons and heavy armor. </br>";
-                features += "<b>Wrath of the Storm</b>: PHB pg. 62 </br>    When a creature within 5 feet of you hits you with an attack, you can use your reaction to deal 2d8 lightning or thunder damage to the attacker. You can use this feature " + wisMod + " times per long rest. </br>";
+                features += "<b>Bonus Proficiencies</b>: PHB pg. 62 </br>&nbsp;&nbsp;&nbsp;&nbsp;You are proficient with martial weapons and heavy armor. </br>";
+                features += "<b>Wrath of the Storm</b>: PHB pg. 62 </br>&nbsp;&nbsp;&nbsp;&nbsp;When a creature within 5 feet of you hits you with an attack, you can use your reaction to deal 2d8 lightning or thunder damage to the attacker. You can use this feature " + wisMod + " times per long rest. </br>";
                 break;
               case "Trickery Domain Cleric":
-                features += "<b>Blessing of the Trickster</b>: PHB pg. 63 </br>    You can use your action to grant a willing creature advantage on Dexterity (Stealth) checks. This lasts for 1 hour or until you use this feature again. </br>";
+                features += "<b>Blessing of the Trickster</b>: PHB pg. 63 </br>&nbsp;&nbsp;&nbsp;&nbsp;You can use your action to grant a willing creature advantage on Dexterity (Stealth) checks. This lasts for 1 hour or until you use this feature again. </br>";
                 break;
               case "War Domain Cleric":
-                features += "<b>Bonus Proficiencies</b>: PHB pg. 63 </br>    You are proficient with martial weapons and heavy armor. </br>";
-                features += "<b>War Priest</b>: PHB pg. 63 </br>    When you use the attack action, you can make one weapon attack as a bonus action. You can use this feature " + wisMod + " times per long rest. </br>";
+                features += "<b>Bonus Proficiencies</b>: PHB pg. 63 </br>&nbsp;&nbsp;&nbsp;&nbsp;You are proficient with martial weapons and heavy armor. </br>";
+                features += "<b>War Priest</b>: PHB pg. 63 </br>&nbsp;&nbsp;&nbsp;&nbsp;When you use the attack action, you can make one weapon attack as a bonus action. You can use this feature " + wisMod + " times per long rest. </br>";
                 break;
             }
           }
@@ -4719,7 +4719,7 @@ function setFeatures() {
         case "Druid":
           //Level 1
           if (level >= 1) {
-            features += "<b>Druidic</b>: PHB pg. 66 </br>    You know the Druidic language. </br>";
+            features += "<b>Druidic</b>: PHB pg. 66 </br>&nbsp;&nbsp;&nbsp;&nbsp;You know the Druidic language. </br>";
           }
           break;
         case "Fighter":
@@ -4751,7 +4751,7 @@ function setFeatures() {
           }
           //Level 1
           if (level >= 1) {
-            features += "<b>Fighting Style (" + fightingStyle + ")</b>: PHB pg. 72 </br>    ";
+            features += "<b>Fighting Style (" + fightingStyle + ")</b>: PHB pg. 72 </br>&nbsp;&nbsp;&nbsp;&nbsp;";
             switch (fightingStyle) {
               case "Archery":
                 features += "You have a +2 bonus to attack rolls with ranged weapons. </br>";
@@ -4772,7 +4772,7 @@ function setFeatures() {
                 features += "When wielding two weapons, you can add your ability modifier to the damage of the second attack. </br>";
                 break;
             }
-            features += "<b>Second Wind</b>: PHB pg. 72 </br>    You can use a bonus action to regain hit points equal to 1d10 + your fighter level, once per short or long rest. </br>";
+            features += "<b>Second Wind</b>: PHB pg. 72 </br>&nbsp;&nbsp;&nbsp;&nbsp;You can use a bonus action to regain hit points equal to 1d10 + your fighter level, once per short or long rest. </br>";
           }
           break;
         case "Monk":
@@ -4787,15 +4787,15 @@ function setFeatures() {
             martialArts = "d10";
           //Level 1
           if (level >= 1) {
-            features += "<b>Unarmored Defense</b>: PHB pg. 78 </br>    Your armor class is equal to 10 + your Dexterity modifier + your Wisdom modifier while you are not wearing armor or wielding a shield. </br>";
-            features += "<b>Martial Arts</b>: PHB pg. 78 </br>    Your Martial Arts die is a " + martialArts + ". </br>";
+            features += "<b>Unarmored Defense</b>: PHB pg. 78 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your armor class is equal to 10 + your Dexterity modifier + your Wisdom modifier while you are not wearing armor or wielding a shield. </br>";
+            features += "<b>Martial Arts</b>: PHB pg. 78 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your Martial Arts die is a " + martialArts + ". </br>";
           }
           break;
         case "Paladin":
           //Level 1
           if (level >= 1) {
-            features += "<b>Divine Sense</b>: PHB pg. 84 </br>    As an action, you can detect celestials, fiends, and undead within 60 feet of you and are not behind total cover until the end of your next turn. You can use this feature " + (1 + chaMod) + " times per long rest. </br>";
-            features += "<b>Lay on Hands</b>: PHB pg. 84 </br>    As an action, you can touch a creature and restore any amount of hit points, up to " + (5 * level) + " hit points per long rest. </br>";
+            features += "<b>Divine Sense</b>: PHB pg. 84 </br>&nbsp;&nbsp;&nbsp;&nbsp;As an action, you can detect celestials, fiends, and undead within 60 feet of you and are not behind total cover until the end of your next turn. You can use this feature " + (1 + chaMod) + " times per long rest. </br>";
+            features += "<b>Lay on Hands</b>: PHB pg. 84 </br>&nbsp;&nbsp;&nbsp;&nbsp;As an action, you can touch a creature and restore any amount of hit points, up to " + (5 * level) + " hit points per long rest. </br>";
           }
           break;
         case "Ranger":
@@ -4870,16 +4870,16 @@ function setFeatures() {
           //Level 1
           if (level >= 1) {
             if (level >= 14) {
-              features += "<b>Favored Enemy</b>: PHB pg. 91 </br>    Your favored enemies are: " + favoredEnemies[0] + ", " + favoredEnemies[1] + " and " + favoredEnemies[2] + "</br>";
-              features += "<b>Natural Explorer</b>: PHB pg. 91 </br>    Your favored terrains are: " + naturalExplorer[0] + ", " + naturalExplorer[1] + " and " + naturalExplorer[2] + "</br>";
+              features += "<b>Favored Enemy</b>: PHB pg. 91 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your favored enemies are: " + favoredEnemies[0] + ", " + favoredEnemies[1] + " and " + favoredEnemies[2] + "</br>";
+              features += "<b>Natural Explorer</b>: PHB pg. 91 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your favored terrains are: " + naturalExplorer[0] + ", " + naturalExplorer[1] + " and " + naturalExplorer[2] + "</br>";
             }
             else if (level >= 6) {
-              features += "<b>Favored Enemy</b>: PHB pg. 91 </br>    Your favored enemies are: " + favoredEnemies[0] + " and " + favoredEnemies[1] + "</br>";
-              features += "<b>Natural Explorer</b>: PHB pg. 91 </br>    Your favored terrains are: " + naturalExplorer[0] + " and " + naturalExplorer[1] + "</br>";
+              features += "<b>Favored Enemy</b>: PHB pg. 91 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your favored enemies are: " + favoredEnemies[0] + " and " + favoredEnemies[1] + "</br>";
+              features += "<b>Natural Explorer</b>: PHB pg. 91 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your favored terrains are: " + naturalExplorer[0] + " and " + naturalExplorer[1] + "</br>";
             }
             else {
-              features += "<b>Favored Enemy</b>: PHB pg. 91 </br>    Your favored enemies are: " + favoredEnemies[0] + "</br>";
-              features += "<b>Natural Explorer</b>: PHB pg. 91 </br>    Your favored terrains are: " + naturalExplorer[0] + "</br>";
+              features += "<b>Favored Enemy</b>: PHB pg. 91 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your favored enemies are: " + favoredEnemies[0] + "</br>";
+              features += "<b>Natural Explorer</b>: PHB pg. 91 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your favored terrains are: " + naturalExplorer[0] + "</br>";
             }
           }
           break;
@@ -4907,9 +4907,9 @@ function setFeatures() {
             sneakAttack = "10d6";
           //Level 1
           if (level >= 1) {
-            features += "<b>Sneak Attack</b>: PHB pg. 96 </br>    Your Sneak Attack damage is " + sneakAttack + ". </br>";
-            features += "<b>Expertise</b>: PHB pg. 96 </br>    Choose two of your proficiencies or one of your proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for these proficiencies. </br>";
-            features += "<b>Thieves' Cant</b>: PHB pg. 96 </br>    You know the Thieves' Cant language. </br>";
+            features += "<b>Sneak Attack</b>: PHB pg. 96 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your Sneak Attack damage is " + sneakAttack + ". </br>";
+            features += "<b>Expertise</b>: PHB pg. 96 </br>&nbsp;&nbsp;&nbsp;&nbsp;Choose two of your proficiencies or one of your proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for these proficiencies. </br>";
+            features += "<b>Thieves' Cant</b>: PHB pg. 96 </br>&nbsp;&nbsp;&nbsp;&nbsp;You know the Thieves' Cant language. </br>";
           }
           break;
         case "Sorcerer":
@@ -4922,12 +4922,12 @@ function setFeatures() {
           if (level >= 1) {
             switch (subclass) {
               case "Draconic Bloodline Sorcerer":
-                features += "<b>Dragon Ancestor</b>: PHB pg. 102 </br>    Your dragon ancestor type is " + dragonAncestor + ". You can speak, read, and write Draconic and when you make a Charisma check when interacting with dragons, and your proficiency bonus applies, it is doubled. </br>";
-                features += "<b>Draconic Resilience</b>: PHB pg. 102 </br>    Your hit point maximum increases by 1 for each sorcerer level. Also, when you aren't wearing armor, your AC equals 13 + your Dexterity modifier. </br>";
+                features += "<b>Dragon Ancestor</b>: PHB pg. 102 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your dragon ancestor type is " + dragonAncestor + ". You can speak, read, and write Draconic and when you make a Charisma check when interacting with dragons, and your proficiency bonus applies, it is doubled. </br>";
+                features += "<b>Draconic Resilience</b>: PHB pg. 102 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your hit point maximum increases by 1 for each sorcerer level. Also, when you aren't wearing armor, your AC equals 13 + your Dexterity modifier. </br>";
                 break;
               case "Wild Magic Sorcerer":
-                features += "<b>Wild Magic Surge</b>: PHB pg. 103 </br>    When you cast a sorcerer spell of 1st level or higher, the DM can have you roll a d20. On a 1, roll on the Wild Magic Surge table. </br>";
-                features += "<b>Tides of Chaos</b>: PHB pg. 103 </br>    Once per long rest, you can gain advantage on one attack roll, ability check, or saving throw. However, the DM can have you roll on the Wild Magic Surge table when you cast a sorcerer spell of 1st level or higher. You then regain the use of this feature. </br>";
+                features += "<b>Wild Magic Surge</b>: PHB pg. 103 </br>&nbsp;&nbsp;&nbsp;&nbsp;When you cast a sorcerer spell of 1st level or higher, the DM can have you roll a d20. On a 1, roll on the Wild Magic Surge table. </br>";
+                features += "<b>Tides of Chaos</b>: PHB pg. 103 </br>&nbsp;&nbsp;&nbsp;&nbsp;Once per long rest, you can gain advantage on one attack roll, ability check, or saving throw. However, the DM can have you roll on the Wild Magic Surge table when you cast a sorcerer spell of 1st level or higher. You then regain the use of this feature. </br>";
                 break;
             }
           }
@@ -4937,16 +4937,16 @@ function setFeatures() {
           if (level >= 1) {
             switch (subclass) {
               case "Warlock of the Archfey":
-                features += "<b>Expanded Spell List</b>: PHB pg. 108 </br>    The Archfey spells listed in the PHB are added to the warlock spell list for you. </br>";
-                features += "<b>Fey Presence</b>: PHB pg. 109 </br>    As an action, you can cause each creature in a 10-foot cube originating from you to make a Wisdom saving throw against your warlock spell save DC. On a failure, choose whether they are charmed by or frightened of you until the end of your next turn. You can use this feature once per short or long rest. </br>";
+                features += "<b>Expanded Spell List</b>: PHB pg. 108 </br>&nbsp;&nbsp;&nbsp;&nbsp;The Archfey spells listed in the PHB are added to the warlock spell list for you. </br>";
+                features += "<b>Fey Presence</b>: PHB pg. 109 </br>&nbsp;&nbsp;&nbsp;&nbsp;As an action, you can cause each creature in a 10-foot cube originating from you to make a Wisdom saving throw against your warlock spell save DC. On a failure, choose whether they are charmed by or frightened of you until the end of your next turn. You can use this feature once per short or long rest. </br>";
                 break;
               case "Warlock of the Fiend":
-                features += "<b>Expanded Spell List</b>: PHB pg. 109 </br>    The Fiend spells listed in the PHB are added to the warlock spell list for you. </br>";
-                features += "<b>Dark One's Blessing</b>: When you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your warlock level. </br>";
+                features += "<b>Expanded Spell List</b>: PHB pg. 109 </br>&nbsp;&nbsp;&nbsp;&nbsp;The Fiend spells listed in the PHB are added to the warlock spell list for you. </br>";
+                features += "<b>Dark One's Blessing</b>: PHB pg. 109 </br>&nbsp;&nbsp;&nbsp;&nbsp;When you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your warlock level. </br>";
                 break;
               case "Warlock of the Great Old One":
-                features += "<b>Expanded Spell List</b>: PHB pg. 110 </br>    The Great Old One spells listed in the PHB are added to the warlock spell list for you. </br>";
-                features += "<b>Awakened Mind</b>: PHB pg. 110 </br>    You can communicate telepathically with any creature you can see within 30 feet of you, even without sharing a language with the creature. </br>";
+                features += "<b>Expanded Spell List</b>: PHB pg. 110 </br>&nbsp;&nbsp;&nbsp;&nbsp;The Great Old One spells listed in the PHB are added to the warlock spell list for you. </br>";
+                features += "<b>Awakened Mind</b>: PHB pg. 110 </br>&nbsp;&nbsp;&nbsp;&nbsp;You can communicate telepathically with any creature you can see within 30 feet of you, even without sharing a language with the creature. </br>";
                 break;
             }
           }
@@ -4954,7 +4954,7 @@ function setFeatures() {
         case "Wizard":
           //Level 1
           if (level >= 1) {
-            features += "<b>Arcane Recovery</b>: PHB pg. 115 </br>    Once per day, when you finish a short rest, you can recover expended spell slots with a combined level of up to half your wizard level, rounded up. None of the slots can be 6th level or higher. </br>";
+            features += "<b>Arcane Recovery</b>: PHB pg. 115 </br>&nbsp;&nbsp;&nbsp;&nbsp;Once per day, when you finish a short rest, you can recover expended spell slots with a combined level of up to half your wizard level, rounded up. None of the slots can be 6th level or higher. </br>";
           }
           break;
     }
