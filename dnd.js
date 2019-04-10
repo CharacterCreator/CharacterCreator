@@ -5417,6 +5417,7 @@ function getCharacter() {
           instrumentProficiencies[e] = 0;
         for (var e = 1; e < equipment.length; e++)
           equipment.splice(e);
+        features = "";
 
         racePrevious = race;
         subracePrevious = subrace;
