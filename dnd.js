@@ -4619,6 +4619,10 @@ function setEquipment() {
 }
 
 function setFeatures() {
+    //Features by Race
+    features += "<u>Racial Traits</u></br>";
+    //Features by Class
+    features += "<u>Class Features</u></br>";
     switch (classChoice) {
         case "Barbarian":
           //Rages
@@ -4799,7 +4803,7 @@ function setFeatures() {
           var enemies = ["Aberrations", "Beasts", "Celestials", "Constructs", "Dragons", "Elementals", "Fey", "Fiends", "Giants", "Monstrosities", "Oozes", "Plants", "Undead"];
           var humanoids = ["Dwarves", "Elves", "Gnolls", "Gnomes", "Goblinoids", "Grimlocks", "Humans", "Kobolds", "Lizardfolk", "Merfolk", "Orcs", "Sahuagin"];
           if (level >= 1) {
-            var choice = Math.floor(Math.random() * (enemies.length + 1);
+            var choice = Math.floor(Math.random() * (enemies.length + 1));
             if (choice < enemies.length) {
               favoredEnemies[0] = enemies[choice];
               enemies.splice(choice);
@@ -4930,18 +4934,31 @@ function setFeatures() {
           break;
         case "Warlock":
           //Level 1
-          switch (subclass) {
-            case "Warlock of the Archfey":
-              break;
-            case "Warlock of the Fiend":
-              break;
-            case "Warlock of the Great Old One":
-              break;
+          if (level >= 1) {
+            switch (subclass) {
+              case "Warlock of the Archfey":
+                features += "<b>Expanded Spell List</b>: PHB pg. 108 </br>    The Archfey spells listed in the PHB are added to the warlock spell list for you. </br>";
+                features += "<b>Fey Presence</b>: PHB pg. 109 </br>    As an action, you can cause each creature in a 10-foot cube originating from you to make a Wisdom saving throw against your warlock spell save DC. On a failure, choose whether they are charmed by or frightened of you until the end of your next turn. You can use this feature once per short or long rest. </br>";
+                break;
+              case "Warlock of the Fiend":
+                features += "<b>Expanded Spell List</b>: PHB pg. 109 </br>    The Fiend spells listed in the PHB are added to the warlock spell list for you. </br>";
+                features += "<b>Dark One's Blessing</b>: When you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your warlock level. </br>";
+                break;
+              case "Warlock of the Great Old One":
+                features += "<b>Expanded Spell List</b>: PHB pg. 110 </br>    The Great Old One spells listed in the PHB are added to the warlock spell list for you. </br>";
+                features += "<b>Awakened Mind</b>: PHB pg. 110 </br>    You can communicate telepathically with any creature you can see within 30 feet of you, even without sharing a language with the creature. </br>";
+                break;
+            }
           }
           break;
         case "Wizard":
+          //Level 1
+          if (level >= 1) {
+            features += "<b>Arcane Recovery</b>: PHB pg. 115 </br>    Once per day, when you finish a short rest, you can recover expended spell slots with a combined level of up to half your wizard level, rounded up. None of the slots can be 6th level or higher. </br>";
+          }
           break;
     }
+    return features;
 }
 
 function setSpells() {
@@ -5439,6 +5456,7 @@ function getCharacter() {
         document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
         document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice) + "</br>" + sethealth() + "</br>" + setSpeed();
         document.getElementById("consoleProficiencies").innerHTML = displayProficiencies();
+        document.getElementById("consoleFeatures").innerHTML = setFeatures();
         document.getElementById("consoleSkills").innerHTML = displaySkills();
         document.getElementById("consoleEquipment").innerHTML = setEquipment();
         document.getElementById("consoleSpells").innerHTML = setSpells();
