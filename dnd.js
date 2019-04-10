@@ -3533,7 +3533,7 @@ function displayProficiencies() {
   display = display.substring(0, display.length - 2) + "</br>";
   display += "Weapons: ";
   for (var e = 0; e < weaponTypeProficiencies.length; e++) {
-    if (weaponTypeProficiencies[0] == 1 && weaponTypeProficiencies[1] == 1) {
+    if (e < 2 && weaponTypeProficiencies[0] == 1 && weaponTypeProficiencies[1] == 1) {
       display += "Simple Weapons, ";
       e = 2;
     }
@@ -4794,7 +4794,7 @@ function setFeatures() {
         case "Paladin":
           //Level 1
           if (level >= 1) {
-            features += "<b>Divine Sense</b>: PHB pg. 84 </br>    As an action, you can detect celestials, fiends, and undead within 60 feet of you and are not behind total cover until the end of your next turn. You can use this feature " + (1 + chaMod) + " times per long rest. </br.";
+            features += "<b>Divine Sense</b>: PHB pg. 84 </br>    As an action, you can detect celestials, fiends, and undead within 60 feet of you and are not behind total cover until the end of your next turn. You can use this feature " + (1 + chaMod) + " times per long rest. </br>";
             features += "<b>Lay on Hands</b>: PHB pg. 84 </br>    As an action, you can touch a creature and restore any amount of hit points, up to " + (5 * level) + " hit points per long rest. </br>";
           }
           break;
@@ -5418,6 +5418,16 @@ function getCharacter() {
         for (var e = 1; e < equipment.length; e++)
           equipment.splice(e);
         features = "";
+        rages = 0;
+        rageDamage = 0;
+        inspiration = "";
+        songOfRest = "";
+        fightingStyle = "";
+        martialArts = "";
+        favoredEnemies = ["", "", ""];
+        naturalExplorer = ["", "", ""];
+        sneakAttack = "";
+        dragonAncestor = "";
 
         racePrevious = race;
         subracePrevious = subrace;
