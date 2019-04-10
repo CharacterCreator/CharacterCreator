@@ -122,6 +122,26 @@ var features = "";
 var rages = 0;
 var rageDamage = 0;
 
+//Bard
+var inspiration = "";
+var songOfRest = "";
+
+//Fighter
+var fightingStyle = "";
+
+//Monk
+var martialArts = "";
+
+//Ranger
+var favoredEnemies = ["", "", ""];
+var naturalExplorer = ["", "", ""];
+
+//Rogue
+var sneakAttack = "";
+
+//Sorcerer
+var dragonAncestor = "";
+
 /*For setSpells*/
 var spells = [
   //["ID", "Name", "Type", "Level", "Ritual Casting", "Casting Time", "Range", "Components", "Duration", "Concentration", "Description"]
@@ -450,85 +470,85 @@ var spells = [
 
   [160, "Grasping Vine", "Conjuration", "4th-level", false, "1 Bonus Action", "30 Feet", "V, S", "1 Minute", true, "You conjure a vine that sprouts from the ground in an unoccupied space of your choice that you can see within range. When you cast this spell, you can direct the vine to lash out at a creature within 30 feet of it that you can see. That creature must succeed on a Dexterity saving throw or be pulled 20 feet directly toward the vine. Until the spell ends, you can direct the vine to lash out at the same creature or another one as a bonus action on each of your turns."],
 
-  [161, "Grease"],
+  [161, "Grease", "Conjuration", "1st-level", false, "1 Action", "60 Feet", "V, S, M (a bit of pork rind or butter)", "1 Minute", false, "Slick grease covers the ground in a 10-foot square centered on a point within range and turns it into difficult terrain for the duration. When the grease appears, each creature standing in its area must succeed on a Dexterity saving throw or fall prone. A creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall prone."],
 
-  [162, "Greater Invisibility"],
+  [162, "Greater Invisibility", "Illusion", "4th-level", false, "1 Action", "Touch", "V, S", "1 Minute", true, "You or a creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target’s person."],
 
-  [163, "Greater Restoration"],
+  [163, "Greater Restoration", "Abjuration", "5th-level", false, "1 Action", "Touch", "V, S, M (diamond dust worth at least 100 gp, which the spell consumes)", "Instantaneous", false, "You imbue a creature you touch with positive energy to undo a debilitating effect. You can reduce the target’s exhaustion level by one, or end one of the following effects on the target: <ul> <li>One effect that charmed or petrified the target</li> <li>One curse, including the target’s attunement to a cursed magic item</li> <li>Any reduction to one of the target’s ability scores</li> <li>One effect reducing the target’s hit point maximum</li> </ul>"],
 
-  [164, "Guardian of Faith"],
+  [164, "Guardian of Faith", "Conjuration", "4th-level", false, "1 Action", "30 Feet", "V", "8 Hours", false, "A Large spectral guardian appears and hovers for the duration in an unoccupied space of your choice that you can see within range. The guardian occupies that space and is indistinct except for a gleaming sword and shield emblazoned with the symbol of your deity. Any creature hostile to you that moves to a space within 10 feet of the guardian for the first time on a turn must succeed on a Dexterity saving throw. The creature takes 20 radiant damage on a failed save, or half as much damage on a successful one. The guardian vanishes when it has dealt a total of 60 damage."],
 
-  [165, "Guards and Wards"],
+  [165, "Guards and Wards", "Abjuration", "6th-level", false, "10 Minutes", "Touch", "V, S, M (burning incense, a small measure of brimstone and oil, a knotted string, a small amount of umber hulk blood, and a small silver rod worth at least 10 gp)", "24 Hours", false, "You create a ward that protects up to 2,500 square feet of floor space (an area 50 feet square, or one hundred 5-foot squares or twenty-five 10-foot squares). The warded area can be up to 20 feet tall, and shaped as you desire. You can ward several stories of a stronghold by dividing the area among them, as long as you can walk into each contiguous area while you are casting the spell. When you cast this spell, you can specify individuals that are unaffected by any or all of the effects that you choose. You can also specify a password that, when spoken aloud, makes the speaker immune to these effects. Guards and wards creates the following effects within the warded area. </br> <b>Corridors.</b> Fog fills all the warded corridors, making them heavily obscured. In addition, at each intersection or branching passage offering a choice of direction, there is a 50 percent chance that a creature other than you will believe it is going in the opposite direction from the one it chooses. </br> <b>Doors.</b> All doors in the warded area are magically locked, as if sealed by an arcane lock spell. In addition, you can cover up to ten doors with an illusion (equivalent to the illusory object function of the minor illusion spell) to make them appear as plain sections of wall. </br> <b>Stairs.</b> Webs fill all stairs in the warded area from top to bottom, as the web spell. These strands regrow in 10 minutes if they are burned or torn away while guards and wards lasts. </br> <b>Other Spell Effect.</b> You can place your choice of one of the following magical effects within the warded area of the stronghold. <ul> <li>Place dancing lights in four corridors. You can designate a simple program that the lights repeat as long as guards and wards lasts.</li> <li>Place magic mouth in two locations.</li> <li>Place stinking cloud in two locations. The vapors appear in the places you designate; they return within 10 minutes if dispersed by wind while guards and wards lasts.</li> <li>Place a constant gust of wind in one corridor or room.</li> <li>Place a suggestion in one location. You select an area of up to 5 feet square, and any creature that enters or passes through the area receives the suggestion mentally.</li> </ul> </br> The whole warded area radiates magic. A dispel magic cast on a specific effect, if successful, removes only that effect. You can create a permanently guarded and warded structure by casting this spell there every day for one year."],
 
-  [166, "Guidance"],
+  [166, "Guidance", "Divination", "Cantrip", false, "1 Action", "Touch", "V, S", "1 Minute", true, "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends."],
 
-  [167, "Guiding Bolt"],
+  [167, "Guiding Bolt", "Evocation", "1st-level", false, "1 Action", "120 Feet", "V, S", "1 Round", false, "A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes 4d6 radiant damage, and the next attack roll made against this target before the end of your next turn has advantage, thanks to the mystical dim light glittering on the target until then. <b> At Higher Levels. </b> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."],
 
-  [168, "Gust of Wind"],
+  [168, "Gust of Wind", "Evocation", "2nd-level", false, "1 Action", "Self (60-foot line)", "V, S, M (a legume seed)", "1 Minute", true, "A line of strong wind 60 feet long and 10 feet wide blasts from you in a direction you choose for the spell’s duration. Each creature that starts its turn in the line must succeed on a Strength saving throw or be pushed 15 feet away from you in a direction following the line. Any creature in the line must spend 2 feet of movement for every 1 foot it moves when moving closer to you. The gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50 percent chance to extinguish them. As a bonus action on each of your turns before the spell ends, you can change the direction in which the line blasts from you."],
 
-  [169, "Hall of Thorns"],
+  [169, "Hail of Thorns", "Conjuration", "1st-level", false, "1 Bonus Action", "Self", "V", "1 Minute", true, "The next time you hit a creature with a ranged weapon attack before the spell ends, this spell creates a rain of thorns that sprouts from your ranged weapon or ammunition. In addition to the normal effect of the attack, the target of the attack and each creature within 5 feet of it must make a Dexterity saving throw. A creature takes 1d10 piercing damage on a failed save, or half as much damage on a successful one. <b>At Higher Levels.</b> If you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st (to a maximum of 6d10)."],
 
-  [170, "Hallow"],
+  [170, "Hallow", "Evocation", "5th-level", false, "24 Hours", "Touch", "V, S, M (herbs, oils, and incense worth at least 1,000 gp, which the spell consumes)", "Until Dispelled", false, "You touch a point and infuse an area around it with holy (or unholy) power. The area can have a radius up to 60 feet, and the spell fails if the radius includes an area already under the effect a hallow spell. The affected area is subject to the following effects. First, celestials, elementals, fey, fiends, and undead can’t enter the area, nor can such creatures charm, frighten, or possess creatures within it. Any creature charmed, frightened, or possessed by such a creature is no longer charmed, frightened, or possessed upon entering the area. You can exclude one or more of those types of creatures from this effect. Second, you can bind an extra effect to the area. Choose the effect from the following list, or choose an effect offered by the GM. Some of these effects apply to creatures in the area; you can designate whether the effect applies to all creatures, creatures that follow a specific deity or leader, or creatures of a specific sort, such as orcs or trolls. When a creature that would be affected enters the spell’s area for the first time on a turn or starts its turn there, it can make a Charisma saving throw. On a success, the creature ignores the extra effect until it leaves the area. </br. <b>Courage.</b> Affected creatures can’t be frightened while in the area. </br> <b>Darkness.</b> Darkness fills the area. Normal light, as well as magical light created by spells of a lower level than the slot you used to cast this spell, can’t illuminate the area. </br> <b>Daylight</b> Bright light fills the area. Magical darkness created by spells of a lower level than the slot you used to cast this spell can’t extinguish the light. </br> <b>Energy Protection</b> Affected creatures in the area have resistance to one damage type of your choice, except for bludgeoning, piercing, or slashing. </br> <b>Energy Vunerability.</b> Affected creatures in the area have vulnerability to one damage type of your choice, except for bludgeoning, piercing, or slashing. </br> <b>Everlasting Rest</b> Dead bodies interred in the area can’t be turned into undead. </br> <b>Extradimensional Interference</b> Affected creatures can’t move or travel using teleportation or by extradimensional or interplanar means. </br> <b>Fear.</b> Affected creatures are frightened while in the area. </br> <b>Silence.</b> No sound can emanate from within the area, and no sound can reach into it. </br> <b>Tongues.</b> Affected creatures can communicate with any other creature in the area, even if they don’t share a common language."],
 
-  [171, "Hallucinatory Terrain"],
+  [171, "Hallucinatory Terrain", "Illusion", "4th-level", false, "10 Minutes", "300 Feet", "V, S, M (a stone, a twig, and a bit of green plant)", "24 Hours", false, "You make natural terrain in a 150-foot cube in range look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren’t changed in appearance. The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to see through the illusion. If the difference isn’t obvious by touch, a creature carefully examining the illusion can attempt an Intelligence (Investigation) check against your spell save DC to disbelieve it. A creature who discerns the illusion for what it is, sees it as a vague image superimposed on the terrain."],
 
-  [172, "Harm"],
+  [172, "Harm", "Necromancy", "6th-level", false, "1 Action", "60 Feet", "V, S", "Instantaneous", false, "You unleash a virulent disease on a creature that you can see within range. The target must make a Constitution saving throw. On a failed save, it takes 14d6 necrotic damage, or half as much damage on a successful save. The damage can’t reduce the target’s hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature’s hit point maximum to return to normal before that time passes."],
 
-  [173, "Haste"],
+  [173, "Haste", "Transmutation", "3rd-level", false, "1 Action", "30 Feet", "V, S, M (a shaving of licorice root)", "1 Minute", true, "Choose a willing creature that you can see within range. Until the spell ends, the target’s speed is doubled, it gains a +2 bonus to AC, it has advantage on Dexterity saving throws, and it gains an additional action on each of its turns. That action can be used only to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Use an Object action. When the spell ends, the target can’t move or take actions until after its next turn, as a wave of lethargy sweeps over it."],
 
-  [174, "Heal"],
+  [174, "Heal", "Evocation", "6th-level", false, "1 Action", "60 Feet", "V, S", "Instantaneous", false, "Choose a creature that you can see within range. A surge of positive energy washes through the creature, causing it to regain 70 hit points. This spell also ends blindness, deafness, and any diseases affecting the target. This spell has no effect on constructs or undead. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 7th level or higher, the amount of Healing increases by 10 for each slot level above 6th."],
 
-  [175, "Healing Word"],
+  [175, "Healing Word", "Evocation", "1st-level", false, "1 Bonus Action", "60 Feet", "V", "Instantaneous", false, "A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, the Healing increases by 1d4 for each slot level above 1st."],
 
-  [176, "Heat Metal"],
+  [176, "Heat Metal", "Transmutation", "2nd-level", false, "1 Action", "60 Feet", "V, S, M (a piece of iron and a flame)", "1 Minute", true, "Choose a manufactured metal object, such as a metal weapon or a suit of heavy or medium metal armor, that you can see within range. You cause the object to glow red-hot. Any creature in physical contact with the object takes 2d8 fire damage when you cast the spell. Until the spell ends, you can use a bonus action on each of your subsequent turns to cause this damage again. If a creature is holding or wearing the object and takes the damage from it, the creature must succeed on a Constitution saving throw or drop the object if it can. If it doesn’t drop the object, it has disadvantage on attack rolls and ability checks until the start of your next turn. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot above 2nd."],
 
-  [177, "Hellish Rebuke"],
+  [177, "Hellish Rebuke", "Evocation", "1st-level", false, "1 Reaction, which you take in response to being damaged by a creature within 60 feet of you that you can see", "60 Feet", "V, S", "Instantaneous", false, "You point your finger, and the creature that damaged you is momentarily surrounded by hellish flames. The creature must make a Dexterity saving throw. It takes 2d10 fire damage on a failed save, or half as much damage on a successful one. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st."],
 
-  [178, "Heroes' Feast"],
+  [178, "Heroes' Feast", "Conjuration", "6th-level", false, "10 Minutes", "30 Feet", "V, S, M (a gem-encrusted bowl worth at least 1,000 gp, which the spell consumes)", "Instantaneous", false, "You bring forth a great feast, including magnificent food and drink. The feast takes 1 hour to consume and disappears at the end of that time, and the beneficial effects don’t set in until this hour is over. Up to twelve other creatures can partake of the feast. A creature that partakes of the feast gains several benefits. The creature is cured of all diseases and poison, becomes immune to poison and being frightened, and makes all Wisdom saving throws with advantage. Its hit point maximum also increases by 2d10, and it gains the same number of hit points. These benefits last for 24 hours."],
 
-  [179, "Heroism"],
+  [179, "Heroism", "Enchantment", "1st-level", false, "1 Action", "Touch", "V, S", "1 Minute", true, "A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and gains temporary hit points equal to your spellcasting ability modifier at the start of each of its turns. When the spell ends, the target loses any remaining temporary hit points from this spell. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."],
 
-  [180, "Hex"],
+  [180, "Hex", "Enchantment", "1st-level", false, "1 Bonus Action", "90 Feet", "V, S, M (the petrified eye of a newt)", "1 Hour", true, "You place a curse on a creature that you can see within range. Until the spell ends, you deal an extra 1d6 necrotic damage to the target whenever you hit it with an attack. Also, choose one ability when you cast the spell. The target has disadvantage on ability checks made with the chosen ability. If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to curse a new creature. A remove curse cast on the target ends this spell early. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 3rd or 4th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 5th level or higher, you can maintain your concentration on the spell for up to 24 hours."],
 
-  [181, "Hold Monster"],
+  [181, "Hold Monster", "Enchantment", "5th-level", false, "1 Action", "90 Feet", "V, S, M (a small, straight piece of iron)", "1 Minute", true, "Choose a creature that you can see within range. The target must succeed on a Wisdom saving throw or be paralyzed for the duration. This spell has no effect on undead. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 6th level or higher, you can target one additional creature for each slot level above 5th. The creatures must be within 30 feet of each other when you target them."],
 
-  [182, "Hold Person"],
+  [182, "Hold Person", "Enchantment", "2nd-level", false, "1 Action", "60 Feet", "V, S, M (a small, straight piece of iron)", "1 Minute", true, "Choose a humanoid that you can see within range. The target must succeed on a Wisdom saving throw or be paralyzed for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 3rd level or higher, you can target on additional humanoid for each slot level above 2nd. The humanoids must be within 30 feet of each other when you target them."],
 
-  [183, "Holy Aura"],
+  [183, "Holy Aura", "Abjuration", "8th-level", false, "1 Action", "Self", "V, S, M (a tiny reliquary worth at least 1,000 gp containing a sacred relic, such as a scrap of cloth from a saint's robe or a piece of parchment paper from a religious text)", "1 Minute", true, "Divine light washes out from you and coalesces in a soft radiance in a 30-foot radius around you. Creatures of your choice in that radius when you cast this spell shed dim light in a 5-foot radius and have advantage on all saving throws, and other creatures have disadvantage on attack rolls against them until the spell ends. In addition, when a fiend or an undead hits an affected creature with a melee attack, the aura flashes with brilliant light. The attacker must succeed on a Constitution saving throw or be blinded until the spell ends."],
 
-  [184, "Hunger of Hadar"],
+  [184, "Hunger of Hadar", "Conjuration", "3rd-level", false, "1 Action", "150 Feet", "V, S, M (a pickled octopus tentacle)", "1 Minute", true, "You open a gateway to the dark between the stars, a region infested with unknown horrors. A 20-foot-radius sphere of blackness and bitter cold appears, centered on a point with range and lasting for the duration. This void is filled with a cacophony of soft whispers and slurping noises that can be heard up to 30 feet away. No light, magical or otherwise, can illuminate the area, and creatures fully within the area are blinded. The void creates a warp in the fabric of space, and the area is difficult terrain. Any creature that starts its turn in the area takes 2d6 cold damage. Any creature that ends its turn in the area must succeed on a Dexterity saving throw or take 2d6 acid damage as milky, otherwordly tentacles rub against it."],
 
-  [185, "Hunter's Mark"],
+  [185, "Hunter's Mark", "Divination", "1st-level", false, "1 Bonus Action", "90 Feet", "V", "1 Hour", true, "You choose a creature you can see within range and mystically mark it as your quarry. Until the spell ends, you deal an extra 1d6 damage to the target whenever you hit it with a weapon attack, and you have advantage on any Wisdom (Perception) or Wisdom (Survival) check you make to find it. If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to mark a new creature. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 3rd or 4th level, you can maintain your Concentration on the spell for up to 8 hours. When you use a spell slot of 5th level or higher, you can maintain your concentr⁠ation on the spell for up to 24 hours."],
 
-  [186, "Hypnotic Pattern"],
+  [186, "Hypnotic Pattern", "Illusion", "3rd-level", false, "1 Action", "120 Feet", "S, M (a glowing stick of incense or a crystal vial filled with phosphorescent material)", "1 Minute", true, "You create a twisting pattern of colors that weaves through the air inside a 30-foot cube within range. The pattern appears for a moment and vanishes. Each creature in the area who sees the pattern must make a Wisdom saving throw. On a failed save, the creature becomes charmed for the duration. While charmed by this spell, the creature is incapacitated and has a speed of 0. The spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor."],
 
-  [187, "Ice Storm"],
+  [187, "Ice Storm", "Evocation", "4th-level", false, "1 Action", "300 Feet", "V, S, M (a pinch of dust and a few drops of water)", "Instantaneous", false, "A hail of rock-hard ice pounds to the ground in a 20-foot-radius, 40-foot-high cylinder centered on a point within range. Each creature in the cylinder must make a Dexterity saving throw. A creature takes 2d8 bludgeoning damage and 4d6 cold damage on a failed save, or half as much damage on a successful one. Hailstones turn the storm’s area of effect into difficult terrain until the end of your next turn. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 5th level or higher, the bludgeoning damage increases by 1d8 for each slot level above 4th."],
 
-  [188, "Identify"],
+  [188, "Identify", "Divination", "1st-level", true, "1 Minute", "Touch", "V, S, M (a pearl worth at least 100 gp and an owl feather)", "Instantaneous", false, "You choose one object that you must touch throughout the casting of the spell. If it is a magic item or some other magic-imbued object, you learn its properties and how to use them, whether it requires attunement to use, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are. If the item was created by a spell, you learn which spell created it. If you instead touch a creature throughout the casting, you learn what spells, if any, are currently affecting it."],
 
-  [189, "Illusory Script"],
+  [189, "Illusory Script", "Illusion", "1st-level", true, "1 Minute", "Touch", "S, M (a lead-based ink worth at least 10 gp, which the spell consumes)", "10 Days", false, "You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration. To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know. Should the spell be dispelled, the original script and the illusion both disappear. A creature with truesight can read the hidden message."],
 
-  [190, "Imprisonment"],
+  [190, "Imprisonment", "Abjuration", "9th-level", false, "1 Minute", "30 Feet", "V, S, M (a vellum depiction or a carved statuette in the likeness of the target, and a special component that varies according to the version of the spell you choose, worth at least 500 gp per Hit Die of the target)", "Until Dispelled", false, "You create a magical restraint to hold a creature that you can see within range. The target must succeed on a Wisdom saving throw or be bound by the spell; if it succeeds, it is immune to this spell if you cast it again. While affected by this spell, the creature doesn’t need to breathe, eat, or drink, and it doesn’t age. Divination spells can’t locate or perceive the target. When you cast the spell, you choose one of the following forms of imprisonment. </br> <b>Burial.</b> The target is entombed far beneath the earth in a sphere of magical force that is just large enough to contain the target. Nothing can pass through the sphere, nor can any creature teleport or use planar travel to get into or out of it. The special component for this version of the spell is a small mithral orb. </br> <b>Chaining.</b> Heavy chains, firmly rooted in the ground, hold the target in place. The target is restrained until the spell ends, and it can’t move or be moved by any means until then. The special component for this version of the spell is a fine chain of precious metal. </br> <b>Hedged Prison.</b> The spell transports the target into a tiny demiplane that is warded against teleportation and planar travel. The demiplane can be a labyrinth, a cage, a tower, or any similar confined structure or area of your choice. The special component for this version of the spell is a miniature representation of the prison made from jade. </br> <b>Minimus Containment.</b> The target shrinks to a height of 1 inch and is imprisoned inside a gemstone or similar object. Light can pass through the gemstone normally (allowing the target to see out and other creatures to see in), but nothing else can pass through, even by means of teleportation or planar travel. The gemstone can’t be cut or broken while the spell remains in effect. The special component for this version of the spell is a large, transparent gemstone, such as a corundum, diamond, or ruby. </br> <b>Slumber.</b> The target falls asleep and can’t be awoken. The special component for this version of the spell consists of rare soporific herbs. </br> <b>Ending the Spell.</b> During the casting of the spell, in any of its versions, you can specify a condition that will cause the spell to end and release the target. The condition can be as specific or as elaborate as you choose, but the GM must agree that the condition is reasonable and has a likelihood of coming to pass. The conditions can be based on a creature’s name, identity, or deity but otherwise must be based on observable actions or qualities and not based on intangibles such as level, class, or hit points. A dispel magic spell can end the spell only if it is cast as a 9th-level spell, targeting either the prison or the special component used to create it. You can use a particular special component to create only one prison at a time. If you cast the spell again using the same component, the target of the first casting is immediately freed from its binding."],
 
-  [191, "Incendiary Cloud"],
+  [191, "Incendiary Cloud", "Conjuration", "8th-level", false, "1 Action", "150 Feet", "V, S", "1 Minute", true, "A swirling cloud of smoke shot through with white-hot embers appears in a 20-foot-radius sphere centered on a point within range. The cloud spreads around corners and is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it. When the cloud appears, each creature in it must make a Dexterity saving throw. A creature takes 10d8 fire damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell’s area for the first time on a turn or ends its turn there. The cloud moves 10 feet directly away from you in a direction that you choose at the start of each of your turns."],
 
-  [192, "Inflict Wounds"],
+  [192, "Inflict Wounds", "Necromancy", "1st-level", false, "1 Action", "Touch", "V, S", "Instantaneous", false, "Make a melee spell attack against a creature you can reach. On a hit, the target takes 3d10 necrotic damage. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st."],
 
-  [193, "Insect Plague"],
+  [193, "Insect Plague", "Conjuration", "5th-level", false, "1 Action", "300 Feet", "V, S, M (a few grains of sugar, some kernels of grain, and a smear of fat)", "10 Minutes", true, "Swarming, biting locusts fill a 20-foot-radius sphere centered on a point you choose within range. The sphere spreads around corners. The sphere remains for the duration, and its area is lightly obscured. The sphere’s area is difficult terrain. When the area appears, each creature in it must make a Constitution saving throw. A creature takes 4d10 piercing damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell’s area for the first time on a turn or ends its turn there. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th."],
 
-  [194, "Invisibility"],
+  [194, "Invisibility", "Illusion", "2nd-level", false, "1 Action", "Touch", "V, S, M (an eyelash encased in gum arabic)", "1 Hour", true, "A creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target’s person. The spell ends for a target that attacks or casts a spell. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."],
 
-  [195, "Jump"],
+  [195, "Jump", "Transmutation", "1st-level", false, "1 Action", "Touch", "V, S, M (a grasshopper's hind leg)", "1 Minute", false, "You touch a creature. That creature's jump distance is tripled until the spell ends."],
 
-  [196, "Knock"],
+  [196, "Knock", "Transmutation", "2nd-level", false, "1 Action", "60 Feet", "V", "Instantaneous", false, "Choose an object that you can see within range. The object can be a door, a box, a chest, a set of manacles, a padlock, or another object that contains a mundane or magical means that prevents access. A target that is held shut by a mundane lock or that is stuck or barred becomes unlocked, unstuck, or unbarred. If the object has multiple locks, only one of them is unlocked. If you choose a target that is held shut with arcane lock, that spell is suppressed for 10 minutes, during which time the target can be opened and shut normally. When you cast the spell, a loud knock, audible from as far away as 300 feet, emanates from the target object."],
 
-  [197, "Legend Lore"],
+  [197, "Legend Lore", "Divination", "5th-level", false, "10 Minutes", "Self", "V, S, M (incense worth at least 250 gp, which the spell consumes, and four ivory strips worth at least 50 gp each)", "Instantaneous", false, "Name or describe a person, place, or object. The spell brings to your mind a brief summary of the significant lore about the thing you named. The lore might consist of current tales, forgotten stories, or even secret lore that has never been widely known. If the thing you named isn’t of legendary importance, you gain no information. The more information you already have about the thing, the more precise and detailed the information you receive is. The information you learn is accurate but might be couched in figurative language. For example, if you have a mysterious magic axe on hand, the spell might yield this information: \"Woe to the evildoer whose hand touches the axe, for even the haft slices the hand of the evil ones. Only a true Child of Stone, lover and beloved of Moradin, may awaken the true powers of the axe, and only with the sacred word Rudnogg on the lips.\""],
 
-  [198, "Leomund's Secret Chest"],
+  [198, "Leomund's Secret Chest", "Conjuration", "4th-level", false, "1 Action", "Touch", "V, S, M (an exquisite chest, 3 feet by 2 feet by 2 feet, constructed from rare materials worth at least 5,000 gp, and a Tiny replica made from the same materials worth at least 50 gp)", "Instantaneous", false, "You hide a chest, and all its contents, on the Ethereal Plane. You must touch the chest and the miniature replica that serves as a material component for the spell. The chest can contain up to 12 cubic feet of nonliving material (3 feet by 2 feet by 2 feet). While the chest remains on the Ethereal Plane, you can use an action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 feet of you. You can send the chest back to the Ethereal Plane by using an action and touching both the chest and the replica. After 60 days, there is a cumulative 5 percent chance per day that the spell’s effect ends. This effect ends if you cast this spell again, if the smaller replica chest is destroyed, or if you choose to end the spell as an action. If the spell ends and the larger chest is on the Ethereal Plane, it is irretrievably lost."],
 
-  [199, "Leomund's Tiny Hut"],
+  [199, "Leomund's Tiny Hut", "Evocation", "3rd-level", true, "1 Minute", "Self (10-foot-radius hemisphere)", "V, S, M (a small crystal bead)", "8 Hours", false, "A 10-foot-radius immobile dome of force springs into existence around and above you and remains stationary for the duration. The spell ends if you leave its area. Nine creatures of Medium size or smaller can fit inside the dome with you. The spell fails if its area includes a larger creature or more than nine creatures. Creatures and objects within the dome when you cast this spell can move through it freely. All other creatures and objects are barred from passing through it. Spells and other magical effects can’t extend through the dome or be cast through it. The atmosphere inside the space is comfortable and dry, regardless of the weather outside. Until the spell ends, you can command the interior to become dimly lit or dark. The dome is opaque from the outside, of any color you choose, but it is transparent from the inside."],
 
-  [200, "Lesser Restoration"],
+  [200, "Lesser Restoration", "Abjuration", "2nd-level", false, "1 Action", "Touch", "V, S", "Instantaneous", false, "You touch a creature and can end either one disease or one condition afflicting it. The condition can be blinded, deafened, paralyzed, or poisoned."],
 
   [201, "Levitate"],
 
@@ -3513,14 +3533,14 @@ function displayProficiencies() {
   display = display.substring(0, display.length - 2) + "</br>";
   display += "Weapons: ";
   for (var e = 0; e < weaponTypeProficiencies.length; e++) {
-    /*if (weaponTypeProficiencies[0] == 1 && weaponTypeProficiencies[1] == 1) {
+    if (weaponTypeProficiencies[0] == 1 && weaponTypeProficiencies[1] == 1) {
       display += "Simple Weapons, ";
       e = 2;
     }
     if (e >= 2 && weaponTypeProficiencies[2] == 1 && weaponTypeProficiencies[3] == 1) {
       display += "Martial Weapons, ";
-      e = 4;
-    }*/
+      break;
+    }
     if (weaponTypeProficiencies[e] == 1)
       display += weaponType[e] + ", ";
   }
@@ -4601,79 +4621,326 @@ function setEquipment() {
 function setFeatures() {
     switch (classChoice) {
         case "Barbarian":
-            //Rages
-            if (level < 3)
-                rages = 2;
-            else if (level < 6)
-                rages = 3;
-            else if (level < 12)
-                rages = 4;
-            else if (level < 17)
-                rages = 5;
-            else if (level < 20)
-                rages = 6;
+          //Rages
+          if (level < 3)
+            rages = 2;
+          else if (level < 6)
+            rages = 3;
+          else if (level < 12)
+            rages = 4;
+          else if (level < 17)
+            rages = 5;
+          else if (level < 20)
+            rages = 6;
+          else
+            rages = 100;
+          //Rage Damage
+          if (level < 9)
+            rageDamage = 2;
+          else if (level < 16)
+            rageDamage = 3;
+          else
+            rageDamage = 4;
+          //Level 1
+          if (level >= 1) {
+            if (rages == 100)
+              features += "<b>Rage</b>: PHB pg. 48 </br>    You have unlimited uses of Rage per long rest and you have a +" + rageDamage + " to damage rolls using Strength while raging. </br>";
             else
-                rages = 17033;
-            //Rage Damage
-            if (level < 9)
-                rageDamage = 2;
-            else if (level < 16)
-                rageDamage = 3;
-            else
-                rageDamage = 4;
-            //Level 1
-            if (level == 1) {
-                features += "Rage: PHB pg. 48 </br>    You have " + rages + " uses of Rage and you have a +" + rageDamage + " to damage rolls using Strength while raging.";
-                features += "Unarmored Defense: PHB pg. 48 </br>";
-            }
-            //Level 2
-            if (level == 2) {
-                //insert features
-            }
-
-            break;
+              features += "<b>Rage</b>: PHB pg. 48 </br>    You have " + rages + " uses of Rage per long rest and you have a +" + rageDamage + " to damage rolls using Strength while raging. </br>";
+            features += "<b>Unarmored Defense</b>: PHB pg. 48 </br>    Your armor class is equal to 10 + your Dexterity modifier + your Constitution modifier while you are not wearing armor. </br>";
+          }
+          break;
         case "Bard":
-            //Inspiration
+          //Inspiration
+          if (level < 5)
+            inspiration = "d6";
+          else if (level < 10)
+            inspiration = "d8";
+          else if (level < 15)
+            inspiration = "d10";
+          else
+            inspiration = "d12";
+          //Song of Rest
+          if (level == 1)
+            songOfRest = undefined;
+          else if (level < 9)
+            songOfRest = "d6";
+          else if (level < 13)
+            songOfRest = "d8";
+          else if (level < 17)
+            songOfRest = "d10";
+          else
+            songOfRest = "d12";
+          //Level 1
+          if (level >= 1) {
             if (level < 5)
-                inspiration = "d6";
-            else if (level < 10)
-                inspiration = "d8";
-            else if (level < 15)
-                inspiration = "d10";
+              features += "<b>Bardic Inspiration</b>: PHB pg. 53-54 </br>    Your Inspiration die is a " + inspiration + ". You can use this feature " + chaMod + " times per long rest. </br>";
             else
-                inspiration = "d12";
-            //Song of Rest
-            if (level == 1)
-                songOfRest = undefined;
-            else if (level < 9)
-                songOfRest = "d6";
-            else if (level < 13)
-                songOfRest = "d8";
-            else if (level < 17)
-                songOfRest = "d10";
-            else
-                songOfRest = "d12";
-            break;
+              features += "<b>Bardic Inspiration</b>: PHB pg. 53-54 </br>    Your Inspiration die is a " + inspiration + ". You can use this feature " + chaMod + " times per short or long rest. </br>";
+          }
+          break;
         case "Cleric":
-            break;
+          //Level 1
+          if (level >= 1) {
+            switch (subclass) {
+              case "Knowledge Domain Cleric":
+                features += "<b>Blessings of Knowledge</b>: PHB pg. 59 </br>    You are proficient in two skills from: Arcana, History, Nature, or Religion. Your proficiency bonus is doubled for these two skills. </br>";
+                break;
+              case "Life Domain Cleric":
+                features += "<b>Bonus Proficiency</b>: PHB pg. 60 </br>    You are proficient with heavy armor. </br>";
+                features += "<b>Disciple of Life</b>: PHB pg. 60 </br>    Your healing spells heal additional hit points equal to 2 + the spell's level. </br>";
+                break;
+              case "Light Domain Cleric":
+                features += "<b>Bonus Cantrip</b>: PHB pg. 61 </br>    You know the Light cantrip.";
+                features += "<b>Warding Flare</b>: PHB pg. 61 </br>    When a creature within 30 feet of you attacks you, you can use your reaction to impose disadvantage on the attack. You can use this feature " + wisMod + " times per long rest. </br>";
+                break;
+              case "Nature Domain Cleric":
+                features += "<b>Acolyte of Nature</b>: PHB pg. 62 </br>    You gain one druid cantrip of your choice. You also gain proficiency in one skill from: Animal Handling, Nature, or Survival. </br>";
+                features += "<b>Bonus Proficiency</b>: PHB pg. 62 </br>    You are proficient with heavy armor. </br>";
+                break;
+              case "Tempest Domain Cleric":
+                features += "<b>Bonus Proficiencies</b>: PHB pg. 62 </br>    You are proficient with martial weapons and heavy armor. </br>";
+                features += "<b>Wrath of the Storm</b>: PHB pg. 62 </br>    When a creature within 5 feet of you hits you with an attack, you can use your reaction to deal 2d8 lightning or thunder damage to the attacker. You can use this feature " + wisMod + " times per long rest. </br>";
+                break;
+              case "Trickery Domain Cleric":
+                features += "<b>Blessing of the Trickster</b>: PHB pg. 63 </br>    You can use your action to grant a willing creature advantage on Dexterity (Stealth) checks. This lasts for 1 hour or until you use this feature again. </br>";
+                break;
+              case "War Domain Cleric":
+                features += "<b>Bonus Proficiencies</b>: PHB pg. 63 </br>    You are proficient with martial weapons and heavy armor. </br>";
+                features += "<b>War Priest</b>: PHB pg. 63 </br>    When you use the attack action, you can make one weapon attack as a bonus action. You can use this feature " + wisMod + " times per long rest. </br>";
+                break;
+            }
+          }
+          break;
         case "Druid":
-            break;
+          //Level 1
+          if (level >= 1) {
+            features += "<b>Druidic</b>: PHB pg. 66 </br>    You know the Druidic language. </br>";
+          }
+          break;
         case "Fighter":
-            break;
+          //Fighting Style
+          switch (fightingStyle) {
+            case "":
+              var choice = Math.floor(Math.random() * 6);
+              switch (choice) {
+                case 0:
+                  fightingStyle = "Archery";
+                  break;
+                case 1:
+                  fightingStyle = "Defense";
+                  break;
+                case 2:
+                  fightingStyle = "Dueling";
+                  break;
+                case 3:
+                  fightingStyle = "Great Weapon Fighting";
+                  break;
+                case 4:
+                  fightingStyle = "Protection";
+                  break;
+                case 5:
+                  fightingStyle = "Two-Weapon Fighting";
+                  break;
+              }
+              break;
+          }
+          //Level 1
+          if (level >= 1) {
+            features += "<b>Fighting Style (" + fightingStyle + ")</b>: PHB pg. 72 </br>    ";
+            switch (fightingStyle) {
+              case "Archery":
+                features += "You have a +2 bonus to attack rolls with ranged weapons. </br>";
+                break;
+              case "Defense":
+                features += "While wearing armor, you have a +1 bonus to your armor class. </br>";
+                break;
+              case "Dueling":
+                features += "While you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon. </br>";
+                break;
+              case "Great Weapon Fighting":
+                features += "When you roll a 1 or 2 on a damage die for an attack you make a with a melee weapon you are wielding with two hands, you can reroll the die and must use the new roll. </br>";
+                break;
+              case "Protection":
+                features += "While you are wielding a shield, when a creature you can see attacks a target other than you within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. </br>";
+                break;
+              case "Two-Weapon Fighting":
+                features += "When wielding two weapons, you can add your ability modifier to the damage of the second attack. </br>";
+                break;
+            }
+            features += "<b>Second Wind</b>: PHB pg. 72 </br>    You can use a bonus action to regain hit points equal to 1d10 + your fighter level, once per short or long rest. </br>";
+          }
+          break;
         case "Monk":
-            break;
+          //Martial Arts
+          if (level < 5)
+            martialArts = "d4";
+          else if (level < 11)
+            martialArts = "d6";
+          else if (level < 17)
+            martialArts = "d8";
+          else
+            martialArts = "d10";
+          //Level 1
+          if (level >= 1) {
+            features += "<b>Unarmored Defense</b>: PHB pg. 78 </br>    Your armor class is equal to 10 + your Dexterity modifier + your Wisdom modifier while you are not wearing armor or wielding a shield. </br>";
+            features += "<b>Martial Arts</b>: PHB pg. 78 </br>    Your Martial Arts die is a " + martialArts + ". </br>";
+          }
+          break;
         case "Paladin":
-            break;
+          //Level 1
+          if (level >= 1) {
+            features += "<b>Divine Sense</b>: PHB pg. 84 </br>    As an action, you can detect celestials, fiends, and undead within 60 feet of you and are not behind total cover until the end of your next turn. You can use this feature " + (1 + chaMod) + " times per long rest. </br.";
+            features += "<b>Lay on Hands</b>: PHB pg. 84 </br>    As an action, you can touch a creature and restore any amount of hit points, up to " + (5 * level) + " hit points per long rest. </br>";
+          }
+          break;
         case "Ranger":
-            break;
+          //Favored Enemy
+          var enemies = ["Aberrations", "Beasts", "Celestials", "Constructs", "Dragons", "Elementals", "Fey", "Fiends", "Giants", "Monstrosities", "Oozes", "Plants", "Undead"];
+          var humanoids = ["Dwarves", "Elves", "Gnolls", "Gnomes", "Goblinoids", "Grimlocks", "Humans", "Kobolds", "Lizardfolk", "Merfolk", "Orcs", "Sahuagin"];
+          if (level >= 1) {
+            var choice = Math.floor(Math.random() * (enemies.length + 1);
+            if (choice < enemies.length) {
+              favoredEnemies[0] = enemies[choice];
+              enemies.splice(choice);
+            }
+            else {
+              var humanoid1 = Math.floor(Math.random() * humanoids.length);
+              var humanoid2 = Math.floor(Math.random() * humanoids.length);
+              while (humanoid1 == humanoid2)
+                humanoid2 = Math.floor(Math.random() * humanoids.length);
+              favoredEnemies[0] = humanoid1 + " and " + humanoid2;
+              humanoids.splice(humanoid1);
+              humanoids.splice(humanoid2);
+            }
+          }
+          if (level >= 6) {
+            var choice = Math.floor(Math.random() * (enemies.length) + 1);
+            if (choice < enemies.length) {
+              favoredEnemies[1] = enemies[choice];
+              enemies.splice(choice);
+            }
+            else {
+              var humanoid1 = Math.floor(Math.random() * humanoids.length);
+              var humanoid2 = Math.floor(Math.random() * humanoids.length);
+              while (humanoid1 == humanoid2)
+                humanoid2 = Math.floor(Math.random() * humanoids.length);
+              favoredEnemies[1] = humanoid1 + " and " + humanoid2;
+              humanoids.splice(humanoid1);
+              humanoids.splice(humanoid2);
+            }
+          }
+          if (level >= 14) {
+            var choice = Math.floor(Math.random() * (enemies.length) + 1);
+            if (choice < enemies.length) {
+              favoredEnemies[2] = enemies[choice];
+              enemies.splice(choice);
+            }
+            else {
+              var humanoid1 = Math.floor(Math.random() * humanoids.length);
+              var humanoid2 = Math.floor(Math.random() * humanoids.length);
+              while (humanoid1 == humanoid2)
+                humanoid2 = Math.floor(Math.random() * humanoids.length);
+              favoredEnemies[2] = humanoid1 + " and " + humanoid2;
+              humanoids.splice(humanoid1);
+              humanoids.splice(humanoid2);
+            }
+          }
+          //Natural Explorer
+          var terrains = ["Arctic", "Coast", "Desert", "Forest", "Grassland", "Mountain", "Swamp", "Underdark"];
+          if (level >= 1) {
+            var choice = Math.floor(Math.random() * terrains.length);
+            naturalExplorer[0] = terrains[choice];
+            terrains.splice(choice);
+          }
+          if (level >= 6) {
+            var choice = Math.floor(Math.random() * terrains.length);
+            naturalExplorer[1] = terrains[choice];
+            terrains.splice(choice);
+          }
+          if (level >= 14) {
+            var choice = Math.floor(Math.random() * terrains.length);
+            naturalExplorer[2] = terrains[choice];
+            terrains.splice(choice);
+          }
+          //Level 1
+          if (level >= 1) {
+            if (level >= 14) {
+              features += "<b>Favored Enemy</b>: PHB pg. 91 </br>    Your favored enemies are: " + favoredEnemies[0] + ", " + favoredEnemies[1] + " and " + favoredEnemies[2] + "</br>";
+              features += "<b>Natural Explorer</b>: PHB pg. 91 </br>    Your favored terrains are: " + naturalExplorer[0] + ", " + naturalExplorer[1] + " and " + naturalExplorer[2] + "</br>";
+            }
+            else if (level >= 6) {
+              features += "<b>Favored Enemy</b>: PHB pg. 91 </br>    Your favored enemies are: " + favoredEnemies[0] + " and " + favoredEnemies[1] + "</br>";
+              features += "<b>Natural Explorer</b>: PHB pg. 91 </br>    Your favored terrains are: " + naturalExplorer[0] + " and " + naturalExplorer[1] + "</br>";
+            }
+            else {
+              features += "<b>Favored Enemy</b>: PHB pg. 91 </br>    Your favored enemies are: " + favoredEnemies[0] + "</br>";
+              features += "<b>Natural Explorer</b>: PHB pg. 91 </br>    Your favored terrains are: " + naturalExplorer[0] + "</br>";
+            }
+          }
+          break;
         case "Rogue":
-            break;
+          //Sneak Attack
+          if (level < 3)
+            sneakAttack = "1d6";
+          else if (level < 5)
+            sneakAttack = "2d6";
+          else if (level < 7)
+            sneakAttack = "3d6";
+          else if (level < 9)
+            sneakAttack = "4d6";
+          else if (level < 11)
+            sneakAttack = "5d6";
+          else if (level < 13)
+            sneakAttack = "6d6";
+          else if (level < 15)
+            sneakAttack = "7d6";
+          else if (level < 17)
+            sneakAttack = "8d6";
+          else if (level < 19)
+            sneakAttack = "9d6";
+          else
+            sneakAttack = "10d6";
+          //Level 1
+          if (level >= 1) {
+            features += "<b>Sneak Attack</b>: PHB pg. 96 </br>    Your Sneak Attack damage is " + sneakAttack + ". </br>";
+            features += "<b>Expertise</b>: PHB pg. 96 </br>    Choose two of your proficiencies or one of your proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for these proficiencies. </br>";
+            features += "<b>Thieves' Cant</b>: PHB pg. 96 </br>    You know the Thieves' Cant language. </br>";
+          }
+          break;
         case "Sorcerer":
-            break;
+          //Dragon Ancestor
+          if (subclass == "Draconic Bloodline Sorcerer") {
+            var dragons = ["Black", "Blue", "Brass", "Bronze", "Copper", "Gold", "Green", "Red", "Silver", "White"];
+            dragonAncestor = dragons[Math.floor(Math.random() * 10)];
+          }
+          //Level 1
+          if (level >= 1) {
+            switch (subclass) {
+              case "Draconic Bloodline Sorcerer":
+                features += "<b>Dragon Ancestor</b>: PHB pg. 102 </br>    Your dragon ancestor type is " + dragonAncestor + ". You can speak, read, and write Draconic and when you make a Charisma check when interacting with dragons, and your proficiency bonus applies, it is doubled. </br>";
+                features += "<b>Draconic Resilience</b>: PHB pg. 102 </br>    Your hit point maximum increases by 1 for each sorcerer level. Also, when you aren't wearing armor, your AC equals 13 + your Dexterity modifier. </br>";
+                break;
+              case "Wild Magic Sorcerer":
+                features += "<b>Wild Magic Surge</b>: PHB pg. 103 </br>    When you cast a sorcerer spell of 1st level or higher, the DM can have you roll a d20. On a 1, roll on the Wild Magic Surge table. </br>";
+                features += "<b>Tides of Chaos</b>: PHB pg. 103 </br>    Once per long rest, you can gain advantage on one attack roll, ability check, or saving throw. However, the DM can have you roll on the Wild Magic Surge table when you cast a sorcerer spell of 1st level or higher. You then regain the use of this feature. </br>";
+                break;
+            }
+          }
+          break;
         case "Warlock":
-            break;
+          //Level 1
+          switch (subclass) {
+            case "Warlock of the Archfey":
+              break;
+            case "Warlock of the Fiend":
+              break;
+            case "Warlock of the Great Old One":
+              break;
+          }
+          break;
         case "Wizard":
-            break;
+          break;
     }
 }
 
@@ -4861,45 +5128,59 @@ function setSpells() {
       }
       switch (subclass) {
         case "College of Lore Bard":
-          if (level >= 6) {
-            for (var i = 0; i <= 2; i++) {
-              index = Math.floor(Math.random() * spells.length);
-              spellsChosen += spells[index][1] + "<br>";
-            }
-          }
           break;
       }
       break;
     case "Cleric":
       var clericSpells = [
         /*Cantrips*/[spells[166][1], spells[202][1], spells[224][1], spells[278][1], spells[283][1], spells[304][1], spells[328][1]],
-        /*Level One*/[spells[23][1], spells[33]]
+        /*Level One*/[spells[23][1], spells[33][1], spells[54][1], spells[79][1], spells[84][1], spells[93][1], spells[94][1], spells[95][1], spells[167][1], spells[175][1], spells[192][1], spells[267][1], spells[269][1], spells[284][1], spells[295][1]],
+        /*Level Two*/[spells[1][1], spells[18][1], spells[36][1], spells[42][1], spells[73][1], spells[115][1], spells[134][1], spells[154][1], spells[182][1], spells[200][1], spells[207][1], spells[259][1], spells[268][1], spells[298][1], spells[311][1], spells[349][1], spells[360][1]],
+        /*Level Three*/[spells[7][1], spells[27][1], spells[29][1], spells[49][1], spells[78][1], spells[88][1], spells[101][1], spells[130][1], spells[158][1], spells[211][1], spells[219][1], spells[222][1], spells[266][1], spells[277][1], spells[281][1], spells[290][1], spells[306][1], spells[310][1], spells[333][1], spells[351][1]],
+        /*Level Four*/[spells[25][1], spells[74][1], spells[89][1], spells[103][1], spells[149][1], spells[164][1], spells[206][1], spells[314][1]],
+        /*Level Five*/[spells[55][1], spells[71][1], spells[100][1], spells[141][1], spells[153][1], spells[163][1], spells[170][1], spells[193][1], spells[197][1], spells[217][1], spells[251][1], spells[270][1], spells[286][1]],
+        /*Level Six*/[spells[31][1], spells[80][1], spells[133][1], spells[146][1], spells[172][1], spells[174][1], spells[178][1], spells[250][1], spells[338][1], spells[358][1]],
+        /*Level Seven*/[spells[64][1], spells[105][1], spells[120][1], spells[139][1], spells[252][1], spells[275][1], spells[279][1], spells[321][1]],
+        /*Level Eight*/[spells[10][1], spells[75][1], spells[112][1], spells[183][1]],
+        /*Level Nine*/[spells[17][1], spells[152][1], spells[218][1], spells[337][1]]
       ];
       switch (subclass) {
-        case "Knowledge Domain ":
+        case "Knowledge Domain Cleric":
 
           break;
-        case "Life Domain ":
+        case "Life Domain Cleric":
 
           break;
-        case "Light Domain ":
+        case "Light Domain Cleric":
 
           break;
-        case "Nature Domain ":
+        case "Nature Domain Cleric":
 
           break;
-        case "Tempest Domain ":
+        case "Tempest Domain Cleric":
 
           break;
-        case "Trickery Domain ":
+        case "Trickery Domain Cleric":
 
           break;
-        case "War Domain ":
+        case "War Domain Cleric":
 
           break;
       }
       break;
     case "Druid":
+      var druidSpells = [
+        /*Cantrips*/[spells[111][1], spells[166][1], spells[224][1], spells[254][1], spells[263][1], spells[278][1], spells[296][1], spells[32][1]],
+        /*Level One*/[spells[4][1], spells[44][1], spells[79][1], spells[84][1], spells[94][1], spells[95][1], spells[118][1], spells[125][1], spells[145][1], spells[159][1], spells[175][1], spells[195][1], spells[208][1], spells[269][1], spells[305][1], spells[331][1]],
+        ///*Level Two*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Three*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Four*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Five*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Six*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Seven*/[spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Eight*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Nine*/[spells[][], spells[][], spells[][], spells[][]]
+      ];
       switch (subclass) {
         case "Circle of the Land (Arctic)":
 
@@ -4938,6 +5219,13 @@ function setSpells() {
       }
       break;
     case "Paladin":
+      var paladinSpells = [
+        ///*Level One*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Two*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Three*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Four*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Five*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]]
+      ];
       switch (subclass) {
         case "Oath of Devotion ":
 
@@ -4951,6 +5239,13 @@ function setSpells() {
       }
       break;
     case "Ranger":
+      //var rangerSpells = [
+        ///*Level One*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Two*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Three*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Four*/[spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Five*/[spells[][], spells[][], spells[][], spells[][]]
+      //];
       switch (subclass) {
         case " (Hunter)":
 
@@ -4968,6 +5263,18 @@ function setSpells() {
       }
       break;
     case "Sorcerer":
+      //var sorcererSpells = [
+        ///*Cantrips*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level One*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Two*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        ///*Level Three*/[],
+        ///*Level Four*/[],
+        ///*Level Five*/[],
+        ///*Level Six*/[],
+        ///*Level Seven*/[],
+        ///*Level Eight*/[],
+        ///*Level Nine*/[]
+      //];
       switch (subclass) {
         case " Draconic Bloodline":
 
@@ -4978,6 +5285,18 @@ function setSpells() {
       }
       break;
     case "Warlock":
+      //var warlockSpells = [
+        ///*Cantrips*/[],
+        ///*Level One*/[],
+        ///*Level Two*/[],
+        ///*Level Three*/[],
+        ///*Level Four*/[],
+        ///*Level Five*/[],
+        ///*Level Six*/[],
+        ///*Level Seven*/[],
+        ///*Level Eight*/[],
+        ///*Level Nine*/[]
+      //];
       switch (subclass) {
         case " of the Archfey":
 
@@ -4991,6 +5310,18 @@ function setSpells() {
       }
       break;
     case "Wizard":
+      //var wizardSpells = [
+        ///*Cantrips*/[],
+        ///*Level One*/[],
+        ///*Level Two*/[],
+        ///*Level Three*/[],
+        ///*Level Four*/[],
+        ///*Level Five*/[],
+        ///*Level Six*/[],
+        ///*Level Seven*/[],
+        ///*Level Eight*/[],
+        ///*Level Nine*/[]
+      //];
       switch (subclass) {
         case "School of Abjuration ":
 
