@@ -550,55 +550,55 @@ var spells = [
 
   [200, "Lesser Restoration", "Abjuration", "2nd-level", false, "1 Action", "Touch", "V, S", "Instantaneous", false, "You touch a creature and can end either one disease or one condition afflicting it. The condition can be blinded, deafened, paralyzed, or poisoned."],
 
-  [201, "Levitate"],
+  [201, "Levitate", "Transmutation", "2nd-level", false, "1 Action", "60 Feet", "V, S, M (either a small leather loop or a piece of golden wire bent into a cup shape with a long shank on one end)", "10 Minutes", true, "One creature or object of your choice that you can see within range rises vertically, up to 20 feet, and remains suspended there for the duration. The spell can levitate a target that weighs up to 500 pounds. An unwilling creature that succeeds on a Constitution saving throw is unaffected. The target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move as if it were climbing. You can change the target’s altitude by up to 20 feet in either direction on your turn. If you are the target, you can move up or down as part of your move. Otherwise, you can use your action to move the target, which must remain within the spell’s range. When the spell ends, the target floats gently to the ground if it is still aloft."],
 
-  [202, "Light"],
+  [202, "Light", "Evocation", "Cantrip", false, "1 Action", "Touch", "V, M (a firefly or phosphorescent moss)", "1 Hour", false, "You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action. If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell."],
 
-  [203, "Lightning Arrow"],
+  [203, "Lightning Arrow", "Transmutation", "3rd-level", false ,"1 Bonus Action", "Self", "V, S", "1 Minute", true, "The next time you make a ranged weapon attack during the spell’s duration, the weapon’s ammunition, or the weapon itself if it’s a thrown weapon, transforms into a bolt of lightning. Make the attack roll as normal, The target takes 4d8 lightning damage on a hit, or half as much damage on a miss, instead of the weapon’s normal damage. Whether you hit or miss, each creature within 10 feet of the target must make a Dexterity saving throw. Each of these creatures takes 2d8 lightning damage on a failed save, or half as much damage on a successful one. The piece of ammunition or weapon then returns to its normal form. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, the damage for both effects of the spell increases by 1d8 for each slot level above 3rd."],
 
-  [204, "Lightning Bolt"],
+  [204, "Lightning Bolt", "Evocation", "3rd-level", false, "1 Action", "Self (100-foot line)", "V, S, M (a bit of fur and a rod of amber, crystal, or glass)", "Instantaneous", false, "A stroke of lightning forming a line 100 feet long and 5 feet wide blasts out from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 8d6 lightning damage on a failed save, or half as much damage on a successful one. The lightning ignites flammable objects in the area that aren’t being worn or carried. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot above 3rd."],
 
-  [205, "Locate Animals or Plants"],
+  [205, "Locate Animals or Plants", "Divination", "2nd-level", true, "1 Action", "Self", "V, S, M (a bit of fur from a bloodhound)", "Instantaneous", false, "Describe or name a specific kind of beast or plant. Concentrating on the voice of nature in your surroundings, you learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present."],
 
-  [206, "Locate Creature"],
+  [206, "Locate Creature", "Divination", "4th-level", false, "1 Action", "Self", "V, S, M (a bit of fur from a bloodhound)", "1 Hour", true, "Describe or name a creature that is familiar to you. You sense the direction to the creature’s location, as long as that creature is within 1,000 feet of you. If the creature is moving, you know the direction of its movement. The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a unicorn), so long as you have seen such a creature up close—within 30 feet—at least once. If the creature you described or named is in a different form, such as being under the effects of a polymorph spell, this spell doesn’t locate the creature. This spell can’t locate a creature if running water at least 10 feet wide blocks a direct path between you and the creature."],
 
-  [207, "Locate Object"],
+  [207, "Locate Object", "Divination", "2nd-level", false, "1 Action", "Self", "V, S, M (a forked twig)", "10 Minutes", true, "Describe or name an object that is familiar to you. You sense the direction to the object’s location, as long as that object is within 1,000 feet of you. If the object is in motion, you know the direction of its movement. The spell can locate a specific object known to you, as long as you have seen it up close—within 30 feet—at least once. Alternatively, the spell can locate the nearest object of a particular kind, such as a certain kind of apparel, jewelry, furniture, tool, or weapon. This spell can’t locate an object if any thickness of lead, even a thin sheet, blocks a direct path between you and the object."],
 
-  [208, "Longstrider"],
+  [208, "Longstrider", "Transmutation", "1st-level", false, "1 Action", "Touch", "V, S, M (a pinch of dirt)", "1 Hour", false, "You touch a creature. The target’s speed increases by 10 feet until the spell ends. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."],
 
-  [209, "Mage Armor"],
+  [209, "Mage Armor", "Abjuration", "1st-level", false, "1 Action", "Touch", "V, S, M (a piece of curled leather)", "8 Hours", false, "You touch a willing creature who isn’t wearing armor, and a protective magical force surrounds it until the spell ends. The target’s base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action."],
 
-  [210, "Mage Hand"],
+  [210, "Mage Hand", "Conjuration", "Cantrip", false, "1 Action", "30 Feet", "V, S", "1 Minute", false, "A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again. You can use your action to control the hand. You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial. You can move the hand up to 30 feet each time you use it. The hand can’t attack, activate magic items, or carry more than 10 pounds."],
 
-  [211, "Magic Circle"],
+  [211, "Magic Circle", "Abjuration", "3rd-level", false, "1 Minute", "10 Feet", "V, S, M (holy water or powdered silver and iron worth at least 100 gp, which the spell consumes)", "1 Hour", false, "You create a 10-foot-radius, 20-foot-tall cylinder of magical energy centered on a point on the ground that you can see within range. Glowing runes appear wherever the cylinder intersects with the floor or other surface. Choose one or more of the following types of creatures: celestials, elementals, fey, fiends, or undead. The circle affects a creature of the chosen type in the following ways: <ul> <li>The creature can’t willingly enter the cylinder by nonmagical means. If the creature tries to use teleportation or interplanar travel to do so, it must first succeed on a Charisma saving throw.</li> <li>The creature has disadvantage on attack rolls against targets within the cylinder.</li> <li>Targets within the cylinder can’t be charmed, frightened, or possessed by the creature.</li> </ul> When you cast this spell, you can elect to cause its magic to operate in the reverse direction, preventing a creature of the specified type from leaving the cylinder and protecting targets outside it. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, the Duration increases by 1 hour for each slot level above 3rd."],
 
-  [212, "Magic Jar"],
+  [212, "Magic Jar", "Necromancy", "6th-level", false, "1 Minute", "Self", "V, S, M (a gem, crystal, reliquary, or some other ornamental container worth at least 500 gp)", "Until Dispelled", false, "Your body falls into a catatonic state as your soul leaves it and enters the container you used for the spell’s material component. While your soul inhabits the container, you are aware of your surroundings as if you were in the container’s space. You can’t move or use reactions. The only action you can take is to project your soul up to 100 feet out of the container, either returning to your living body (and ending the spell) or attempting to possess a humanoids body. You can attempt to possess any humanoid within 100 feet of you that you can see (creatures warded by a protection from evil and good or magic circle spell can’t be possessed). The target must make a Charisma saving throw. On a failure, your soul moves into the target’s body, and the target’s soul becomes trapped in the container. On a success, the target resists your efforts to possess it, and you can’t attempt to possess it again for 24 hours. Once you possess a creature’s body, you control it. Your game statistics are replaced by the statistics of the creature, though you retain your alignment and your Intelligence, Wisdom, and Charisma scores. You retain the benefit of your own class features. If the target has any class levels, you can’t use any of its class features. Meanwhile, the possessed creature’s soul can perceive from the container using its own senses, but it can’t move or take actions at all. While possessing a body, you can use your action to return from the host body to the container if it is within 100 feet of you, returning the host creature’s soul to its body. If the host body dies while you’re in it, the creature dies, and you must make a Charisma saving throw against your own spellcasting DC. On a success, you return to the container if it is within 100 feet of you. Otherwise, you die. If the container is destroyed or the spell ends, your soul immediately returns to your body. If your body is more than 100 feet away from you or if your body is dead when you attempt to return to it, you die. If another creature’s soul is in the container when it is destroyed, the creature’s soul returns to its body if the body is alive and within 100 feet. Otherwise, that creature dies. When the spell ends, the container is destroyed."],
 
-  [213, "Magic Missle"],
+  [213, "Magic Missle", "Evocation", "1st-level", false, "1 Action", "120 Feet", "V, S", "Instantaneous", false, "You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot above 1st."],
 
-  [214, "Magic Mouth"],
+  [214, "Magic Mouth", "Illusion", "2nd-level", true, "1 Minute", "30 Feet", "V, S, M (a small bit of honeycomb and jade dust worth at least 10 gp, which the spell consumes)", "Until Dispelled", false, "You implant a message within an object in range, a message that is uttered when a trigger condition is met. Choose an object that you can see and that isn’t being worn or carried by another creature. Then speak the message, which must be 25 words or less, though it can be delivered over as long as 10 minutes. Finally, determine the circumstance that will trigger the spell to deliver your message. When that circumstance occurs, a magical mouth appears on the object and recites the message in your voice and at the same volume you spoke. If the object you chose has a mouth or something that looks like a mouth (for example, the mouth of a statue), the magical mouth appears there so that the words appear to come from the object’s mouth. When you cast this spell, you can have the spell end after it delivers its message, or it can remain and repeat its message whenever the trigger occurs. The triggering circumstance can be as general or as detailed as you like, though it must be based on visual or audible conditions that occur within 30 feet of the object. For example, you could instruct the mouth to speak when any creature moves within 30 feet of the object or when a silver bell rings within 30 feet of it."],
 
-  [215, "Magic Weapon"],
+  [215, "Magic Weapon", "Transmutation", "2nd-level", false, "1 Bonus Action", "Touch", "V, S", "1 Hour", true, "You touch a nonmagical weapon. Until the spell ends, that weapon becomes a magic weapon with a +1 bonus to attack rolls and damage rolls. At Higher Levels: When you cast this spell using a spell slot of 4th level or higher, the bonus increases to +2. When you use a spell slot of 6th level or higher, the bonus increases to +3."],
 
-  [216, "Major Image"],
+  [216, "Major Image", "Illusion", "3rd-level", false, "1 Action", "120 Feet", "V, S, M (a bit of fleece)", "10 Minutes", true, "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube. The image appears at a spot that you can see within range and lasts for the duration. It seems completely real, including sounds, smells, and temperature appropriate to the thing depicted. You can’t create sufficient heat or cold to cause damage, a sound loud enough to deal thunder damage or deafen a creature, or a smell that might sicken a creature (like a troglodyte’s stench). As long as you are within range of the illusion, you can use your action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example. Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 6th level or higher, the spell lasts until dispelled, without requiring your Concentration."],
 
-  [217, "Mass Cure Wounds"],
+  [217, "Mass Cure Wounds", "Conjuration", "5th-level", false, "1 Action", "60 Feet", "V, S", "Instantaneous", false, "A wave of healing energy washes out from a point of your choice within range. Choose up to six creatures in a 30-foot-radius sphere centered on that point. Each target regains hit points equal to 3d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 6th level or higher, the Healing increases by 1d8 for each slot level above 5th."],
 
-  [218, "Mass Heal"],
+  [218, "Mass Heal", "Conjuration", "9th-level", false, "1 Action", "60 Feet", "V, S", "Instantaneous", false, "A flood of healing energy flows from you into injured creatures around you. You restore up to 700 hit points, divided as you choose among any number of creatures that you can see within range. Creatures healed by this spell are also cured of all diseases and any effect making them blinded or deafened. This spell has no effect on undead or constructs."],
 
-  [219, "Mass Healing Word"],
+  [219, "Mass Healing Word", "Evocation", "3rd-level", false, "1 Bonus Action", "60 Feet", "V", "Instantaneous", false, "As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, the Healing increases by 1d4 for each slot level above 3rd."],
 
-  [220, "Mass Suggestion"],
+  [220, "Mass Suggestion", "Enchantment", "6th-level", false, "1 Action", "60 Feet", "V, M (a snake's tongue and either a bit of honeycomb or a drop of sweet oil)", "24 Hours", false, "You suggest a course of activity (limited to a sentence or two) and magically influence up to twelve creatures of your choice that you can see within range and that can hear and understand you. Creatures that can’t be charmed are immune to this effect. The suggestion must be worded in such a manner as to make the course of action sound reasonable. Asking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act automatically negates the effect of the spell. Each target must make a Wisdom saving throw. On a failed save, it pursues the course of action you described to the best of its ability. The suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do. You can also specify conditions that will trigger a special activity during the duration. For example, you might suggest that a group of soldiers give all their money to the first beggar they meet. If the condition isn’t met before the spell ends, the activity isn’t performed. If you or any of your companions damage a creature affected by this spell, the spell ends for that creature. <b>At Higher Levels.</b> When you cast this spell using a 7th-level spell slot, the Duration is 10 days. When you use an 8th-level spell slot, the Duration is 30 days. When you use a 9th-level spell slot, the Duration is a year and a day."],
 
-  [221, "Maze"],
+  [221, "Maze", "Conjuration", "8th-level", false, "1 Action", "60 Feet", "V, S", "10 Minutes", true, "You banish a creature that you can see within range into a labyrinthine demiplane. The target remains there for the duration or until it escapes the maze. The target can use its action to attempt to escape. When it does so, it makes a DC 20 Intelligence check. If it succeeds, it escapes, and the spell ends (a minotaur or goristro demon automatically succeeds). When the spell ends, the target reappears in the space it left or, if that space is occupied, in the nearest unoccupied space."],
 
-  [222, "Meld Into Stone"],
+  [222, "Meld Into Stone", "Transmutation", "3rd-level", true, "1 Action", "Touch", "V, S", "8 Hours", false, "You step into a stone object or surface large enough to fully contain your body, melding yourself and all the equipment you carry with the stone for the duration. Using your movement, you step into the stone at a point you can touch. Nothing of your presence remains visible or otherwise detectable by nonmagical senses. While merged with the stone, you can’t see what occurs outside it, and any Wisdom (Perception) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use your movement to leave the stone where you entered it, which ends the spell. You otherwise can’t move. Minor physical damage to the stone doesn’t harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals 6d6 bludgeoning damage to you. The stone’s complete destruction (or transmutation into a different substance) expels you and deals 50 bludgeoning damage to you. If expelled, you fall prone in an unoccupied space closest to where you first entered."],
 
-  [223, "Melf's Acid Arrow"],
+  [223, "Melf's Acid Arrow", "Evocation", "2nd-level", false, "1 Action", "90 Feet", "V, S, M (powdered rhubarb leaf and an adder's stomach)", "Instantaneous", false, "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 acid damage immediately and 2d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 3rd level or higher, the damage (both initial and later) increases by 1d4 for each slot level above 2nd."],
 
-  [224, "Mending"],
+  [224, "Mending", "Transmutation", "Cantrip", false, "1 Minute", "Touch", "V, S, M (two lodestones)", "Instantaneous", false, "This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage. This spell can physically repair a magic item or construct, but the spell can’t restore magic to such an object."],
 
-  [225, "Message"],
+  [225, "Message", "Transmutation", "Cantrip", false, "1 Action", "120 Feet", "V, S, M (a short piece of copper wire)", "1 Round", false, "You point your finger toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear. You can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks the spell. The spell doesn’t have to follow a straight line and can travel freely around corners or through openings."],
 
   [226, "Meteor Swarm"],
 
@@ -4648,10 +4648,10 @@ function setFeatures() {
           //Level 1
           if (level >= 1) {
             if (rages == 100)
-              features += "<b>Rage</b>: PHB pg. 48 </br>&nbsp;&nbsp;&nbsp;&nbsp;You have unlimited uses of Rage per long rest and you have a +" + rageDamage + " to damage rolls using Strength while raging. </br>";
+              features += "<b>Rage</b>: PHB pg. 48 </br>You have unlimited uses of Rage per long rest and you have a +" + rageDamage + " to damage rolls using Strength while raging. </br>";
             else
-              features += "<b>Rage</b>: PHB pg. 48 </br>&nbsp;&nbsp;&nbsp;&nbsp;You have " + rages + " uses of Rage per long rest and you have a +" + rageDamage + " to damage rolls using Strength while raging. </br>";
-            features += "<b>Unarmored Defense</b>: PHB pg. 48 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your armor class is equal to 10 + your Dexterity modifier + your Constitution modifier while you are not wearing armor. </br>";
+              features += "<b>Rage</b>: PHB pg. 48 </br>You have " + rages + " uses of Rage per long rest and you have a +" + rageDamage + " to damage rolls using Strength while raging. </br>";
+            features += "<b>Unarmored Defense</b>: PHB pg. 48 </br>Your armor class is equal to 10 + your Dexterity modifier + your Constitution modifier while you are not wearing armor. </br>";
           }
           break;
         case "Bard":
@@ -4678,9 +4678,9 @@ function setFeatures() {
           //Level 1
           if (level >= 1) {
             if (level < 5)
-              features += "<b>Bardic Inspiration</b>: PHB pg. 53-54 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your Inspiration die is a " + inspiration + ". You can use this feature " + chaMod + " times per long rest. </br>";
+              features += "<b>Bardic Inspiration</b>: PHB pg. 53-54 </br>Your Inspiration die is a " + inspiration + ". You can use this feature " + chaMod + " times per long rest. </br>";
             else
-              features += "<b>Bardic Inspiration</b>: PHB pg. 53-54 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your Inspiration die is a " + inspiration + ". You can use this feature " + chaMod + " times per short or long rest. </br>";
+              features += "<b>Bardic Inspiration</b>: PHB pg. 53-54 </br>Your Inspiration die is a " + inspiration + ". You can use this feature " + chaMod + " times per short or long rest. </br>";
           }
           break;
         case "Cleric":
@@ -4688,30 +4688,30 @@ function setFeatures() {
           if (level >= 1) {
             switch (subclass) {
               case "Knowledge Domain Cleric":
-                features += "<b>Blessings of Knowledge</b>: PHB pg. 59 </br>&nbsp;&nbsp;&nbsp;&nbsp;You are proficient in two skills from: Arcana, History, Nature, or Religion. Your proficiency bonus is doubled for these two skills. </br>";
+                features += "<b>Blessings of Knowledge</b>: PHB pg. 59 </br>You are proficient in two skills from: Arcana, History, Nature, or Religion. Your proficiency bonus is doubled for these two skills. </br>";
                 break;
               case "Life Domain Cleric":
-                features += "<b>Bonus Proficiency</b>: PHB pg. 60 </br>&nbsp;&nbsp;&nbsp;&nbsp;You are proficient with heavy armor. </br>";
-                features += "<b>Disciple of Life</b>: PHB pg. 60 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your healing spells heal additional hit points equal to 2 + the spell's level. </br>";
+                features += "<b>Bonus Proficiency</b>: PHB pg. 60 </br>You are proficient with heavy armor. </br>";
+                features += "<b>Disciple of Life</b>: PHB pg. 60 </br>Your healing spells heal additional hit points equal to 2 + the spell's level. </br>";
                 break;
               case "Light Domain Cleric":
-                features += "<b>Bonus Cantrip</b>: PHB pg. 61 </br>&nbsp;&nbsp;&nbsp;&nbsp;You know the Light cantrip.";
-                features += "<b>Warding Flare</b>: PHB pg. 61 </br>&nbsp;&nbsp;&nbsp;&nbsp;When a creature within 30 feet of you attacks you, you can use your reaction to impose disadvantage on the attack. You can use this feature " + wisMod + " times per long rest. </br>";
+                features += "<b>Bonus Cantrip</b>: PHB pg. 61 </br>You know the Light cantrip.";
+                features += "<b>Warding Flare</b>: PHB pg. 61 </br>When a creature within 30 feet of you attacks you, you can use your reaction to impose disadvantage on the attack. You can use this feature " + wisMod + " times per long rest. </br>";
                 break;
               case "Nature Domain Cleric":
-                features += "<b>Acolyte of Nature</b>: PHB pg. 62 </br>&nbsp;&nbsp;&nbsp;&nbsp;You gain one druid cantrip of your choice. You also gain proficiency in one skill from: Animal Handling, Nature, or Survival. </br>";
-                features += "<b>Bonus Proficiency</b>: PHB pg. 62 </br>&nbsp;&nbsp;&nbsp;&nbsp;You are proficient with heavy armor. </br>";
+                features += "<b>Acolyte of Nature</b>: PHB pg. 62 </br>You gain one druid cantrip of your choice. You also gain proficiency in one skill from: Animal Handling, Nature, or Survival. </br>";
+                features += "<b>Bonus Proficiency</b>: PHB pg. 62 </br>You are proficient with heavy armor. </br>";
                 break;
               case "Tempest Domain Cleric":
-                features += "<b>Bonus Proficiencies</b>: PHB pg. 62 </br>&nbsp;&nbsp;&nbsp;&nbsp;You are proficient with martial weapons and heavy armor. </br>";
-                features += "<b>Wrath of the Storm</b>: PHB pg. 62 </br>&nbsp;&nbsp;&nbsp;&nbsp;When a creature within 5 feet of you hits you with an attack, you can use your reaction to deal 2d8 lightning or thunder damage to the attacker. You can use this feature " + wisMod + " times per long rest. </br>";
+                features += "<b>Bonus Proficiencies</b>: PHB pg. 62 </br>You are proficient with martial weapons and heavy armor. </br>";
+                features += "<b>Wrath of the Storm</b>: PHB pg. 62 </br>When a creature within 5 feet of you hits you with an attack, you can use your reaction to deal 2d8 lightning or thunder damage to the attacker. You can use this feature " + wisMod + " times per long rest. </br>";
                 break;
               case "Trickery Domain Cleric":
-                features += "<b>Blessing of the Trickster</b>: PHB pg. 63 </br>&nbsp;&nbsp;&nbsp;&nbsp;You can use your action to grant a willing creature advantage on Dexterity (Stealth) checks. This lasts for 1 hour or until you use this feature again. </br>";
+                features += "<b>Blessing of the Trickster</b>: PHB pg. 63 </br>You can use your action to grant a willing creature advantage on Dexterity (Stealth) checks. This lasts for 1 hour or until you use this feature again. </br>";
                 break;
               case "War Domain Cleric":
-                features += "<b>Bonus Proficiencies</b>: PHB pg. 63 </br>&nbsp;&nbsp;&nbsp;&nbsp;You are proficient with martial weapons and heavy armor. </br>";
-                features += "<b>War Priest</b>: PHB pg. 63 </br>&nbsp;&nbsp;&nbsp;&nbsp;When you use the attack action, you can make one weapon attack as a bonus action. You can use this feature " + wisMod + " times per long rest. </br>";
+                features += "<b>Bonus Proficiencies</b>: PHB pg. 63 </br>You are proficient with martial weapons and heavy armor. </br>";
+                features += "<b>War Priest</b>: PHB pg. 63 </br>When you use the attack action, you can make one weapon attack as a bonus action. You can use this feature " + wisMod + " times per long rest. </br>";
                 break;
             }
           }
@@ -4719,7 +4719,7 @@ function setFeatures() {
         case "Druid":
           //Level 1
           if (level >= 1) {
-            features += "<b>Druidic</b>: PHB pg. 66 </br>&nbsp;&nbsp;&nbsp;&nbsp;You know the Druidic language. </br>";
+            features += "<b>Druidic</b>: PHB pg. 66 </br>You know the Druidic language. </br>";
           }
           break;
         case "Fighter":
@@ -4751,7 +4751,7 @@ function setFeatures() {
           }
           //Level 1
           if (level >= 1) {
-            features += "<b>Fighting Style (" + fightingStyle + ")</b>: PHB pg. 72 </br>&nbsp;&nbsp;&nbsp;&nbsp;";
+            features += "<b>Fighting Style (" + fightingStyle + ")</b>: PHB pg. 72 </br>";
             switch (fightingStyle) {
               case "Archery":
                 features += "You have a +2 bonus to attack rolls with ranged weapons. </br>";
@@ -4772,7 +4772,7 @@ function setFeatures() {
                 features += "When wielding two weapons, you can add your ability modifier to the damage of the second attack. </br>";
                 break;
             }
-            features += "<b>Second Wind</b>: PHB pg. 72 </br>&nbsp;&nbsp;&nbsp;&nbsp;You can use a bonus action to regain hit points equal to 1d10 + your fighter level, once per short or long rest. </br>";
+            features += "<b>Second Wind</b>: PHB pg. 72 </br>You can use a bonus action to regain hit points equal to 1d10 + your fighter level, once per short or long rest. </br>";
           }
           break;
         case "Monk":
@@ -4787,15 +4787,15 @@ function setFeatures() {
             martialArts = "d10";
           //Level 1
           if (level >= 1) {
-            features += "<b>Unarmored Defense</b>: PHB pg. 78 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your armor class is equal to 10 + your Dexterity modifier + your Wisdom modifier while you are not wearing armor or wielding a shield. </br>";
-            features += "<b>Martial Arts</b>: PHB pg. 78 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your Martial Arts die is a " + martialArts + ". </br>";
+            features += "<b>Unarmored Defense</b>: PHB pg. 78 </br>Your armor class is equal to 10 + your Dexterity modifier + your Wisdom modifier while you are not wearing armor or wielding a shield. </br>";
+            features += "<b>Martial Arts</b>: PHB pg. 78 </br>Your Martial Arts die is a " + martialArts + ". </br>";
           }
           break;
         case "Paladin":
           //Level 1
           if (level >= 1) {
-            features += "<b>Divine Sense</b>: PHB pg. 84 </br>&nbsp;&nbsp;&nbsp;&nbsp;As an action, you can detect celestials, fiends, and undead within 60 feet of you and are not behind total cover until the end of your next turn. You can use this feature " + (1 + chaMod) + " times per long rest. </br>";
-            features += "<b>Lay on Hands</b>: PHB pg. 84 </br>&nbsp;&nbsp;&nbsp;&nbsp;As an action, you can touch a creature and restore any amount of hit points, up to " + (5 * level) + " hit points per long rest. </br>";
+            features += "<b>Divine Sense</b>: PHB pg. 84 </br>As an action, you can detect celestials, fiends, and undead within 60 feet of you and are not behind total cover until the end of your next turn. You can use this feature " + (1 + chaMod) + " times per long rest. </br>";
+            features += "<b>Lay on Hands</b>: PHB pg. 84 </br>As an action, you can touch a creature and restore any amount of hit points, up to " + (5 * level) + " hit points per long rest. </br>";
           }
           break;
         case "Ranger":
@@ -4870,16 +4870,16 @@ function setFeatures() {
           //Level 1
           if (level >= 1) {
             if (level >= 14) {
-              features += "<b>Favored Enemy</b>: PHB pg. 91 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your favored enemies are: " + favoredEnemies[0] + ", " + favoredEnemies[1] + " and " + favoredEnemies[2] + "</br>";
-              features += "<b>Natural Explorer</b>: PHB pg. 91 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your favored terrains are: " + naturalExplorer[0] + ", " + naturalExplorer[1] + " and " + naturalExplorer[2] + "</br>";
+              features += "<b>Favored Enemy</b>: PHB pg. 91 </br>Your favored enemies are: " + favoredEnemies[0] + ", " + favoredEnemies[1] + " and " + favoredEnemies[2] + "</br>";
+              features += "<b>Natural Explorer</b>: PHB pg. 91 </br>Your favored terrains are: " + naturalExplorer[0] + ", " + naturalExplorer[1] + " and " + naturalExplorer[2] + "</br>";
             }
             else if (level >= 6) {
-              features += "<b>Favored Enemy</b>: PHB pg. 91 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your favored enemies are: " + favoredEnemies[0] + " and " + favoredEnemies[1] + "</br>";
-              features += "<b>Natural Explorer</b>: PHB pg. 91 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your favored terrains are: " + naturalExplorer[0] + " and " + naturalExplorer[1] + "</br>";
+              features += "<b>Favored Enemy</b>: PHB pg. 91 </br>Your favored enemies are: " + favoredEnemies[0] + " and " + favoredEnemies[1] + "</br>";
+              features += "<b>Natural Explorer</b>: PHB pg. 91 </br>Your favored terrains are: " + naturalExplorer[0] + " and " + naturalExplorer[1] + "</br>";
             }
             else {
-              features += "<b>Favored Enemy</b>: PHB pg. 91 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your favored enemies are: " + favoredEnemies[0] + "</br>";
-              features += "<b>Natural Explorer</b>: PHB pg. 91 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your favored terrains are: " + naturalExplorer[0] + "</br>";
+              features += "<b>Favored Enemy</b>: PHB pg. 91 </br>Your favored enemies are: " + favoredEnemies[0] + "</br>";
+              features += "<b>Natural Explorer</b>: PHB pg. 91 </br>Your favored terrains are: " + naturalExplorer[0] + "</br>";
             }
           }
           break;
@@ -4907,9 +4907,9 @@ function setFeatures() {
             sneakAttack = "10d6";
           //Level 1
           if (level >= 1) {
-            features += "<b>Sneak Attack</b>: PHB pg. 96 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your Sneak Attack damage is " + sneakAttack + ". </br>";
-            features += "<b>Expertise</b>: PHB pg. 96 </br>&nbsp;&nbsp;&nbsp;&nbsp;Choose two of your proficiencies or one of your proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for these proficiencies. </br>";
-            features += "<b>Thieves' Cant</b>: PHB pg. 96 </br>&nbsp;&nbsp;&nbsp;&nbsp;You know the Thieves' Cant language. </br>";
+            features += "<b>Sneak Attack</b>: PHB pg. 96 </br>Your Sneak Attack damage is " + sneakAttack + ". </br>";
+            features += "<b>Expertise</b>: PHB pg. 96 </br>Choose two of your proficiencies or one of your proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for these proficiencies. </br>";
+            features += "<b>Thieves' Cant</b>: PHB pg. 96 </br>You know the Thieves' Cant language. </br>";
           }
           break;
         case "Sorcerer":
@@ -4922,12 +4922,12 @@ function setFeatures() {
           if (level >= 1) {
             switch (subclass) {
               case "Draconic Bloodline Sorcerer":
-                features += "<b>Dragon Ancestor</b>: PHB pg. 102 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your dragon ancestor type is " + dragonAncestor + ". You can speak, read, and write Draconic and when you make a Charisma check when interacting with dragons, and your proficiency bonus applies, it is doubled. </br>";
-                features += "<b>Draconic Resilience</b>: PHB pg. 102 </br>&nbsp;&nbsp;&nbsp;&nbsp;Your hit point maximum increases by 1 for each sorcerer level. Also, when you aren't wearing armor, your AC equals 13 + your Dexterity modifier. </br>";
+                features += "<b>Dragon Ancestor</b>: PHB pg. 102 </br>Your dragon ancestor type is " + dragonAncestor + ". You can speak, read, and write Draconic and when you make a Charisma check when interacting with dragons, and your proficiency bonus applies, it is doubled. </br>";
+                features += "<b>Draconic Resilience</b>: PHB pg. 102 </br>Your hit point maximum increases by 1 for each sorcerer level. Also, when you aren't wearing armor, your AC equals 13 + your Dexterity modifier. </br>";
                 break;
               case "Wild Magic Sorcerer":
-                features += "<b>Wild Magic Surge</b>: PHB pg. 103 </br>&nbsp;&nbsp;&nbsp;&nbsp;When you cast a sorcerer spell of 1st level or higher, the DM can have you roll a d20. On a 1, roll on the Wild Magic Surge table. </br>";
-                features += "<b>Tides of Chaos</b>: PHB pg. 103 </br>&nbsp;&nbsp;&nbsp;&nbsp;Once per long rest, you can gain advantage on one attack roll, ability check, or saving throw. However, the DM can have you roll on the Wild Magic Surge table when you cast a sorcerer spell of 1st level or higher. You then regain the use of this feature. </br>";
+                features += "<b>Wild Magic Surge</b>: PHB pg. 103 </br>When you cast a sorcerer spell of 1st level or higher, the DM can have you roll a d20. On a 1, roll on the Wild Magic Surge table. </br>";
+                features += "<b>Tides of Chaos</b>: PHB pg. 103 </br>Once per long rest, you can gain advantage on one attack roll, ability check, or saving throw. However, the DM can have you roll on the Wild Magic Surge table when you cast a sorcerer spell of 1st level or higher. You then regain the use of this feature. </br>";
                 break;
             }
           }
@@ -4937,16 +4937,16 @@ function setFeatures() {
           if (level >= 1) {
             switch (subclass) {
               case "Warlock of the Archfey":
-                features += "<b>Expanded Spell List</b>: PHB pg. 108 </br>&nbsp;&nbsp;&nbsp;&nbsp;The Archfey spells listed in the PHB are added to the warlock spell list for you. </br>";
-                features += "<b>Fey Presence</b>: PHB pg. 109 </br>&nbsp;&nbsp;&nbsp;&nbsp;As an action, you can cause each creature in a 10-foot cube originating from you to make a Wisdom saving throw against your warlock spell save DC. On a failure, choose whether they are charmed by or frightened of you until the end of your next turn. You can use this feature once per short or long rest. </br>";
+                features += "<b>Expanded Spell List</b>: PHB pg. 108 </br>The Archfey spells listed in the PHB are added to the warlock spell list for you. </br>";
+                features += "<b>Fey Presence</b>: PHB pg. 109 </br>As an action, you can cause each creature in a 10-foot cube originating from you to make a Wisdom saving throw against your warlock spell save DC. On a failure, choose whether they are charmed by or frightened of you until the end of your next turn. You can use this feature once per short or long rest. </br>";
                 break;
               case "Warlock of the Fiend":
-                features += "<b>Expanded Spell List</b>: PHB pg. 109 </br>&nbsp;&nbsp;&nbsp;&nbsp;The Fiend spells listed in the PHB are added to the warlock spell list for you. </br>";
-                features += "<b>Dark One's Blessing</b>: PHB pg. 109 </br>&nbsp;&nbsp;&nbsp;&nbsp;When you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your warlock level. </br>";
+                features += "<b>Expanded Spell List</b>: PHB pg. 109 </br>The Fiend spells listed in the PHB are added to the warlock spell list for you. </br>";
+                features += "<b>Dark One's Blessing</b>: PHB pg. 109 </br>When you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your warlock level. </br>";
                 break;
               case "Warlock of the Great Old One":
-                features += "<b>Expanded Spell List</b>: PHB pg. 110 </br>&nbsp;&nbsp;&nbsp;&nbsp;The Great Old One spells listed in the PHB are added to the warlock spell list for you. </br>";
-                features += "<b>Awakened Mind</b>: PHB pg. 110 </br>&nbsp;&nbsp;&nbsp;&nbsp;You can communicate telepathically with any creature you can see within 30 feet of you, even without sharing a language with the creature. </br>";
+                features += "<b>Expanded Spell List</b>: PHB pg. 110 </br>The Great Old One spells listed in the PHB are added to the warlock spell list for you. </br>";
+                features += "<b>Awakened Mind</b>: PHB pg. 110 </br>You can communicate telepathically with any creature you can see within 30 feet of you, even without sharing a language with the creature. </br>";
                 break;
             }
           }
@@ -4954,7 +4954,7 @@ function setFeatures() {
         case "Wizard":
           //Level 1
           if (level >= 1) {
-            features += "<b>Arcane Recovery</b>: PHB pg. 115 </br>&nbsp;&nbsp;&nbsp;&nbsp;Once per day, when you finish a short rest, you can recover expended spell slots with a combined level of up to half your wizard level, rounded up. None of the slots can be 6th level or higher. </br>";
+            features += "<b>Arcane Recovery</b>: PHB pg. 115 </br>Once per day, when you finish a short rest, you can recover expended spell slots with a combined level of up to half your wizard level, rounded up. None of the slots can be 6th level or higher. </br>";
           }
           break;
     }
