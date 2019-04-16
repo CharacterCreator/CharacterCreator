@@ -2211,8 +2211,54 @@ function setSpeed() {
 }
 
 function setProficiencies() {
+    //Proficiencies based on race
+    switch (race) {
+        case "Dwarf":
+            weaponProficiencies[14] = 1;
+            weaponProficiencies[3] = 1;
+            weaponProficiencies[5] = 1;
+            weaponProficiencies[30] = 1;
+            var tool = Math.floor(Math.random() * 3);
+            switch (tool) {
+                case 0:
+                    toolProficiencies[18] = 1;
+                    break;
+                case 1:
+                    toolProficiencies[1] = 1;
+                    break;
+                case 2:
+                    toolProficiencies[13] = 1;
+                    break;
+            }
+            if (subrace == "Mountain ") {
+                armorProficiencies[0] = 1;
+                armorProficiencies[1] = 1;
+            }
+            break;
+        case "Elf":
+            skillProficiencies[12] = 1;
+            switch (subrace) {
+                case "High ":
+                    weaponProficiencies[21] = 1;
+                    weaponProficiencies[27] = 1;
+                    weaponProficiencies[12] = 1;
+                    weaponProficiencies[35] = 1;
+                    break;
+                case "Wood ":
+                    weaponProficiencies[21] = 1;
+                    weaponProficiencies[27] = 1;
+                    weaponProficiencies[12] = 1;
+                    weaponProficiencies[35] = 1;
+                    break;
+                case "Dark ":
+                    weaponProficiencies[25] = 1;
+                    weaponProficiencies[27] = 1;
+                    weaponProficiencies[33] = 1;
+                    break;
+            }
+    }
     //Proficiencies based on class
-    switch(classChoice) {
+    switch (classChoice) {
         case "Barbarian":
             saveProficiencies[0] = 1;
             saveProficiencies[2] = 1;
@@ -4621,6 +4667,58 @@ function setEquipment() {
 function setFeatures() {
     //Features by Race
     features += "<u>Racial Traits</u></br>";
+    switch (race) {
+      case "Dwarf":
+        features += "<b>Darkvision</b>: PHB pg. 20 </br>You have superior vision in dim and dark conditions, within 60 feet of you. </br>";
+        features += "<b>Dwarven Resilience</b>: PHB pg. 20 </br>You have advantage on saving throws against poison and resistance to poison damage. </br>";
+        features += "<b>Dwarven Combat Training</b>: PHB pg. 20 </br>You have proficiency with the battleaxe, handaxe, throwing hammer, and warhammer. </br>";
+        features += "<b>Tool Proficiency</b>: PHB pg. 20 </br>Choose one of the following artisans' tools to gain proficiency with: smith's tools, brewer's supplies, or mason's tools. </br>";
+        features += "<b>Stonecunning</b>: PHB pg. 20 </br>Whenever you make a History check related to the origin of stonework, you are considered proficient in the check and add double your proficiency bonus. </br>";
+        switch (subrace) {
+          case "Hill ":
+            features += "<b>Dwarven Toughness</b>: PHB pg. 20 </br>Your hit point maximum increases by 1, and increases by 1 again each time you gain a level. </br>";
+            break;
+          case "Mountain ":
+            features += "<b>Dwarven Armor Training</b>: You have proficiency with light and medium armor. </br>";
+            break;
+        }
+        break;
+      case "Elf":
+        if (subrace !== "Dark ")
+          features += "<b>Darkvision</b>: PHB pg. 23 </br>You have superior vision in dim and dark conditions, within 60 feet of you. </br>";
+        features += "<b>Keen Senses</b>: PHB pg. 23 </br>You have proficiency in the Perception skill. </br>";
+        features += "<b>Fey Ancestry</b>: PHB pg. 23 </br>You have advantage on saving throws against being charmed and magic can't put you to sleep. </br>";
+        features += "<b>Trance</b>: PHB pg. 23 </br>Instead of sleeping, you need only meditate deeply for 4 hours. </br>";
+        switch (subrace) {
+          case "High ":
+            features += "<b>Elf Weapon Training</b>: PHB pg. 23 </br>You have proficiency with the longsword, shortsword, shortbow, and longbow. </br>";
+            features += "<b>Cantrip</b>: PHB pg. 24 </br>You know one wizard cantrip. Intelligence is your spellcasting ability for it. </br>";
+            features += "<b>Extra Language</b>: PHB pg. 24 </br>You know an extra language. </br>";
+            break;
+          case "Wood ":
+            features += "<b>Elf Weapon Training</b>: PHB pg. 24 </br>You have proficiency with the longsword, shortsword, shortbow, and longbow. </br>";
+            features += "<b>Fleet of Foot</b>: PHB pg. 24 </br>Your base walking speed is 35 feet. </br>";
+            features += "<b>Mask of the Wild</b>: PHB pg. 24 </br>You can attempt to hide even when only lightly obscured by natural phenomena. </br>";
+            break;
+          case "Dark ":
+            features += "<b>Superior Darkvision</b>: PHB pg. 24 </br>You have superior vision in dim and dark conditions, within 120 feet of you. </br>";
+            features += "<b>Sunlight Sensitivity</b>: PHB pg. 24 </br>You have disadvantage on attack rolls and Perception checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight. </br>";
+            features += "<b>Drow Magic</b>: PHB pg. 24 </br>You know the Dancing Lights cantrip. When you reach 3rd level, you can cast the Faerie Fire spell once per day. When you reach 5th level, you can also cast the Darkness spell once per day. Charisma is your spellcasting ability for these spells. </br>";
+            features += "<b>Drow Weapon Training</b>: PHB pg. 24 </br>You have proficiency with rapiers, shortswords, and hand crossbows. </br>";
+            break;
+        }
+        break;
+      case "Halfling":
+        features += "<b>Lucky</b>: PHB pg. 28 </br>When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll. </br>";
+        features += "<b>Brave</b>: PHB pg. 28 </br>You have advantage on saving throws against being frightened. </br>";
+        features += "<b>Halfling Nimbleness</b>: PHB pg. 28 </br>You can move through the space of any creature that is of a size larger than yours. </br>";
+        switch (subrace) {
+          case "Lightfoot ":
+            features += "<b>Naturally Stealthy</b>: PHB pg. 28 </br>You can attempt to hide even when you are obscured only by a creature of a size larger than yours. </br>";
+            break;
+        }
+        break;
+    }
     //Features by Class
     features += "<u>Class Features</u></br>";
     switch (classChoice) {
