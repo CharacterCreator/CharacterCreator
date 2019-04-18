@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Character Creator</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/die.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body onload="getCharacter(); loadCharacter()">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+	  	<a class="navbar-brand">Character Creator</a>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    	<span class="navbar-toggler-icon"></span>
+	  	</button>
+	  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    	<ul class="navbar-nav">
+	    		<li class="nav-item">
+	    			<div class="btn-group">
+	    				<button class="btn btn-outline-secondary" onclick="getCharacter(); saveCharacter()">Create Character</button>
+	    				<button class="btn btn-outline-secondary" onclick="getPreviousCharacter(); saveCharacter()">Previous Character</button>
+	    			</div>
+	      		</li>
+	    	</ul>
+	  	</div>
+	  	<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+	    	<ul class="navbar-nav">
+	    		<li class="nav-item">
+	    			<div class="btn-group">
+	    				<button class="btn btn-outline-secondary" data-toggle="modal" data-target="#settings">Settings</button>
+	    			</div>
+	      	</li>
+	    	</ul>
+	  	</div>
+	</nav>
+	<div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="settingsLable" aria-hidden="true">
+	  	<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	        		<h5 class="modal-title" id="settingsLable">Settings</h5>
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          			<span aria-hidden="true">&times;</span>
+	        		</button>
+	      		</div>
+	      		<div class="modal-body">
+							<button class="btn btn-outline-secondary" data-dismiss="modal" onclick="getCharacter(); saveCharacter()">Create Character</button>
+						</br></br>
+							<div class="dropdown">
+								<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="raceSelection" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    	Race Selection
+					  		</button>
+						  	<div class="dropdown-menu" aria-labelledby="raceSelection">
+						  		<button class="dropdown-item" onclick="setRaceManual(1)">Hill Dwarf</button>
+						  		<button class="dropdown-item" onclick="setRaceManual(2)">Mountain Dwarf</button>
+						  		<button class="dropdown-item" onclick="setRaceManual(3)">High Elf</button>
+						  		<button class="dropdown-item" onclick="setRaceManual(4)">Wood Elf</button>
+						  		<button class="dropdown-item" onclick="setRaceManual(5)">Dark Elf</button>
+						  		<button class="dropdown-item" onclick="setRaceManual(6)">Lightfoot Halfling</button>
+						  		<button class="dropdown-item" onclick="setRaceManual(7)">Stout Halfling</button>
+						  		<button class="dropdown-item" onclick="setRaceManual(8)">Human</button>
+						  		<button class="dropdown-item" onclick="setRaceManual(9)">Dragonborn</button>
+						  		<button class="dropdown-item" onclick="setRaceManual(10)">Forest Gnome</button>
+						  		<button class="dropdown-item" onclick="setRaceManual(11)">Rock Gnome</button>
+						  		<button class="dropdown-item" onclick="setRaceManual(12)">Half-Elf</button>
+						  		<button class="dropdown-item" onclick="setRaceManual(13)">Half-Orc</button>
+						  		<button class="dropdown-item" onclick="setRaceManual(14)">Tiefling</button>
+						  		<button class="dropdown-item" onclick="setRaceManual(15)">Default</button>
+						  	</div>
+							</div>
+						</br>
+							<div class="dropdown">
+								<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="classSelection" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    	Class Selection
+					  		</button>
+								<div class="dropdown-menu" aria-labelledby="classSelection">
+									<button class="dropdown-item" onclick="setClassManual(1)">Barbarian</button>
+						  		<button class="dropdown-item" onclick="setClassManual(2)">Bard</button>
+						  		<button class="dropdown-item" onclick="setClassManual(3)">Cleric</button>
+						  		<button class="dropdown-item" onclick="setClassManual(4)">Druid</button>
+						  		<button class="dropdown-item" onclick="setClassManual(5)">Fighter</button>
+						  		<button class="dropdown-item" onclick="setClassManual(6)">Monk</button>
+						  		<button class="dropdown-item" onclick="setClassManual(7)">Paladin</button>
+						  		<button class="dropdown-item" onclick="setClassManual(8)">Ranger</button>
+						  		<button class="dropdown-item" onclick="setClassManual(9)">Rogue</button>
+						  		<button class="dropdown-item" onclick="setClassManual(10)">Sorcerer</button>
+						  		<button class="dropdown-item" onclick="setClassManual(11)">Warlock</button>
+						  		<button class="dropdown-item" onclick="setClassManual(12)">Wizard</button>
+									<button class="dropdown-item" onclick="setClassManual(13)">Default</button>
+								</div>
+							</div>
+	      			<hr>
+	        		<button class="btn btn-outline-danger" onclick="deleteCharacter()">Delete Character</button>
+	      		</div>
+	    	</div>
+	  	</div>
+	</div>
+	<br>
+	<div class="col-12">
+		<h4>Descriptions</h4>
+		<span id="consoleDescriptions"></span>
+								<hr>
+		<h4>Statistics</h4>
+		<span id="consoleStatistics"></span>
+								<hr>
+		<h4>Skills and Saving Throws</h4>
+		<span id="consoleSkills"></span>
+								<hr>
+		<h4>Proficiencies and Languages</h4>
+		<span id="consoleProficiencies"></span>
+								<hr>
+		<h4>Features and Traits</h4>
+		<span id="consoleFeatures"></span>
+								<hr>
+		<h4>Equipment</h4>
+		<span id="consoleEquipment"></span>
+								<hr>
+		<h4>Spells</h4>
+		<span id="consoleSpells"></span>
+	</div>
+	<script type="text/javascript" src="scripts/docs.js"></script>
+	<script type="text/javascript" src="scripts/descriptions.js"></script>
+	<script type="text/javascript" src="scripts/equip.js"></script>
+	<script type="text/javascript" src="scripts/features.js"></script>
+	<script type="text/javascript" src="scripts/save.js"></script>
+	<script type="text/javascript" src="scripts/skills.js"></script>
+	<script type="text/javascript" src="scripts/spells.js"></script>
+	<script type="text/javascript" src="scripts/stats.js"></script>
+</body>
+</html>
