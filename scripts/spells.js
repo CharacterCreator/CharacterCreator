@@ -226,9 +226,9 @@ function setSpells() {
       var druidSpells = [
         /*Cantrips*/[spells[111][1], spells[166][1], spells[224][1], spells[254][1], spells[263][1], spells[278][1], spells[296][1], spells[32][1]],
         /*Level One*/[spells[4][1], spells[44][1], spells[79][1], spells[84][1], spells[94][1], spells[95][1], spells[118][1], spells[125][1], spells[145][1], spells[159][1], spells[175][1], spells[195][1], spells[208][1], spells[269][1], spells[305][1], spells[331][1]],
-        ///*Level Two*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
-        ///*Level Three*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
-        ///*Level Four*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
+        /*Level Two*/[spells[5][1], spells[26][1], spells[28][1], spells[87][1], spells[115][1], spells[134][1], spells[140][1], spells[142][1], spells[168][1], spells[176][1], spells[182][1], spells[200][1], spells[205][1], spells[207][1], spells[234][1], spells[245][1], spells[268][1], spells[309][1]],
+        /*Level Three*/[spells[41][1], spells[62][1], spells[88][1], spells[101][1], spells[130][1], spells[222][1], spells[253][1], spells[266][1], spells[302][1], spells[307][1], spells[350][1], spells[351][1], spells[355][1]],
+        /*Level Four*/[spells[34][1], spells[61][1], spells[67][1], spells[69][1], spells[74][1], spells[106][1], spells[149][1], spells[155][1], spells[160][1], spells[171][1], spells[187][1], spells[206][1], spells[255][1], spells[314][1], spells[315][1], spells[344][1]],
         ///*Level Five*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
         ///*Level Six*/[spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][], spells[][]],
         ///*Level Seven*/[spells[][], spells[][], spells[][], spells[][], spells[][]],
