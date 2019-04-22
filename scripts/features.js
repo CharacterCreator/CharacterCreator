@@ -50,8 +50,10 @@ function setFeatures() {
           case "Lightfoot ":
             features += "<b>Naturally Stealthy</b>: PHB pg. 28 </br>You can attempt to hide even when you are obscured only by a creature of a size larger than yours. </br>";
             break;
+          //Stout
         }
         break;
+      //other races
     }
     //Features by Class
     features += "<u>Class Features</u></br>";
