@@ -1,5 +1,4 @@
 function setFeatures() {
-    //0:Common, 1:Dwarvish, 2:Elvish, 3:Giant, 4:Gnomish, 5:Goblin, 6:Halfling, 7:Orc, 8:Abyssal, 9:Celestial, 10:Draconic, 11:Deep Speech, 12:Infernal, 13:Primordial, 14:Sylvan, 15:Undercommon, 16:Druidic, 17:Thieves' Cant
     //Features by Race
     languages[0] = 1;
     features += "<u>Racial Traits</u></br>";
