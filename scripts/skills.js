@@ -978,6 +978,14 @@ function setProficiencies() {
                     skill = Math.floor(Math.random() * 18);
                 skillProficiencies[skill] = 1;
             }
+            var choice = Math.floor(Math.random() * 18);
+            while (languages[choice] == 1)
+              choice = Math.floor(Math.random() * 18);
+            languages[choice] = 1;
+            choice = Math.floor(Math.random() * 18);
+            while (languages[choice] == 1)
+              choice = Math.floor(Math.random() * 18);
+            languages[choice] = 1;
             break;
         case "Charlatan":
             if (skillProficiencies[2] == 0)
@@ -1135,6 +1143,10 @@ function setProficiencies() {
             while (toolProficiencies[tool] == 1)
                 tool = Math.floor(Math.random() * 23);
             toolProficiencies[tool] = 1;
+            var choice = Math.floor(Math.random() * 18);
+            while (languages[choice] == 1)
+              choice = Math.floor(Math.random() * 18);
+            languages[choice] = 1;
             break;
         case "Guild Merchant":
             if (skillProficiencies[10] == 0)
@@ -1157,6 +1169,10 @@ function setProficiencies() {
             while (toolProficiencies[tool] == 1)
                 tool = Math.floor(Math.random() * 23);
             toolProficiencies[tool] = 1;
+            var choice = Math.floor(Math.random() * 18);
+            while (languages[choice] == 1)
+              choice = Math.floor(Math.random() * 18);
+            languages[choice] = 1;
             break;
         case "Hermit":
             if (skillProficiencies[8] == 0)
@@ -1176,6 +1192,10 @@ function setProficiencies() {
                 skillProficiencies[skill] = 1;
             }
             toolProficiencies[10] = 1;
+            var choice = Math.floor(Math.random() * 18);
+            while (languages[choice] == 1)
+              choice = Math.floor(Math.random() * 18);
+            languages[choice] = 1;
             break;
         case "Noble":
             if (skillProficiencies[5] == 0)
@@ -1198,6 +1218,10 @@ function setProficiencies() {
             while (gamingProficiencies[gaming] == 1)
                 gaming = Math.floor(Math.random() * 3);
             gamingProficiencies[gaming] = 1;
+            var choice = Math.floor(Math.random() * 18);
+            while (languages[choice] == 1)
+              choice = Math.floor(Math.random() * 18);
+            languages[choice] = 1;
             break;
         case "Knight":
             if (skillProficiencies[5] == 0)
@@ -1220,6 +1244,10 @@ function setProficiencies() {
             while (gamingProficiencies[gaming] == 1)
                 gaming = Math.floor(Math.random() * 3);
             gamingProficiencies[gaming] = 1;
+            var choice = Math.floor(Math.random() * 18);
+            while (languages[choice] == 1)
+              choice = Math.floor(Math.random() * 18);
+            languages[choice] = 1;
             break;
         case "Outlander":
             if (skillProficiencies[0] == 0)
@@ -1241,6 +1269,10 @@ function setProficiencies() {
             var instrument = Math.floor(Math.random() * 10);
             while (instrumentProficiencies[instrument] == 1)
                 instrument = Math.floor(Math.random() * 10);
+            var choice = Math.floor(Math.random() * 18);
+            while (languages[choice] == 1)
+              choice = Math.floor(Math.random() * 18);
+            languages[choice] = 1;
             break;
         case "Sage":
             if (skillProficiencies[4] == 0)
@@ -1259,6 +1291,14 @@ function setProficiencies() {
                     skill = Math.floor(Math.random() * 18);
                 skillProficiencies[skill] = 1;
             }
+            var choice = Math.floor(Math.random() * 18);
+            while (languages[choice] == 1)
+              choice = Math.floor(Math.random() * 18);
+            languages[choice] = 1;
+            choice = Math.floor(Math.random() * 18);
+            while (languages[choice] == 1)
+              choice = Math.floor(Math.random() * 18);
+            languages[choice] = 1;
             break;
         case "Sailor":
             if (skillProficiencies[0] == 0)
@@ -1359,6 +1399,7 @@ function displayProficiencies() {
 	var weapon = ["Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear", "Light Crossbow", "Dart", "Shortbow", "Sling",
 				"Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar",
 				"Shortsword", "Trident", "War Pick", "Warhammer", "Whip", "Blowgun", "Hand Crossbow", "Heavy Crossbow", "Longbow", "Net"];
+  display += "<u>Proficiencies</u>:</br>";
   display += "Armor: ";
   for (var e = 0; e < armorProficiencies.length; e++) {
     if (armorProficiencies[e] == 1)
@@ -1399,6 +1440,12 @@ function displayProficiencies() {
   for (var e = 0; e < gamingProficiencies.length; e++) {
     if (gamingProficiencies[e] == 1)
       display += gaming[e] + ", ";
+  }
+  display = display.substring(0, display.length - 2) + "</br>";
+  display += "<u>Languages</u>:</br>";
+  for (var e = 0; e < languages.length; e++) {
+    if (languages[e] == 1)
+      display += languages[e] + ", ";
   }
   display = display.substring(0, display.length - 2) + "</br>";
 	return display;
