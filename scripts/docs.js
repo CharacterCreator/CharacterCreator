@@ -68,6 +68,8 @@ var toolProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 var gamingProficiencies = [0, 0, 0];
 //0:Bagpipes, 1:Drum, 2:Dulcimer, 3:Flute, 4:Lute, 5:Lyre, 6:Horn, 7:Pan Flute, 8:Shawm, 9:Viol
 var instrumentProficiencies = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+//0:Common, 1:Dwarvish, 2:Elvish, 3:Giant, 4:Gnomish, 5:Goblin, 6:Halfling, 7:Orc, 8:Abyssal, 9:Celestial, 10:Draconic, 11:Deep Speech, 12:Infernal, 13:Primordial, 14:Sylvan, 15:Undercommon, 16:Druidic, 17:Thieves' Cant
+var languages = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 /*For setEquipment*/
 //0:Abacus, 1:Acid (vial), 2:Alchemist's Fire (flask), 3:Arrow, 4:Blowgun Needle, 5:Crossbow Bolt, 6:Sling Bullet, 7:Antitoxin (vial), 8:Crystal, 9:Orb, 10:Rod, 11:Staff, 12:Wand, 13:Backpack, 14:Ball Bearing, 15:Barrel, 16:Basket, 17:Bedroll, 18:Bell,
