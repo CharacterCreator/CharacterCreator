@@ -1,5 +1,7 @@
 function setFeatures() {
+    //0:Common, 1:Dwarvish, 2:Elvish, 3:Giant, 4:Gnomish, 5:Goblin, 6:Halfling, 7:Orc, 8:Abyssal, 9:Celestial, 10:Draconic, 11:Deep Speech, 12:Infernal, 13:Primordial, 14:Sylvan, 15:Undercommon, 16:Druidic, 17:Thieves' Cant
     //Features by Race
+    languages[0] = 1;
     features += "<u>Racial Traits</u></br>";
     switch (race) {
       case "Dwarf":
@@ -11,11 +13,13 @@ function setFeatures() {
         switch (subrace) {
           case "Hill ":
             features += "<b>Dwarven Toughness</b>: PHB pg. 20 </br>Your hit point maximum increases by 1, and increases by 1 again each time you gain a level. </br>";
+            maxHP += level;
             break;
           case "Mountain ":
             features += "<b>Dwarven Armor Training</b>: You have proficiency with light and medium armor. </br>";
             break;
         }
+        languages[1] = 1;
         break;
       case "Elf":
         if (subrace !== "Dark ")
@@ -28,6 +32,10 @@ function setFeatures() {
             features += "<b>Elf Weapon Training</b>: PHB pg. 23 </br>You have proficiency with the longsword, shortsword, shortbow, and longbow. </br>";
             features += "<b>Cantrip</b>: PHB pg. 24 </br>You know one wizard cantrip. Intelligence is your spellcasting ability for it. </br>";
             features += "<b>Extra Language</b>: PHB pg. 24 </br>You know an extra language. </br>";
+            var choice = Math.floor(Math.random() * 18);
+            while (languages[choice] == 1)
+              choice = Math.floor(Math.random() * 18);
+            languages[choice] = 1;
             break;
           case "Wood ":
             features += "<b>Elf Weapon Training</b>: PHB pg. 24 </br>You have proficiency with the longsword, shortsword, shortbow, and longbow. </br>";
@@ -41,6 +49,7 @@ function setFeatures() {
             features += "<b>Drow Weapon Training</b>: PHB pg. 24 </br>You have proficiency with rapiers, shortswords, and hand crossbows. </br>";
             break;
         }
+        languages[2] = 1;
         break;
       case "Halfling":
         features += "<b>Lucky</b>: PHB pg. 28 </br>When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll. </br>";
@@ -52,8 +61,33 @@ function setFeatures() {
             break;
           //Stout
         }
+        languages[6] = 1;
         break;
-      //other races
+      case "Human":
+        var choice = Math.floor(Math.random() * 18);
+        while (languages[choice] == 1)
+          choice = Math.floor(Math.random() * 18);
+        languages[choice] = 1;
+        break;
+      case "Dragonborn":
+        languages[10] = 1;
+        break;
+      case "Gnome":
+        languages[4] = 1;
+        break;
+      case "Half-Elf":
+        languages[2] = 1;
+        var choice = Math.floor(Math.random() * 18);
+        while (languages[choice] == 1)
+          choice = Math.floor(Math.random() * 18);
+        languages[choice] = 1;
+        break;
+      case "Half-Orc":
+        languages[7] = 1;
+        break;
+      case "Tiefling":
+        languages[12] = 1;
+        break;
     }
     //Features by Class
     features += "<u>Class Features</u></br>";
@@ -154,6 +188,7 @@ function setFeatures() {
           //Level 1
           if (level >= 1) {
             features += "<b>Druidic</b>: PHB pg. 66 </br>You know the Druidic language. </br>";
+            languages[16] = 1;
           }
           break;
         case "Fighter":
@@ -240,6 +275,26 @@ function setFeatures() {
             var choice = Math.floor(Math.random() * (enemies.length + 1));
             if (choice < enemies.length) {
               favoredEnemies[0] = enemies[choice];
+              switch (choice) {
+                case 2:
+                  languages[9] = 1;
+                  break;
+                case 4:
+                  languages[10] = 1;
+                  break;
+                case 5:
+                  languages[13] = 1;
+                  break;
+                case 6:
+                  languages[14] = 1;
+                  break;
+                case 7:
+                  languages[12] = 1;
+                  break;
+                case 8:
+                  languages[3] = 1;
+                  break;
+              }
               enemies.splice(choice);
             }
             else {
@@ -248,6 +303,10 @@ function setFeatures() {
               while (humanoid1 == humanoid2)
                 humanoid2 = Math.floor(Math.random() * humanoids.length);
               favoredEnemies[0] = humanoid1 + " and " + humanoid2;
+              var choice = Math.floor(Math.random() * 18);
+              while (languages[choice] == 1)
+                choice = Math.floor(Math.random() * 18);
+              languages[choice] = 1;
               humanoids.splice(humanoid1);
               humanoids.splice(humanoid2);
             }
@@ -256,6 +315,26 @@ function setFeatures() {
             var choice = Math.floor(Math.random() * (enemies.length) + 1);
             if (choice < enemies.length) {
               favoredEnemies[1] = enemies[choice];
+              switch (choice) {
+                case 2:
+                  languages[9] = 1;
+                  break;
+                case 4:
+                  languages[10] = 1;
+                  break;
+                case 5:
+                  languages[13] = 1;
+                  break;
+                case 6:
+                  languages[14] = 1;
+                  break;
+                case 7:
+                  languages[12] = 1;
+                  break;
+                case 8:
+                  languages[3] = 1;
+                  break;
+              }
               enemies.splice(choice);
             }
             else {
@@ -264,6 +343,10 @@ function setFeatures() {
               while (humanoid1 == humanoid2)
                 humanoid2 = Math.floor(Math.random() * humanoids.length);
               favoredEnemies[1] = humanoid1 + " and " + humanoid2;
+              var choice = Math.floor(Math.random() * 18);
+              while (languages[choice] == 1)
+                choice = Math.floor(Math.random() * 18);
+              languages[choice] = 1;
               humanoids.splice(humanoid1);
               humanoids.splice(humanoid2);
             }
@@ -272,6 +355,26 @@ function setFeatures() {
             var choice = Math.floor(Math.random() * (enemies.length) + 1);
             if (choice < enemies.length) {
               favoredEnemies[2] = enemies[choice];
+              switch (choice) {
+                case 2:
+                  languages[9] = 1;
+                  break;
+                case 4:
+                  languages[10] = 1;
+                  break;
+                case 5:
+                  languages[13] = 1;
+                  break;
+                case 6:
+                  languages[14] = 1;
+                  break;
+                case 7:
+                  languages[12] = 1;
+                  break;
+                case 8:
+                  languages[3] = 1;
+                  break;
+              }
               enemies.splice(choice);
             }
             else {
@@ -280,6 +383,10 @@ function setFeatures() {
               while (humanoid1 == humanoid2)
                 humanoid2 = Math.floor(Math.random() * humanoids.length);
               favoredEnemies[2] = humanoid1 + " and " + humanoid2;
+              var choice = Math.floor(Math.random() * 18);
+              while (languages[choice] == 1)
+                choice = Math.floor(Math.random() * 18);
+              languages[choice] = 1;
               humanoids.splice(humanoid1);
               humanoids.splice(humanoid2);
             }
@@ -344,6 +451,7 @@ function setFeatures() {
             features += "<b>Sneak Attack</b>: PHB pg. 96 </br>Your Sneak Attack damage is " + sneakAttack + ". </br>";
             features += "<b>Expertise</b>: PHB pg. 96 </br>Choose two of your proficiencies or one of your proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for these proficiencies. </br>";
             features += "<b>Thieves' Cant</b>: PHB pg. 96 </br>You know the Thieves' Cant language. </br>";
+            languages[17] = 1;
           }
           break;
         case "Sorcerer":
@@ -357,7 +465,9 @@ function setFeatures() {
             switch (subclass) {
               case "Draconic Bloodline Sorcerer":
                 features += "<b>Dragon Ancestor</b>: PHB pg. 102 </br>Your dragon ancestor type is " + dragonAncestor + ". You can speak, read, and write Draconic and when you make a Charisma check when interacting with dragons, and your proficiency bonus applies, it is doubled. </br>";
+                languages[10] = 1;
                 features += "<b>Draconic Resilience</b>: PHB pg. 102 </br>Your hit point maximum increases by 1 for each sorcerer level. Also, when you aren't wearing armor, your AC equals 13 + your Dexterity modifier. </br>";
+                maxHP += level;
                 break;
               case "Wild Magic Sorcerer":
                 features += "<b>Wild Magic Surge</b>: PHB pg. 103 </br>When you cast a sorcerer spell of 1st level or higher, the DM can have you roll a d20. On a 1, roll on the Wild Magic Surge table. </br>";
