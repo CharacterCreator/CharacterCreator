@@ -1399,6 +1399,7 @@ function displayProficiencies() {
 	var weapon = ["Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear", "Light Crossbow", "Dart", "Shortbow", "Sling",
 				"Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar",
 				"Shortsword", "Trident", "War Pick", "Warhammer", "Whip", "Blowgun", "Hand Crossbow", "Heavy Crossbow", "Longbow", "Net"];
+  var language = ["Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic", "Deep Speech", "Infernal", "Primordial", "Sylvan", "Undercommon", "Druidic", "Thieves' Cant"];
   display += "<u>Proficiencies</u>:</br>";
   display += "Armor: ";
   for (var e = 0; e < armorProficiencies.length; e++) {
@@ -1445,7 +1446,7 @@ function displayProficiencies() {
   display += "<u>Languages</u>:</br>";
   for (var e = 0; e < languages.length; e++) {
     if (languages[e] == 1)
-      display += languages[e] + ", ";
+      display += language[e] + ", ";
   }
   display = display.substring(0, display.length - 2) + "</br>";
 	return display;
