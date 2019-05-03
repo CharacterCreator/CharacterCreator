@@ -23,6 +23,8 @@ function getCharacter() {
           instrumentProficiencies[e] = 0;
         for (var e = 1; e < equipment.length; e++)
           equipment.splice(e);
+        for (var e = 0; e < languages.length; e++)
+          languages.splice(e);
         features = "";
         rages = 0;
         rageDamage = 0;
