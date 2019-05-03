@@ -65,7 +65,7 @@ function setFeatures() {
         languages[6] = 1;
         break;
       case "Human":
-        features += "<b>No racial features.</b>";
+        features += "<b>No racial features.</b> </br>";
         var choice = Math.floor(Math.random() * 18);
         while (languages[choice] == 1)
           choice = Math.floor(Math.random() * 18);
