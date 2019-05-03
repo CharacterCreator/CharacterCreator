@@ -15,7 +15,7 @@ function setFeatures() {
             maxHP += level;
             break;
           case "Mountain ":
-            features += "<b>Dwarven Armor Training</b>: You have proficiency with light and medium armor. </br>";
+            features += "<b>Dwarven Armor Training</b>: PHB pg. 20 </br>You have proficiency with light and medium armor. </br>";
             break;
         }
         languages[1] = 1;
