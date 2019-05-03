@@ -82,8 +82,10 @@ function setFeatures() {
         var breathRange = ranges[choice];
         var breathSave = saves[choice];
         var breathDC = 8 + profBonus + conMod;
-        var breathDamage = "2d6";
-        if (level >= 6 && level < 11)
+        var breathDamage = "";
+        if (level < 6)
+          breathDamage = "2d6";
+        else if (level >= 6 && level < 11)
           breathDamage = "3d6";
         else if (level >= 11 && level < 16)
           breathDamage = "4d6";
