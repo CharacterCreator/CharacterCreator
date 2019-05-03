@@ -58,23 +58,61 @@ function setFeatures() {
           case "Lightfoot ":
             features += "<b>Naturally Stealthy</b>: PHB pg. 28 </br>You can attempt to hide even when you are obscured only by a creature of a size larger than yours. </br>";
             break;
-          //Stout
+          case "Stout ":
+            features += "<b>Stout Resilience</b>: PHB pg. 28 </br>You have advantage on saving throws against poison and resistance against poison damage. </br>";
+            break;
         }
         languages[6] = 1;
         break;
       case "Human":
+        features += "<b>No racial features.</b>";
         var choice = Math.floor(Math.random() * 18);
         while (languages[choice] == 1)
           choice = Math.floor(Math.random() * 18);
         languages[choice] = 1;
         break;
       case "Dragonborn":
+        var dragons = ["black", "blue", "brass", "bronze", "copper", "gold", "green", "red", "silver", "white"];
+        var breaths = ["acid", "lightning", "fire", "lightning", "acid", "fire", "poison", "fire", "cold", "cold"];
+        var ranges = ["5 by 30 ft. line", "5 by 30 ft. line", "5 by 30 ft. line", "5 by 30 ft. line", "5 by 30 ft. line", "15 ft. cone", "15 ft. cone", "15 ft. cone", "15 ft. cone", "15 ft. cone"];
+        var saves = ["Dexterity", "Dexterity", "Dexterity", "Dexterity", "Dexterity", "Dexterity", "Constitution", "Dexterity", "Constitution", "Constitution"];
+        var choice = Math.floor(Math.random() * 10);
+        var dragonType = dragons[choice];
+        var breathType = breaths[choice];
+        var breathRange = ranges[choice];
+        var breathSave = saves[choice];
+        var breathDC = 8 + profBonus + conMod;
+        var breathDamage = "2d6";
+        if (level >= 6 && level < 11)
+          breathDamage = "3d6";
+        else if (level >= 11 && level < 16)
+          breathDamage = "4d6";
+        else
+          breathDamage = "5d6";
+        features += "<b>Draconic Ancestry</b>: PHB pg. 34 </br>You are a " + dragonType + " dragonborn. </br>";
+        features += "<b>Breath Weapon</b>: PHB pg. 34 </br>Once per short or long rest, you can use your breath weapon to cause each creature in a " + breathRange + " to make a DC " + breathDC + " "  + breathSave + " saving throw or take " + breathDamage + " " + breathType + " damage, taking half as much on a successful save. </br>";
+        features += "<b>Damage Resistance</b>: PHB pg. 34 </br>You have resistance to " + breathType + " damage. </br>";
         languages[10] = 1;
         break;
       case "Gnome":
+        features += "<b>Darkvision</b>: PHB pg. 37 </br>You have superior vision in dim and dark conditions, within 60 feet of you. </br>";
+        features += "<b>Gnome Cunning</b>: PHB pg. 37 </br>You have adavantage on Intelligence, Wisdom, and Charisma saving throws against magic. </br>";
+        switch (subrace) {
+          case "Forest ":
+            features += "<b>Natural Illusionist</b>: PHB pg. 37 </br>You know the Minor Illusion cantrip. Intelligence is your spellcasting ability for it. </br>";
+            features += "<b>Speak with Small Beasts</b>: PHB pg. 37 </br>You can communicate simple ideas with Small or smaller beasts. </br>";
+            break;
+          case "Rock ":
+            features += "<b>Artificer's Lore</b>: PHB pg. 37 </br>Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, and your proficiency bonus applies, you can apply double your proficiency bonus to the check. </br>";
+            features += "<b>Tinker</b>: PHB pg. 37 </br>You have proficiency with tinker's tools. Using these tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (choose from those in the PHB) which functions for 24 hours, unless you spend an hour to repair it to keep it functioning. You can have up to three devices at a time. </br>";
+            break;
+        }
         languages[4] = 1;
         break;
       case "Half-Elf":
+        features += "<b>Darkvision</b>: PHB pg. 39 </br>You have superior vision in dim and dark conditions, within 60 feet of you. </br>";
+        features += "<b>Fey Ancestry</b>: PHB pg. 39 </br>You have advantage on saving throws against being charmed, and magic can't put you to sleep. </br>";
+        features += "<b>Skill Versatility</b>: PHB pg. 39 </br>You have proficiency in two extra skills. </br>";
         languages[2] = 1;
         var choice = Math.floor(Math.random() * 18);
         while (languages[choice] == 1)
@@ -82,9 +120,14 @@ function setFeatures() {
         languages[choice] = 1;
         break;
       case "Half-Orc":
+        features += "<b>Darkvision</b>: PHB pg. 41 </br>You have superior vision in dim and dark conditions, within 60 feet of you. </br>";
+        features += "<b>Menacing</b>: PHB pg. 41 </br>You have proficiency in the Intimidation skill. </br>";
+        features += "<b>Relentless Endurance</b>: PHB pg. 41 </br>Once per long rest, when you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. </br>";
+        features += "<b>Savage Attacks</b>: PHB pg. 41 </br>When you score a critical hit with a melee weapon attack, you can roll one the weapon's damage dice an additional time and add it to the extra damage of the critical hit. </br>";
         languages[7] = 1;
         break;
       case "Tiefling":
+
         languages[12] = 1;
         break;
     }
