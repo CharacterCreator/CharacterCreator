@@ -25,6 +25,7 @@ function getCharacter() {
           equipment.splice(e);
         for (var e = 0; e < languages.length; e++)
           languages.splice(e);
+        maxHP = 0;
         features = "";
         rages = 0;
         rageDamage = 0;
