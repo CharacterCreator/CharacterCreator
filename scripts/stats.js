@@ -246,7 +246,7 @@ function generateScores(primary, secondary, race, subrace, classChoice) {
 }
 
 function setHealth() {
-    maxHP = hitDie + conMod;
+    maxHP += hitDie + conMod;
     if (maxHP <= 0)
         maxHP = 1;
     return "Max HP: " + maxHP;
