@@ -245,7 +245,7 @@ function generateScores(primary, secondary, race, subrace, classChoice) {
     return "Strength: " + strength + " (" + mods[0] + ")</br> Dexterity: " + dexterity + " (" + mods[1] + ")</br> Constitution: " + constitution + " (" + mods[2] + ")</br> Intelligence: " + intelligence + " (" + mods[3] + ")</br> Wisdom: " + wisdom + " (" + mods[4] + ")</br> Charisma: " + charisma + " (" + mods[5] + ")";
 }
 
-function sethealth() {
+function setHealth() {
     maxHP = hitDie + conMod;
     if (maxHP <= 0)
         maxHP = 1;
