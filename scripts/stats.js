@@ -257,8 +257,6 @@ function setSpeed() {
     var raceMod = 0;
     if (race !== "Gnome" && race !== "Halfling" && race !== "Dwarf")
         raceMod += 5;
-    if (subrace + race == "Wood Elf")
-        raceMod += 5;
     speed = baseSpeed + raceMod;
     return "Speed: " + speed;
 }
