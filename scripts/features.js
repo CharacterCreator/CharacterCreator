@@ -387,7 +387,7 @@ function setFeatures() {
               var humanoid2 = Math.floor(Math.random() * humanoids.length);
               while (humanoid1 == humanoid2)
                 humanoid2 = Math.floor(Math.random() * humanoids.length);
-              favoredEnemies[0] = humanoid1 + " and " + humanoid2;
+              favoredEnemies[0] = humanoids[humanoid1] + " and " + humanoids[humanoid2];
               var choice = Math.floor(Math.random() * 18);
               while (languages[choice] == 1)
                 choice = Math.floor(Math.random() * 18);
@@ -427,7 +427,7 @@ function setFeatures() {
               var humanoid2 = Math.floor(Math.random() * humanoids.length);
               while (humanoid1 == humanoid2)
                 humanoid2 = Math.floor(Math.random() * humanoids.length);
-              favoredEnemies[1] = humanoid1 + " and " + humanoid2;
+              favoredEnemies[1] = humanoids[humanoid1] + " and " + humanoids[humanoid2];
               var choice = Math.floor(Math.random() * 18);
               while (languages[choice] == 1)
                 choice = Math.floor(Math.random() * 18);
@@ -467,7 +467,7 @@ function setFeatures() {
               var humanoid2 = Math.floor(Math.random() * humanoids.length);
               while (humanoid1 == humanoid2)
                 humanoid2 = Math.floor(Math.random() * humanoids.length);
-              favoredEnemies[2] = humanoid1 + " and " + humanoid2;
+              favoredEnemies[2] = humanoids[humanoid1] + " and " + humanoids[humanoid2];
               var choice = Math.floor(Math.random() * 18);
               while (languages[choice] == 1)
                 choice = Math.floor(Math.random() * 18);
