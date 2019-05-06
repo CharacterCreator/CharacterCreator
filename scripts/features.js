@@ -129,7 +129,14 @@ function setFeatures() {
         languages[7] = 1;
         break;
       case "Tiefling":
-
+        features += "<b>Darkvision</b>: PHB pg. 43 </br>You have superior vision in dim and dark conditions, within 60 feet of you. </br>";
+        features += "<b>Hellish Resistance</b>: PHB pg. 43 </br>You have resistance to fire damage. </br>";
+        if (level < 3)
+          features += "<b>Infernal Legacy</b>: PHB pg. 43 </br>You know the Thaumaturgy cantrip. Charisma is your spellcasting ability for this spell. </br>";
+        else if (level < 5)
+          features+= "<b>Infernal Legacy</b>: PHB pg. 43 </br>You know the Thaumaturgy cantrip and you can cast the Hellish Rebuke spell once per day as a 2nd-level spell. Charisma is your spellcasting ability for these spells. </br>";
+        else
+          features += "<b>Infernal Legacy</b>: PHB pg. 43 </br>You know the Thaumaturgy cantrip, can cast Hellish Rebuke as a 2nd-level spell once per day, and can cast Darkness once per day. Charisma is your spellcasting ability for these spells. </br>";
         languages[12] = 1;
         break;
     }
