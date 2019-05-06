@@ -7,7 +7,22 @@ function setFeatures() {
         features += "<b>Darkvision</b>: PHB pg. 20 </br>You have superior vision in dim and dark conditions, within 60 feet of you. </br>";
         features += "<b>Dwarven Resilience</b>: PHB pg. 20 </br>You have advantage on saving throws against poison and resistance to poison damage. </br>";
         features += "<b>Dwarven Combat Training</b>: PHB pg. 20 </br>You have proficiency with the battleaxe, handaxe, throwing hammer, and warhammer. </br>";
+        weaponProficiencies[3] = 1;
+        weaponProficiencies[14] = 1;
+        weaponProficiencies[30] = 1;
         features += "<b>Tool Proficiency</b>: PHB pg. 20 </br>Choose one of the following artisans' tools to gain proficiency with: smith's tools, brewer's supplies, or mason's tools. </br>";
+        var choice = Math.floor(Math.random() * 3);
+        switch (choice) {
+          case 0:
+            toolProficiencies[1] = 1;
+            break;
+          case 1:
+            toolProficiencies[13] = 1;
+            break;
+          case 2:
+            toolProficiencies[18] = 1;
+            break;
+        }
         features += "<b>Stonecunning</b>: PHB pg. 20 </br>Whenever you make a History check related to the origin of stonework, you are considered proficient in the check and add double your proficiency bonus. </br>";
         switch (subrace) {
           case "Hill ":
@@ -16,6 +31,8 @@ function setFeatures() {
             break;
           case "Mountain ":
             features += "<b>Dwarven Armor Training</b>: PHB pg. 20 </br>You have proficiency with light and medium armor. </br>";
+            armorProficiencies[0] = 1;
+            armorProficiencies[1] = 1;
             break;
         }
         languages[1] = 1;
@@ -24,13 +41,17 @@ function setFeatures() {
         if (subrace !== "Dark ")
           features += "<b>Darkvision</b>: PHB pg. 23 </br>You have superior vision in dim and dark conditions, within 60 feet of you. </br>";
         features += "<b>Keen Senses</b>: PHB pg. 23 </br>You have proficiency in the Perception skill. </br>";
+        skillProficiencies[12] = 1;
         features += "<b>Fey Ancestry</b>: PHB pg. 23 </br>You have advantage on saving throws against being charmed and magic can't put you to sleep. </br>";
         features += "<b>Trance</b>: PHB pg. 23 </br>Instead of sleeping, you need only meditate deeply for 4 hours. </br>";
         switch (subrace) {
           case "High ":
             features += "<b>Elf Weapon Training</b>: PHB pg. 23 </br>You have proficiency with the longsword, shortsword, shortbow, and longbow. </br>";
+            weaponProficiencies[12] = 1;
+            weaponProficiencies[21] = 1;
+            weaponProficiencies[27] = 1;
+            weaponProficiencies[35] = 1;
             features += "<b>Cantrip</b>: PHB pg. 24 </br>You know one wizard cantrip. Intelligence is your spellcasting ability for it. </br>";
-            features += "<b>Extra Language</b>: PHB pg. 24 </br>You know an extra language. </br>";
             var choice = Math.floor(Math.random() * 18);
             while (languages[choice] == 1)
               choice = Math.floor(Math.random() * 18);
@@ -38,7 +59,12 @@ function setFeatures() {
             break;
           case "Wood ":
             features += "<b>Elf Weapon Training</b>: PHB pg. 24 </br>You have proficiency with the longsword, shortsword, shortbow, and longbow. </br>";
+            weaponProficiencies[12] = 1;
+            weaponProficiencies[21] = 1;
+            weaponProficiencies[27] = 1;
+            weaponProficiencies[35] = 1;
             features += "<b>Fleet of Foot</b>: PHB pg. 24 </br>Your base walking speed is 35 feet. </br>";
+            speed = 35;
             features += "<b>Mask of the Wild</b>: PHB pg. 24 </br>You can attempt to hide even when only lightly obscured by natural phenomena. </br>";
             break;
           case "Dark ":
@@ -46,6 +72,9 @@ function setFeatures() {
             features += "<b>Sunlight Sensitivity</b>: PHB pg. 24 </br>You have disadvantage on attack rolls and Perception checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight. </br>";
             features += "<b>Drow Magic</b>: PHB pg. 24 </br>You know the Dancing Lights cantrip. When you reach 3rd level, you can cast the Faerie Fire spell once per day. When you reach 5th level, you can also cast the Darkness spell once per day. Charisma is your spellcasting ability for these spells. </br>";
             features += "<b>Drow Weapon Training</b>: PHB pg. 24 </br>You have proficiency with rapiers, shortswords, and hand crossbows. </br>";
+            weaponProficiencies[25] = 1;
+            weaponProficiencies[27] = 1;
+            weaponProficiencies[33] = 1;
             break;
         }
         languages[2] = 1;
@@ -107,6 +136,7 @@ function setFeatures() {
           case "Rock ":
             features += "<b>Artificer's Lore</b>: PHB pg. 37 </br>Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, and your proficiency bonus applies, you can apply double your proficiency bonus to the check. </br>";
             features += "<b>Tinker</b>: PHB pg. 37 </br>You have proficiency with tinker's tools. Using these tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (choose from those in the PHB) which functions for 24 hours, unless you spend an hour to repair it to keep it functioning. You can have up to three devices at a time. </br>";
+            toolProficiencies[20] = 1;
             break;
         }
         languages[4] = 1;
@@ -115,8 +145,16 @@ function setFeatures() {
         features += "<b>Darkvision</b>: PHB pg. 39 </br>You have superior vision in dim and dark conditions, within 60 feet of you. </br>";
         features += "<b>Fey Ancestry</b>: PHB pg. 39 </br>You have advantage on saving throws against being charmed, and magic can't put you to sleep. </br>";
         features += "<b>Skill Versatility</b>: PHB pg. 39 </br>You have proficiency in two extra skills. </br>";
-        languages[2] = 1;
         var choice = Math.floor(Math.random() * 18);
+        while (skillProficiencies[choice] == 1)
+          choice = Math.floor(Math.random() * 18);
+        skillProficiencies[choice] = 1;
+        choice = Math.floor(Math.random() * 18);
+        while (skillProficiencies[choice] == 1)
+          choice = Math.floor(Math.random() * 18);
+        skillProficiencies[choice] = 1;
+        languages[2] = 1;
+        choice = Math.floor(Math.random() * 18);
         while (languages[choice] == 1)
           choice = Math.floor(Math.random() * 18);
         languages[choice] = 1;
@@ -124,6 +162,7 @@ function setFeatures() {
       case "Half-Orc":
         features += "<b>Darkvision</b>: PHB pg. 41 </br>You have superior vision in dim and dark conditions, within 60 feet of you. </br>";
         features += "<b>Menacing</b>: PHB pg. 41 </br>You have proficiency in the Intimidation skill. </br>";
+        skillProficiencies[15] = 1;
         features += "<b>Relentless Endurance</b>: PHB pg. 41 </br>Once per long rest, when you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. </br>";
         features += "<b>Savage Attacks</b>: PHB pg. 41 </br>When you score a critical hit with a melee weapon attack, you can roll one the weapon's damage dice an additional time and add it to the extra damage of the critical hit. </br>";
         languages[7] = 1;
@@ -131,12 +170,7 @@ function setFeatures() {
       case "Tiefling":
         features += "<b>Darkvision</b>: PHB pg. 43 </br>You have superior vision in dim and dark conditions, within 60 feet of you. </br>";
         features += "<b>Hellish Resistance</b>: PHB pg. 43 </br>You have resistance to fire damage. </br>";
-        if (level < 3)
-          features += "<b>Infernal Legacy</b>: PHB pg. 43 </br>You know the Thaumaturgy cantrip. Charisma is your spellcasting ability for this spell. </br>";
-        else if (level < 5)
-          features+= "<b>Infernal Legacy</b>: PHB pg. 43 </br>You know the Thaumaturgy cantrip and you can cast the Hellish Rebuke spell once per day as a 2nd-level spell. Charisma is your spellcasting ability for these spells. </br>";
-        else
-          features += "<b>Infernal Legacy</b>: PHB pg. 43 </br>You know the Thaumaturgy cantrip, can cast Hellish Rebuke as a 2nd-level spell once per day, and can cast Darkness once per day. Charisma is your spellcasting ability for these spells. </br>";
+        features += "<b>Infernal Legacy</b>: PHB pg. 43 </br>You know the Thaumaturgy cantrip. When you reach 3rd level, you can cast the Hellish Rebuke spell as a 2nd-level spell once per day. When you reach 5th level, you can also cast the Darkness spell once per day. Charisma is your spellcasting ability for these spells. </br>";
         languages[12] = 1;
         break;
     }
