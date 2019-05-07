@@ -451,6 +451,7 @@ function setEquipment() {
             break;
         }
         addEquipment(armor[9], 1);
+        setAC(9);
         item = Math.floor(Math.random() * 3);
         switch (item) {
           case 0:
