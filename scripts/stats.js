@@ -202,7 +202,6 @@ function generateScores(primary, secondary, race, subrace, classChoice) {
     else
         mods[1] = Math.floor((dexterity - 10.5) / 2);
     if (constitution >= 10)
-        //Class of 2019
         mods[2] = Math.floor((constitution - 10) / 2);
     else if (constitution % 2 == 0)
         mods[2] = Math.floor((constitution - 10) / 2);
@@ -259,4 +258,8 @@ function setSpeed() {
         raceMod += 5;
     speed = baseSpeed + raceMod;
     return "Speed: " + speed;
+}
+
+function displayAC() {
+  return "Armor Class: " + armorClass;
 }
