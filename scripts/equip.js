@@ -176,6 +176,7 @@ function setEquipment() {
             break;
         }
         addEquipment(armor[1], 1);
+        setAC(1);
         addEquipment(simpleMeleeWeapons[1], 1);
         break;
       case "Cleric":
@@ -197,12 +198,15 @@ function setEquipment() {
           switch (item) {
             case 0:
               addEquipment(armor[5], 1);
+              setAC(5);
               break;
             case 1:
               addEquipment(armor[1], 1);
+              setAC(1);
               break;
             case 2:
               addEquipment(armor[9], 1);
+              setAC(9);
               break;
           }
         }
@@ -299,9 +303,11 @@ function setEquipment() {
         switch (item) {
           case 0:
             addEquipment(armor[9], 1);
+            setAC(9);
             break;
           case 1:
             addEquipment(armor[1], 1);
+            setAC(1);
             addEquipment(martialRangedWeapons[3], 1);
             addEquipment(adventuringGear[3], 20);
             break;
@@ -463,9 +469,11 @@ function setEquipment() {
         switch (item) {
           case 0:
             addEquipment(armor[5], 1);
+            setAC(5);
             break;
           case 1:
             addEquipment(armor[1], 1);
+            setAC(1);
             break;
         }
         item = Math.floor(Math.random() * 2);
@@ -522,6 +530,7 @@ function setEquipment() {
             break;
         }
         addEquipment(armor[1], 1);
+        setAC(1);
         addEquipment(simpleMeleeWeapons[1], 2);
         addEquipment(artisansTools[19], 1);
         break;
@@ -645,6 +654,7 @@ function setEquipment() {
             break;
         }
         addEquipment(armor[1], 1);
+        setAC(1);
         addEquipment(simpleMeleeWeapons[1], 2);
         break;
       case "Wizard":
