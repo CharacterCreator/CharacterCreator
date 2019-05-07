@@ -135,6 +135,7 @@ function setEquipment() {
         }
         addEquipment("Explorer's Pack", 0);
         addEquipment(simpleMeleeWeapons[4], 4);
+        setAC(-1);
         break;
       case "Bard":
         var item = Math.floor(Math.random() * 3);
@@ -248,6 +249,17 @@ function setEquipment() {
               break;
             case 2:
               addEquipment(adventuringGear[48], 1);
+              break;
+          }
+          item = Math.floor(Math.random() * 2);
+          switch (item) {
+            case 0:
+              addEquipment(armor[5], 1);
+              setAC(5);
+              break;
+            case 1:
+              addEquipment(armor[1], 1);
+              setAC(1);
               break;
           }
           addEquipment(armor[12], 1);
@@ -396,6 +408,7 @@ function setEquipment() {
             break;
         }
         addEquipment(simpleRangedWeapons[1], 10);
+        setAC(-1);
         break;
       case "Paladin":
         var item = Math.floor(Math.random() * 2);
@@ -591,6 +604,7 @@ function setEquipment() {
             break;
         }
         addEquipment(simpleMeleeWeapons[1], 2);
+        setAC(-1);
         break;
       case "Warlock":
         var item = Math.floor(Math.random() * 2);
@@ -705,6 +719,7 @@ function setEquipment() {
             break;
         }
         addEquipment(adventuringGear[94], 1);
+        setAC(-1);
         break;
     }
     switch (backgroundSelect) {
