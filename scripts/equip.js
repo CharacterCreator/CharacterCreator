@@ -281,6 +281,7 @@ function setEquipment() {
             break;
         }
         addEquipment(armor[1], 1);
+        setAC(1);
         addEquipment("Explorer's Pack", 0);
         item = Math.floor(Math.random() * 4);
         switch (item) {
