@@ -326,5 +326,7 @@ function setAC(index) {
 }
 
 function displayAC() {
+  if (equipment.includes(["Shield", 1]))
+    return "Armor Class: " + armorClass + " (" + (armorClass + 2) + " while using shield)";
   return "Armor Class: " + armorClass;
 }
