@@ -38,11 +38,14 @@ var intMod = 0;
 var wisMod = 0;
 var chaMod = 0;
 
-/*For sethealth*/
+/*For setHealth*/
 var maxHP = 0;
 
 /*For setSpeed*/
 var speed = 0;
+
+/*For setAC*/
+var armorClass = 10;
 
 /*For setProficiencies*/
 //0:STR, 1:DEX, 2:CON, 3:INT, 4:WIS, 5:CHA
