@@ -322,6 +322,8 @@ function setAC(index) {
       armorClass += 8;
       armorClass -= dexMod;
       break;
+    default:
+      break;
   }
 }
 
