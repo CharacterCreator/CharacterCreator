@@ -76,8 +76,9 @@ function getCharacter() {
 
         document.getElementById("consoleDescriptions").innerHTML = setRace() + "</br>" + setClass() + "</br>" + setBackground() + "</br>" + setAlignment(race, ideal);
         document.getElementById("consoleFeatures").innerHTML = setFeatures();
+        document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice) + "</br>" + setHealth() + "</br>" + setSpeed();
         document.getElementById("consoleEquipment").innerHTML = setEquipment();
-        document.getElementById("consoleStatistics").innerHTML = generateScores(primary, secondary, race, subrace, classChoice) + "</br>" + setHealth() + "</br>" + setSpeed() + "</br>" + displayAC();
+        document.getElementById("consoleStatistics").innerHTML += "</br>" + displayAC();
         document.getElementById("consoleProficiencies").innerHTML = displayProficiencies();
         document.getElementById("consoleSkills").innerHTML = displaySkills();
         document.getElementById("consoleSpells").innerHTML = setSpells();
