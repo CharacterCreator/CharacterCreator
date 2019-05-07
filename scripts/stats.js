@@ -260,6 +260,71 @@ function setSpeed() {
     return "Speed: " + speed;
 }
 
+function setAC(index) {
+  armorClass += dexMod;
+  switch (index) {
+    case 0:
+      armorClass += 1;
+      break;
+    case 1:
+      armorClass += 1;
+      break;
+    case 2:
+      armorClass += 2;
+      break;
+    case 3:
+      armorClass += 2;
+      if (dexMod > 2) {
+        armorClass -= dexMod;
+        armorClass += 2;
+      }
+      break;
+    case 4:
+      armorClass += 3;
+      if (dexMod > 2) {
+        armorClass -= dexMod;
+        armorClass += 2;
+      }
+    case 5:
+      armorClass += 4;
+      if (dexMod > 2) {
+        armorClass -= dexMod;
+        armorClass += 2;
+      }
+      break;
+    case 6:
+      armorClass += 4;
+      if (dexMod > 2) {
+        armorClass -= dexMod;
+        armorClass += 2;
+      }
+      break;
+    case 7:
+      armorClass += 5;
+      if (dexMod > 2) {
+        armorClass -= dexMod;
+        armorClass += 2;
+      }
+      break;
+    case 8:
+      armorClass += 4;
+      armorClass -= dexMod;
+      break;
+    case 9:
+      armorClass += 6;
+      armorClass -= dexMod;
+      break;
+    case 10:
+      armorClass += 7;
+      armorClass -= dexMod;
+      break;
+    case 11:
+      armorClass += 8;
+      armorClass -= dexMod;
+      break;
+  }
+}
+
 function displayAC() {
   return "Armor Class: " + armorClass;
 }
