@@ -820,6 +820,7 @@ function setEquipment() {
         addEquipment("Quill (s)", 1);
         addEquipment("Small Knife", 1);
         addEquipment(adventuringGear[31], 1);
+        currency[3] += 10;
         break;
       case "Sailor":
         addEquipment(adventuringGear[86], 50);
