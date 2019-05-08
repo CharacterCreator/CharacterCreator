@@ -206,6 +206,7 @@ function setFeatures() {
               features += "<b>Rage</b>: PHB pg. 48 </br>You have " + rages + " uses of Rage per long rest and you have a +" + rageDamage + " to damage rolls using Strength while raging. </br>";
             features += "<b>Unarmored Defense</b>: PHB pg. 48 </br>Your armor class is equal to 10 + your Dexterity modifier + your Constitution modifier while you are not wearing armor. </br>";
             armorClass += conMod;
+            setAC(-1);
           }
           break;
         case "Bard":
@@ -344,6 +345,7 @@ function setFeatures() {
           if (level >= 1) {
             features += "<b>Unarmored Defense</b>: PHB pg. 78 </br>Your armor class is equal to 10 + your Dexterity modifier + your Wisdom modifier while you are not wearing armor or wielding a shield. </br>";
             armorClass += wisMod;
+            setAC(-1);
             features += "<b>Martial Arts</b>: PHB pg. 78 </br>Your Martial Arts die is a " + martialArts + ". </br>";
           }
           break;
