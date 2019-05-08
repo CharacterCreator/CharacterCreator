@@ -47,6 +47,9 @@ var speed = 0;
 /*For setAC*/
 var armorClass = 10;
 
+/*For currency*/
+var currency = [0, 0, 0, 0, 0];
+
 /*For setProficiencies*/
 //0:STR, 1:DEX, 2:CON, 3:INT, 4:WIS, 5:CHA
 var saveProficiencies = [0, 0, 0, 0, 0, 0];
