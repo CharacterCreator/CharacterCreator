@@ -135,7 +135,6 @@ function setEquipment() {
         }
         addEquipment("Explorer's Pack", 0);
         addEquipment(simpleMeleeWeapons[4], 4);
-        setAC(-1);
         break;
       case "Bard":
         var item = Math.floor(Math.random() * 3);
@@ -408,7 +407,6 @@ function setEquipment() {
             break;
         }
         addEquipment(simpleRangedWeapons[1], 10);
-        setAC(-1);
         break;
       case "Paladin":
         var item = Math.floor(Math.random() * 2);
