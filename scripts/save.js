@@ -27,6 +27,7 @@ function getCharacter() {
           languages.splice(e);
         maxHP = 0;
         armorClass = 10;
+        currency = [0, 0, 0, 0, 0];
         features = "";
         rages = 0;
         rageDamage = 0;
