@@ -748,72 +748,72 @@ function setEquipment() {
         addEquipment("Stick (s) of Incense", 5);
         addEquipment("Vestments", 1);
         addEquipment(adventuringGear[31], 1);
-        //15 gp
+        currency[3] += 15;
         break;
       case "Charlatan":
         addEquipment(adventuringGear[33], 1);
         addEquipment(artisansTools[7], 1);
-        //15 gp
+        currency[3] += 15;
         break;
       case "Criminal":
         addEquipment(adventuringGear[36], 1);
         addEquipment(adventuringGear[31], 1);
-        //15 gp
+        currency[3] += 15;
         break;
       case "Entertainer":
         addEquipment(instruments[Math.floor(Math.random() * instruments.length)], 1);
         addEquipment(adventuringGear[32], 1);
-        //15 gp
+        currency[3] += 15;
         break;
       case "Folk Hero":
         addEquipment(artisansTools[Math.floor(Math.random() * artisansTools.length)], 1);
         addEquipment(adventuringGear[90], 1);
         addEquipment(adventuringGear[78], 1);
         addEquipment(adventuringGear[31], 1);
-        //10 gp
+        currency[3] += 10;
         break;
       case "Gladiator":
         addEquipment(instruments[Math.floor(Math.random() * instruments.length)], 1);
         addEquipment(adventuringGear[32], 1);
-        //15 gp
+        currency[3] += 15;
         break;
       case "Guild Artisan":
         addEquipment(artisansTools[Math.floor(Math.random() * artisansTools.length)], 1);
         addEquipment(adventuringGear[34], 1);
-        //15 gp
+        currency[3] += 15;
         break;
       case "Guild Merchant":
         addEquipment(artisansTools[Math.floor(Math.random() * artisansTools.length)], 1);
         addEquipment(adventuringGear[34], 1);
-        //15 gp
+        currency[3] += 15;
         break;
       case "Hermit":
         addEquipment(adventuringGear[27], 1);
         addEquipment(adventuringGear[19], 1);
         addEquipment(adventuringGear[31], 1);
         addEquipment(artisansTools[57], 1);
-        //5 gp
+        currency[3] += 5;
         break;
       case "Knight":
         addEquipment(adventuringGear[33], 1);
         addEquipment(adventuringGear[92], 1);
-        //25 gp
+        currency[3] += 25;
         break;
       case "Noble":
         addEquipment(adventuringGear[33], 1);
         addEquipment(adventuringGear[92], 1);
-        //25 gp
+        currency[3] += 25;
         break;
       case "Outlander":
         addEquipment(adventuringGear[11], 1);
         addEquipment(adventuringGear[51], 1);
         addEquipment(adventuringGear[34], 1);
-        //10 gp
+        currency[3] += 10;
         break;
       case "Pirate":
         addEquipment(adventuringGear[86], 50);
         addEquipment(adventuringGear[31], 1);
-        //10 gp
+        currency[3] += 10;
         break;
       case "Sage":
         addEquipment(adventuringGear[52], 1);
@@ -824,7 +824,7 @@ function setEquipment() {
       case "Sailor":
         addEquipment(adventuringGear[86], 50);
         addEquipment(adventuringGear[31], 1);
-        //10 gp
+        currency[3] += 10;
         break;
       case "Soldier":
         var item = Math.floor(Math.random() * 2);
@@ -837,19 +837,19 @@ function setEquipment() {
             break;
         }
         addEquipment(adventuringGear[31], 1);
-        //10 gp
+        currency[3] += 10;
         break;
       case "Spy":
         addEquipment(adventuringGear[36], 1);
         addEquipment(adventuringGear[31], 1);
-        //15 gp
+        currency[3] += 15;
         break;
       case "Urchin":
         addEquipment("Small Knife", 1);
         addEquipment("Map (s)", 1);
         addEquipment("Pet Mouse", 1);
         addEquipment(adventuringGear[31], 1);
-        //10 gp
+        currency[3] += 10;
         break;
     }
     eq = "";
