@@ -852,8 +852,14 @@ function setEquipment() {
         currency[3] += 10;
         break;
     }
-    eq = "";
+    eq = "<u>Equipment</u></br>";
     for (var e = 1; e < equipment.length; e++)
       eq += equipment[e][1] + " " + equipment[e][0] + "</br>";
+    eq += "<u>Currency</u></br>";
+    eq += "<b>PP</b>: " + currency[4] + "</br>";
+    eq += "<b>GP</b>: " + currency[3] + "</br>";
+    eq += "<b>EP</b>: " + currency[2] + "</br>";
+    eq += "<b>SP</b>: " + currency[1] + "</br>";
+    eq += "<b>CP</b>: " + currency[0] + "</br>";
     return eq;
 }
