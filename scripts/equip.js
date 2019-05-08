@@ -791,7 +791,7 @@ function setEquipment() {
         addEquipment(adventuringGear[27], 1);
         addEquipment(adventuringGear[19], 1);
         addEquipment(adventuringGear[31], 1);
-        addEquipment(artisansTools[57], 1);
+        addEquipment(artisansTools[10], 1);
         currency[3] += 5;
         break;
       case "Knight":
